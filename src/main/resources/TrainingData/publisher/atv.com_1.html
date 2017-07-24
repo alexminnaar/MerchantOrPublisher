@@ -1,0 +1,1725 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1039.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="stylesheet" href="/blog/wp-content/themes/atv2015/css/foundation.css" />
+    <link rel="stylesheet" href="/blog/wp-content/themes/atv2015/css/vs-css.css" />
+    <link rel="stylesheet" type="text/css" media="print"  href="/blog/wp-content/themes/atv2015/css/print-css2.css" />
+
+    <!-- Google Fonts embed code -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+    <script src="/blog/wp-content/themes/atv2015/js/vendor/modernizr.js"></script>
+
+    <!-- Slider HOMEPAGE ONLY -->
+    <link rel="stylesheet" type="text/css" href="/blog/wp-content/themes/atv2015/js/slick/slick.css"/>
+    <!-- End Slider -->
+
+
+        <script>
+	    /* PLEASE ADD CURRENT PAGE URL */
+    	var CurrentPageURL="http://www.atv.com/blog/2017/07/belt-keep-slipping.html";
+    </script>
+
+
+    
+<!-- This site is optimized with the Yoast SEO plugin v4.3 - https://yoast.com/wordpress/plugins/seo/ -->
+<title>Why Does My Belt Keep Slipping? - ATV.com</title>
+<meta name="description" content="Why does my belt keep slipping? This is what one confused Polaris Sportsman 500 owner wants to know and the ATV AnswerMan is here to help."/>
+<meta name="news_keywords" content="answerman, atv answerman, polaris sportsman, sportsman 500, atv, all terrain vehicles, off-road, automotive, lifestyle, racing, entertainment" />
+<link rel="original-source" href="http://www.atv.com/blog/2017/07/belt-keep-slipping.html" />
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="http://www.atv.com/blog/2017/07/belt-keep-slipping.html" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Why Does My Belt Keep Slipping? - ATV.com" />
+<meta property="og:description" content="Why does my belt keep slipping? This is what one confused Polaris Sportsman 500 owner wants to know and the ATV AnswerMan is here to help." />
+<meta property="og:url" content="http://www.atv.com/blog/2017/07/belt-keep-slipping.html" />
+<meta property="og:site_name" content="ATV.com" />
+<meta property="article:publisher" content="https://www.facebook.com/ATVcom/" />
+<meta property="article:tag" content="Answerman" />
+<meta property="article:tag" content="ATV Answerman" />
+<meta property="article:tag" content="polaris sportsman" />
+<meta property="article:tag" content="Sportsman 500" />
+<meta property="article:section" content="How To" />
+<meta property="article:published_time" content="2017-07-20T11:30:20-04:00" />
+<meta property="article:modified_time" content="2017-07-20T11:32:03-04:00" />
+<meta property="og:updated_time" content="2017-07-20T11:32:03-04:00" />
+<meta property="fb:admins" content="100000487895902" />
+<meta property="og:image" content="http://atv.com.vsassets.com/blog/wp-content/uploads/2017/07/Polaris-Sportsman-500.jpg" />
+<meta property="og:image:width" content="671" />
+<meta property="og:image:height" content="382" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:description" content="Why does my belt keep slipping? This is what one confused Polaris Sportsman 500 owner wants to know and the ATV AnswerMan is here to help." />
+<meta name="twitter:title" content="Why Does My Belt Keep Slipping? - ATV.com" />
+<meta name="twitter:image" content="http://atv.com.vsassets.com/blog/wp-content/uploads/2017/07/Polaris-Sportsman-500.jpg" />
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='//ad.crwdcntrl.net' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="ATV.com &raquo; Why Does My Belt Keep Slipping? Comments Feed" href="http://www.atv.com/blog/2017/07/belt-keep-slipping.html/feed" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/www.atv.com\/blog\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.7.2"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),!(j.toDataURL().length<3e3)&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,65039,8205,55356,57096),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,55356,57096),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55357,56425,55356,57341,8205,55357,56507),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55357,56425,55356,57341,55357,56507),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='avatars-css'  href='http://atv.com.vsassets.com/blog/wp-content/plugins/add-local-avatar/avatars.css?ver=4.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='imgareaselect-css'  href='http://www.atv.com/blog/wp-includes/js/imgareaselect/imgareaselect.css?ver=0.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='http://www.atv.com/blog/wp-includes/css/dashicons.min.css?ver=4.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='thickbox-css'  href='http://www.atv.com/blog/wp-includes/js/thickbox/thickbox.css?ver=4.7.2' type='text/css' media='all' />
+<script type='text/javascript' src='http://www.atv.com/blog/wp-content/themes/atv2015/js/vendor/jquery.js?ver=4.7.2'></script>
+<script type='text/javascript' src='http://www.atv.com/blog/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://ad.crwdcntrl.net/5/c=8059/pe=y/var=ccauds?ver=4.7.2'></script>
+<link rel='https://api.w.org/' href='http://www.atv.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.atv.com/blog/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.atv.com/blog/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.7.2" />
+<link rel='shortlink' href='http://www.atv.com/?p=77843' />
+<link rel="alternate" type="application/json+oembed" href="http://www.atv.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.atv.com%2Fblog%2F2017%2F07%2Fbelt-keep-slipping.html" />
+<link rel="alternate" type="text/xml+oembed" href="http://www.atv.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.atv.com%2Fblog%2F2017%2F07%2Fbelt-keep-slipping.html&#038;format=xml" />
+<!-- <meta name="NextGEN" version="2.1.7" /> -->
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<script type="text/javascript">
+	window._wp_rp_static_base_url = 'https://wprp.zemanta.com/static/';
+	window._wp_rp_wp_ajax_url = "http://www.atv.com/blog/wp-admin/admin-ajax.php";
+	window._wp_rp_plugin_version = '3.6.3';
+	window._wp_rp_post_id = '77843';
+	window._wp_rp_num_rel_posts = '4';
+	window._wp_rp_thumbnails = true;
+	window._wp_rp_post_title = 'Why+Does+My+Belt+Keep+Slipping%3F';
+	window._wp_rp_post_tags = ['atv+answerman', 'polaris+sportsman', 'sportsman+500', 'answerman', 'how+to', 'polaris', 'atv', 'drive', 'gear', 'sportsman', '500', 'belt', 'cover', 'clutch', 'road', 'machin', 'eb', 'adjust', 'polari', 'reader', 'state'];
+	window._wp_rp_promoted_content = false;
+</script>
+<!-- ******* DEBUGGER : single.php ******* -->
+<meta property="fb:pages" content="134267149956440" /><!-- Taboola 1 of 3 -->
+<script type="text/javascript">
+  window._taboola = window._taboola || [];
+  _taboola.push({article:'auto'});
+  !function (e, f, u) {
+    e.async = 1;
+    e.src = u;
+    f.parentNode.insertBefore(e, f);
+  }(document.createElement('script'),
+  document.getElementsByTagName('script')[0],
+  '//cdn.taboola.com/libtrc/verticalscope-network/loader.js');
+</script>
+<!-- END: Taboola 1 of 3 -->				<!-- WordPress Popular Posts v3.3.2 -->
+				<script type="text/javascript">//<![CDATA[
+
+					var sampling_active = 0;
+					var sampling_rate   = 100;
+					var do_request = false;
+
+					if ( !sampling_active ) {
+						do_request = true;
+					} else {
+						var num = Math.floor(Math.random() * sampling_rate) + 1;
+						do_request = ( 1 === num );
+					}
+
+					if ( do_request ) {
+
+						// Create XMLHttpRequest object and set variables
+						var xhr = ( window.XMLHttpRequest )
+						  ? new XMLHttpRequest()
+						  : new ActiveXObject( "Microsoft.XMLHTTP" ),
+						url = 'http://www.atv.com/blog/wp-admin/admin-ajax.php',
+						params = 'action=update_views_ajax&token=ade402787b&wpp_id=77843';
+						// Set request method and target URL
+						xhr.open( "POST", url, true );
+						// Set request header
+						xhr.setRequestHeader( "Content-type", "application/x-www-form-urlencoded" );
+						// Hook into onreadystatechange
+						xhr.onreadystatechange = function() {
+							if ( 4 === xhr.readyState && 200 === xhr.status ) {
+								if ( window.console && window.console.log ) {
+									window.console.log( xhr.responseText );
+								}
+							}
+						};
+						// Send request
+						xhr.send( params );
+
+					}
+
+				//]]></script>
+				<!-- End WordPress Popular Posts v3.3.2 -->
+				<link rel="amphtml" href="http://www.atv.com/blog/2017/07/belt-keep-slipping.html/amp" />
+<!-- ConsolidatedFooters Headers -->
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start":
+new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
+"https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,"script","dataLayer","GTM-N2H9G6");</script>
+<!-- End Google Tag Manager -->
+
+<!-- /ConsolidatedFooters Headers -->
+
+    
+	<script async type="text/javascript" src="/scripts/player/jwplayer.js?v=1406647241"></script>
+	<script async type="text/javascript" src="/scripts/playerscripts.min.js?v=1454951878"></script>
+
+    <script>
+      window.google_analytics_uacct = "UA-30657-87"
+    </script>
+
+
+<!-- gpt sync -->
+<script type="text/javascript">
+(function() {
+var useSSL = 'https:' == document.location.protocol;
+var src = (useSSL ? 'https:' : 'http:') +
+'//www.googletagservices.com/tag/js/gpt.js';
+document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+})();
+</script>
+
+
+<script id='dfpsetup' type='text/javascript'>
+
+var _vsDFPDebugInfo = '';
+
+googletag.cmd.push(function() {
+
+<!-- gpt -->
+googletag.defineSlot('/1030735/ATV_com_Featured_ATV_Left_PS', [300, 70], 'ATV_com_Featured_ATV_Left_PS').
+  defineSizeMapping(googletag.sizeMapping().addSize([1024, 10], [300, 70]).addSize([642, 10], [300, 70]).addSize([0, 0], [99999, 99999]).build()).
+  addService(googletag.pubads());
+<!-- gpt -->
+googletag.defineSlot('/1030735/ATV_com_300x250_TopRight_PS', [300, 250], 'ATV_com_300x250_TopRight_PS').
+  defineSizeMapping(googletag.sizeMapping().addSize([1024, 10], [300, 250]).addSize([642, 10], [300, 250]).addSize([0, 0], [99999, 99999]).build()).
+  addService(googletag.pubads());
+<!-- gpt -->
+googletag.defineSlot('/1030735/ATV_com_300x600_Left_PS', [300, 600], 'ATV_com_300x600_Left_PS').
+  defineSizeMapping(googletag.sizeMapping().addSize([1024, 10], [300, 600]).addSize([642, 10], [300, 600]).addSize([0, 0], [99999, 99999]).build()).
+  addService(googletag.pubads());
+<!-- gpt -->
+googletag.defineSlot('/1030735/ATV_com_x80_PS', [303, 115], 'ATV_com_x80_PS').
+  addService(googletag.pubads());
+<!-- gpt -->
+googletag.defineSlot('/1030735/ATV_com_x60_PS', [500, 500], 'ATV_com_x60_PS').
+  defineSizeMapping(googletag.sizeMapping().addSize([1024, 10], [500, 500]).addSize([0, 0], [99999, 99999]).build()).
+  addService(googletag.pubads());
+<!-- gpt -->
+googletag.defineSlot('/1030735/ATV_com_x61_PS', [1658, 1000], 'ATV_com_x61_PS').
+  defineSizeMapping(googletag.sizeMapping().addSize([1024, 10], [1658, 1000]).addSize([0, 0], [99999, 99999]).build()).
+  addService(googletag.pubads());
+<!-- gpt -->
+googletag.defineSlot('/1030735/ATV_com_x62_PS', [999, 416], 'ATV_com_x62_PS').
+  defineSizeMapping(googletag.sizeMapping().addSize([1024, 10], [999, 416]).addSize([0, 0], [99999, 99999]).build()).
+  addService(googletag.pubads());
+<!-- gpt -->
+googletag.defineSlot('/1030735/ATV_com_728x90_Top_PS', [728, 90], 'ATV_com_728x90_Top_PS').
+  defineSizeMapping(googletag.sizeMapping().addSize([1024, 10], [728, 90]).addSize([642, 10], [728, 90]).addSize([0, 0], [99999, 99999]).build()).
+  addService(googletag.pubads());
+<!-- gpt -->
+googletag.defineSlot('/1030735/ATV_com_Middle3_PS', [573, 419], 'ATV_com_Middle3_PS').
+  addService(googletag.pubads());
+<!-- gpt -->
+googletag.defineSlot('/1030735/ATV_com_728x90_Bottom_PS', [728, 90], 'ATV_com_728x90_Bottom_PS').
+  defineSizeMapping(googletag.sizeMapping().addSize([1024, 10], [728, 90]).addSize([642, 10], [728, 90]).addSize([0, 0], [99999, 99999]).build()).
+  addService(googletag.pubads());
+<!-- gpt -->
+googletag.defineSlot('/1030735/ATV_com_1x1_Bottom_PS', [1, 1], 'ATV_com_1x1_Bottom_PS').
+  addService(googletag.pubads());
+<!-- gpt -->
+googletag.defineSlot('/1030735/ATV_com_320x50_Mobile_Bottom_PS', [320, 50], 'ATV_com_320x50_Mobile_Bottom_PS').
+  defineSizeMapping(googletag.sizeMapping().addSize([1024, 10], [99999, 99999]).addSize([642, 10], [99999, 99999]).addSize([0, 0], [320, 50]).build()).
+  addService(googletag.pubads());
+<!-- gpt -->
+googletag.defineSlot('/1030735/ATV_com_177x63_Summit4_PS', [177, 63], 'ATV_com_177x63_Summit4_PS').
+  defineSizeMapping(googletag.sizeMapping().addSize([1024, 10], [177, 63]).addSize([642, 10], [177, 63]).addSize([0, 0], [99999, 99999]).build()).
+  addService(googletag.pubads());
+
+if (typeof(ccauds) != 'undefined') {
+	(function(googletag, ccauds) {
+		var aud_abbr = [], audience = ccauds.Profile.Audiences.Audience;
+		for (var cci = 0; cci < audience.length; cci++) {
+			aud_abbr.push(audience[cci].abbr);
+		}
+		googletag.pubads().setTargeting("aud_abbr", aud_abbr);
+	})(googletag, ccauds);
+}googletag.defineSlot('/1030735/ATV_com_1x1_Slimcut_PS_Content', [1, 1], 'ATV_com_1x1_Slimcut_PS_Content').addService(googletag.pubads());
+googletag.pubads().setTargeting("PageID", "wp77843");
+googletag.pubads().setTargeting("section1", "How_To");
+googletag.pubads().setTargeting("make", "Polaris");
+googletag.pubads().setTargeting("sitename", "atv_com");
+googletag.pubads().setTargeting("folder1", "blog");
+googletag.pubads().setTargeting("folder2", "2017");
+googletag.pubads().setTargeting("folder3", "07");
+googletag.pubads().setTargeting("filename", "belt-keep-slipping_html");
+
+
+
+googletag.pubads().enableSyncRendering();
+googletag.pubads().collapseEmptyDivs();
+googletag.enableServices();
+
+});
+
+
+
+</script>
+<!-- /DFP TAG -->
+
+
+
+</head>
+<body>
+
+<!-- ConsolidatedFooters Body Top w/o buffer -->
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N2H9G6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- /ConsolidatedFooters Body Top w/o buffer -->
+
+<div id="ATV_com_x60_PS" class="ad nolinks">
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('ATV_com_x60_PS'); });
+</script>
+</div>
+
+<div id="ATV_com_x61_PS" class="ad nolinks">
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('ATV_com_x61_PS'); });
+</script>
+</div>
+
+
+<!--  header part begin -->
+
+
+
+  <!-- Top articles above header -->
+  <div id="aboveHeader" class="row collapse fullWidth hide-for-small-only nolinks">
+
+  	<div class="large-3 medium-3 columns">
+    	<div class="crop"><img src="http://atv.com.vsassets.com/blog/wp-content/uploads/2017/03/Can-Am-Maverick-Sport-UTV-of-the-Year-500x285.jpg" alt="Can-Am Adventure Hub"></div>
+    	<a href="http://www.atv.com/can-am-adventure-hub" class="fullLink valign-middle"><span class="valign-content">Can-Am Adventure Hub</span></a>
+    </div>
+  	<div class="large-3 medium-3 columns">
+    	<div class="crop"><img src="http://atv.com.vsassets.com/blog/wp-content/uploads/2017/07/Kawasaki-Bayou-500x285.jpg" alt="Why Does My ATV Engine Cut Out?"></div>
+    	<a href="http://www.atv.com/blog/2017/07/atv-engine-cut.html" class="fullLink valign-middle"><span class="valign-content">Why Does My ATV Engine Cut Out?</span></a>
+    </div>
+  	<div class="large-3 medium-3 columns">
+    	<div class="crop"><img src="http://atv.com.vsassets.com/blog/wp-content/uploads/2017/07/ATV-Boots-Feature-500x285.jpg" alt="Five Best ATV Boots"></div>
+    	<a href="http://www.atv.com/parts-gear/five-best-atv-boots" class="fullLink valign-middle"><span class="valign-content">Five Best ATV Boots</span></a>
+    </div>
+	<div class="large-3 medium-3 columns valign-middle ad" id="ATV_com_177x63_Summit4_PS">
+		<script type="text/javascript">
+		googletag.cmd.push(function() { googletag.display('ATV_com_177x63_Summit4_PS'); });
+		</script>
+	</div>
+  </div>
+  <!-- END Top articles above header -->
+
+  <!-- Header -->
+  <div id="header" class="row collapse fullWidth nolinks">
+    	<div class="row collapse contentWidth hide-for-small-only">
+        	<div class="large-3 columns show-for-large-up logoDesktop"><a href="/" title="ATV"><img src="/blog/wp-content/themes/atv2015/images/logo.png" alt=""></a></div>
+		<div class="large-9 small-12 columns small-text-center large-text-right"><div class="ad" id="ATV_com_728x90_Top_PS" >
+		<script type="text/javascript">
+		googletag.cmd.push(function() { googletag.display('ATV_com_728x90_Top_PS'); });
+		</script>
+		</div></div>
+	</div><!--  end calss=row collapse contentWidth hide-for-small-only -->
+
+        <div class="row contentWidth">
+        	<div id="navDesk" class="topnav">
+            	<!-- ATV logo when fixed topnav -->
+		<div id="fixed-atv-logo"><a href="/"><img src="/blog/wp-content/themes/atv2015/images/atv-fixed-logo.jpg" /></a></div>
+		<!-- End ATV logo -->
+            	<!-- Hamburger icon for drop down on mobile-->
+                <ul class="right inline-list show-for-small-only hamburger-icon">
+                	<li class="mobileDD-btn"><span class="sprite mobileDD-icon">&nbsp;</span></li>
+                </ul>
+                <!-- End Hamburger icon for drop down on mobile-->
+            	<!-- Search icon -->
+            	<ul class="search-in-nav right inline-list">
+                	<li><span class="sprite search-icon">&nbsp;</span>
+                    	<div class="topnav-dd-search">
+                        	<div class="row contentWidth">
+                            <div class="small-12 columns">
+				<form id="google-cse-searchbox-form" action="/search.html">
+				<input type="text" onFocus="if(this.value=='Search ATV.com') this.value=''" value="Search ATV.com" name="q" class="searchinput">
+				<input type="submit" value="Search" style="display:none">
+                                    <ul class="inline-list">
+                                    	<li>Popular Keywords:</li>
+<li><a href="http://www.atv.com/search.html?q=Quad">Quad</a></li>
+<li><a href="http://www.atv.com/search.html?q=Yamaha">Yamaha</a></li>
+<li><a href="http://www.atv.com/search.html?q=Polaris">Polaris</a></li>
+<li><a href="http://www.atv.com/search.html?q=Honda">Honda</a></li>
+<li><a href="http://www.atv.com/search.html?q=ATV+for+Sale">ATV for Sale</a></li>
+<li><a href="http://www.atv.com/search.html?q=Tires+for+ATV">Tires for ATV</a></li>
+<li><a href="http://www.atv.com/search.html?q=Polaris+Ranger">Polaris Ranger</a></li>
+<li><a href="http://www.atv.com/search.html?q=UTV+Polaris">UTV Polaris</a></li>
+                                    </ul>
+                                    <span class="close-icon right"></span>
+                                </form>
+                            </div> <!-- End small-12 columns -->
+                            </div> <!-- End row contentWidth -->
+                        </div>
+                    </li>
+                </ul>
+               <!-- End Search icon -->
+<ul class="topmenu-list"><li class="logo-mobile hide-for-large-up"><a href="http://www.atv.com"><img src="/blog/wp-content/themes/atv2015/images/logo-m.jpg" class="white-logo"><img src="/blog/wp-content/themes/atv2015/images/logo-m.png" class="orange-logo"></a>
+</li>
+<li class="hovertouch hide-for-small-only"><a href="http://www.atv.com/utvs/" class="submenu">UTVs</a>
+<div class="topnav-dd">
+<div class="row contentWidth">
+<div class="small-12 columns">
+<ul class="inline-list">
+<li><a href="http://www.atv.com/utvs/">All UTVs</a></li>
+<li><a href="http://www.atv.com/utvs/sport.html">Sport UTVs</a></li>
+<li><a href="http://www.atv.com/utvs/utility.html">Utility UTVs</a></li>
+</ul>
+<div class="show-for-large-up dd-articles"><ul class='inline-list'>                                <li itemscope="" itemtype="http://schema.org/Article">
+                                <a href="http://www.atv.com/manufacturer/honda/2017-honda-pioneer-1000-eps-review-video" itemprop="headline"><img src="http://atv.com.vsassets.com/blog/wp-content/uploads/2017/07/2017-Honda-Pioneer-1000-EPS-Action-11-500x285.jpg" itemprop="thumbnailUrl">2017 Honda Pioneer 1000 EPS Review + Video</a></li>
+                                <li itemscope="" itemtype="http://schema.org/Article">
+                                <a href="http://www.atv.com/manufacturer/kawasaki/2017-kawasaki-mule-pro-fx-eps-le-review-video" itemprop="headline"><img src="http://atv.com.vsassets.com/blog/wp-content/uploads/2017/07/2017-Kawasaki-Mule-Pro-FX-Towing-1-500x285.jpg" itemprop="thumbnailUrl">2017 Kawasaki Mule Pro-FX EPS LE Review + Video</a></li>
+                                <li itemscope="" itemtype="http://schema.org/Article">
+                                <a href="http://www.atv.com/comparisons/2017-can-am-defender-hd5-vs-polaris-ranger-570-by-the-numbers" itemprop="headline"><img src="http://atv.com.vsassets.com/blog/wp-content/uploads/2017/06/Can-Am-Defender-HD5-Polaris-Ranger-570-500x285.jpg" itemprop="thumbnailUrl">2017 Can-Am Defender HD5 vs. Polaris Ranger 570: By the Numbers</a></li>
+                                <li itemscope="" itemtype="http://schema.org/Article">
+                                <a href="http://www.atv.com/manufacturer/honda/2018-honda-pioneer-1000-and-700-lineup-unveiled" itemprop="headline"><img src="http://atv.com.vsassets.com/blog/wp-content/uploads/2017/06/2018-Honda-Pioneer-1000-5-500x285.jpg" itemprop="thumbnailUrl">2018 Honda Pioneer 1000 and 700 Lineup Unveiled</a></li>
+                                <li itemscope="" itemtype="http://schema.org/Article">
+                                <a href="http://www.atv.com/manufacturer/kawasaki/kawasaki-celebrating-30-years-of-the-mule" itemprop="headline"><img src="http://atv.com.vsassets.com/blog/wp-content/uploads/2017/06/1988-Kawasaki-Mule-1000-500x285.jpg" itemprop="thumbnailUrl">Kawasaki Celebrating 30 Years of the Mule</a></li>
+</ul></div><!-- End show-for-large-up dd-articles -->
+</div><!-- End small-12 columns -->
+</div><!-- End row contentWidth -->
+</div><!-- End  topnav-dd-->
+
+</li>
+<li class="hovertouch hide-for-small-only"><a href="http://www.atv.com/atvs/" class="submenu">ATVs</a>
+<div class="topnav-dd">
+<div class="row contentWidth">
+<div class="small-12 columns">
+<ul class="inline-list">
+<li><a href="http://www.atv.com/atvs/">All ATVs</a></li>
+<li><a href="http://www.atv.com/atvs/sport.html">Sport ATVs</a></li>
+<li><a href="http://www.atv.com/atvs/utility.html">Utility ATVs</a></li>
+<li><a href="http://www.atv.com/atvs/youth.html">Youth</a></li>
+</ul>
+<div class="show-for-large-up dd-articles"><ul class='inline-list'>                                <li itemscope="" itemtype="http://schema.org/Article">
+                                <a href="http://www.atv.com/comparisons/2018-yamaha-kodiak-450-eps-vs-can-am-outlander-450-dps-by-the-numbers" itemprop="headline"><img src="http://atv.com.vsassets.com/blog/wp-content/uploads/2017/07/Yamaha-Kodiak-450-Can-Am-Outlander-450-500x285.jpg" itemprop="thumbnailUrl">2018 Yamaha Kodiak 450 EPS vs. Can-Am Outlander 450 DPS: By the Numbers</a></li>
+                                <li itemscope="" itemtype="http://schema.org/Article">
+                                <a href="http://www.atv.com/comparison/2018-arctic-cat-mudpro-700-limited-vs-can-outlander-x-mr-650-numbers" itemprop="headline"><img src="http://atv.com.vsassets.com/blog/wp-content/uploads/2017/07/Arctic-Cat-MudPro-700-Can-Am-Outlander-X-MR-650-500x285.jpg" itemprop="thumbnailUrl">2018 Arctic Cat MudPro 700 Limited vs. Can-Am Outlander X MR 650: By the Numbers</a></li>
+                                <li itemscope="" itemtype="http://schema.org/Article">
+                                <a href="http://www.atv.com/manufacturer/honda/2018-honda-pioneer-1000-and-700-lineup-unveiled" itemprop="headline"><img src="http://atv.com.vsassets.com/blog/wp-content/uploads/2017/06/2018-Honda-Pioneer-1000-5-500x285.jpg" itemprop="thumbnailUrl">2018 Honda Pioneer 1000 and 700 Lineup Unveiled</a></li>
+                                <li itemscope="" itemtype="http://schema.org/Article">
+                                <a href="http://www.atv.com/features/top-five-atvs-we-wish-were-still-produced" itemprop="headline"><img src="http://atv.com.vsassets.com/blog/wp-content/uploads/2017/06/Honda-Three-Wheeler-671x382-500x285.jpg" itemprop="thumbnailUrl">Top Five ATVs We Wish Were Still Produced</a></li>
+                                <li itemscope="" itemtype="http://schema.org/Article">
+                                <a href="http://www.atv.com/comparisons/2017-suzuki-kingquad-500-axi-vs-honda-fourtrax-foreman-rubicon-4x4-by-the-numbers" itemprop="headline"><img src="http://atv.com.vsassets.com/blog/wp-content/uploads/2017/06/2017-Honda-Rubicon-vs-Suzuki-KingQuad-500-500x285.jpg" itemprop="thumbnailUrl">2017 Suzuki KingQuad 500 AXi vs. Honda FourTrax Foreman Rubicon 4x4: By the Numbers</a></li>
+</ul></div><!-- End show-for-large-up dd-articles -->
+</div><!-- End small-12 columns -->
+</div><!-- End row contentWidth -->
+</div><!-- End  topnav-dd-->
+
+</li>
+<li class="hovertouch hide-for-small-only"><span class="submenu">BRANDS</span>
+<div class="topnav-dd">
+<div class="row contentWidth">
+<div class="small-12 columns">
+<ul class="inline-list">
+<li><a href="http://www.atv.com/manufacturers/honda.html">Honda</a></li>
+<li><a href="http://www.atv.com/manufacturers/yamaha.html">Yamaha</a></li>
+<li><a href="http://www.atv.com/manufacturers/polaris.html">Polaris</a></li>
+<li><a href="http://www.atv.com/manufacturers/suzuki.html">Suzuki</a></li>
+<li><a href="http://www.atv.com/manufacturers/kawasaki.html">Kawasaki</a></li>
+<li><a href="http://www.atv.com/manufacturers/arctic-cat.html">Arctic Cat</a></li>
+<li><a href="http://www.atv.com/manufacturers/can-am.html">Can-Am</a></li>
+<li><a href="http://www.atv.com/manufacturers/john-deere.html">John Deere</a></li>
+<li><a href="http://www.atv.com/manufacturers/kymco.html">Kymco</a></li>
+<li><a href="http://www.atv.com/manufacturers/bobcat.html">Bobcat</a></li>
+<li><a href="http://www.atv.com/manufacturers/argo.html">Argo</a></li>
+<li><a href="http://www.atv.com/manufacturers/manufacturers-other.html">Other</a></li>
+</ul>
+<div class="show-for-large-up dd-articles"><ul class='inline-list'>                                <li itemscope="" itemtype="http://schema.org/Article">
+                                <a href="http://www.atv.com/blog/2017/07/belt-keep-slipping.html" itemprop="headline"><img src="http://atv.com.vsassets.com/blog/wp-content/uploads/2017/07/Polaris-Sportsman-500-500x285.jpg" itemprop="thumbnailUrl">Why Does My Belt Keep Slipping?</a></li>
+                                <li itemscope="" itemtype="http://schema.org/Article">
+                                <a href="http://www.atv.com/manufacturer/polaris/five-ways-to-improve-the-utility-of-your-polaris-ranger" itemprop="headline"><img src="http://atv.com.vsassets.com/blog/wp-content/uploads/2017/07/Polaris-Ranger-Feature-500x285.jpg" itemprop="thumbnailUrl">Five Ways to Improve the Utility of Your Polaris Ranger</a></li>
+                                <li itemscope="" itemtype="http://schema.org/Article">
+                                <a href="http://www.atv.com/comparisons/2018-yamaha-kodiak-450-eps-vs-can-am-outlander-450-dps-by-the-numbers" itemprop="headline"><img src="http://atv.com.vsassets.com/blog/wp-content/uploads/2017/07/Yamaha-Kodiak-450-Can-Am-Outlander-450-500x285.jpg" itemprop="thumbnailUrl">2018 Yamaha Kodiak 450 EPS vs. Can-Am Outlander 450 DPS: By the Numbers</a></li>
+                                <li itemscope="" itemtype="http://schema.org/Article">
+                                <a href="http://www.atv.com/manufacturer/john-deere/angry-gator-modded-mondays" itemprop="headline"><img src="http://atv.com.vsassets.com/blog/wp-content/uploads/2017/07/825i-500x285.jpg" itemprop="thumbnailUrl">Angry Gator: Modded Mondays</a></li>
+                                <li itemscope="" itemtype="http://schema.org/Article">
+                                <a href="http://www.atv.com/manufacturer/honda/2017-honda-pioneer-1000-eps-review-video" itemprop="headline"><img src="http://atv.com.vsassets.com/blog/wp-content/uploads/2017/07/2017-Honda-Pioneer-1000-EPS-Action-11-500x285.jpg" itemprop="thumbnailUrl">2017 Honda Pioneer 1000 EPS Review + Video</a></li>
+</ul></div><!-- End show-for-large-up dd-articles -->
+</div><!-- End small-12 columns -->
+</div><!-- End row contentWidth -->
+</div><!-- End  topnav-dd-->
+
+</li>
+<li class="hovertouch hide-for-small-only"><a href="http://www.atv.com/parts-gear" class="submenu">PARTS &#038; GEAR</a>
+<div class="topnav-dd">
+<div class="row contentWidth">
+<div class="small-12 columns">
+<ul class="inline-list">
+<li><a href="http://www.atv.com/parts-gear">All Parts &#038; Gear</a></li>
+<li><a href="http://www.atv.com/parts-gear/helmets">Helmets</a></li>
+<li><a href="http://www.atv.com/parts-gear/gear">Gear</a></li>
+<li><a href="http://www.atv.com/parts-gear/tires-wheels">Tires &#038; Wheels</a></li>
+<li><a href="http://www.atv.com/parts-gear/part-acces">Part &#038; Acces</a></li>
+<li><a href="http://www.atv.com/parts-gear/electronics">Electronics</a></li>
+<li><a href="http://www.atv.com/parts-gear/other">Other</a></li>
+<li><a href="http://www.atv.com/buyers-guide">Buyer’s Guide</a></li>
+</ul>
+<div class="show-for-large-up dd-articles"><ul class='inline-list'>                                <li itemscope="" itemtype="http://schema.org/Article">
+                                <a href="http://www.atv.com/manufacturer/polaris/five-ways-to-improve-the-utility-of-your-polaris-ranger" itemprop="headline"><img src="http://atv.com.vsassets.com/blog/wp-content/uploads/2017/07/Polaris-Ranger-Feature-500x285.jpg" itemprop="thumbnailUrl">Five Ways to Improve the Utility of Your Polaris Ranger</a></li>
+                                <li itemscope="" itemtype="http://schema.org/Article">
+                                <a href="http://www.atv.com/blog/2017/07/kolpin-launch-new-switchblade-system.html" itemprop="headline"><img src="http://atv.com.vsassets.com/blog/wp-content/uploads/2017/07/Kolpin-SwitchBlade-Plow-500x285.jpg" itemprop="thumbnailUrl">Kolpin to Launch New SwitchBlade System</a></li>
+                                <li itemscope="" itemtype="http://schema.org/Article">
+                                <a href="http://www.atv.com/parts-gear/five-best-atv-boots" itemprop="headline"><img src="http://atv.com.vsassets.com/blog/wp-content/uploads/2017/07/ATV-Boots-Feature-500x285.jpg" itemprop="thumbnailUrl">Five Best ATV Boots</a></li>
+                                <li itemscope="" itemtype="http://schema.org/Article">
+                                <a href="http://www.atv.com/parts-gear/we-re-giving-away-a-quadboss-led-light-bar" itemprop="headline"><img src="http://atv.com.vsassets.com/blog/wp-content/uploads/2017/07/QuadBoss-LED-Light-Bar-500x285.jpg" itemprop="thumbnailUrl">We're Giving Away a QuadBoss LED Light Bar</a></li>
+                                <li itemscope="" itemtype="http://schema.org/Article">
+                                <a href="http://www.atv.com/parts-gear/poll-which-piece-of-riding-gear-do-you-spend-the-most-money-on" itemprop="headline"><img src="http://atv.com.vsassets.com/blog/wp-content/uploads/2017/07/Riding-Gear-500x285.jpg" itemprop="thumbnailUrl">Poll:  Which Piece of Riding Gear Do You Spend The Most Money On?</a></li>
+</ul></div><!-- End show-for-large-up dd-articles -->
+</div><!-- End small-12 columns -->
+</div><!-- End row contentWidth -->
+</div><!-- End  topnav-dd-->
+
+</li>
+<li class="hovertouch hide-for-small-only"><a href="http://www.atv.com/manufacturers/index.html" class="submenu">REVIEWS</a>
+<div class="topnav-dd">
+<div class="row contentWidth">
+<div class="small-12 columns">
+<ul class="inline-list">
+<li><a href="http://www.atv.com/manufacturers/index.html">All Reviews</a></li>
+<li><a href="http://www.atv.com/manufacturers/reviews-atv.html">ATVs</a></li>
+<li><a href="http://www.atv.com/manufacturers/reviews-utv.html">UTVs</a></li>
+<li><a href="http://www.atv.com/parts-gear/reviews">Parts &#038; Gear</a></li>
+<li><a href="http://www.atv.com/comparisons">Comparison / Shootouts</a></li>
+<li><a href="http://www.atv.com/editors-choice">Editor’s Choice</a></li>
+</ul>
+<div class="show-for-large-up dd-articles"><ul class='inline-list'>                                <li itemscope="" itemtype="http://schema.org/Article">
+                                <a href="http://www.atv.com/comparisons/2018-yamaha-kodiak-450-eps-vs-can-am-outlander-450-dps-by-the-numbers" itemprop="headline"><img src="http://atv.com.vsassets.com/blog/wp-content/uploads/2017/07/Yamaha-Kodiak-450-Can-Am-Outlander-450-500x285.jpg" itemprop="thumbnailUrl">2018 Yamaha Kodiak 450 EPS vs. Can-Am Outlander 450 DPS: By the Numbers</a></li>
+                                <li itemscope="" itemtype="http://schema.org/Article">
+                                <a href="http://www.atv.com/manufacturer/honda/2017-honda-pioneer-1000-eps-review-video" itemprop="headline"><img src="http://atv.com.vsassets.com/blog/wp-content/uploads/2017/07/2017-Honda-Pioneer-1000-EPS-Action-11-500x285.jpg" itemprop="thumbnailUrl">2017 Honda Pioneer 1000 EPS Review + Video</a></li>
+                                <li itemscope="" itemtype="http://schema.org/Article">
+                                <a href="http://www.atv.com/manufacturer/kawasaki/2017-kawasaki-mule-pro-fx-eps-le-review-video" itemprop="headline"><img src="http://atv.com.vsassets.com/blog/wp-content/uploads/2017/07/2017-Kawasaki-Mule-Pro-FX-Towing-1-500x285.jpg" itemprop="thumbnailUrl">2017 Kawasaki Mule Pro-FX EPS LE Review + Video</a></li>
+                                <li itemscope="" itemtype="http://schema.org/Article">
+                                <a href="http://www.atv.com/comparison/2018-arctic-cat-mudpro-700-limited-vs-can-outlander-x-mr-650-numbers" itemprop="headline"><img src="http://atv.com.vsassets.com/blog/wp-content/uploads/2017/07/Arctic-Cat-MudPro-700-Can-Am-Outlander-X-MR-650-500x285.jpg" itemprop="thumbnailUrl">2018 Arctic Cat MudPro 700 Limited vs. Can-Am Outlander X MR 650: By the Numbers</a></li>
+                                <li itemscope="" itemtype="http://schema.org/Article">
+                                <a href="http://www.atv.com/comparisons/2017-can-am-defender-hd5-vs-polaris-ranger-570-by-the-numbers" itemprop="headline"><img src="http://atv.com.vsassets.com/blog/wp-content/uploads/2017/06/Can-Am-Defender-HD5-Polaris-Ranger-570-500x285.jpg" itemprop="thumbnailUrl">2017 Can-Am Defender HD5 vs. Polaris Ranger 570: By the Numbers</a></li>
+</ul></div><!-- End show-for-large-up dd-articles -->
+</div><!-- End small-12 columns -->
+</div><!-- End row contentWidth -->
+</div><!-- End  topnav-dd-->
+
+</li>
+<li id="moreLink" class="hovertouch show-for-medium-only"><a class="submenu">More</a>
+<div class="topnav-dd">
+<div class="row contentWidth">
+<div class="small-12 columns"><!-- Placeholder for content. Added via jQuery --></div><!-- End small-12 columns -->
+</div><!-- End row contentWidth -->
+</div><!-- End  topnav-dd-->
+
+</li>
+<li class="hide"><!-- do not remove -->
+</li>
+<li class="moveToMore hovertouch hide-for-small-only"><a href="http://www.atv.com/features/index.html" class="submenu">FEATURES</a>
+<div class="topnav-dd">
+<div class="row contentWidth">
+<div class="small-12 columns">
+<ul class="inline-list">
+<li><a href="http://www.atv.com/features/index.html">All Features</a></li>
+<li><a href="http://www.atv.com/features/top-10">Top 10</a></li>
+<li><a href="http://www.atv.com/events/index.html">Event / Show</a></li>
+<li><a href="http://www.atv.com/feature/race-coverage">Race Coverage</a></li>
+</ul>
+<div class="show-for-large-up dd-articles"><ul class='inline-list'>                                <li itemscope="" itemtype="http://schema.org/Article">
+                                <a href="http://www.atv.com/manufacturer/polaris/five-ways-to-improve-the-utility-of-your-polaris-ranger" itemprop="headline"><img src="http://atv.com.vsassets.com/blog/wp-content/uploads/2017/07/Polaris-Ranger-Feature-500x285.jpg" itemprop="thumbnailUrl">Five Ways to Improve the Utility of Your Polaris Ranger</a></li>
+                                <li itemscope="" itemtype="http://schema.org/Article">
+                                <a href="http://www.atv.com/features/2017-rally-in-the-pines-report" itemprop="headline"><img src="http://atv.com.vsassets.com/blog/wp-content/uploads/2017/07/Lunch-Break-500x285.jpg" itemprop="thumbnailUrl">2017 Rally in the Pines Report</a></li>
+                                <li itemscope="" itemtype="http://schema.org/Article">
+                                <a href="http://www.atv.com/parts-gear/five-new-action-cameras-for-capturing-your-rides" itemprop="headline"><img src="http://atv.com.vsassets.com/blog/wp-content/uploads/2017/07/Helmet-Mounted-Action-Camera-500x285.jpg" itemprop="thumbnailUrl">Six New Action Cameras for Capturing Your Rides</a></li>
+                                <li itemscope="" itemtype="http://schema.org/Article">
+                                <a href="http://www.atv.com/features/top-five-atvs-we-wish-were-still-produced" itemprop="headline"><img src="http://atv.com.vsassets.com/blog/wp-content/uploads/2017/06/Honda-Three-Wheeler-671x382-500x285.jpg" itemprop="thumbnailUrl">Top Five ATVs We Wish Were Still Produced</a></li>
+                                <li itemscope="" itemtype="http://schema.org/Article">
+                                <a href="http://www.atv.com/blog/2017/06/walker-fowler-shines-amsoil-snowshoe-gncc.html" itemprop="headline"><img src="http://atv.com.vsassets.com/blog/wp-content/uploads/2017/06/Walker-Fowler-Snowshoe-GNCC-500x285.jpg" itemprop="thumbnailUrl">Walker Fowler Shines at AMSOIL Snowshoe GNCC</a></li>
+</ul></div><!-- End show-for-large-up dd-articles -->
+</div><!-- End small-12 columns -->
+</div><!-- End row contentWidth -->
+</div><!-- End  topnav-dd-->
+
+</li>
+<li class="moveToMore hovertouch hide-for-small-only"><span class="submenu">BUY & SELL</span>
+<div class="topnav-dd">
+<div class="row contentWidth">
+<div class="small-12 columns"><ul class="inline-list hasIcons"><li><a class="icon-classified" href="http://www.atv.com/classifieds/atv-classifieds.html">Classifieds <span class='show-for-large-up'>Our ATV Classifieds provide easy-to-search listings of ATV's for sale</span></a></li><li><a class="icon-insurance" href="/buyers-guide/atv-insurance.html">Insurance <span class="show-for-large-up">Use our ATV Insurance to call for a atv insurance quote</span></a></li><li><a class="icon-locator" href="http://www.atv.com/dealers">Dealer Locator <span class="show-for-large-up">A quality ATV dealer can make all the difference in the world</span></a></li><li><a class="icon-quote" href="http://www.atv.com/price-quote/">Price Quote <span class="show-for-large-up">Research the ATV and get a ATV quote from local dealers</span></a></li></ul></div><!-- End small-12 columns -->
+</div><!-- End row contentWidth -->
+</div><!-- End  topnav-dd-->
+
+</li>
+<li class="moveToMore hide-for-small-only"><a href="/specs/">SPECS</a>
+</li>
+<li class="hide-for-large-up moveToMore hovertouch hide-for-small-only"><a href="http://www.atv.com/trails/" >Trails & Travel</a></li><li class="hide-for-large-up moveToMore hide-for-small-only"><a href="http://www.atv.com/how-to/" >How To</a></li><li class="hide-for-large-up moveToMore hide-for-small-only"><a href="http://www.atv.com/buyers-guide/atv-insurance.html" >Insurance</a></li><li class="hide-for-large-up moveToMore hide-for-small-only"><a href="http://www.atv.com/atv-community/" >ATV Community</a></li>
+</ul>        </div>
+    </div> <!-- end for First class="row contentWidth" wrapping the id="navDesk" class="topnav" -->
+</div>  <!-- end for id="header" class="row collapse fullWidth" -->
+<div id="subMenu" class="row collapse fullWidth show-for-large-up nolinks">
+	<div class="row collapse contentWidth">
+        <div class="large-8 columns">
+        	<ul class="inline-list subMenu">
+		<li><a href="http://www.atv.com/trails/">Trails &#038; Travel</a></li>
+<li><a href="http://www.atv.com/how-to/">How To</a></li>
+<li><a href="http://www.atv.com/buyers-guide/atv-insurance.html">Insurance</a></li>
+<li><a href="http://www.atv.com/atv-community/">ATV Community</a></li>
+                </ul>
+            </div>
+            <div class="large-4 columns socialBtns">
+            	<ul class="inline-list right">
+               		<li><a href="http://www.facebook.com/ATVcom" target="_blank"><span class="sprite facebook"></span></a></li>
+                    <li><a href="http://twitter.com/#!/atvcom" target="_blank"><span class="sprite twitter"></span></a></li>
+                                    </ul>
+            </div>
+        </div>
+  </div>
+  <!-- End Header -->
+
+  <!-- test pushdown -->
+    <div class="row nolinks" id="topPushover">
+    <div class="ad" id="ATV_com_x62_PS" >
+<script type="text/javascript">
+googletag.cmd.push(function() { googletag.display('ATV_com_x62_PS'); });
+</script>
+</div>    </div>
+  <!-- /test pushdown -->
+<!-- header from cache --><!--  header part end -->
+
+<!--  Content -->
+<div id="content" >
+
+
+<div class="row large-collapse">
+
+	<!-- Sidebar top -->
+	<div id="sidebar-controls" class="show-for-medium-only nolinks">&nbsp;</div>
+
+	<aside class="large-4 columns show-for-large-up sidebar-container nolinks">
+		<div class="sidebar">
+<div class="ad" id="ATV_com_Featured_ATV_Left_PS">
+<script type="text/javascript">
+googletag.cmd.push(function() { googletag.display('ATV_com_Featured_ATV_Left_PS'); });
+</script>
+</div>
+<div class="row">	<div class="small-12 columns">		<ul class="tabs" data-tab>			<li class="tab-title active"><a href="#tabs-atvSpecs">ATV Specs</a></li>			<li class="tab-title"><a href="#tabs-priceQuote">Price Quote</a></li>			<li class="tab-title"><a href="#tabs-classifieds">Classifieds</a></li>		</ul>	</div>	<div class="small-12 columns links-padding">		<a href="http://www.atv.com/buyers-guide/atv-insurance.html" class="smaller-font">Get a free insurance Quote</a> | <a href="/dealers" class="smaller-font">Find an ATV Dealer</a>	</div></div><div class="tabs-content">
+	<div class="row content active" id="tabs-atvSpecs">
+	<form id="specs_form" action='/specs/index.php' method=post>
+
+		<input class='defaultManufacturer' type='hidden' name='defaultManufacturer' value=''>
+	    <input class='defaultCategory' type='hidden' name='defaultCategory' value=''>
+	    <input class='defaultYear' type='hidden' name='defaultYear' value=''>
+	    <input class='defaultModel' type='hidden' name='defaultModel' value=''>
+
+		<div class="small-6 columns">
+		<select class="MakeId" name="MakeId" onChange="javascript:if(typeof specs_get_NextDropdown=='function'){specs_get_NextDropdown('specs_form',1,false,true);}else{page_get_NextDropdown(1);}" >
+        	<option value="">Make</option>
+		</select>
+		</div>
+
+		<div class="small-6 columns">
+		<select class="ModelType" name="ModelType" onChange="javascript:if(typeof specs_get_NextDropdown=='function'){specs_get_NextDropdown('specs_form',2,false,true);}else{page_get_NextDropdown(2);}" >
+        	<option value="">&nbsp;</option>
+		</select>
+		</div>
+
+		<div class="small-6 columns">
+		<select class="ModelYear year" name="ModelYear" onChange="javascript:if(typeof specs_get_NextDropdown=='function'){specs_get_NextDropdown('specs_form',3,false,true);}else{page_get_NextDropdown(3);}" >
+        	<option value="">&nbsp;</option>
+		</select>
+		</div>
+
+		<div class="small-6 columns">
+		<select class="TrimId" name="TrimId" >
+		</select>
+		</div>
+
+		<div class="small-12 columns text-center">
+		<input type="submit" name="get_specs" value="Find my ATV" class="button radius">
+		</div>
+	</form>
+	</div>
+
+	<div class="row content" id="tabs-priceQuote">
+	<form id="pricequote_form"  method=post>
+
+		<div class="small-6 columns">
+		<select id="pMakeId" name="pMakeId" onChange='javascript:page_p_get_NextDropdown(1)' class="textfield">
+        	<option value="">Make</option>
+		</select>
+		</div>
+
+		<div class="small-6 columns">
+		<select id="pModelType" name="pModelType" onChange='javascript:page_p_get_NextDropdown(3)'  class="textfield">
+        	<option value="">&nbsp;</option>
+		</select>
+		</div>
+
+		<div class="small-6 columns">
+		<select id="pTrimId" name="pTrimId"  class="textfield">
+		</select>
+		</div>
+
+		<div class="small-12 columns text-center">
+		<input name="get_quote" value="Find Price" class="button radius" type="submit" onclick="javascript:jump_to_new_trim($('#pTrimId').val());return false;" />
+		</div>
+
+	</form>
+	</div>
+
+	<div class="row content" id="tabs-classifieds">
+	<form id="classifieds-form" action='/classifieds/search.php' method="post" >
+		<div class="small-6 columns">
+
+	<select id="cMakeId" name="vehicle_manufacturer" >
+		<option value="">All Manufacturers</option>
+			<option value="AlphaSports"   disabled="disabled"  >AlphaSports</option><option value="Arctic Cat"   >Arctic Cat</option><option value="Bennche"   >Bennche</option><option value="Bobcat"   >Bobcat</option><option value="Bombardier"   >Bombardier</option><option value="Can-Am"   >Can-Am</option><option value="Case IH"   disabled="disabled"  >Case IH</option><option value="CFMOTO"   >CFMOTO</option><option value="Cub Cadet"   disabled="disabled"  >Cub Cadet</option><option value="E-ton"   disabled="disabled"  >E-ton</option><option value="Hisun"   >Hisun</option><option value="Honda"   >Honda</option><option value="Hyosung"   disabled="disabled"  >Hyosung</option><option value="John Deere"   >John Deere</option><option value="Kawasaki"   >Kawasaki</option><option value="KIOTI"   disabled="disabled"  >KIOTI</option><option value="KTM"   >KTM</option><option value="Kubota"   >Kubota</option><option value="Kymco"   >Kymco</option><option value="Land Pride"   disabled="disabled"  >Land Pride</option><option value="Mahindra"   disabled="disabled"  >Mahindra</option><option value="New Holland"   disabled="disabled"  >New Holland</option><option value="Polaris"   >Polaris</option><option value="QLINK"   disabled="disabled"  >QLINK</option><option value="Suzuki"   >Suzuki</option><option value="SYM"   disabled="disabled"  >SYM</option><option value="Tomberlin"   disabled="disabled"  >Tomberlin</option><option value="United Motors"   disabled="disabled"  >United Motors</option><option value="Vento"   disabled="disabled"  >Vento</option><option value="Yamaha"   >Yamaha</option>
+		<option value="Other">Other</option>
+	</select>
+
+					
+		</div>
+		<div class="small-6 columns">
+		<input name="zip_state" type="text" placeholder="Zip Code or State" >
+		</div>
+		<div class="small-12 columns text-center">
+		<input name="get_classifieds" value="Find" class="button radius" type="submit" />
+		<input type="hidden" name="submitform" value="1" />
+		<input type="hidden" name="ad_type" value="vehicle" />
+		<input type="hidden" name="advance" value="1" />
+		</div>
+	</form>
+	</div>
+
+</div><!-- End Price tabs -->	<!-- Social -->
+	<div class="social-sidebar">
+		<a href="https://www.facebook.com/ATVcom" target="_blank" class="ss-f"><span>Like us on Facebook</span></a>
+		<a href="https://twitter.com/atvcom" target="_blank" class="ss-t"><span>Follow Us on Twitter</span></a>
+		<div class="get-news"><span class="e">Get ATV.com News Fast</span></div>
+		<div class="form-sign-up">
+			<form class="form" method="post" action="http://email.atv.com/newsletter-signup/">
+				<input type="hidden" name="form[source]" value="wp_generic" />
+                <input type="hidden" name="form[subscribeCheck]" required="required" value="1" />			
+				<input name="form[email]" placeholder="Your Email Address" type="text"  required />
+				<input name="Submit" value="Sign-up" type="submit" class="button radius" accesskey="s" title="Subscribe" />
+			</form>
+		</div>
+	</div>
+	 <!-- End Social -->
+
+<div class="ad" id="ATV_com_300x250_TopRight_PS">
+<script type="text/javascript">
+googletag.cmd.push(function() { googletag.display('ATV_com_300x250_TopRight_PS'); });
+</script>
+</div>
+<ul class="inline-list logos"> 
+                <li><a href="/manufacturers/honda.html"><span class="logo-sprite honda"></span> Honda</a></li> 
+                <li><a href="/manufacturers/yamaha.html"><span class="logo-sprite yamaha"></span> Yamaha</a></li> 
+                <li><a href="/manufacturers/polaris.html"><span class="logo-sprite polaris"></span> Polaris</a></li> 
+                <li><a href="/manufacturers/suzuki.html"><span class="logo-sprite suzuki"></span> Suzuki</a></li> 
+                <li><a href="/manufacturers/kawasaki.html"><span class="logo-sprite kawasaki"></span> Kawasaki</a></li> 
+                <li><a href="/manufacturers/arctic-cat.html"><span class="logo-sprite arcticcat"></span> Arctic Cat</a></li> 
+                <li><a href="/manufacturers/can-am.html"><span class="logo-sprite canam"></span> Can-Am</a></li> 
+                <li><a href="/manufacturers/john-deere.html"><span class="logo-sprite johndeere"></span> John Deere</a></li> 
+                <li><a href="/manufacturers/kymco.html"><span class="logo-sprite kymco"></span> Kymco</a></li> 
+                <li><a href="/manufacturers/bobcat.html"><span class="logo-sprite bobcat"></span> Bobcat</a></li> 
+<li><a href="/manufacturers/argo.html"><span class="logo-sprite argo"></span> Argo</a></li> 
+                <li><a href="/manufacturers/manufacturers-other.html"><span class="logo-sprite other"></span> Other</a></li> 
+        </ul> <div class="ad" id="ATV_com_300x600_Left_PS">
+<script type="text/javascript">
+googletag.cmd.push(function() { googletag.display('ATV_com_300x600_Left_PS'); });
+</script>
+</div>
+<section class="section" id="featured-videos"><a href="http://www.atv.com/videos.html"><h2>Featured Videos</h2></a>	<div class="row" itemscope="" itemtype="http://schema.org/Article">
+		<div class="small-6 columns">
+			<a href="http://www.atv.com/fast-lap-from-unadilla-mx-video">
+			<img src="http://atv.com.vsassets.com/blog/wp-content/uploads/2017/07/Sky-Shot-500x285.jpg" itemprop="thumbnailUrl"><span class="play-overlay-small"><span></span></span></a>
+		</div>
+		<div class="small-6 columns"><a href="http://www.atv.com/fast-lap-from-unadilla-mx-video" itemprop="headline">Fast Lap From Unadilla MX + Video</a></div>
+	</div>
+	<div class="row" itemscope="" itemtype="http://schema.org/Article">
+		<div class="small-6 columns">
+			<a href="http://www.atv.com/insane-utv-hill-climb-action-from-adventure-off-road-park-video">
+			<img src="http://atv.com.vsassets.com/blog/wp-content/uploads/2017/07/Rock-Racing-500x285.jpg" itemprop="thumbnailUrl"><span class="play-overlay-small"><span></span></span></a>
+		</div>
+		<div class="small-6 columns"><a href="http://www.atv.com/insane-utv-hill-climb-action-from-adventure-off-road-park-video" itemprop="headline">Insane UTV Hill Climb Action From Adventure Off Road Park + Video</a></div>
+	</div>
+	<div class="row" itemscope="" itemtype="http://schema.org/Article">
+		<div class="small-6 columns">
+			<a href="http://www.atv.com/do-you-like-powdered-donuts-video">
+			<img src="http://atv.com.vsassets.com/blog/wp-content/uploads/2017/07/Powdered-Donuts-500x285.jpg" itemprop="thumbnailUrl"><span class="play-overlay-small"><span></span></span></a>
+		</div>
+		<div class="small-6 columns"><a href="http://www.atv.com/do-you-like-powdered-donuts-video" itemprop="headline">Do You Like Powdered Donuts? + Video</a></div>
+	</div>
+	<div class="row" itemscope="" itemtype="http://schema.org/Article">
+		<div class="small-6 columns">
+			<a href="http://www.atv.com/riding-double-launching-a-utility-quad-off-a-freestyle-ramp-video">
+			<img src="http://atv.com.vsassets.com/blog/wp-content/uploads/2017/07/Riding-double-500x285.jpg" itemprop="thumbnailUrl"><span class="play-overlay-small"><span></span></span></a>
+		</div>
+		<div class="small-6 columns"><a href="http://www.atv.com/riding-double-launching-a-utility-quad-off-a-freestyle-ramp-video" itemprop="headline">Riding Double Launching a Utility Quad Off a Freestyle Ramp + Video</a></div>
+	</div>
+</section>
+<!-- sidebar_long sidebar from cache --></div>
+
+	</aside>
+	<!-- End Sidebar -->
+
+	<div class="large-8 small-12 columns contentContainer">
+    	<!-- Breadcrumbs -->
+        <nav class="breadcrumbs nolinks" role="menubar" aria-label="breadcrumbs">
+            <li role="menuitem"><a href="/">ATV.com</a></li>
+			<li role="menuitem"><a href="http://www.atv.com/how-to/">How To</a></li>
+<li role="menuitem"><a href="http://www.atv.com/manufacturers/polaris.html">Polaris</a></li>
+        </nav>
+        <!-- End Breadcrumbs -->
+
+        
+        <!-- Article -->
+        <article class="article" itemtype="http://schema.org/Article" itemscope="">
+        	<div class="row">
+        		<div class="small-12 columns nolinks">
+                	<h1 itemprop="headline">Why Does My Belt Keep Slipping?</h1>
+                    <span class="author">Story by Rick Sosebee.</span>
+                                        <span class="date" itemprop="datePublished" content="2017-07-20 (3 minutes ago)">Jul. 20, 2017 (3 minutes ago)</span>
+                    <span class="comments" itemprop="interactionCount"><a href="#disqus_thread">0</a></span>
+                 </div>
+            </div>
+
+            
+
+            <!-- Social block -->
+            <div class="social-block">
+						
+            	<div class="row collapse">
+                	<div class="small-6 medium-4 columns s-facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.atv.com%2Fblog%2F2017%2F07%2Fbelt-keep-slipping.html" class="social-link" onClick="window.open(this.href, '', 'height=279,width=575'); event.preventDefault();"><span class="f">Share</span><span class="count" data-facebook-share-count-url="http://www.atv.com/blog/2017/07/belt-keep-slipping.html" ></span></a></div>
+                    <div class="small-6 medium-4 columns s-twitter"><a href="https://twitter.com/intent/tweet?text=Why+Does+My+Belt+Keep+Slipping%3F&url=http%3A%2F%2Fwww.atv.com%2Fblog%2F2017%2F07%2Fbelt-keep-slipping.html&via=ATVcom" class="social-link" onClick="window.open(this.href, '', 'height=430,width=600'); event.preventDefault();"><span class="t">Tweet</span><span class="count"></span></a></div>
+                    <div class="small-12 medium-4 columns s-subscribe"><a href="" class="social-link">Subscribe<span class="arrow"></span></a></div>
+                </div>
+                <div class="row subscribe-sub">
+                	<div class="small-12 medium-6 columns">
+                    	<h4>Get ATV.com in your Inbox</h4>
+						<form class="form" method="post" action="http://email.atv.com/newsletter-signup/">
+				            <input name="form[email]" placeholder="Your Email Address" type="text" required />
+				            <input name="Submit" value="GO" type="submit" class="button radius" accesskey="s" title="Subscribe" />
+                    		<input type="hidden" name="form[source]" value="wp_generic" />
+                    		<input type="hidden" name="form[subscribeCheck]" required="required" value="1" />
+				        </form>
+                    </div>
+                    <div class="small-12 medium-6 columns">
+                    	<h4>Like ATV.com on Facebook</h4>
+                        <div class="fb-like" data-href="https://www.facebook.com/ATVcom" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Social block -->
+
+
+			<img src="http://atv.com.vsassets.com/blog/wp-content/uploads/2017/07/Polaris-Sportsman-500-671x382.jpg" class="photo" itemprop="thumbnailUrl">
+
+            <div class="ut-icons text-center">
+            	<ul class="inline-list">
+                	<li><a href="" class="emailpopup" ><span class="sprite ut-email"></span><span>Email a friend</span></a></li>
+		        		                            <li><a href="#comments"><span class="sprite ut-comment"></span><span>Comment</span></a></li>
+                </ul>
+            </div>
+
+
+			            <h2 class="subheader nolinks" itemprop="alternativeHeadline">Polaris Sportsman 500 owner struggling with belt performance</h2>
+            
+            <!-- Begin Text -->
+            <div class="text" itemprop="text">
+            <p>Why does my belt keep slipping? This is what one confused Polaris Sportsman 500 owner wants to know and he turned to the ATV AnswerMan for help.</p>
+<p>Here is exactly what the reader asked the ATV AnswerMan, followed by his answer:</p>
+<p style="padding-left: 30px;"><em>I have a 2003 Polaris Sportsman 500 4&#215;4 that grinds when putting it in gear. We took cover off clutch and the secondary clutch keeps turning when in neutral. So we looked and the belt wasn&#8217;t lined up, we noticed the belt had slipped over on the track of the clutch. We moved it over and it worked fine so we put it back together, road it and it slipped off again. Is it the belt or the clutch?  </em></p>
+<p>There are several different scenarios that could be affecting the belt performance on your Sportsman 500. These machines did begin to have what’s called EBS after 1999 and the belt should always be tight where older machines needed belt deflection or tension adjustments. With that said, the belt should be snug and alignment would be my first go to operation.</p>
+<p>You stated that you can notice the drive and driven pulleys are not exactly lined up correctly, so let&#8217;s look at the quick alignment procedure. You will need a tool that Polaris sells to get this correct unless you are very good with a straight edge. I&#8217;d say get a service manual and the tool if you plan on keeping the quad.</p>
+<p>Before looking at the drive and driven sheave alignment I would get your hands on the driven sheave. There is a bearing inside this pulley system that might be going bad and causing the pulley to not release the belt. The roller bearing can freeze up as it goes bad, causing the consistent tension there. If these parts have never been serviced then you might think about a complete overhaul first.</p>
+<p>As for the alignment, start with the purchase of the “Offset Alignment Bar” under Polaris part number 2870654. This tool will help expedite the pulley alignment and once placed onto the back half of the drive sheave the bar lays across the backside of the driven pulley. This gives you a bird’s eye view of the alignment and how square the pulleys are. The clutch alignment is in spec when the gap between the tool and the driven sheave is about 1/8<sup>th</sup> inch of space. If this gap is larger or smaller, you will need to adjust the transmission to the engine for proper spacing. This is best explained in the OEM service manual. I’d say this could be a perfect starting point to figuring out your issues.</p>
+<p>I hope this helps. Let us know how it works out.</p>            </div>
+            <!-- End Text -->
+
+        </article>
+        <!-- End Article -->
+
+
+        
+
+		
+
+            <!-- Social block -->
+            <div class="social-block">
+										<style>
+					.specialCampaignBanner {position: relative;font-weight: bold;background-color:#000;/* rgba(0, 0, 0, 1) !important;*/margin-bottom: 25px !important;}
+					.specialCampaignBanner a {margin: 0 auto;padding: 0;text-decoration: none;}
+					.specialCampaignBanner img {position: relative;float: left;width: 100%;}
+					.specialCampaignTitle {position: absolute;padding:3px 17px 2px 17px;top:0;right:0;max-width: 100%;color: #000;font-size: 14px;font-style:italic;text-align: center;background-color: #fae202;z-index:1;text-transform: uppercase;font-weight: 500;}
+					.specialCampaignBanner span {position: absolute;display: block;max-width: 100%;bottom: 0;left:0;color: #fcff00;font-size: 19px;text-align: left;line-height: 1;z-index:1;font-weight: 500;padding:0px 15px 10px 15px;}
+					@media (min-width:400px){
+					.specialCampaignBanner span {font-size: 20px;line-height: 23px;}
+					}
+				</style>
+			<div class="row mobile-only specialCampaignBanner">
+					<div class="specialCampaignTitle"></div>
+					<a style="height: 90px;" href="http://www.atv.com/can-am-adventure-hub" target="_blank">
+						<img src="http://atv.com.vsassets.com/blog/wp-content/uploads/2017/06/Glamis-watch-v2-02.jpg">
+									<span></span>
+					</a>
+			</div>
+
+            	<div class="row collapse">
+                	<div class="small-6 medium-4 columns s-facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.atv.com%2Fblog%2F2017%2F07%2Fbelt-keep-slipping.html" class="social-link" onClick="window.open(this.href, '', 'height=279,width=575'); event.preventDefault();"><span class="f">Share</span><span class="count" data-facebook-share-count-url="http://www.atv.com/blog/2017/07/belt-keep-slipping.html" ></span></a></div>
+                    <div class="small-6 medium-4 columns s-twitter"><a href="https://twitter.com/intent/tweet?text=Why+Does+My+Belt+Keep+Slipping%3F&url=http%3A%2F%2Fwww.atv.com%2Fblog%2F2017%2F07%2Fbelt-keep-slipping.html&via=ATVcom" class="social-link" onClick="window.open(this.href, '', 'height=430,width=600'); event.preventDefault();"><span class="t">Tweet</span><span class="count"></span></a></div>
+                    <div class="small-12 medium-4 columns s-subscribe"><a href="" class="social-link">Subscribe<span class="arrow"></span></a></div>
+                </div>
+                <div class="row subscribe-sub">
+                	<div class="small-12 medium-6 columns">
+                    	<h4>Get ATV.com in your Inbox</h4>
+						<form class="form" method="post" action="http://email.atv.com/newsletter-signup/">
+				            <input name="form[email]" placeholder="Your Email Address" type="text" required />
+				            <input name="Submit" value="GO" type="submit" class="button radius" accesskey="s" title="Subscribe" />
+                    		<input type="hidden" name="form[source]" value="wp_generic" />
+                    		<input type="hidden" name="form[subscribeCheck]" required="required" value="1" />
+				        </form>
+                    </div>
+                    <div class="small-12 medium-6 columns">
+                    	<h4>Like ATV.com on Facebook</h4>
+                        <div class="fb-like" data-href="https://www.facebook.com/ATVcom" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Social block -->
+
+
+        <h2 class="line"><span>Related</span></h2>
+<div class="row" >
+<ul class="related_post wp_rp">
+			<li data-position="0" data-poid="74900" data-post-type="none" style="list-style-type:none;" >
+        	<div class="medium-3 small-6 columns simple-thumbs" itemtype="http://schema.org/Article" itemscope="">
+            	<a href="http://www.atv.com/blog/2017/02/atv-lose-power-gets-warm.html" itemprop="headline" class="wp_rp_thumbnail">
+                	<img src="http://atv.com.vsassets.com/blog/wp-content/uploads/2017/02/Polaris-Sportsman-500-HO-500x285.jpg" itemprop="thumbnailUrl">
+                    Why Does My ATV Lose Power When it Gets Warm?
+                </a>
+            </div>
+        </li>
+
+		<li data-position="1" data-poid="66582" data-post-type="none" style="list-style-type:none;" >
+        	<div class="medium-3 small-6 columns simple-thumbs" itemtype="http://schema.org/Article" itemscope="">
+            	<a href="http://www.atv.com/how-to/atv-answerman---november-2015" itemprop="headline" class="wp_rp_thumbnail">
+                	<img src="http://atv.com.vsassets.com/blog/wp-content/uploads/2015/11/Polaris-RZR-900-EPS-Trail-500x285.jpg" itemprop="thumbnailUrl">
+                    ATV AnswerMan - November 2015
+                </a>
+            </div>
+        </li>
+
+		<li data-position="2" data-poid="77502" data-post-type="none" style="list-style-type:none;" >
+        	<div class="medium-3 small-6 columns simple-thumbs" itemtype="http://schema.org/Article" itemscope="">
+            	<a href="http://www.atv.com/how-to/why-do-i-keep-burning-through-belts" itemprop="headline" class="wp_rp_thumbnail">
+                	<img src="http://atv.com.vsassets.com/blog/wp-content/uploads/2017/07/Can-Am-Outlander-800R-500x285.jpg" itemprop="thumbnailUrl">
+                    Why Do I Keep Burning Through Belts?
+                </a>
+            </div>
+        </li>
+
+		<li data-position="3" data-poid="75989" data-post-type="none" style="list-style-type:none;" >
+        	<div class="medium-3 small-6 columns simple-thumbs" itemtype="http://schema.org/Article" itemscope="">
+            	<a href="http://www.atv.com/blog/2017/04/can-tell-starter-clutch-bad.html" itemprop="headline" class="wp_rp_thumbnail">
+                	<img src="http://atv.com.vsassets.com/blog/wp-content/uploads/2017/04/Yamaha-Raptor-660-500x285.jpg" itemprop="thumbnailUrl">
+                    How Can I Tell If My Starter Clutch Is Bad?
+                </a>
+            </div>
+        </li>
+
+</ul>
+	</div>
+<!-- related -->
+
+        		<h2 class="line"><span>Popular</span></h2>
+		<div class="row" data-equalizer >
+
+<!-- WordPress Popular Posts Plugin v3.3.2 [PHP] [monthly] [views] [custom] -->
+
+ 
+			<div class="medium-3 small-6 columns simple-thumbs" data-equalizer-watch itemtype="http://schema.org/Article" itemscope="">
+    			<a href="http://www.atv.com/blog/2017/04/atv-manufacturer-reliable.html" itemprop="headline">
+        			<img src="http://atv.com.vsassets.com/blog/wp-content/uploads/2017/04/Most-Reliable-ATV-Manufacturer.jpg" itemprop="thumbnailUrl">
+            		Which ATV Manufacturer is the Most Reliable?
+        		</a>
+    		</div>
+			<div class="medium-3 small-6 columns simple-thumbs" data-equalizer-watch itemtype="http://schema.org/Article" itemscope="">
+    			<a href="http://www.atv.com/features/top-five-atvs-we-wish-were-still-produced" itemprop="headline">
+        			<img src="http://atv.com.vsassets.com/blog/wp-content/uploads/2017/06/Honda-Three-Wheeler-671x382.jpg" itemprop="thumbnailUrl">
+            		Top Five ATVs We Wish Were Still Produced
+        		</a>
+    		</div>
+			<div class="medium-3 small-6 columns simple-thumbs" data-equalizer-watch itemtype="http://schema.org/Article" itemscope="">
+    			<a href="http://www.atv.com/when-the-most-interesting-man-in-the-world-drives-a-maverick-x3-video" itemprop="headline">
+        			<img src="http://atv.com.vsassets.com/blog/wp-content/uploads/2017/06/Most-interesting-mand.jpg" itemprop="thumbnailUrl">
+            		When the Most Interesting Man in the World Drives a Maverick X3 + Video
+        		</a>
+    		</div>
+			<div class="medium-3 small-6 columns simple-thumbs" data-equalizer-watch itemtype="http://schema.org/Article" itemscope="">
+    			<a href="http://www.atv.com/watch-this-rzr-smoke-a-mustang-gt500-video" itemprop="headline">
+        			<img src="http://atv.com.vsassets.com/blog/wp-content/uploads/2017/04/RZR-vs-Mustang.jpg" itemprop="thumbnailUrl">
+            		Watch This RZR Smoke a Mustang GT500 + Video
+        		</a>
+    		</div>
+
+ 
+
+<!-- End WordPress Popular Posts Plugin v3.3.2 -->
+		</div> <!-- End popular -->
+
+<!-- popular posts from cache -->
+                <h2 class="line"><span>Featured Vehicles</span></h2>
+        <div class="row margin-bottom-2" data-equalizer>
+        	        	<div class="medium-3 small-6 columns simple-thumbs" data-equalizer-watch>
+            	<a href="http://www.atv.com/specs/polaris/sport-utv/2016/general-tm/1000-eps-deluxe.html">
+                	<img src="http://atv.com.vsassets.com/specs/sites/atv/images/thumbs/250/2016_Polaris_GENERAL_1000EPSDeluxe.jpg">
+                    2016 Polaris GENERAL&#8482; 1000 EPS Deluxe
+                    <br><b>MSRP: $ 19,999 </b>
+                </a>
+            </div>        	<div class="medium-3 small-6 columns simple-thumbs" data-equalizer-watch>
+            	<a href="http://www.atv.com/specs/polaris/utility-utv/2016/ranger-crew-reg-570-4/eps.html">
+                	<img src="http://atv.com.vsassets.com/specs/sites/atv/images/thumbs/250/2016_Polaris_RangerCrew570-4_EPS.jpg">
+                    2016 Polaris Ranger Crew&#174; 570-4 EPS
+                    <br><b>MSRP: $ 12,499 </b>
+                </a>
+            </div>        	<div class="medium-3 small-6 columns simple-thumbs" data-equalizer-watch>
+            	<a href="http://www.atv.com/specs/polaris/sport/2016/scrambler-reg/850.html">
+                	<img src="http://atv.com.vsassets.com/specs/sites/atv/images/thumbs/250/2016_Polaris_Scrambler_850.jpg">
+                    2016 Polaris Scrambler&#174; 850
+                    <br><b>MSRP: $ 9,499 </b>
+                </a>
+            </div>        	<div class="medium-3 small-6 columns simple-thumbs" data-equalizer-watch>
+            	<a href="http://www.atv.com/specs/polaris/utility/2016/ace-reg/570-sp.html">
+                	<img src="http://atv.com.vsassets.com/specs/sites/atv/images/thumbs/250/2016_Polaris_ACE_570SP.jpg">
+                    2016 Polaris ACE&#174; 570 SP
+                    <br><b>MSRP: $ 9,999 </b>
+                </a>
+            </div>        </div> <!-- End Featured Vehicles : polaris -->
+
+
+        
+        <div class="insurance-block">
+        	<div class="row">
+            	<div class="small-12 medium-6 columns ad">
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('ATV_com_x80_PS'); });
+</script>
+                </div>
+
+                <div class="small-12 medium-6 columns">
+                	<h4>Find a ATV Dealer near you</h4>
+                    <span>Enter your ZIP code below to search for ATV dealers near you.</span>
+                    <form id="dealerlocator_zip" onsubmit="
+                   	var zipCode = document.getElementById('zip_finder').value;
+                    if (zipCode == 'ZIP code') {
+                        document.getElementById('zip_finder').value = '';
+                    }
+                    " method="post" action="/dealers/" >
+                    	<input type="text" value="ZIP code" name="zip" id="finder_zip"
+                    		onfocus="if(this.value=='ZIP code')this.value='';"
+                   			onblur="if (this.value == '' || this.value == null) this.value = 'ZIP code';">
+                    	<input type="submit" value="Find a Dealer" class="button radius" onclick="return findByZip();" />
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+<!-- insurance block from cache -->
+	<!-- Taboola 2 of 3 -->
+	<div id="taboola-below-article-thumbnails-white"></div>
+		<script type="text/javascript">
+		  window._taboola = window._taboola || [];
+		  _taboola.push({
+			mode: 'thumbnails-c',
+			container: 'taboola-below-article-thumbnails-white',
+			placement: 'Below Article Thumbnails White',
+			target_type: 'mix'
+		  });
+		</script>
+	<!-- END: Taboola 2 of 3 -->
+
+    <!-- BEGIN DISQUS -->
+    <a name="disqus_thread"></a>  <!-- <a name="respond"></a> -->
+    <a name="comments"></a>
+    
+<div id="disqus_thread">
+    </div>
+
+	<!-- END DISQUS -->
+
+    </div>
+    <!-- END contentContainer -->
+
+
+</div>
+
+
+<div id="ATV_com_1x1_Slimcut_PS_Content" style="width: auto; height: auto;"><script type="text/javascript">googletag.cmd.push(function() { googletag.display('ATV_com_1x1_Slimcut_PS_Content'); });</script></div>
+</div>
+<!--  End Content -->
+
+
+
+<div id="emailfriend" class="bodyoverlay" >
+  <div class="overlay-wrapper">
+
+  	<form id="email_a_friend_form" method="post" name="form1" onsubmit="return false;">
+    	<input type="hidden" name="url" value="http://www.atv.com/blog/2017/07/belt-keep-slipping.html">
+        <div class="pretty-form margin-bottom-2">
+        <!-- Row with header -->
+        <div class="row header"><div class="small-12 columns"><h2>Email this article to a friend</h2><a href="" class="overlay-close-btn overlay-close">x</a></div></div>
+
+        <div class="row">
+
+        	<div class="message"></div>
+
+            <div class="small-12 columns">
+                <div class="row">
+                    <div class="small-12 medium-3 columns"><label>Url</label></div>
+                    <div class="small-12 medium-9 columns"><b>http://www.atv.com/blog/2017/07/belt-keep-slipping.html</b></div>
+                </div>
+                <div class="row">
+                    <div class="small-12 medium-3 columns"><label>Your Email</label></div>
+                    <div class="small-12 medium-9 columns">
+                          <input name="your_email" value="" type="text">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-12 medium-3 columns"><label>Your Name</label></div>
+                    <div class="small-12 medium-9 columns">
+                          <input name="your_name" value="" type="text">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-12 medium-3 columns"><label>Your friend's Email</label></div>
+                    <div class="small-12 medium-9 columns">
+                          <input name="to_email" value="" type="text">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-12 medium-3 columns"><label>Email Subject</label></div>
+                    <div class="small-12 medium-9 columns">
+                          <input name="subject"  value="I saw this on ATV.Com" type="text">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-12 medium-3 columns"><label>Message</label></div>
+                    <div class="small-12 medium-9 columns">
+                          <textarea name="message" rows="6"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-12 medium-3 columns"><label></label></div>
+                    <div class="small-12 medium-9 columns">
+                          <div class="g-recaptcha" data-sitekey="6LcFZAYTAAAAAPjGaeJLesFpnmIdoJrXlmTgtOXU"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="medium-3 columns"></div>
+                    <div class="small-12 medium-9 columns">
+                    	<input type="submit" class="button radius" value="Send email" >
+                    	<a href="" class="button radius overlay-close">Cancel</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Row with header -->
+    </div>
+    </form>
+  </div>
+</div>
+
+
+
+<div id='avatar_footer_credit' style='display: none;'>Avatars by <a href='http://www.sterling-adventures.co.uk/blog/'>Sterling Adventures</a></div>
+
+
+
+<style>#footer {padding-bottom: 50px;}</style>
+
+<!-- Footer -->
+<div class="text-center show-for-small-only bottom-ad-mobile nolinks"><div class="ad" id="ATV_com_320x50_Mobile_Bottom_PS" style="position: fixed; bottom: 0; left: 0; right: 0; text-align: center; z-index: 1000; height: 50px;">
+	<script type="text/javascript">
+		googletag.cmd.push(function() { googletag.display('ATV_com_320x50_Mobile_Bottom_PS'); });
+	</script>
+</div></div>
+
+<div id="footer" class="row collapse fullWidth nolinks">
+	<div id="adFooter" class="row contentWidth show-for-medium-up">
+        <div class="large-12 columns text-center">
+
+		<div class="ad" id="ATV_com_728x90_Bottom_PS" >
+		<script type="text/javascript">
+			googletag.cmd.push(function() { googletag.display('ATV_com_728x90_Bottom_PS'); });
+		</script>
+		</div>
+	</div>
+    	</div>
+        <div class="row  contentWidth">
+       		<div class="medium-3 small-6 columns ">
+			<a href="http://www.atv.com/" title="ATV"><img src="/blog/wp-content/themes/atv2015/images/logo.png" alt="" width="145"></a>
+	                <span class="copy">Copyright &copy; 2017 ATV. All rights reserved</span>
+        	</div>
+		<div class="medium-9 small-6 columns">
+		<ul id="footerMenu" class="inline-list right">
+                <li><a href="http://www.atv.com/about-us.html">About us</a></li>
+<li><a href="http://www.atv.com/contact-us.html">Contact</a></li>
+<li><a href="http://www.atv.com/privacy-statement.html">Privacy Statement</a></li>
+<li><a href="http://www.atv.com/terms-of-service.html">TOS</a></li>
+<li><a href="http://www.atv.com/advertising-info.html">Advertising</a></li>
+<li><a href="http://www.atv.com/staff-and-contributors">Staff and Contributors</a></li>
+                </ul>
+            	</div>
+        </div>
+  </div>
+  <!-- End Footer -->
+
+
+<script type="text/javascript">
+// new crazy egg
+setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName("script")[0];
+a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0021/4208.js?"+Math.floor(new Date().getTime()/3600000);
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script>
+
+
+
+<!-- UK legal cookies -->
+<style>
+.uk-cookie-popup {display:none;border: 2px solid #333; background: #f4f4f4; color: #333; Font-size: 11px; padding: 0px 10px 10px; line-height: normal; position: fixed; z-index: 1000001; bottom: 0px; left: 0px; width: 300px; max-width: 100%; margin: 2px; text-align: left; font-family: Arial;}
+.uk-cookie-popup-title {margin: 0px -10px 10px; background: #333; color: #fff; padding: 5px 10px; font-weight: bold;}
+.uk-cookie-popup a {color: #0983b6;}
+.uk-cookie-popup a.uk-cookie-popup-close {float: right; color: #fff; font-size: 14px; display: inline-block; border: 1px solid #ccc; padding: 1px; line-height: 12px }
+</style>
+<div id="ukCookiePopup" class="uk-cookie-popup">
+<div class="uk-cookie-popup-title"><a href="" class="uk-cookie-popup-close" onclick="EEACookie.setUkLegalCookie();return false;">x</a> Cookie and Data Use Consent</div>
+We use cookies to improve your experience on this website and so that ads you see online can be tailored to your online browsing interests.
+We use data about you for a number of purposes explained in the links below.  By continuing to browse our site you agree to our use of data and cookies.
+<br/><a href="http://www.verticalscope.com/about-us/Data-Use-Consent-Notice.html?site=atv.com">Tell me more</a> |
+<a href="http://www.verticalscope.com/about-us/cookie-preferences.html?site=atv.com">Cookie Preferences</a>
+</div>
+<script>
+
+var EEACookie = {
+
+	createCookie : function (name,value,days) {
+	    if (days) {
+	        var date = new Date();
+	        date.setTime(date.getTime()+(days*24*60*60*1000));
+	        var expires = "; expires="+date.toGMTString();
+	    }
+	    else var expires = "";
+	    document.cookie = name+"="+value+expires+"; path=/";
+	},
+
+	readCookie : function (name) {
+	    var nameEQ = name + "=";
+	    var ca = document.cookie.split(";");
+	    for(var i=0;i < ca.length;i++) {
+	        var c = ca[i];
+	        while (c.charAt(0)==" ") c = c.substring(1,c.length);
+	        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+	    }
+	    return null;
+	},
+
+	eraseCookie : function (name) {
+	    this.createCookie(name,"",-1);
+	},
+
+	init : function (){
+		//Check if cookie has been set
+		if (this.readCookie("uk-cookie-legal") == null && this.readCookie("not-in-europe")!="true" ) {
+
+			//do ajax call to check geo location
+			$.ajax({
+				context: this,
+				type: "get",
+				url: "/blog/wp-admin/admin-ajax.php",
+				data: {
+					"action" : "vs_check_euro_ip",
+					"rnd" : Math.random(),
+				},
+				success: function(data){
+					if ( data === 'true' ) {
+					    //show popup
+					    document.getElementById("ukCookiePopup").style.display = "block";
+					}else if ( data === 'false' ) {
+						this.createCookie("not-in-europe","true",30);
+					}
+				}
+			});
+
+		}
+
+	},
+
+	setUkLegalCookie : function (){
+	    this.createCookie("uk-cookie-legal","been-shown",3650); //set cookie for 10 years
+	    document.getElementById("ukCookiePopup").style.display = "none";
+	}
+}
+EEACookie.init();
+
+</script>
+<!-- END UK legal cookies -->
+<!-- footer from cache -->
+
+
+
+
+
+	<script src="/blog/wp-content/themes/atv2015/js/vs.js"></script>
+
+    <script src="/blog/wp-content/themes/atv2015/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+
+<script>
+  $(document).foundation({
+	  equalizer : {
+		// Specify if Equalizer should make elements equal height once they become stacked.
+		equalize_on_stack: true
+	  }
+	});
+</script>
+
+
+    <!-- Slider -->
+
+	<script type="text/javascript">
+	(function ($, window) {
+        $(document).ready(function(){
+
+			/* Create "more" link for tablets */
+			$("#navDesk li.moveToMore").each(function(){
+				$(this).find("a:first").clone().addClass("oneLine").appendTo("#moreLink .topnav-dd .row .columns");
+				$(this).find(".topnav-dd ul.inline-list").first().clone().appendTo("#moreLink .topnav-dd .row .columns");
+			});
+			$("#subMenu .subMenu li.moveToMore").each(function(){
+				$(this).find("a:first").clone().addClass("oneLine").appendTo("#moreLink .topnav-dd .row .columns");
+			});
+
+			/* Nav search functions */
+			$('.topnav .search-icon').click(function(){
+				var parentLI=$(this).parent("li");
+				if (parentLI.hasClass("active")) parentLI.removeClass("active");
+				else {
+					parentLI.addClass("active");
+					$(".topmenu-list").removeClass("mobileDD-open");
+					$(".topmenu-list li.hovertouch-hover").removeClass("hovertouch-hover");
+				}
+			});
+			$('.topnav-dd-search .close-icon').click(function(){
+				$('.search-in-nav li').removeClass("active");
+			});
+			var navSearchInput=$('#navSearch-form .searchinput');
+			var defaultSearchPhrase="Enter Search Keyword: e.g. Polaris";
+			if (navSearchInput.val()=="") navSearchInput.val(defaultSearchPhrase);
+			navSearchInput.focus(function(){
+				if (navSearchInput.val()==defaultSearchPhrase) navSearchInput.val("");
+			})
+
+			/* Nav scroll */
+			var didScroll;
+            var lastScrollTop = 0;
+            var delta = 5;
+            var navbarHeight = 51;
+            var NavBar=$('#navDesk');
+            var NavBarofset=NavBar.offset();
+            var startStick=NavBarofset.top+$("#subMenu").height();
+            NavBar.parent().before('<div id="navBarPlaceholder" style="height:50px; display:none"></div>');
+            if ($(window).scrollTop()>=startStick) $(window).trigger("scroll");
+            $(window).scroll(function() {
+            	var scr = $(window).scrollTop();
+                if (scr >= startStick && $(window).width()>641) {
+                	NavBar.parent().addClass("fixednavbar");
+                    $("#fixed-atv-logo").animate({right:"0", opacity:"1"},500);
+                    $("#navBarPlaceholder").show();
+				} else {
+                	NavBar.parent().removeClass("fixednavbar");
+                    $("#fixed-atv-logo").stop(true,true).attr("style","right:-40px; opacity:0");
+                    $("#navBarPlaceholder").hide();
+				}
+                didScroll = true;
+			});
+
+			/* Nav hamburger icon click */
+			$(".mobileDD-btn").click(function(){
+				$(".topmenu-list").toggleClass("mobileDD-open");
+				$(".search-in-nav > li.active").removeClass("active");
+			});
+
+			/* Nav for tablets and mobile */
+			$(".topmenu-list .submenu").click(function(e){
+				/* Check if not touchscreen and smaller than desktop */
+				if (!('ontouchstart' in document.documentElement) && ($(window).width()<1024)){
+					//desktop resized to mobile view. No touchscreen.
+					e.stopPropagation();
+					$(this).parent().toggleClass("hovertouch-hover");
+					return false;
+				}
+
+                /* if touchscreen */
+                if ('ontouchstart' in document.documentElement){
+					e.stopPropagation();
+                    if ($(window).width()>624){// for tablets and bigger close opened menus first
+                    	$(".topmenu-list li.hovertouch-hover").not($(this).parent()).removeClass("hovertouch-hover");
+                        $(this).parent().toggleClass("hovertouch-hover");
+                        if ($(".search-in-nav > li").hasClass("active")) $('.topnav-dd-search .close-icon').trigger("click");
+					} else { //on mobile just toggle the class. Multiple menus can be open at the same time
+                    	$(this).parent().toggleClass("hovertouch-hover");
+					}
+                    return false;
+                }
+
+			});
+			/* Hover events for non-touch screens - tablets and desktop */
+			if (!('ontouchstart' in document.documentElement)) {
+				var $dropdowns = $('.topnav .hovertouch');
+				$dropdowns
+				.on('mouseover', function(){
+					if ($(window).width()>624){
+					var $this = $(this);
+					if ($this.prop('hoverTimeout')) $this.prop('hoverTimeout', clearTimeout($this.prop('hoverTimeout')));
+
+					$this.prop('hoverIntent', setTimeout(function(){
+						$this.addClass('hovertouch-hover');
+					}, 200));
+					}
+				})
+				.on('mouseleave', function(){
+					if ($(window).width()>624){
+					var $this = $(this);
+					if ($this.prop('hoverIntent')) $this.prop('hoverIntent', clearTimeout($this.prop('hoverIntent')));
+
+					$this.prop('hoverTimeout', setTimeout(function(){
+						$this.removeClass('hovertouch-hover');
+					}, 200));
+					}
+				});
+			}
+
+			/* window resize listener */
+			//function to wait before to call resize again
+			var waitForFinalEvent = (function () {
+			  var timers = {};
+			  return function (callback, ms, uniqueId) {
+				if (!uniqueId) {
+				  uniqueId = "Don't call this twice without a uniqueId";
+				}
+				if (timers[uniqueId]) {
+				  clearTimeout (timers[uniqueId]);
+				}
+				timers[uniqueId] = setTimeout(callback, ms);
+			  };
+			})();
+			$(window).resize(function () {
+				waitForFinalEvent(function(){
+				  var win = $(this);
+      			  if (win.width() >= 641) {
+						//If the window has been resized from mobile to desktop view: clear topmenu hovetouch-hover classes
+						$(".topmenu-list li").removeClass("hovertouch-hover");
+						$(".topmenu-list").removeClass("mobileDD-open");
+				  }
+				}, 100, "submenuHoverClear");
+			});
+
+			/* Sidebar open/close on tablet */
+			$("#sidebar-controls").click(function(){
+				$("#content").toggleClass("sidebar-open");
+			});
+
+			/* Open/close social bar */
+			$(".social-block .s-subscribe").click(function(e){
+				e.stopPropagation();
+				$(this).closest(".social-block").toggleClass("open");
+				return false;
+		    });
+
+			/* Right menu accordion: buyers-guide */
+
+			/* Get facebook share count */
+			var fbs = $('[data-facebook-share-count-url]');
+
+			if (fbs.length) {
+				// Collect all URLs and map it back to matching elements
+				var urls = [];
+				var fbData = {};
+
+				fbs.each(function(k, elem) {
+					var url = $(elem).data('facebook-share-count-url');
+					if (!fbData[url]) {
+						fbData[url] = [];
+					}
+					fbData[url].push(elem);
+					urls.push(url);
+				});
+
+				$.each(fbData, function(url, elems) {
+					$.ajax({
+						url: "http://graph.facebook.com/v2.7/",
+						data: { id: url, fields: 'share' },
+						dataType: 'json',
+						success: function(data) {
+							if (typeof(data.share) != 'undefined' && data.share.share_count != 0) {
+								var totalShares = data.share.share_count;
+								$(elems).html("("+totalShares+")");
+							}
+						}
+					});
+				});
+			}
+
+
+        }); // document ready
+	})(jQuery, window);
+
+
+    </script>
+
+
+
+<!-- App begin -->
+<!-- App end -->
+
+
+
+<div id="fb-root"></div>
+
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+<script type="text/javascript">
+  var vglnk = { api_url: '//api.viglink.com/api',
+                key: '2c9091279596215c373c6a33b29e1744' };
+
+  (function(d, t) {
+    var s = d.createElement(t); s.type = 'text/javascript'; s.async = true;
+    s.src = ('https:' == document.location.protocol ? vglnk.api_url :
+             '//cdn.viglink.com/api') + '/vglnk.js';
+    var r = d.getElementsByTagName(t)[0]; r.parentNode.insertBefore(s, r);
+  }(document, 'script'));
+</script>
+
+
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-30657-87']);
+_gaq.push(['_trackPageview']); (function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript';
+ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' :
+'http://www') + '.google-analytics.com/ga.js';
+(document.getElementsByTagName('head')[0] ||
+document.getElementsByTagName('body')[0]).appendChild(ga); })();
+</script>
+
+
+
+<!-- Begin comScore Tag -->
+<script type="text/javascript">setTimeout(function(){ var url = "http" + (/^https:/.test(document.location.href) ? "s" : "") + "://beacon.scorecardresearch.com/scripts/beacon.dll" + "?c1=2&c2=6036030&c3=&c4=&c5=&c6=&c7=" + escape(document.location.href) + "&c8=" + escape(document.title) + "&c9=" + escape(document.referrer) + "&c10=" + escape(screen.width+'x'+screen.height) + "&rn=" + (new Date()).getTime(); var i = new Image(); i.src = url; }, 1);</script>
+<noscript><img src="https://beacon.scorecardresearch.com/scripts/beacon.dll?c1=2&c2=6036030&c3=&c4=&c5=&c6=&c7=&x=NOJAVASCRIPT" alt="" /></noscript>
+<!-- End comScore Tag -->
+
+<script type='text/javascript'>
+	googletag.cmd.push(function() { googletag.display('ATV_com_1x1_Bottom_PS'); });
+</script>
+
+
+
+<!-- from wp_footer -->
+<!-- ngg_resource_manager_marker --><script type='text/javascript' src='http://www.atv.com/blog/wp-includes/js/imgareaselect/jquery.imgareaselect.min.js?ver=4.7.2'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var thickboxL10n = {"next":"Next >","prev":"< Prev","image":"Image","of":"of","close":"Close","noiframes":"This feature requires inline frames. You have iframes disabled or your browser does not support them.","loadingAnimation":"http:\/\/www.atv.com\/blog\/wp-includes\/js\/thickbox\/loadingAnimation.gif"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.atv.com/blog/wp-includes/js/thickbox/thickbox.js?ver=3.1-20121105'></script>
+<script type='text/javascript' src='http://www.atv.com/blog/wp-includes/js/wp-embed.min.js?ver=4.7.2'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var embedVars = {"disqusConfig":{"platform":"wordpress@4.7.2","language":""},"disqusIdentifier":"77843 http:\/\/www.atv.com\/?p=77843","disqusShortname":"atvcom","disqusTitle":"Why Does My Belt Keep Slipping?","disqusUrl":"http:\/\/www.atv.com\/blog\/2017\/07\/belt-keep-slipping.html","options":{"manualSync":false},"postId":"77843"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://atv.com.vsassets.com/blog/wp-content/plugins/disqus-comment-system/media/js/disqus.js?ver=4.7.2'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var countVars = {"disqusShortname":"atvcom"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://atv.com.vsassets.com/blog/wp-content/plugins/disqus-comment-system/media/js/count.js?ver=4.7.2'></script>
+
+	<script type="text/javascript" >
+/*
+	grecaptcha.reset= function(){
+		var $recaptcha = $('.g-recaptcha iframe');
+		if ($recaptcha.length) {
+				    $recaptcha.each(function () {
+				        var $this = $(this),
+				            recaptchaSoure = $this[0].src;
+				        $this[0].src = '';
+				        setInterval(function () { $this[0].src = recaptchaSoure; }, 500);
+				    });
+		}
+	}
+*/
+	$(function(){
+		$('#emailfriend input.button').on("click",function(){ vs_email_a_friend(); });
+	});
+
+	function vs_email_a_friend(){
+
+			var name = $('#email_a_friend_form input[name="your_name"]').val();
+			var from_email =  $('#email_a_friend_form input[name="your_email"]').val();
+			var to_email = $('#email_a_friend_form input[name="to_email"]').val();
+			var subject = $('#email_a_friend_form input[name="subject"]').val();
+			var message = $('#email_a_friend_form textarea[name="message"]').val();
+			var url = $('#email_a_friend_form input[name="url"]').val();
+			var captcha_response = grecaptcha.getResponse();
+	
+			if (name && from_email && to_email && subject && url && captcha_response){
+				var data = {
+					'action': 'vs_email_a_friend',
+					'your_name': name,
+					'your_email': from_email,
+					'to_email': to_email,
+					'subject': subject,
+					'message': message,
+					'url': url,
+					'recaptcha_response': captcha_response
+				};
+
+				$.getJSON("http://www.atv.com/blog/wp-admin/admin-ajax.php", data, function(response) {
+					if(response.result && response.result=='ok' && response.message){
+						$('#emailfriend div.message').removeClass('error').html(response.message).show();
+						$('#emailfriend input.button').off("click");
+					}else if(response.result && response.result=='error' && response.message){
+						$('#emailfriend div.message').addClass("error").html(response.message).show();
+					}					
+
+					grecaptcha.reset();
+				});					
+			}
+			else{
+				$('#emailfriend div.message').addClass("error").html("Please fill all the required fields").show();
+			}
+
+			return false;
+
+	}
+
+	</script> <!-- Taboola 3 of 3 -->
+<script type="text/javascript">
+  window._taboola = window._taboola || [];
+  _taboola.push({flush: true});
+</script>
+<!-- Taboola 3 of 3 -->
+<script>
+  (function ($, window) {
+	  $(".emailpopup").click(function(e){
+			e.stopPropagation();
+			$("#emailfriend").show();
+			return false;
+	  });
+	  $(".overlay-close").click(function(e){
+			e.stopPropagation();
+			$("#emailfriend").hide();
+			return false;
+	  });
+  })(jQuery, window);
+</script>
+<script type="text/javascript">
+$(document).ready(function () {
+            /* add custom css to nextgen gallery */
+            var nextgenGallery=$("iframe.galleria-iframe");
+            if (nextgenGallery.length){ // if gallery is found on the page
+                        nextgenGallery.bind("load", function() {
+                                    var $head = nextgenGallery.contents().find("head");
+                                    $head.append($("<link/>",
+	{ rel: "stylesheet", href: "/blog/wp-content/themes/atv2015/css/nextgen_custom.css", type: "text/css" }
+                                                              ));
+                        });
+            }
+            var nextgenGalleryContent=$("#npl_content");
+            if (nextgenGalleryContent.length){ // if gallery is found on the page
+                        nextgenGalleryContent.bind("load", function() {
+                                    var $head = nextgenGalleryContent.contents().find("head");
+                                    $head.append($("<link/>",
+    { rel: "stylesheet", href: "/blog/wp-content/themes/atv2015/css/nextgen_custom.css", type: "text/css" }
+                                                              ));
+                        });
+            }
+});
+</script>
+
+<!-- ConsolidatedFooters Footers -->
+<!-- Lotame -->
+<script src="http://tags.crwdcntrl.net/c/8060/cc_af.js"></script>
+<!-- /Lotame -->
+<script language="javascript" type="text/javascript"> 
+<!-- 
+var _dropTag=function() { 
+var _qS=""; 
+var _rand=Math.random()+""; 
+var _rs=document.location.protocol+"//"; 
+var xp1_qs = 
+{ 
+"_t": "motovspowct", 
+"_random": _rand*100000000000 
+} 
+for(var qsKey in xp1_qs){_qS += "&"+qsKey+"="+xp1_qs[qsKey];} 
+document.write("<iframe src=\""+_rs+"m.xp1.ru4.com/meta?_o=15719"+_qS+"\" width=\"0\" height=\"0\" frameborder=\"0\" scrolling=\"no\"><\/iframe>");} 
+_dropTag(); 
+//--> 
+</script>
+<!-- /ConsolidatedFooters Footers -->
+
+<!-- App begin -->
+<!-- App end -->
+
+
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"0f2b0d60a0","applicationID":"2313242","transactionName":"YFMEZUdYCBADVRddVlkZM0NcFgQPDVFMHg==","queueTime":0,"applicationTime":103,"atts":"TBQHEw9CGx4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: https://www.w3-edge.com/products/
+
+Page Caching using disk: enhanced
+Content Delivery Network via atv.com.vsassets.com
+
+ Served from: www.atv.com @ 2017-07-20 11:34:14 by W3 Total Cache -->

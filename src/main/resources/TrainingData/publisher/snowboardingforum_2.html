@@ -1,0 +1,5027 @@
+
+<!DOCTYPE html><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en">
+<head>
+<base href="http://www.snowboardingforum.com/" /><!--[if IE]></base><![endif]-->
+	
+<!-- Amazon Tag Top -->
+<script type='text/javascript' src='//c.amazon-adsystem.com/aax2/amzn_ads.js'></script>
+<script type='text/javascript'>
+    try {
+            amznads.getAds('3274');
+        } catch (e) { /*ignore*/ }
+</script>
+<!-- /Amazon Tag Top -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<meta name="keywords" content="Epic,13,day,trip,Jackson,Hole,Winter,X,Games,Aspen,Snowmass, Epic 13 day trip to Jackson Hole, Winter X Games, Aspen Snowmass, snowboarding forum, snowboard forums, snowboarding discussion, snowboarding tips,learn snowboarding,how to snowboard, blogs, wakeboarding, snowboarding community, snowboarding resorts, snowboarding equipment, snowboarding clothing, snowboarding gear, snowboarding events, U.S. Snowboarding Grand Prix, Snowboarding World Cup" />
+<meta name="description" content="This year New York winter sucks. I mean, really really sucks. The snowfall total was an inch until the day we left town (as of January 22nd, 2016)." />
+
+
+<!-- CSS Stylesheet -->
+<link href="http://www.snowboardingforum.com/clientscript/vbulletin_css/style-b9186aae-00026.css" rel="stylesheet">
+
+
+<!-- / CSS Stylesheet -->
+
+<!--[if lt IE 9]>
+<style>
+#update-browser{display:block}
+</style>
+<script>
+// HTML 5 Shiv. for older IE - should be an if statement?  /
+(function(){if(!/*@cc_on!@*/0)return;var e="abbr,article,aside,audio,bb,canvas,datagrid,datalist,details,dialog,eventsource,figure,footer,header,hgroup,mark,menu,meter,nav,output,progress,section,time,video".split(',');for(var i=0;i<e.length;i++){document.createElement(e[i])}})()
+</script>
+<![endif]-->
+
+
+<script src="http://www.snowboardingforum.com/clientscript/vs_scripts/scripts.js"></script> 
+
+
+
+<style>
+/* 
+Sticky Sidebar Styles
+*/
+#main-content_wrapper{
+margin: 0;
+width: calc(100% - 343px);
+}
+#main-content{
+margin-right: 0;
+padding: 8px 10px 20px 0px !important;
+border: none;
+}
+#sidebar, #sidebar .sidebar{
+width: 328px;
+
+}
+#main-content, .sidebar{
+-webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    padding: 8px 0 15px !important;
+}
+#main-content img, #sidebar img{
+max-width: 100%;
+}
+
+#main-content td img {max-width: none;}
+
+@media screen and (max-width: 1024px){
+#main-content_wrapper{
+margin-right: 0 !important;
+width: 100% !important;
+}
+#main-content{
+margin-right: 0;
+}
+#sidebar{
+width: 326px;
+position: fixed !important;
+}
+#sidebar .sidebar{
+width: auto;
+}
+}
+
+
+</style>
+<!--[if lt IE 9]>
+<style>
+#main-content_wrapper{
+margin-right: -343px !important;
+width: 100% !important;
+}
+#main-content{
+margin-right: 328px;
+}
+#sidebar, #sidebar .sidebar{
+width: 328px;
+}
+#sidebar{
+position: static !important;
+}
+</style>
+<![endif]-->
+
+
+
+
+<style>
+/* #5 heart icon */
+.vbseo_buttons .vbseo_liked {background-image: url(http://img.verticalscope.com/images/like_update.png) !important;}
+
+/* #7 upgrade Reply Box */
+.controlbar .smilies-table td {display: table-cell;}
+.controlbar iframe, .controlbar textarea {width: calc(100% - 20px) !important;}
+
+/* #11 oversized smilies in preview */
+/* could exist already */
+.vs_preview .postquote img.inlineimg, .vs_preview .postquote img {max-width: 100%; width: auto;}
+
+/* fix indent issue*/
+.user-post .alt1 ul, .user-post .alt1 ol, blockquote {margin-left: 20px; margin-bottom: 10px;}
+
+#main-content .newreply_reviewbit img {max-width: 400px;}
+</style>
+
+<script async type="text/javascript">
+<!--
+var SESSIONURL = "";
+var SECURITYTOKEN = "guest";
+var IMGDIR_MISC = "/images/SnowboardingForum_2015/misc";
+var vb_disable_ajax = parseInt("0", 10);
+// -->
+</script>
+
+
+
+
+
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setCustomVar',3,'styleid','26',3]);
+</script>
+
+
+
+
+<script src='http://www.snowboardingforum.com/clientscript/dnd.js'>Your browser does not support scripts.</script><script src='http://www.snowboardingforum.com/clientscript/vbulletin_attachment.js?v=387'></script>
+
+
+<!-- 
+  nCode Image Resizer
+  (c) nCode
+  http://www.ncode.nl/vbulletinplugins/
+-->
+<script type="text/javascript" src="http://static.verticalscope.com/clientscript/ncode_imageresizer.js?v=1.0.1"></script>
+<style type="text/css">
+<!--
+table.ncode_imageresizer_warning {
+	background: #FFFFE1;
+	color: #000000;
+	border: 1px solid #CCC;
+	cursor: pointer;
+}
+
+table.ncode_imageresizer_warning td {
+	font-size: 10px;
+	vertical-align: middle;
+	text-decoration: none;
+}
+
+table.ncode_imageresizer_warning td.td1 {
+	padding: 5px;
+}
+
+table.ncode_imageresizer_warning td.td1 {
+	padding: 2px;
+}
+table.ncode_imageresizer_warning2 {
+	color: #ffffff;
+	cursor: pointer;
+	border-collapse: collapse;
+}
+
+table.ncode_imageresizer_warning2 .td1 {
+	background: #000000;
+	white-space:nowrap;
+	padding: 5px;
+}
+
+table.ncode_imageresizer_warning2 a:link {
+	color: #ffffff;
+}
+
+table.ncode_imageresizer_warning2 td {
+	font-size: 10px;
+	vertical-align: middle;
+	text-decoration: none;
+}
+
+table.ncode_imageresizer_warning2 td.td2 {
+	padding: 0px;
+}
+-->
+</style>
+<script type="text/javascript">
+<!--
+NcodeImageResizer.MODE = 'enlarge';
+<!-- NcodeImageResizer.MAXWIDTH = 640; -->
+if (screen && screen.width && parseInt(screen.width) < parseInt(640)) {
+    NcodeImageResizer.MAXWIDTH = screen.width;
+} else {
+    NcodeImageResizer.MAXWIDTH = 640;
+}
+NcodeImageResizer.MAXHEIGHT = 0;
+
+NcodeImageResizer.BBURL = 'http://www.snowboardingforum.com';
+
+vbphrase['ncode_imageresizer_warning_small'] = 'Click this bar to view the full image.';
+vbphrase['ncode_imageresizer_warning_filesize'] = 'This image has been resized. Click this bar to view the full image.';
+vbphrase['ncode_imageresizer_warning_no_filesize'] = 'This image has been resized. Click this bar to view the full image.';
+vbphrase['ncode_imageresizer_warning_fullsize'] = 'Click this bar to view the small image.';
+
+var currentPagePath='http%3A%2F%2Fwww.snowboardingforum.com%2Fshowthread.php%3Ft%3D202457';
+vbphrase['vbp_ncode_click_for_moderation'] = 'Report this image';
+
+var reportImageUrl='http://abuse.verticalscope.com/report/index.php?referrer={1}&imageurl={2}';
+//-->
+</script>
+
+
+<!-- REGISTRATION CODE STARTS -->
+
+<!-- REGISTRATION CODE ENDS -->
+
+<style>
+.ams_gtsearch{min-height:20px;}
+#navbar_search_menu input.gsc-input{min-width:120px; min-height:20px;}
+</style>
+<script type="text/javascript" src="http://www.snowboardingforum.com/clientscript/ame.js" ></script><!-- 
+  nCode Image Resizer
+  (c) nCode
+  http://www.ncode.nl/vbulletinplugins/
+-->
+<script type="text/javascript" src="http://static.verticalscope.com/clientscript/ncode_imageresizer.js?v=1.0.1"></script>
+<style type="text/css">
+<!--
+table.ncode_imageresizer_warning {
+	background: #FFFFE1;
+	color: #000000;
+	border: 1px solid #CCC;
+	cursor: pointer;
+}
+
+table.ncode_imageresizer_warning td {
+	font-size: 10px;
+	vertical-align: middle;
+	text-decoration: none;
+}
+
+table.ncode_imageresizer_warning td.td1 {
+	padding: 5px;
+}
+
+table.ncode_imageresizer_warning td.td1 {
+	padding: 2px;
+}
+table.ncode_imageresizer_warning2 {
+	color: #ffffff;
+	cursor: pointer;
+	border-collapse: collapse;
+}
+
+table.ncode_imageresizer_warning2 .td1 {
+	background: #000000;
+	white-space:nowrap;
+	padding: 5px;
+}
+
+table.ncode_imageresizer_warning2 a:link {
+	color: #ffffff;
+}
+
+table.ncode_imageresizer_warning2 td {
+	font-size: 10px;
+	vertical-align: middle;
+	text-decoration: none;
+}
+
+table.ncode_imageresizer_warning2 td.td2 {
+	padding: 0px;
+}
+-->
+</style>
+<script type="text/javascript">
+<!--
+NcodeImageResizer.MODE = 'enlarge';
+<!-- NcodeImageResizer.MAXWIDTH = 640; -->
+if (screen && screen.width && parseInt(screen.width) < parseInt(640)) {
+    NcodeImageResizer.MAXWIDTH = screen.width;
+} else {
+    NcodeImageResizer.MAXWIDTH = 640;
+}
+NcodeImageResizer.MAXHEIGHT = 0;
+
+NcodeImageResizer.BBURL = 'http://www.snowboardingforum.com';
+
+vbphrase['ncode_imageresizer_warning_small'] = 'Click this bar to view the full image.';
+vbphrase['ncode_imageresizer_warning_filesize'] = 'This image has been resized. Click this bar to view the full image.';
+vbphrase['ncode_imageresizer_warning_no_filesize'] = 'This image has been resized. Click this bar to view the full image.';
+vbphrase['ncode_imageresizer_warning_fullsize'] = 'Click this bar to view the small image.';
+
+var currentPagePath='http%3A%2F%2Fwww.snowboardingforum.com%2Fshowthread.php%3Ft%3D202457';
+vbphrase['vbp_ncode_click_for_moderation'] = 'Report this image';
+
+var reportImageUrl='http://abuse.verticalscope.com/report/index.php?referrer={1}&imageurl={2}';
+//-->
+</script><script type="text/javascript">
+<!--
+function vba_attach_win(threadid)
+{
+	openWindow('http://www.snowboardingforum.com/misc.php?do=showattachments&t=' + threadid, 480, 300);
+}
+-->
+</script><style>
+div.ams_gtsearch .gsc-clear-button { display: none !important }
+</style>
+<script>
+vsamsgtsearches=[];
+</script> 
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30657-37']);
+  _gaq.push(['_setDomainName', '.snowboardingforum.com']);
+  _gaq.push(['_setCustomVar',1,'grp','guest', 2]);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+<script type="text/javascript">
+var _comscore = _comscore || [];
+_comscore.push({ c1: "2", c2: "6036030", c4: "snowboardingforum.com" });
+(function() {
+var s = document.createElement("script"), el =
+document.getElementsByTagName("script")[0]; s.async = true;
+s.src = (document.location.protocol == "https:" ? "https://sb" :
+"http://b") + ".scorecardresearch.com/beacon.js";
+el.parentNode.insertBefore(s, el);
+})(); </script>
+<noscript> <img src="http://b.scorecardresearch.com/p?c1=2&c2=6036030&c4=snowboardingforum.com&cv=2.0&cj=1" alt="" /> </noscript>
+
+
+
+
+<script type="text/javascript">
+netseer_tag_id="27080"; 
+netseer_publisher_label="snowboardingforum.com";
+</script>
+<script async src="//ps.ns-cdn.com/dsatserving2/scripts/ns_vmtag.js" type="text/javascript"></script>
+
+<!-- Video Player -->
+<script type="text/javascript" src="/videoplayer/jwplayer.js?v=1407419748"></script>
+<script type="text/javascript" src="/videoplayer/playerscripts.min.js.php?v=1407430177"></script>
+<!-- /Video Player -->
+
+<!-- DFP TAG -->
+
+<script type="text/javascript" src="//ad.crwdcntrl.net/5/c=8059/pe=y/var=ccauds"></script>
+
+<script type="text/javascript" src="//native.sharethrough.com/assets/sfp.js"></script>
+<script type='text/javascript'>
+var PREBID_TIMEOUT = 1000;
+
+// prebid only works with ga so the gaconnector has been created to convert the analytics.js calls to ga.js compatible calls
+var _gaq = _gaq || [];
+var gaconnector = function(send, event, eventCategory, eventAction, eventLabel, eventValue, fieldsObject) {
+	var isNonInteraction = (typeof(fieldsObject) == 'object' && fieldsObject.nonInteraction) ? true : false;
+	_gaq.push(['_trackEvent', eventCategory, eventAction, eventLabel, eventValue, isNonInteraction]);
+}
+
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+
+function initAdserver() {
+    if (pbjs.initAdserverSet) return;
+    (function() {
+        var gads = document.createElement('script');
+        gads.async = true;
+        gads.type = 'text/javascript';
+        var useSSL = 'https:' == document.location.protocol;
+        gads.src = (useSSL ? 'https:' : 'http:') +
+        '//www.googletagservices.com/tag/js/gpt.js';
+        var node = document.getElementsByTagName('script')[0];
+        node.parentNode.insertBefore(gads, node);
+    })();
+    pbjs.initAdserverSet = true;
+};
+setTimeout(initAdserver, PREBID_TIMEOUT);
+
+var pbjs = pbjs || {};
+pbjs.que = pbjs.que || [];
+(function() {
+    var pbjsEl = document.createElement("script");
+    pbjsEl.type = "text/javascript";
+    pbjsEl.async = true;
+    pbjsEl.src = "//dz2fz0bgyq9tn.cloudfront.net/prebid-0.13.1-v7.js";
+    var pbjsTargetEl = document.getElementsByTagName("head")[0];
+    pbjsTargetEl.insertBefore(pbjsEl, pbjsTargetEl.firstChild);
+})();
+pbjs.que.push(function() {
+    pbjs.enableAnalytics({
+        provider: 'ga',
+        options: {
+            global: 'gaconnector',
+            enableDistribution: true,
+        }
+    });
+});
+pbjs.que.push(function() {
+    var adUnits = [{"code":"SnowboardingForum_com_728x90_Top_SP_Forum","sizes":[[728,90]],"bids":[{"bidder":"aol","params":{"placement":"4256783","network":"9430.1"}},{"bidder":"appnexus","params":{"placementId":"7643367"}},{"bidder":"brealtime","params":{"placementId":"9840862"}},{"bidder":"districtm","params":{"placementId":"9843896"}},{"bidder":"indexExchange","params":{"id":1,"siteID":"190329"}},{"bidder":"pulsepoint","params":{"cf":"728x90","cp":"560903","ct":"551341"}},{"bidder":"rubicon","params":{"accountId":"1019","siteId":"17463","zoneId":"48599","sizes":[2],"keywords":["SnowboardingForum.com"],"inventory":{"vsdomain":"SnowboardingForum.com"}}},{"bidder":"sekindoapn","params":{"placementId":"9899461"}},{"bidder":"sovrn","params":{"tagid":"336866"}}]},{"code":"SnowboardingForum_com_300x250_TopLeft_SP_Forum","sizes":[[300,250]],"bids":[{"bidder":"aol","params":{"placement":"4256785","network":"9430.1"}},{"bidder":"appnexus","params":{"placementId":"7643367"}},{"bidder":"brealtime","params":{"placementId":"9840861"}},{"bidder":"districtm","params":{"placementId":"9843896"}},{"bidder":"indexExchange","params":{"id":2,"siteID":"190330"}},{"bidder":"pulsepoint","params":{"cf":"300x250","cp":"560903","ct":"551340"}},{"bidder":"rubicon","params":{"accountId":"1019","siteId":"17463","zoneId":"48599","sizes":[15],"keywords":["SnowboardingForum.com"],"inventory":{"vsdomain":"SnowboardingForum.com"}}},{"bidder":"sekindo","params":{"spaceId":"72491"}},{"bidder":"sekindoapn","params":{"placementId":"9900289"}},{"bidder":"sovrn","params":{"tagid":"336871"}}]},{"code":"SnowboardingForum_com_300x250_TopRight_SP_Forum","sizes":[[300,250]],"bids":[{"bidder":"aol","params":{"placement":"4256785","network":"9430.1"}},{"bidder":"appnexus","params":{"placementId":"7643367"}},{"bidder":"brealtime","params":{"placementId":"9840861"}},{"bidder":"districtm","params":{"placementId":"9843896"}},{"bidder":"indexExchange","params":{"id":3,"siteID":"190331"}},{"bidder":"pulsepoint","params":{"cf":"300x250","cp":"560903","ct":"551340"}},{"bidder":"rubicon","params":{"accountId":"1019","siteId":"17463","zoneId":"48599","sizes":[15],"keywords":["SnowboardingForum.com"],"inventory":{"vsdomain":"SnowboardingForum.com"}}},{"bidder":"sekindo","params":{"spaceId":"72491"}},{"bidder":"sekindoapn","params":{"placementId":"9900289"}},{"bidder":"sovrn","params":{"tagid":"336872"}}]},{"code":"SnowboardingForum_com_728x90_Bottom_SP_Forum","sizes":[[728,90]],"bids":[{"bidder":"aol","params":{"placement":"4256783","network":"9430.1"}},{"bidder":"appnexus","params":{"placementId":"7643367"}},{"bidder":"brealtime","params":{"placementId":"9840862"}},{"bidder":"districtm","params":{"placementId":"9843896"}},{"bidder":"indexExchange","params":{"id":5,"siteID":"190333"}},{"bidder":"pulsepoint","params":{"cf":"728x90","cp":"560903","ct":"551341"}},{"bidder":"rubicon","params":{"accountId":"1019","siteId":"17463","zoneId":"48599","sizes":[2],"keywords":["SnowboardingForum.com"],"inventory":{"vsdomain":"SnowboardingForum.com"}}},{"bidder":"sekindoapn","params":{"placementId":"9899461"}},{"bidder":"sovrn","params":{"tagid":"336867"}}]},{"code":"SnowboardingForum_com_300x250_Postbit_SP_Forum","sizes":[[300,250]],"bids":[{"bidder":"aol","params":{"placement":"4256785","network":"9430.1"}},{"bidder":"appnexus","params":{"placementId":"7643367"}},{"bidder":"brealtime","params":{"placementId":"9840861"}},{"bidder":"districtm","params":{"placementId":"9843896"}},{"bidder":"indexExchange","params":{"id":4,"siteID":"190332"}},{"bidder":"pulsepoint","params":{"cf":"300x250","cp":"560903","ct":"551340"}},{"bidder":"rubicon","params":{"accountId":"1019","siteId":"17463","zoneId":"48599","sizes":[15],"keywords":["SnowboardingForum.com"],"inventory":{"vsdomain":"SnowboardingForum.com"}}},{"bidder":"sekindo","params":{"spaceId":"72491"}},{"bidder":"sekindoapn","params":{"placementId":"9900289"}},{"bidder":"sovrn","params":{"tagid":"336873"}}]}];
+    pbjs.addAdUnits(adUnits);
+        
+    pbjs.bidderSettings = {
+        standard: {
+            alwaysUseBid: false,
+            adserverTargeting: [{
+                key: "hb_bidder",
+                val: function(bidResponse) {                    
+                    return bidResponse.bidder;
+                }
+            }, {
+                key: "hb_adid",
+                val: function(bidResponse) {
+                    return bidResponse.adId;
+                }
+            }, {
+                key: "hb_pb",
+                val: function(bidResponse) {
+                    var cpm = bidResponse.cpm;
+                    if (cpm < 0.1) cpm = 0.10;
+                    if (cpm > 20) cpm = 20.00;
+                    var newCpm = (Math.floor(cpm * 10) / 10).toFixed(2);
+                    return "pb" + newCpm.replace(".", "");
+                }
+            }, {
+                key: "hb_size",
+                val: function(bidResponse) {
+                    return bidResponse.size;
+                }
+            }]
+        }
+    }
+    
+    pbjs.requestBids({
+        bidsBackHandler: function(bidResponses) {
+            initAdserver();
+        }
+    });
+});
+</script>
+<script id='dfpsetup' type='text/javascript'>
+googletag.cmd.push(function() {
+
+var dfpMapping728x90 = googletag.sizeMapping()
+	.addSize([320, 400], [320, 50])
+	.addSize([320, 700], [320, 50])
+	.addSize([480, 200], [320, 50])
+	.addSize([768, 200], [728, 90])
+	.addSize([1024, 200], [728, 90])
+	.build();
+
+googletag
+	.defineSlot('/1030735/SnowboardingForum_com_728x90_Top_SP_Forum', [[320, 50], [728, 90]], 'SnowboardingForum_com_728x90_Top_SP_Forum')
+	.defineSizeMapping(dfpMapping728x90)
+	.set("adsense_background_color", "ececec")
+	.set("adsense_border_color", "ececec")
+	.addService(googletag.pubads());
+
+googletag
+	.defineSlot('/1030735/SnowboardingForum_com_300x250_TopLeft_SP_Forum', [300, 250], 'SnowboardingForum_com_300x250_TopLeft_SP_Forum')
+	.addService(googletag.pubads());
+
+googletag
+	.defineSlot('/1030735/SnowboardingForum_com_300x250_TopRight_SP_Forum', [300, 250], 'SnowboardingForum_com_300x250_TopRight_SP_Forum')
+	.addService(googletag.pubads());
+
+googletag
+	.defineSlot('/1030735/SnowboardingForum_com_728x90_Bottom_SP_Forum', [[320, 50], [728, 90]], 'SnowboardingForum_com_728x90_Bottom_SP_Forum')
+	.defineSizeMapping(dfpMapping728x90)
+	.set("adsense_background_color", "ececec")
+	.set("adsense_border_color", "ececec")
+	.addService(googletag.pubads());
+
+googletag
+	.defineSlot('/1030735/SnowboardingForum_com_300x250_Postbit_SP_Forum', [[300, 250], [500, 250], [600, 250]], 'SnowboardingForum_com_300x250_Postbit_SP_Forum')
+	.addService(googletag.pubads());
+
+googletag
+	.defineSlot('/1030735/SnowboardingForum_com_300x250_Pre-Roll', [300, 250], 'SnowboardingForum_com_300x250_Pre-Roll')
+	.addService(googletag.pubads());
+
+googletag
+	.defineSlot('/1030735/SnowboardingForum_com_1x1_SlimCut_SP_Forum', [1, 1], 'SnowboardingForum_com_1x1_SlimCut_SP_Forum')
+	.addService(googletag.pubads());
+
+googletag
+	.defineSlot('/1030735/SnowboardingForum_com_1x1_SharethroughPostbit_SP_Forum', [[1, 1], 'fluid'], 'SnowboardingForum_com_1x1_SharethroughPostbit_SP_Forum')
+	.addService(googletag.pubads());
+
+googletag.pubads().setTargeting("sitename", "SnowboardingForum.com");
+googletag.pubads().setTargeting("make", "");
+googletag.pubads().setTargeting("model", "");
+googletag.pubads().setTargeting("group_id", "1");
+googletag.pubads().setTargeting("group_name", "Unregistered / Not Logged In");
+googletag.pubads().setTargeting("forum_id", "14");
+googletag.pubads().setTargeting("forum_name", "Resort Trip Reports");
+googletag.pubads().setTargeting("PageID", "202457");
+googletag.pubads().setTargeting("VS1", "0");
+googletag.pubads().setTargeting("VS2", "0");
+googletag.pubads().setTargeting("registered", "false");
+
+if (typeof(ccauds) != "undefined" && typeof(ccauds.Profile.tpid) != "undefined" && ccauds.Profile.tpid != "") {  
+	googletag.pubads().setTargeting("tpid", ccauds.Profile.tpid); 
+} else { 
+	googletag.pubads().setTargeting("tpid", "0"); 
+}
+
+if (typeof(ccauds) != "undefined") {
+    (function(googletag, ccauds) {
+        var aud_abbr = [], audience = ccauds.Profile.Audiences.Audience;
+        for (var cci = 0; cci < audience.length; cci++) {
+            aud_abbr.push(audience[cci].abbr);
+        }
+        googletag.pubads().setTargeting("aud_abbr", aud_abbr);
+    })(googletag, ccauds);
+}
+
+googletag.pubads().setTargeting("strNativeKey", "URMBsimDVDFEJ3HgirLTPgUW");
+
+pbjs.que.push(function() {
+    pbjs.setTargetingForGPTAsync();
+});
+googletag.pubads().enableSingleRequest();
+googletag.enableServices();
+});
+googletag.cmd.push(function() {            
+googletag.pubads().set("adsense_background_color", "ffffff");
+googletag.pubads().set("adsense_border_color", "ffffff");
+googletag.pubads().set("adsense_link_color", "6cc0c7");
+googletag.pubads().set("adsense_text_color", "000000");
+googletag.pubads().set("adsense_url_color", "6cc0c7");
+googletag.pubads().set("google_ad_bg", "ffffff");
+googletag.pubads().set("google_ad_border", "ffffff");
+googletag.pubads().set("google_ad_link", "6cc0c7");
+googletag.pubads().set("google_ad_text", "000000");
+googletag.pubads().set("google_ad_url", "6cc0c7");
+googletag.pubads().set("page_url", "http://www.snowboardingforum.com/showthread.php?t=202457");});
+</script>
+<!-- /DFP TAG -->
+
+<!-- Amazon Tag Bottom -->
+<script type='text/javascript'>
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+  try { amznads.setTargetingForGPTAsync('passback'); } catch(e) { /*ignore*/}
+</script>
+<!-- /Amazon Tag Bottom -->
+
+        <!-- App Indexing for Google Search -->
+        <link href="android-app://com.quoord.tapatalkpro.activity/tapatalk/www.snowboardingforum.com?location=topic&amp;fid=14&amp;tid=202457&amp;channel=google-indexing" rel="alternate" />
+        <link href="ios-app://307880732/tapatalk/www.snowboardingforum.com?location=topic&amp;fid=14&amp;tid=202457&amp;channel=google-indexing" rel="alternate" />
+        
+        <meta property="al:android:package" content="com.quoord.tapatalkpro.activity" />
+        <meta property="al:android:url" content="tapatalk://www.snowboardingforum.com?location=topic&amp;fid=14&amp;tid=202457&amp;channel=facebook-indexing" />
+        <meta property="al:android:app_name" content="Tapatalk" />
+        <meta property="al:ios:url" content="tapatalk://www.snowboardingforum.com?location=topic&amp;fid=14&amp;tid=202457&amp;channel=facebook-indexing" />
+        <meta property="al:ios:app_store_id" content="307880732" />
+        <meta property="al:ios:app_name" content="Tapatalk" />
+        
+        <!-- twitter app card start-->
+        <!-- https://dev.twitter.com/docs/cards/types/app-card -->
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@tapatalk" />
+        <meta name="twitter:title" content="Epic 13 day trip to Jackson Hole, Winter X Games, Aspen Snowmass" />
+        <meta name="twitter:description" content="Snowboarding Forum - Snowboard Enthusiast Forums" />
+        <meta name="twitter:image" content="http://www.snowboardingforum.com/mobiquo/smartbanner/images/tapatalk-banner-logo.png" />
+        <meta name="twitter:app:id:iphone" content="307880732" />
+        <meta name="twitter:app:url:iphone" content="tapatalk://www.snowboardingforum.com?location=topic&amp;fid=14&amp;tid=202457&amp;channel=twitter-indexing" />
+        <meta name="twitter:app:id:ipad" content="307880732" />
+        <meta name="twitter:app:url:ipad" content="tapatalk://www.snowboardingforum.com?location=topic&amp;fid=14&amp;tid=202457&amp;channel=twitter-indexing" />
+        <meta name="twitter:app:id:googleplay" content="com.quoord.tapatalkpro.activity" />
+        <meta name="twitter:app:url:googleplay" content="tapatalk://www.snowboardingforum.com?location=topic&amp;fid=14&amp;tid=202457&amp;channel=twitter-indexing" />
+        <!-- twitter app card -->
+        <!-- Editor CSS automatically added by functions_editor.php at line 680 -->
+<script type="text/javascript" src="//d1r55yzuc1b1bw.cloudfront.net/vsapi.all.min.js"></script>
+	<title> Epic 13 day trip to Jackson Hole, Winter X Games, Aspen Snowmass - Snowboarding Forum - Snowboard Enthusiast Forums</title>
+
+
+<!-- Taboola Header -->
+<script type="text/javascript">
+  window._taboola = window._taboola || [];
+  _taboola.push({article:"auto"});
+  !function (e, f, u) {
+    e.async = 1;
+    e.src = u;
+    f.parentNode.insertBefore(e, f);
+  }(document.createElement("script"),
+  document.getElementsByTagName("script")[0],
+  '//cdn.taboola.com/libtrc/verticalscope-network/loader.js');
+</script>
+<!-- /Taboola Header -->
+
+<link rel="stylesheet" type="text/css" href="vbseo/resources/css/vbseo_buttons.css?v=a4" />
+<script type="text/javascript" src="vbseo/resources/scripts/vbseo_ui.js?v=a4"></script>
+
+<script type="text/javascript">
+ YAHOO.util.Event.onDOMReady(function (){
+ 	vbseoui = new vBSEO_UI();
+ 	vbseoui.page_init(Array('postbody','blogbit','content','postcontainer','vbseo_like_postbit'), Array("php",1));
+ });
+</script>
+
+</head>
+<body onload="">
+
+<script>
+var captify_kw_query_11825 = "";
+(function(c,a,p,t,i,f,y){i=c.createElement(a);t=c.getElementsByTagName(a)[0];i.type="text/javascript";i.async=true;i.src=p;t.parentNode.insertBefore(i,t);})(document,"script","https://p.cpx.to/p/11825/px.js");
+</script>
+
+<script type="text/javascript"> 
+    var xl8_script = document.createElement("script"); 
+    xl8_script.src = "https://loadus.exelator.com/load/?p=239&g=049&c=1470956&ctg=Sports&cmake=Snowboarding&cmodel=&j=d"; 
+    xl8_script.type = "text/javascript"; 
+    xl8_script.async = true; 
+    document.body.appendChild(xl8_script); 
+</script>
+
+
+
+
+<script>
+var captify_kw_query_11825 = "";
+(function(c,a,p,t,i,f,y){i=c.createElement(a);t=c.getElementsByTagName(a)[0];i.type="text/javascript";i.async=true;i.src=p;t.parentNode.insertBefore(i,t);})(document,"script","https://p.cpx.to/p/11825/px.js");
+</script>
+
+<script type="text/javascript"> 
+    var xl8_script = document.createElement("script"); 
+    xl8_script.src = "https://loadus.exelator.com/load/?p=239&g=049&c=1470956&ctg=Sports&cmake=Snowboarding&cmodel=&j=d"; 
+    xl8_script.type = "text/javascript"; 
+    xl8_script.async = true; 
+    document.body.appendChild(xl8_script); 
+</script>
+
+
+
+
+
+
+<!-- Tapatalk Detect body start -->
+<script type="text/javascript">if (typeof(tapatalkDetect) == "function") tapatalkDetect()</script>
+<!-- Tapatalk Detect banner body end -->
+
+
+<div class="container">
+
+<!-- logo -->
+<a name="top"></a>
+<table border="0" width="100%" cellpadding="0" cellspacing="0" align="center" id="header" class="header" style="background: url(/images/SnowboardingForum_2015/misc/head-middle.jpg) repeat-x;"><tr><td align="left"><a href="http://www.snowboardingforum.com/forum.php"><img src="/images/SnowboardingForum_2015/misc/head-left.png" border="0" height="146" width="875" alt="Snowboarding Forum - Snowboard Enthusiast Forums" /></a></td><td align="right" id="header_right_cell"><img src="/images/SnowboardingForum_2015/misc/head-right.png" border="0" height="146" width="398" alt="" /></td>
+</tr></table>
+<!-- /logo -->
+
+<!-- content table -->
+<!-- open content container -->
+
+<div align="center" itemscope itemtype="http://schema.org/WebPage">
+	<div id="page" class="page page-background" style="width:100%; text-align:left">
+		<div style="padding:0px 0px 0px 0px" align="left">
+
+
+
+
+<!--<div class="vbmenu_popup" id="vbbloglinks_menu" style="display:none;margin-top:3px" align="left">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead"><a href="http://www.snowboardingforum.com/blogs/">Blogs</a></td>
+	</tr>
+	
+	<tr>
+		<td class="vbmenu_option"><a href="http://www.snowboardingforum.com/blogs/recent-entries/">Recent Entries</a></td>
+	</tr>
+	<tr>
+		<td class="vbmenu_option"><a href="http://www.snowboardingforum.com/blogs/best-entries/">Best Entries</a></td>
+	</tr>
+	<tr>
+		<td class="vbmenu_option"><a href="http://www.snowboardingforum.com/blogs/best-blogs/">Best Blogs</a></td>
+	</tr>
+	<tr>
+		<td class="vbmenu_option"><a href="http://www.snowboardingforum.com/blogs/all/">Blog List</a></td>
+	</tr>
+	
+	<tr>
+		<td class="vbmenu_option"><a rel="nofollow" href="http://www.snowboardingforum.com/blog_search.php?do=search">Search Blogs</a></td>
+	</tr>
+	
+	</table>
+</div>-->
+<!-- nav buttons bar -->
+<nav>
+<div class="search-in-one">
+    <div class="change_btn "><div class="image sprite-google-search"></div>
+        <ul class="search_menu">
+            
+<li data-search-type="google-search"><div class="icon sprite-google-search"></div> Google search</li>
+
+            <li data-search-type="vb-search"><div class="icon sprite-vb-search"></div> VB search</li>
+        </ul>
+    </div>
+
+    
+    <div class="search-item google-search">
+    <div class='ams_gtsearch' style='max-width: 250px; margin:auto;' id='cse_gtsearch_form_3'></div>
+<script>
+vsamsgtsearches.push('cse_gtsearch_form_3');
+</script>
+    </div> 
+    
+
+    
+</div>
+
+
+
+<ul class="vbmenu_control navbar_search">
+<li><a id="navbar_search" href="http://www.snowboardingforum.com/search.php" accesskey="4" rel="nofollow">Search</a> <script type="text/javascript"> vbmenu_register("navbar_search"); </script>
+</li></ul>
+
+
+<ul class="nav" id="nav">
+    
+    <li class="vbmenu_control"><a href="http://www.snowboardingforum.com/">Home</a></li>
+    
+    			
+
+	<li class="vbmenu_control hovertouch">
+		<a href="/forum.php" id="navforums">Forums <img src="/images/misc/menu_open.gif" border="0" width="8" height="4" title="" alt=""></a>
+		<div class="vbmenu_popup tools_wrapper forum-menu_wrapper" id="forum-menu">
+			<ul class="subnav" >
+				<style>
+.subnav li.mobile_forumlink {display: none;}
+@media screen and (max-width: 1024px){
+.subnav li.mobile_forumlink {display: list-item;}
+}
+</style>
+<li class="vbmenu_control mobile_forumlink"><a href="http://www.snowboardingforum.com/forum.php">Forums</a></li>
+			
+<li class="vbmenu_control ">
+	<a href="http://www.snowboardingforum.com/welcome-new-riders-new-members/">Welcome New Riders And New Members</a>
+	
+</li>
+	
+			
+					
+<li class="vbmenu_control hovertouch">
+	<a href="http://www.snowboardingforum.com/snowboarding-forum-message-board/">Snowboarding Forum Message Board</a>
+	
+		<div class="vbmenu_popup" style="display:none;" align="left">
+			<ul class="subnav">
+				
+			
+<li class="vbmenu_control">
+	<a href="http://www.snowboardingforum.com/site-news-updates-suggestions/">Site News, Updates and Suggestions</a>
+</li>		
+		
+			
+<li class="vbmenu_control">
+	<a href="http://www.snowboardingforum.com/meets-events/">Meets and Events</a>
+</li>		
+		
+			
+<li class="vbmenu_control">
+	<a href="http://www.skiingforum.com/">Skiing Forum</a>
+</li>		
+		
+			</ul>
+		</div>
+	
+</li>
+	
+			
+					
+<li class="vbmenu_control hovertouch">
+	<a href="http://www.snowboardingforum.com/snowboarding-equipment/">Snowboarding Equipment</a>
+	
+		<div class="vbmenu_popup" style="display:none;" align="left">
+			<ul class="subnav">
+				
+			
+<li class="vbmenu_control">
+	<a href="http://www.snowboardingforum.com/boards/">Boards</a>
+</li>		
+		
+			
+<li class="vbmenu_control">
+	<a href="http://www.snowboardingforum.com/bindings/">Bindings</a>
+</li>		
+		
+			
+<li class="vbmenu_control">
+	<a href="http://www.snowboardingforum.com/boots/">Boots</a>
+</li>		
+		
+			
+<li class="vbmenu_control">
+	<a href="http://www.snowboardingforum.com/outerwear-accessories/">Outerwear and Accessories</a>
+</li>		
+		
+			</ul>
+		</div>
+	
+</li>
+	
+			
+					
+<li class="vbmenu_control hovertouch">
+	<a href="http://www.snowboardingforum.com/equipment-reviews/">Equipment Reviews</a>
+	
+		<div class="vbmenu_popup" style="display:none;" align="left">
+			<ul class="subnav">
+				
+			
+<li class="vbmenu_control">
+	<a href="http://www.snowboardingforum.com/snowboard-reviews/">Snowboard Reviews</a>
+</li>		
+		
+			
+<li class="vbmenu_control">
+	<a href="http://www.snowboardingforum.com/binding-reviews/">Binding Reviews</a>
+</li>		
+		
+			
+<li class="vbmenu_control">
+	<a href="http://www.snowboardingforum.com/general-equipment-reviews/">General Equipment Reviews.</a>
+</li>		
+		
+			</ul>
+		</div>
+	
+</li>
+	
+			
+					
+<li class="vbmenu_control hovertouch">
+	<a href="http://www.snowboardingforum.com/snowboarding-travel/">Snowboarding Travel</a>
+	
+		<div class="vbmenu_popup" style="display:none;" align="left">
+			<ul class="subnav">
+				
+			
+<li class="vbmenu_control">
+	<a href="http://www.snowboardingforum.com/general-travel-forum/">General Travel Forum</a>
+</li>		
+		
+			
+<li class="vbmenu_control">
+	<a href="http://www.snowboardingforum.com/resort-trip-reports/">Resort Trip Reports</a>
+</li>		
+		
+			
+<li class="vbmenu_control">
+	<a href="http://www.snowboardingforum.com/nightlife/">Nightlife</a>
+</li>		
+		
+			
+<li class="vbmenu_control">
+	<a href="http://www.snowboardingforum.com/back-country-travel/">Back Country Travel</a>
+</li>		
+		
+			
+<li class="vbmenu_control">
+	<a href="http://www.snowboardingforum.com/backcountry-trip-reports/">Backcountry Trip Reports</a>
+</li>		
+		
+			</ul>
+		</div>
+	
+</li>
+	
+			
+					
+<li class="vbmenu_control hovertouch">
+	<a href="http://www.snowboardingforum.com/regional-forums/">Regional Forums</a>
+	
+		<div class="vbmenu_popup" style="display:none;" align="left">
+			<ul class="subnav">
+				
+			
+<li class="vbmenu_control">
+	<a href="http://www.snowboardingforum.com/regional-forums-united-states/">Regional Forums: United States</a>
+</li>		
+		
+			
+<li class="vbmenu_control">
+	<a href="http://www.snowboardingforum.com/regional-forums-canada/">Regional Forums: Canada</a>
+</li>		
+		
+			
+<li class="vbmenu_control">
+	<a href="http://www.snowboardingforum.com/regional-forums-international/">Regional Forums: International</a>
+</li>		
+		
+			</ul>
+		</div>
+	
+</li>
+	
+			
+					
+<li class="vbmenu_control hovertouch">
+	<a href="http://www.snowboardingforum.com/snowboarding-lifestyle/">Snowboarding Lifestyle</a>
+	
+		<div class="vbmenu_popup" style="display:none;" align="left">
+			<ul class="subnav">
+				
+			
+<li class="vbmenu_control">
+	<a href="http://www.snowboardingforum.com/music-discussion/">Music Discussion</a>
+</li>		
+		
+			
+<li class="vbmenu_control">
+	<a href="http://www.snowboardingforum.com/fashion/">Fashion</a>
+</li>		
+		
+			
+<li class="vbmenu_control">
+	<a href="http://www.snowboardingforum.com/slam-section/">Slam Section</a>
+</li>		
+		
+			
+<li class="vbmenu_control">
+	<a href="http://www.snowboardingforum.com/photography-video-other-media/">Photography, Video, and Other Media</a>
+</li>		
+		
+			</ul>
+		</div>
+	
+</li>
+	
+			
+					
+<li class="vbmenu_control hovertouch">
+	<a href="http://www.snowboardingforum.com/snowboarding-lounge/">Snowboarding Lounge</a>
+	
+		<div class="vbmenu_popup" style="display:none;" align="left">
+			<ul class="subnav">
+				
+			
+<li class="vbmenu_control">
+	<a href="http://www.snowboardingforum.com/snowboarding-general-chat/">Snowboarding General Chat</a>
+</li>		
+		
+			
+<li class="vbmenu_control">
+	<a href="http://www.snowboardingforum.com/tips-tricks-snowboard-coaching/">Tips, Tricks And Snowboard Coaching</a>
+</li>		
+		
+			
+<li class="vbmenu_control">
+	<a href="http://www.snowboardingforum.com/games/">Games</a>
+</li>		
+		
+			
+<li class="vbmenu_control">
+	<a href="http://www.snowboardingforum.com/buy-sell-snowboard-equipment/">Buy and Sell Snowboard Equipment</a>
+</li>		
+		
+			
+<li class="vbmenu_control">
+	<a href="http://www.snowboardingforum.com/buy-sell-other-items/">Buy and Sell  Other Items</a>
+</li>		
+		
+			
+<li class="vbmenu_control">
+	<a href="http://www.snowboardingforum.com/stolen/">Stolen!</a>
+</li>		
+		
+			
+<li class="vbmenu_control">
+	<a href="http://www.snowboardingforum.com/premium-vip-lounge/">Premium VIP Lounge</a>
+</li>		
+		
+			</ul>
+		</div>
+	
+</li>
+	
+			
+					
+<li class="vbmenu_control hovertouch">
+	<a href="http://www.snowboardingforum.com/vendors/">Vendors</a>
+	
+		<div class="vbmenu_popup" style="display:none;" align="left">
+			<ul class="subnav">
+				
+			
+<li class="vbmenu_control">
+	<a href="http://www.snowboardingforum.com/vendor-deals/">Vendor Deals</a>
+</li>		
+		
+			</ul>
+		</div>
+	
+</li>
+	
+			
+					
+<li class="vbmenu_control hovertouch">
+	<a href="http://www.snowboardingforum.com/off-topic/">Off-Topic</a>
+	
+		<div class="vbmenu_popup" style="display:none;" align="left">
+			<ul class="subnav">
+				
+			
+<li class="vbmenu_control">
+	<a href="http://www.snowboardingforum.com/off-topic-general-discussion/">Off-Topic General Discussion</a>
+</li>		
+		
+			
+<li class="vbmenu_control">
+	<a href="http://www.snowboardingforum.com/off-season-recreation/">Off Season Recreation</a>
+</li>		
+		
+			
+<li class="vbmenu_control">
+	<a href="http://www.snowboardingforum.com/political-wilderness/">The Political Wilderness</a>
+</li>		
+		
+			</ul>
+		</div>
+	
+</li>
+	
+			
+					
+<li class="vbmenu_control hovertouch">
+	<a href="http://www.snowboardingforum.com/snowboardingforum-com-forum-tech-support/">snowboardingforum.com Forum Tech Support</a>
+	
+		<div class="vbmenu_popup" style="display:none;" align="left">
+			<ul class="subnav">
+				
+			
+<li class="vbmenu_control">
+	<a href="http://www.snowboardingforum.com/snowboardingforum-com-forum-help-desk/">snowboardingforum.com Forum Help Desk</a>
+</li>		
+		
+			</ul>
+		</div>
+	
+</li>
+	
+			
+		
+			</ul>
+		</div>
+	</li>
+
+			
+		
+    <if>
+    
+    <li class="vbmenu_control"><a rel="nofollow" href="http://www.snowboardingforum.com/portal.php?page=active_topics">Active Topics</a></li>
+    
+    
+    <li class="vbmenu_control"><a href="http://www.snowboardingforum.com/search.php?do=getdaily" accesskey="2">Latest  Posts</a></li>
+    
+    
+    <li class="vbmenu_control"><a href="http://www.snowboardingforum.com/photopost/">Gallery</a></li>
+    
+    
+<li class="vbmenu_control" id="tmp_garage"><!--<a id="navbar_garage" href="http://www.snowboardingforum.com/garage.php?do=index" rel="nofollow">Garage</a>-->
+		
+		
+</li>
+		
+
+    
+</li>
+
+
+
+		
+		
+        <!--<li class="mobile-hide"><a rel="nofollow" href="http://www.autoguide.com/buyers-guide/auto-insurance.html" target="_blank">Insurance</a><li>-->
+        
+        
+    <li class="vbmenu_control vs_register"><a href="http://www.snowboardingforum.com/register.php" onclick="event.preventDefault(); window.location.href='http://www.snowboardingforum.com/register.php?autodisplayreg=true'" rel="nofollow">Register</a></li>
+    
+
+</ul>
+</nav>
+<!-- / nav buttons bar -->
+
+<!-- breadcrumb, login, pm info -->
+<div class="text_wrapper info-bar">
+<span class="login-or-links">
+
+
+
+		<!-- login form -->
+		<form action="http://www.snowboardingforum.com/login.php?do=login" method="post" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+
+
+<a rel="nofollow" href="http://www.snowboardingforum.com/register.php?do=social&amp;provider=facebook&amp;reg=1" class="social_btn facebook_btn gradient"><span class="sprite inlineimg facebook_sprite">Facebook</span></a>
+
+
+
+
+		
+<input type="text" class="bginput"  name="vb_login_username" id="navbar_username" size="10" accesskey="u" tabindex="101" value="User Name" onfocus="if (this.value == 'User Name') this.value = '';" />
+
+<input type="password" class="bginput"  name="vb_login_password" id="navbar_password" size="10" tabindex="102" /  value="Password" onfocus="if (this.value == 'Password') this.value = '';">
+
+
+<input type="submit" class="button" value="Log in" tabindex="104" title="Enter your username and password in the boxes provided to login, or click the 'register' button to create a profile for yourself." accesskey="s" />
+
+<label for="cb_cookieuser_navbar"><input type="checkbox" name="cookieuser" value="1" tabindex="103" id="cb_cookieuser_navbar" accesskey="c" /><span class="mobile-hide">Remember Me?</span></label>
+
+
+		<input type="hidden" name="s" value="" />
+		<input type="hidden" name="securitytoken" value="guest" />
+		<input type="hidden" name="do" value="login" />
+		<input type="hidden" name="vb_login_md5password" />
+		<input type="hidden" name="vb_login_md5password_utf" />
+		</form>
+		<!-- / login form -->
+     
+
+       
+</span> 
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<!-- NAVBAR POPUP MENUS -->
+
+	
+	
+
+	
+	<!-- header quick search form -->
+	<div class="vbmenu_popup" id="navbar_search_menu" style="display:none;" align="left">
+		<table cellpadding="4" cellspacing="1" border="0">
+		<tr>
+			<td class="thead">Search Forums</td>
+		</tr>
+		<tr>
+			<td class="vbmenu_option" title="nohilite">
+				<form action="http://www.snowboardingforum.com/search.php?do=process" method="post">
+
+					<input type="hidden" name="do" value="process" />
+					<input type="hidden" name="quicksearch" value="1" />
+					<input type="hidden" name="childforums" value="1" />
+					<input type="hidden" name="exactname" value="1" />
+					<input type="hidden" name="s" value="" />
+					<input type="hidden" name="securitytoken" value="guest" />
+					<div><input type="text" class="bginput" name="query" size="25" tabindex="1001" /><input type="submit" class="button go_button" value="Go" tabindex="1004" /></div>
+					<div style="margin-top:5px;">
+						<label for="rb_nb_sp0"><input type="radio" name="showposts" value="0" id="rb_nb_sp0" tabindex="1002" checked="checked" />Show Threads</label>
+						&nbsp;
+						<label for="rb_nb_sp1"><input type="radio" name="showposts" value="1" id="rb_nb_sp1" tabindex="1003" />Show Posts</label>
+					</div>
+				</form>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="vbmenu_option"><a href="http://www.snowboardingforum.com/tags/" rel="nofollow">Tag Search</a></td>
+		</tr>
+		
+		<tr>
+			<td class="vbmenu_option"><a href="http://www.snowboardingforum.com/search.php" accesskey="4" rel="nofollow">Advanced Search</a></td>
+		</tr>
+		<tr><td class='thead' align=''>Google Search</td></tr><tr><td class='vbmenu_option' title='nohilite'><div class='ams_gtsearch' style='max-width: 250px; margin:auto;' id='cse_search_box'></div>
+<script>
+vsamsgtsearches.push('cse_search_box');
+</script></td></tr><tr>
+	<td class="thead">Search Blogs</td>
+</tr>
+<tr>
+	<td class="vbmenu_option" title="nohilite">
+		<form action="http://www.snowboardingforum.com/blog_search.php?do=dosearch" method="post">
+			<input type="hidden" name="s" value="" />
+			<input type="hidden" name="securitytoken" value="guest" />
+			<input type="hidden" name="do" value="dosearch" />
+			<input type="hidden" name="quicksearch" value="1" />
+			<div><input type="text" class="bginput" name="text" size="25" tabindex="2003" /><input type="submit" class="button" value="Go" tabindex="2004" /></div>
+		</form>
+	</td>
+</tr>
+
+<tr>
+	<td class="vbmenu_option"><a href="http://www.snowboardingforum.com/blogs/tags/" rel="nofollow">Tag Search</a></td>
+</tr>
+
+<tr>
+	<td class="vbmenu_option"><a rel="nofollow" href="http://www.snowboardingforum.com/blog_search.php?do=search">Advanced Search</a></td>
+</tr>
+		</table>
+	</div>
+
+
+
+
+
+	
+	
+
+<!-- PAGENAV POPUP -->
+	<div class="vbmenu_popup" id="pagenav_menu" style="display:none">
+		<table cellpadding="4" cellspacing="1" border="0" width="100%">
+		<tr>
+			<td class="thead" nowrap="nowrap">Go to Page...</td>
+		</tr>
+		<tr>
+			<td class="vbmenu_option" title="nohilite">
+			<form action="http://www.snowboardingforum.com/forum.php" method="get" onsubmit="return this.gotopage()" id="pagenav_form">
+				<input type="text" class="bginput" id="pagenav_itxt" size="4" />
+				<input type="button" class="button go_button" id="pagenav_ibtn" value="Go" />
+			</form>
+			</td>
+		</tr>
+		</table>
+	</div>
+<!-- / PAGENAV POPUP -->
+
+
+
+
+
+
+<div class="Leaderboard LeaderboardHeight">
+<div style='width:100%; text-align:center;'><div id='SnowboardingForum_com_728x90_Top_SP_Forum' style='width:auto; height:auto;'>
+						<script type='text/javascript'>
+							googletag.cmd.push(function() { googletag.display('SnowboardingForum_com_728x90_Top_SP_Forum'); });
+						</script>
+					</div></div>
+
+</div>
+
+
+
+
+
+
+<div class="text_wrapper navbar_wrapper">
+<div class="breadcrumb" itemprop="breadcrumb">		
+
+			
+			<span class="navbar"><a href="http://www.snowboardingforum.com/forum.php" accesskey="1">Snowboarding Forum - Snowboard Enthusiast Forums</a></span> 
+	<span class="navbar">&gt; <a href="http://www.snowboardingforum.com/snowboarding-travel/">Snowboarding Travel</a></span>
+
+
+	<span class="navbar">&gt; <a href="http://www.snowboardingforum.com/resort-trip-reports/">Resort Trip Reports</a></span>
+
+
+                ><a href="http://www.snowboardingforum.com/resort-trip-reports/202457-epic-13-day-trip-jackson-hole.html"></a> <strong>
+	 Epic 13 day trip to Jackson Hole, Winter X Games, Aspen Snowmass
+
+</strong>
+		
+</div>
+</div>
+<!-- / breadcrumb, login, pm info -->
+
+
+
+
+
+<div id="wrapper" class="wrapper">
+<div id="main-content_wrapper" class="center">    
+<div id="main-content">
+
+
+
+<div class="showthreadPage">
+<form method="post" action="http://www.snowboardingforum.com/usertag.php">
+<table class="tborder" cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+<thead>
+	<tr style="padding-top:5px;">
+		<td class="tcat"><a rel="nofollow" href="http://www.snowboardingforum.com/usertag.php?do=list&amp;action=tags&amp;t=202457">User Tag List</a></td>
+	</tr>
+</thead>
+<tbody>
+	
+	
+</tbody>
+</table>
+<input type="hidden" name="s" value="" />
+<input type="hidden" name="securitytoken" value="guest" />
+<input type="hidden" name="do" value="threadtag" />
+<input type="hidden" name="action" value="update" />
+<input type="hidden" name="threadid" value="202457" />
+</form>
+<br />
+
+
+
+
+<a name="poststop" id="poststop"></a><div class="text_wrapper">
+<div id="vbseo-likes">
+      <span class="vbseo-likes-count" onclick="vbseoui.tree_dropdown()"><span class="sprite inlineimg vbseo_likes_heart"><!-- -->&nbsp;</span>10<em>Likes</em></span>
+      
+      <div id="liketree_1.202457" class="vbseo-likes-container">
+
+		<ul class="vbseo-likes-tabs">
+			<li><a href="http://www.snowboardingforum.com/resort-trip-reports/202457-epic-13-day-trip-jackson-hole.html#" onclick="return vbseoui.treetab_click(0)">Top</a></li>
+			<li><a href="http://www.snowboardingforum.com/resort-trip-reports/202457-epic-13-day-trip-jackson-hole.html#" onclick="return vbseoui.treetab_click(1)">All</a></li>
+			
+			<li><a href="http://www.snowboardingforum.com/resort-trip-reports/202457-epic-13-day-trip-jackson-hole.html#" onclick="return vbseoui.treetab_click(2)">This Page</a></li>
+			
+			<li class="vbseo-likes-fusion"></li>
+		</ul>
+
+		<ul class="vbseo-likes-list">
+		
+		<li></li>
+		
+		</ul>
+	
+	
+	  </div>
+</div>
+
+<script type="text/javascript">
+var vbseoui_pageids = "2622841,2622857,2622865,2622889,2622897,2622905,2623017,2623057,2623121,2623137";
+</script>
+
+</div> 
+
+
+<!-- controls above postbits -->
+<div class="controls" id="fixed-controls">
+<div class="fixed-controls-container">
+
+		<a href="http://www.snowboardingforum.com/newreply.php?do=newreply&amp;noquote=1&amp;p=2623137" rel="nofollow"><span class="sprite button reply">Reply</span></a>
+	
+<span class="item pagenav">
+	<div class="pagenav" align="right">
+<table class="tborder" cellpadding="0" cellspacing="0" border="0">
+<tr>
+	<td class="vbmenu_control" style="font-weight:normal">Page 1 of 3</td>
+	
+	
+		<td class="alt2"><span class="smallfont" title="Showing results 1 to 10 of 27"><strong>1</strong></span></td>
+ <td class="alt1"><a class="smallfont" href="http://www.snowboardingforum.com/resort-trip-reports/202457-epic-13-day-trip-jackson-hole-2.html" title="Show results 11 to 20 of 27">2</a></td><td class="alt1"><a class="smallfont" href="http://www.snowboardingforum.com/resort-trip-reports/202457-epic-13-day-trip-jackson-hole-3.html" title="Show results 21 to 27 of 27">3</a></td>
+	<td class="alt1 nextpage"><a rel="next" class="smallfont" href="http://www.snowboardingforum.com/resort-trip-reports/202457-epic-13-day-trip-jackson-hole-2.html" title="Next Page - Results 11 to 20 of 27"><span class="sprite greater-than"><!-- -->&nbsp;</span></a></td>
+	
+	<td class="vbmenu_control" title="showthread.php?t=202457"><a name="PageNav"></a></td>
+</tr>
+</table>
+</div>
+</span>
+
+<span class="item item-social">
+			
+<div class="socialIcons threadPage">
+	<div class="gplus"><g:plusone size="medium"></g:plusone></div>
+	<a
+rel="nofollow" 
+		href="http://twitter.com/share"
+		class="twitter-share-button"
+		data-count="horizontal"
+		
+	>Tweet</a>
+	<fb:like href="" send="false" layout="button_count" width="70" show_faces="false" action="like" font=""></fb:like>
+</div>
+<div style="clear:both;"></div>
+			
+		</span>
+
+</div>
+</div>
+<!-- / controls above postbits -->
+<div id="placeholder"></div>
+
+ 
+
+<!-- toolbar -->
+<table class="tborder toolbar " cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="border-bottom-width:0px">
+<tr>
+	<td class="tcat" >
+		<div class="smallfont">
+		
+		&nbsp;
+		</div>
+	</td>
+	
+<td class="vbmenu_control" id="linkbacktools" nowrap="nowrap">
+	<a rel="nofollow" href="http://www.snowboardingforum.com/resort-trip-reports/202457-epic-13-day-trip-jackson-hole.html?nojs=1#links">LinkBack</a>
+	<script type="text/javascript"> vbmenu_register("linkbacktools"); </script>
+</td>
+<td class="tcat" id="threadtools" >
+		<a rel="nofollow" href="http://www.snowboardingforum.com/resort-trip-reports/202457-epic-13-day-trip-jackson-hole.html?nojs=1#goto_threadtools">Thread Tools</a>
+		<script type="text/javascript"> vbmenu_register("threadtools"); </script>
+	</td>
+	
+	
+	 
+	<td class="tcat" id="displaymodes" >
+		<a rel="nofollow" href="http://www.snowboardingforum.com/resort-trip-reports/202457-epic-13-day-trip-jackson-hole.html?nojs=1#goto_displaymodes">Display Modes</a>
+		<script type="text/javascript"> vbmenu_register("displaymodes"); </script>
+	</td>
+	
+
+	
+
+</tr>
+</table>
+<!-- / toolbar -->
+
+
+
+<!-- end content table -->
+
+<!-- / end content table -->
+
+
+
+
+
+<div id="posts" itemscope itemtype="http://schema.org/Blog"><!-- post #2622841 -->
+
+	
+	<div id="edit2622841" style="padding:0px 0px 0px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<section id="post2622841" class="tborder vbseo_like_postbit user-post" itemscope itemtype="http://schema.org/Comment">
+
+
+<div class="text_wrapper postbit_legacy_wrapper_thead thead" >
+	
+    
+    <span class="post-count"><a href="http://www.snowboardingforum.com/2622841-post1.html" target="new"  id="postcount2622841" name="1"><strong>post #1</strong> of 27</a> (<b><a href="http://www.snowboardingforum.com/resort-trip-reports/202457-epic-13-day-trip-jackson-hole.html#post2622841" title="Link to this Post">permalink</a></b>)
+			
+ </span>
+			<!-- status icon and date -->
+			<a name="post2622841"><span class="sprite inlineimg post_old">Old</span></a>
+			<span itemprop="dateCreated">02-12-2016, 01:55 PM</span>
+			
+			<!-- / status icon and date -->
+
+			
+			
+
+	
+ <span class="thread-starter">Thread Starter</span>   
+</div>
+
+<div class="text_wrapper postbit_legacy_wrapper">
+<div class="alt2 picture main-column-picture">
+
+			<div id="postmenu_2622841" itemprop="contributor">
+				
+				<a rel="nofollow" class="bigusername" href="http://www.snowboardingforum.com/members/nutmegchoi.html"><!-- google_ad_section_start(weight=ignore) -->nutmegchoi<!-- google_ad_section_end --></a>
+				
+				
+			</div>
+
+			<div class="smallfont">Veteran Member</div>
+			
+			
+
+			
+				<div class="smallfont">
+					&nbsp;<br /><a rel="nofollow" href="http://www.snowboardingforum.com/members/nutmegchoi.html"><img class="photo avatar" src="/images/SnowboardingForum_2015/misc/spacer.gif" data-original="customavatars/avatar128977_6.gif" width="96" height="89" alt="nutmegchoi's Avatar" border="0" /></a>
+				</div>
+			
+			<div class="smallfont">
+				&nbsp;<br />
+				<div>Join Date: Feb 2016</div>
+				<div>Location: Westchester, New York</div>
+				
+				<div>
+					Posts: 807
+				</div>
+				
+	<div>Mentioned: 6 Post(s)</div>
+
+
+	<div>Tagged: 1 Thread(s)</div>
+
+
+	<div>Quoted: 377 Post(s)</div>
+
+
+				
+				
+				
+				<div>    </div>
+			</div>
+
+</div>
+
+	
+    <div id="td_post_2622841" class="main-column-text-wrapper alt1">
+	<div class="main-column-text">
+	
+		
+		
+			<!-- icon and title -->
+			<div class="smallfont">
+				
+				 <strong itemprop="alternativeHeadline"><!-- google_ad_section_start -->Epic 13 day trip to Jackson Hole, Winter X Games, Aspen Snowmass<!-- google_ad_section_end --></strong>
+			</div>
+			<hr class="dividing-line" />
+
+
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_2622841" itemprop="text">
+			
+			<!-- google_ad_section_start -->This year New York winter sucks.<br />
+I mean, really really sucks.<br />
+<br />
+The snowfall total was an inch until the day we left town (as of January 22nd, 2016).<br />
+Then it started snowing and eventually 31 inches came down.<br />
+Thankfully we were able to escape the storm within hours and flew out.<br />
+Otherwise we would&#8217;ve been grounded and wasted first few days of our annual trip to the west.<br />
+<br />
+No direct flight to Jackson, so connected in Chicago and finally Jackson, Wyoming.<br />
+<br />
+Heard it's very difficult to get in and out, but it wasn't all that bad.<br />
+In fact, the airport was much nicer than Vail or Aspen.<br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Photo%20Jan%2022%202%2000%2041%20PM_zps3bsntcb4.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Photo%20Jan%2022%202%2000%2041%20PM_zps3bsntcb4.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/IMG_1034_zpsuwze8r3g.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/IMG_1034_zpsuwze8r3g.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/IMG_1035_zpsm8wsvqha.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/IMG_1035_zpsm8wsvqha.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+Packed up the rental car and 20 minutes later finally arrived in Teton Village.<br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/IMG_1041_zpssukteaxe.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/IMG_1041_zpssukteaxe.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Photo%20Jan%2022%203%2018%2046%20PM_zpss2iejirj.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Photo%20Jan%2022%203%2018%2046%20PM_zpss2iejirj.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+Our hotel was ski in/out right by the lift and gondola.<br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Photo%20Jan%2022%204%2006%2013%20PM_zpsnn9u5b47.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Photo%20Jan%2022%204%2006%2013%20PM_zpsnn9u5b47.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+First meal in Jackson at Spur.<br />
+Had to try Bison Bone-in Ribeye.<br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Photo%20Jan%2022%2011%2026%2018%20PM_zpsonuq8svo.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Photo%20Jan%2022%2011%2026%2018%20PM_zpsonuq8svo.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+The mountain was beautiful, intimidating, fun and scary.<br />
+Way, way more than I could ever ask for! <br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Photo%20Jan%2024%204%2012%2001%20PM_zpsitzkyljx.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Photo%20Jan%2024%204%2012%2001%20PM_zpsitzkyljx.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Photo%20Jan%2024%204%2018%2006%20PM_zpscmdiwp1a.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Photo%20Jan%2024%204%2018%2006%20PM_zpscmdiwp1a.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+Infamous Corbet's Couloir.<br />
+<br />
+Not that I was gonna go down, it was closed.<br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Photo%20Jan%2024%204%2021%2035%20PM_zpsfezmvaya.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Photo%20Jan%2024%204%2021%2035%20PM_zpsfezmvaya.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><!-- google_ad_section_end -->
+		</div>
+		<!-- / message -->
+
+		
+
+		
+<div class="vbseo_buttons" id="lkbtn_1.202457.2622841">
+
+    <div class="alt2 vbseo_liked"><a href="http://www.snowboardingforum.com/members/argo.html">Argo</a>, <a href="http://www.snowboardingforum.com/members/cassmt.html">CassMT</a> and <a href="http://www.snowboardingforum.com/members/kalev.html">kalev</a> like this.</div>
+
+
+</div>
+
+		
+
+		
+
+		
+
+		
+		<!-- edit note -->
+			<div class="smallfont">
+				<hr class="dividing-line" />
+				<em>
+					
+						Last edited by nutmegchoi; 02-13-2016 at <span class="time">09:44 AM</span>.
+					
+					
+				</em>
+			</div>
+		<!-- / edit note -->
+		
+
+</div>
+</div>
+
+</div>
+<!-- end text_wrapper -->
+
+    
+<div class="text_wrapper postbit_legacy_wrapper postbit_legacy_wrapper_bottom">
+<div class="alt2 picture main-column-picture status-icons" >  
+		<span class="sprite inlineimg user_offline" title="nutmegchoi is offline">nutmegchoi is offline</span>
+
+
+		
+		
+		
+		
+		&nbsp;
+        
+</div>
+	
+<div id="td_post_1162" class="main-column-text-wrapper buttons buttons-postings">
+<div class="main-column-text">  
+	
+		<div class="right"><!-- controls -->
+		
+		
+		
+			<a href="http://www.snowboardingforum.com/newreply.php?do=newreply&amp;p=2622841" rel="nofollow"><span class="sprite button quote">Quote</span></a>
+		
+		
+		
+			<a href="http://www.snowboardingforum.com/newreply.php?do=newreply&amp;p=2622841" rel="nofollow" id="qr_2622841" onclick="return false"><span class="sprite button quickreply">Quick Reply</span></a>
+		
+		
+		
+		
+		
+			
+		
+		
+		<!-- / controls -->
+        </div>
+</div>
+</div>
+
+</div>
+<!-- end text_wrapper -->
+</section>
+
+
+ 
+<!-- post 2622841 popup menu -->
+
+<!-- / post 2622841 popup menu -->
+
+
+
+
+
+
+
+	</div>
+	
+
+<!-- / post #2622841 -->
+<div id="edit_vp1" class="vs_dfp_standard_postbit_container" style="padding:0px 0px 0px 0px; ">
+<table class="tborder vs_dfp_standard_postbit_ad" cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+    <tr>
+        <td class="thead" style="line-height:1.4em;" colspan="2">
+            <div>
+                <span style="float:right;font-weight:normal">
+                    <a href="http://www.snowboardingforum.com/register.php" onclick="event.preventDefault(); window.location.href='http://www.snowboardingforum.com/register.php?autodisplayreg=true'">Remove Advertisements</a>
+                </span>
+            </div>Sponsored Links
+		</td>
+    </tr>
+	<tr valign="top">
+        <td class="alt2" width="175px">
+            <div>
+                <a class="bigusername" href="http://www.snowboardingforum.com">Snowboarding Forum</a>
+            </div>
+            <div class="smallfont">Advertisement</div>
+            <div>&nbsp;<br /></div>
+        </td>
+        <td class="alt1" >
+            <table cellpadding="2" cellspacing="2" border="0" width="100%" align="left">
+                <tr>
+                    <td align="left"><div style='width:100%; text-align:left;'><div id='SnowboardingForum_com_300x250_Postbit_SP_Forum' style='width:auto; height:auto;'>
+						<script type='text/javascript'>
+							googletag.cmd.push(function() { googletag.display('SnowboardingForum_com_300x250_Postbit_SP_Forum'); });
+						</script>
+					</div></div></td>
+                    <td></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table></div><!-- post #2622857 -->
+
+	
+	<div id="edit2622857" style="padding:0px 0px 0px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<section id="post2622857" class="tborder vbseo_like_postbit user-post" itemscope itemtype="http://schema.org/Comment">
+
+
+<div class="text_wrapper postbit_legacy_wrapper_thead thead" >
+	
+    
+    <span class="post-count"><a href="http://www.snowboardingforum.com/2622857-post2.html" target="new"  id="postcount2622857" name="2"><strong>post #2</strong> of 27</a> (<b><a href="http://www.snowboardingforum.com/resort-trip-reports/202457-epic-13-day-trip-jackson-hole.html#post2622857" title="Link to this Post">permalink</a></b>)
+			
+ </span>
+			<!-- status icon and date -->
+			<a name="post2622857"><span class="sprite inlineimg post_old">Old</span></a>
+			<span itemprop="dateCreated">02-12-2016, 01:56 PM</span>
+			
+			<!-- / status icon and date -->
+
+			
+			
+
+	
+ <span class="thread-starter">Thread Starter</span>   
+</div>
+
+<div class="text_wrapper postbit_legacy_wrapper">
+<div class="alt2 picture main-column-picture">
+
+			<div id="postmenu_2622857" itemprop="contributor">
+				
+				<a rel="nofollow" class="bigusername" href="http://www.snowboardingforum.com/members/nutmegchoi.html"><!-- google_ad_section_start(weight=ignore) -->nutmegchoi<!-- google_ad_section_end --></a>
+				
+				
+			</div>
+
+			<div class="smallfont">Veteran Member</div>
+			
+			
+
+			
+				<div class="smallfont">
+					&nbsp;<br /><a rel="nofollow" href="http://www.snowboardingforum.com/members/nutmegchoi.html"><img class="photo avatar" src="/images/SnowboardingForum_2015/misc/spacer.gif" data-original="customavatars/avatar128977_6.gif" width="96" height="89" alt="nutmegchoi's Avatar" border="0" /></a>
+				</div>
+			
+			<div class="smallfont">
+				&nbsp;<br />
+				<div>Join Date: Feb 2016</div>
+				<div>Location: Westchester, New York</div>
+				
+				<div>
+					Posts: 807
+				</div>
+				
+	<div>Mentioned: 6 Post(s)</div>
+
+
+	<div>Tagged: 1 Thread(s)</div>
+
+
+	<div>Quoted: 377 Post(s)</div>
+
+
+				
+				
+				
+				<div>    </div>
+			</div>
+
+</div>
+
+	
+    <div id="td_post_2622857" class="main-column-text-wrapper alt1">
+	<div class="main-column-text">
+	
+		
+		
+
+		<!-- message -->
+		<div id="post_message_2622857" itemprop="text">
+			
+			<!-- google_ad_section_start --><a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Photo%20Jan%2023%206%2009%2058%20PM_zpskm9fgbho.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Photo%20Jan%2023%206%2009%2058%20PM_zpskm9fgbho.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Photo%20Jan%2024%2011%2042%2004%20AM_zpsrrjugafd.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Photo%20Jan%2024%2011%2042%2004%20AM_zpsrrjugafd.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/thumb_G0070772_1024_zpsl9drbzet.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/thumb_G0070772_1024_zpsl9drbzet.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/thumb_G0070773_1024_zpswwo2bxqx.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/thumb_G0070773_1024_zpswwo2bxqx.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+Two people got killed outside the south boundary (Rock Springs area) avalanche while I was on Rendezvous.<br />
+That was already 5th fatality this season.<br />
+There was a tree well incident a month prior.<br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Photo%20Jan%2024%204%2054%2006%20PM_zpsuhmkr6fa.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Photo%20Jan%2024%204%2054%2006%20PM_zpsuhmkr6fa.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Photo%20Jan%2025%2012%2045%2016%20PM_zpsfrbgp2xr.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Photo%20Jan%2025%2012%2045%2016%20PM_zpsfrbgp2xr.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Photo%20Jan%2025%201%2006%2035%20PM_zpsirxsatty.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Photo%20Jan%2025%201%2006%2035%20PM_zpsirxsatty.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+<br />
+Best picture from Jackson.<br />
+Kids were done. lol<br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/IMG_1137_zpsgzaicbnj.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/IMG_1137_zpsgzaicbnj.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><!-- google_ad_section_end -->
+		</div>
+		<!-- / message -->
+
+		
+
+		
+<div class="vbseo_buttons" id="lkbtn_1.202457.2622857">
+
+    <div class="alt2 vbseo_liked"><a href="http://www.snowboardingforum.com/members/motogp990.html">Motogp990</a> and <a href="http://www.snowboardingforum.com/members/xxgogirlxx.html">XxGoGirlxX</a> like this.</div>
+
+
+</div>
+
+		
+
+		
+
+		
+
+		
+		<!-- edit note -->
+			<div class="smallfont">
+				<hr class="dividing-line" />
+				<em>
+					
+						Last edited by nutmegchoi; 02-12-2016 at <span class="time">05:03 PM</span>.
+					
+					
+				</em>
+			</div>
+		<!-- / edit note -->
+		
+
+</div>
+</div>
+
+</div>
+<!-- end text_wrapper -->
+
+    
+<div class="text_wrapper postbit_legacy_wrapper postbit_legacy_wrapper_bottom">
+<div class="alt2 picture main-column-picture status-icons" >  
+		<span class="sprite inlineimg user_offline" title="nutmegchoi is offline">nutmegchoi is offline</span>
+
+
+		
+		
+		
+		
+		&nbsp;
+        
+</div>
+	
+<div id="td_post_1162" class="main-column-text-wrapper buttons buttons-postings">
+<div class="main-column-text">  
+	
+		<div class="right"><!-- controls -->
+		
+		
+		
+			<a href="http://www.snowboardingforum.com/newreply.php?do=newreply&amp;p=2622857" rel="nofollow"><span class="sprite button quote">Quote</span></a>
+		
+		
+		
+			<a href="http://www.snowboardingforum.com/newreply.php?do=newreply&amp;p=2622857" rel="nofollow" id="qr_2622857" onclick="return false"><span class="sprite button quickreply">Quick Reply</span></a>
+		
+		
+		
+		
+		
+			
+		
+		
+		<!-- / controls -->
+        </div>
+</div>
+</div>
+
+</div>
+<!-- end text_wrapper -->
+</section>
+
+
+ 
+<!-- post 2622857 popup menu -->
+
+<!-- / post 2622857 popup menu -->
+
+
+
+
+
+
+
+	</div>
+	
+
+<!-- / post #2622857 --><!-- post #2622865 -->
+
+	
+	<div id="edit2622865" style="padding:0px 0px 0px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<section id="post2622865" class="tborder vbseo_like_postbit user-post" itemscope itemtype="http://schema.org/Comment">
+
+
+<div class="text_wrapper postbit_legacy_wrapper_thead thead" >
+	
+    
+    <span class="post-count"><a href="http://www.snowboardingforum.com/2622865-post3.html" target="new"  id="postcount2622865" name="3"><strong>post #3</strong> of 27</a> (<b><a href="http://www.snowboardingforum.com/resort-trip-reports/202457-epic-13-day-trip-jackson-hole.html#post2622865" title="Link to this Post">permalink</a></b>)
+			
+ </span>
+			<!-- status icon and date -->
+			<a name="post2622865"><span class="sprite inlineimg post_old">Old</span></a>
+			<span itemprop="dateCreated">02-12-2016, 01:59 PM</span>
+			
+			<!-- / status icon and date -->
+
+			
+			
+
+	
+ <span class="thread-starter">Thread Starter</span>   
+</div>
+
+<div class="text_wrapper postbit_legacy_wrapper">
+<div class="alt2 picture main-column-picture">
+
+			<div id="postmenu_2622865" itemprop="contributor">
+				
+				<a rel="nofollow" class="bigusername" href="http://www.snowboardingforum.com/members/nutmegchoi.html"><!-- google_ad_section_start(weight=ignore) -->nutmegchoi<!-- google_ad_section_end --></a>
+				
+				
+			</div>
+
+			<div class="smallfont">Veteran Member</div>
+			
+			
+
+			
+				<div class="smallfont">
+					&nbsp;<br /><a rel="nofollow" href="http://www.snowboardingforum.com/members/nutmegchoi.html"><img class="photo avatar" src="/images/SnowboardingForum_2015/misc/spacer.gif" data-original="customavatars/avatar128977_6.gif" width="96" height="89" alt="nutmegchoi's Avatar" border="0" /></a>
+				</div>
+			
+			<div class="smallfont">
+				&nbsp;<br />
+				<div>Join Date: Feb 2016</div>
+				<div>Location: Westchester, New York</div>
+				
+				<div>
+					Posts: 807
+				</div>
+				
+	<div>Mentioned: 6 Post(s)</div>
+
+
+	<div>Tagged: 1 Thread(s)</div>
+
+
+	<div>Quoted: 377 Post(s)</div>
+
+
+				
+				
+				
+				<div>    </div>
+			</div>
+
+</div>
+
+	
+    <div id="td_post_2622865" class="main-column-text-wrapper alt1">
+	<div class="main-column-text">
+	
+		
+		
+
+		<!-- message -->
+		<div id="post_message_2622865" itemprop="text">
+			
+			<!-- google_ad_section_start -->Finally made into downtown on the day we leave.<br />
+We were stuck in the village for 5 days just skiing/snowboarding.<br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Photo%20Jan%2026%201%2031%2000%20PM_zpsn2drntfl.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Photo%20Jan%2026%201%2031%2000%20PM_zpsn2drntfl.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+Everybody's mama saw moose.<br />
+But moose are unicorns to me.<br />
+They don't exist.<br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Photo%20Jan%2026%201%2044%2051%20PM_zpsppzv5jdb.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Photo%20Jan%2026%201%2044%2051%20PM_zpsppzv5jdb.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+Next off, Aspen.<br />
+<br />
+Can see the X Games superpipe lights from Buttermilk.<br />
+Practice was going on.<br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/IMG_1367_zpsnmaseyie.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/IMG_1367_zpsnmaseyie.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+Aspen Highlands.<br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Photo%20Jan%2027%204%2015%2002%20PM_zpsrtlj33lu.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Photo%20Jan%2027%204%2015%2002%20PM_zpsrtlj33lu.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Snow/Photo%20Jan%2027%203%2003%2001%20PM_zpswo7gbzt7.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Snow/Photo%20Jan%2027%203%2003%2001%20PM_zpswo7gbzt7.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Photo%20Jan%2027%203%2011%2048%20PM_zps2057gz0o.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Photo%20Jan%2027%203%2011%2048%20PM_zps2057gz0o.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+Kiddos got adventurous. lol<br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/thumb_G0151466_1024_zpsva1m78xa.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/thumb_G0151466_1024_zpsva1m78xa.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/thumb_G0060704_1024_zpsmjudkfjy.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/thumb_G0060704_1024_zpsmjudkfjy.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+Finally X Games!<br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Photo%20Jan%2028%202%2036%2014%20PM_zpshj7msmxr.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Photo%20Jan%2028%202%2036%2014%20PM_zpshj7msmxr.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+Levi LaVallee's sled.<br />
+Too bad he got hurt and couldn't compete snowmobile freestyle.<br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/P1060917_zpsyudfhhjd.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/P1060917_zpsyudfhhjd.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><!-- google_ad_section_end -->
+		</div>
+		<!-- / message -->
+
+		
+
+		
+<div class="vbseo_buttons" id="lkbtn_1.202457.2622865">
+
+    <div class="alt2 vbseo_liked" style="display:none"></div>
+
+
+</div>
+
+		
+
+		
+
+		
+
+		
+		<!-- edit note -->
+			<div class="smallfont">
+				<hr class="dividing-line" />
+				<em>
+					
+						Last edited by nutmegchoi; 02-12-2016 at <span class="time">02:56 PM</span>.
+					
+					
+				</em>
+			</div>
+		<!-- / edit note -->
+		
+
+</div>
+</div>
+
+</div>
+<!-- end text_wrapper -->
+
+    
+<div class="text_wrapper postbit_legacy_wrapper postbit_legacy_wrapper_bottom">
+<div class="alt2 picture main-column-picture status-icons" >  
+		<span class="sprite inlineimg user_offline" title="nutmegchoi is offline">nutmegchoi is offline</span>
+
+
+		
+		
+		
+		
+		&nbsp;
+        
+</div>
+	
+<div id="td_post_1162" class="main-column-text-wrapper buttons buttons-postings">
+<div class="main-column-text">  
+	
+		<div class="right"><!-- controls -->
+		
+		
+		
+			<a href="http://www.snowboardingforum.com/newreply.php?do=newreply&amp;p=2622865" rel="nofollow"><span class="sprite button quote">Quote</span></a>
+		
+		
+		
+			<a href="http://www.snowboardingforum.com/newreply.php?do=newreply&amp;p=2622865" rel="nofollow" id="qr_2622865" onclick="return false"><span class="sprite button quickreply">Quick Reply</span></a>
+		
+		
+		
+		
+		
+			
+		
+		
+		<!-- / controls -->
+        </div>
+</div>
+</div>
+
+</div>
+<!-- end text_wrapper -->
+</section>
+
+
+ 
+<!-- post 2622865 popup menu -->
+
+<!-- / post 2622865 popup menu -->
+
+
+
+
+
+
+
+	</div>
+	
+
+<!-- / post #2622865 -->
+<div id="edit_vp1" class="vs_dfp_standard_postbit_container" style="padding:0px 0px; margin-top: -8px;">
+<table class="tborder vs_dfp_standard_postbit_ad" cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+	<tr valign="top">
+        <td class="alt2" width="175px">
+            <div>&nbsp;<br /></div>
+        </td>
+        <td class="alt1">
+            <table cellpadding="2" cellspacing="2" border="0" width="100%" align="left">
+                <tr>
+                    <td align="left"><div style='width:100%; text-align:center;'><div id='SnowboardingForum_com_1x1_SharethroughPostbit_SP_Forum' style='width:auto; height:auto;'>
+						<script type='text/javascript'>
+							googletag.cmd.push(function() { googletag.display('SnowboardingForum_com_1x1_SharethroughPostbit_SP_Forum'); });
+						</script>
+					</div></div> </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table></div><!-- post #2622889 -->
+
+	
+	<div id="edit2622889" style="padding:0px 0px 0px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<section id="post2622889" class="tborder vbseo_like_postbit user-post" itemscope itemtype="http://schema.org/Comment">
+
+
+<div class="text_wrapper postbit_legacy_wrapper_thead thead" >
+	
+    
+    <span class="post-count"><a href="http://www.snowboardingforum.com/2622889-post4.html" target="new"  id="postcount2622889" name="4"><strong>post #4</strong> of 27</a> (<b><a href="http://www.snowboardingforum.com/resort-trip-reports/202457-epic-13-day-trip-jackson-hole.html#post2622889" title="Link to this Post">permalink</a></b>)
+			
+ </span>
+			<!-- status icon and date -->
+			<a name="post2622889"><span class="sprite inlineimg post_old">Old</span></a>
+			<span itemprop="dateCreated">02-12-2016, 02:00 PM</span>
+			
+			<!-- / status icon and date -->
+
+			
+			
+
+	
+ <span class="thread-starter">Thread Starter</span>   
+</div>
+
+<div class="text_wrapper postbit_legacy_wrapper">
+<div class="alt2 picture main-column-picture">
+
+			<div id="postmenu_2622889" itemprop="contributor">
+				
+				<a rel="nofollow" class="bigusername" href="http://www.snowboardingforum.com/members/nutmegchoi.html"><!-- google_ad_section_start(weight=ignore) -->nutmegchoi<!-- google_ad_section_end --></a>
+				
+				
+			</div>
+
+			<div class="smallfont">Veteran Member</div>
+			
+			
+
+			
+				<div class="smallfont">
+					&nbsp;<br /><a rel="nofollow" href="http://www.snowboardingforum.com/members/nutmegchoi.html"><img class="photo avatar" src="/images/SnowboardingForum_2015/misc/spacer.gif" data-original="customavatars/avatar128977_6.gif" width="96" height="89" alt="nutmegchoi's Avatar" border="0" /></a>
+				</div>
+			
+			<div class="smallfont">
+				&nbsp;<br />
+				<div>Join Date: Feb 2016</div>
+				<div>Location: Westchester, New York</div>
+				
+				<div>
+					Posts: 807
+				</div>
+				
+	<div>Mentioned: 6 Post(s)</div>
+
+
+	<div>Tagged: 1 Thread(s)</div>
+
+
+	<div>Quoted: 377 Post(s)</div>
+
+
+				
+				
+				
+				<div>    </div>
+			</div>
+
+</div>
+
+	
+    <div id="td_post_2622889" class="main-column-text-wrapper alt1">
+	<div class="main-column-text">
+	
+		
+		
+
+		<!-- message -->
+		<div id="post_message_2622889" itemprop="text">
+			
+			<!-- google_ad_section_start --><a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Photo%20Jan%2028%204%2043%2001%20PM_zpsdv1nij2n.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Photo%20Jan%2028%204%2043%2001%20PM_zpsdv1nij2n.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/P1060890_zpsttiew9gc.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/P1060890_zpsttiew9gc.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Photo%20Jan%2029%207%2003%2000%20PM_zpsqqruymec.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Photo%20Jan%2029%207%2003%2000%20PM_zpsqqruymec.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/P1070074_zps5dfjxl2g.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/P1070074_zps5dfjxl2g.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/IMG_2636_zps5sdn9vxu.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/IMG_2636_zps5sdn9vxu.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/IMG_2698_zpsdrq1grmt.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/IMG_2698_zpsdrq1grmt.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+Concerts were awesome at X Games as well.<br />
+Nas and Twenty One Pilots were amazing.<br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Snow/IMG_2727_zpsu0v3yzkd.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Snow/IMG_2727_zpsu0v3yzkd.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Snow/IMG_1687_zpsbg8d04jj.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Snow/IMG_1687_zpsbg8d04jj.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Snow/Photo%20Jan%2031%206%2006%2030%20PM_zps9kygj0ym.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Snow/Photo%20Jan%2031%206%2006%2030%20PM_zps9kygj0ym.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><!-- google_ad_section_end -->
+		</div>
+		<!-- / message -->
+
+		
+
+		
+<div class="vbseo_buttons" id="lkbtn_1.202457.2622889">
+
+    <div class="alt2 vbseo_liked" style="display:none"></div>
+
+
+</div>
+
+		
+
+		
+
+		
+
+		
+		<!-- edit note -->
+			<div class="smallfont">
+				<hr class="dividing-line" />
+				<em>
+					
+						Last edited by nutmegchoi; 02-12-2016 at <span class="time">02:57 PM</span>.
+					
+					
+				</em>
+			</div>
+		<!-- / edit note -->
+		
+
+</div>
+</div>
+
+</div>
+<!-- end text_wrapper -->
+
+    
+<div class="text_wrapper postbit_legacy_wrapper postbit_legacy_wrapper_bottom">
+<div class="alt2 picture main-column-picture status-icons" >  
+		<span class="sprite inlineimg user_offline" title="nutmegchoi is offline">nutmegchoi is offline</span>
+
+
+		
+		
+		
+		
+		&nbsp;
+        
+</div>
+	
+<div id="td_post_1162" class="main-column-text-wrapper buttons buttons-postings">
+<div class="main-column-text">  
+	
+		<div class="right"><!-- controls -->
+		
+		
+		
+			<a href="http://www.snowboardingforum.com/newreply.php?do=newreply&amp;p=2622889" rel="nofollow"><span class="sprite button quote">Quote</span></a>
+		
+		
+		
+			<a href="http://www.snowboardingforum.com/newreply.php?do=newreply&amp;p=2622889" rel="nofollow" id="qr_2622889" onclick="return false"><span class="sprite button quickreply">Quick Reply</span></a>
+		
+		
+		
+		
+		
+			
+		
+		
+		<!-- / controls -->
+        </div>
+</div>
+</div>
+
+</div>
+<!-- end text_wrapper -->
+</section>
+
+
+ 
+<!-- post 2622889 popup menu -->
+
+<!-- / post 2622889 popup menu -->
+
+
+
+
+
+
+
+	</div>
+	
+
+<!-- / post #2622889 --><!-- post #2622897 -->
+
+	
+	<div id="edit2622897" style="padding:0px 0px 0px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<section id="post2622897" class="tborder vbseo_like_postbit user-post" itemscope itemtype="http://schema.org/Comment">
+
+
+<div class="text_wrapper postbit_legacy_wrapper_thead thead" >
+	
+    
+    <span class="post-count"><a href="http://www.snowboardingforum.com/2622897-post5.html" target="new"  id="postcount2622897" name="5"><strong>post #5</strong> of 27</a> (<b><a href="http://www.snowboardingforum.com/resort-trip-reports/202457-epic-13-day-trip-jackson-hole.html#post2622897" title="Link to this Post">permalink</a></b>)
+			
+ </span>
+			<!-- status icon and date -->
+			<a name="post2622897"><span class="sprite inlineimg post_old">Old</span></a>
+			<span itemprop="dateCreated">02-12-2016, 02:01 PM</span>
+			
+			<!-- / status icon and date -->
+
+			
+			
+
+	
+ <span class="thread-starter">Thread Starter</span>   
+</div>
+
+<div class="text_wrapper postbit_legacy_wrapper">
+<div class="alt2 picture main-column-picture">
+
+			<div id="postmenu_2622897" itemprop="contributor">
+				
+				<a rel="nofollow" class="bigusername" href="http://www.snowboardingforum.com/members/nutmegchoi.html"><!-- google_ad_section_start(weight=ignore) -->nutmegchoi<!-- google_ad_section_end --></a>
+				
+				
+			</div>
+
+			<div class="smallfont">Veteran Member</div>
+			
+			
+
+			
+				<div class="smallfont">
+					&nbsp;<br /><a rel="nofollow" href="http://www.snowboardingforum.com/members/nutmegchoi.html"><img class="photo avatar" src="/images/SnowboardingForum_2015/misc/spacer.gif" data-original="customavatars/avatar128977_6.gif" width="96" height="89" alt="nutmegchoi's Avatar" border="0" /></a>
+				</div>
+			
+			<div class="smallfont">
+				&nbsp;<br />
+				<div>Join Date: Feb 2016</div>
+				<div>Location: Westchester, New York</div>
+				
+				<div>
+					Posts: 807
+				</div>
+				
+	<div>Mentioned: 6 Post(s)</div>
+
+
+	<div>Tagged: 1 Thread(s)</div>
+
+
+	<div>Quoted: 377 Post(s)</div>
+
+
+				
+				
+				
+				<div>    </div>
+			</div>
+
+</div>
+
+	
+    <div id="td_post_2622897" class="main-column-text-wrapper alt1">
+	<div class="main-column-text">
+	
+		
+		
+
+		<!-- message -->
+		<div id="post_message_2622897" itemprop="text">
+			
+			<!-- google_ad_section_start -->This is how end of a great day looks like. <img src="http://www.snowboardingforum.com/images/smilies/wink.gif" border="0" alt="" title="Wink" class="inlineimg" /><br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Snow/IMG_1900_zpsqfgbxnrx.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Snow/IMG_1900_zpsqfgbxnrx.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+I should bring dog treats in my pocket in case I need to be rescued from avalanche.<br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Snow/IMG_1649_zpssifj1wag.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Snow/IMG_1649_zpssifj1wag.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+Was able to squeeze in some rides here and there.<br />
+<br />
+Aspen Mountain.<br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Snow/Photo%20Jan%2029%201%2031%2028%20PM_zpsbxvjybur.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Snow/Photo%20Jan%2029%201%2031%2028%20PM_zpsbxvjybur.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+Buttermilk.<br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Snow/Photo%20Jan%2029%203%2036%2034%20PM_zpsqrwhoean.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Snow/Photo%20Jan%2029%203%2036%2034%20PM_zpsqrwhoean.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+Back to X Games.<br />
+<br />
+Superpipe on the left, big air on the right.<br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Snow/IMG_1771_zpsv1cndoov.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Snow/IMG_1771_zpsv1cndoov.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+It is a beautiful site.<br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Snow/Photo%20Jan%2030%209%2035%2058%20PM_zpsq2zxoqa3.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Snow/Photo%20Jan%2030%209%2035%2058%20PM_zpsq2zxoqa3.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+We were there as ESPN guests with VIP access.<br />
+So I got to meet a lot of pros.<br />
+<br />
+Danny Davis<br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Snow/Photo%20Jan%2028%204%2022%2003%20PM_zpsrp0jidmo.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Snow/Photo%20Jan%2028%204%2022%2003%20PM_zpsrp0jidmo.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+Sage Kotsenburg<br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Snow/Photo%20Jan%2030%203%2045%2020%20PM_zpspnge6tqd.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Snow/Photo%20Jan%2030%203%2045%2020%20PM_zpspnge6tqd.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+Mons Røisland<br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Snow/Photo%20Jan%2030%203%2048%2019%20PM_zpsxyi9fip5.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Snow/Photo%20Jan%2030%203%2048%2019%20PM_zpsxyi9fip5.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><!-- google_ad_section_end -->
+		</div>
+		<!-- / message -->
+
+		
+
+		
+<div class="vbseo_buttons" id="lkbtn_1.202457.2622897">
+
+    <div class="alt2 vbseo_liked" style="display:none"></div>
+
+
+</div>
+
+		
+
+		
+
+		
+
+		
+		<!-- edit note -->
+			<div class="smallfont">
+				<hr class="dividing-line" />
+				<em>
+					
+						Last edited by nutmegchoi; 02-12-2016 at <span class="time">03:00 PM</span>.
+					
+					
+				</em>
+			</div>
+		<!-- / edit note -->
+		
+
+</div>
+</div>
+
+</div>
+<!-- end text_wrapper -->
+
+    
+<div class="text_wrapper postbit_legacy_wrapper postbit_legacy_wrapper_bottom">
+<div class="alt2 picture main-column-picture status-icons" >  
+		<span class="sprite inlineimg user_offline" title="nutmegchoi is offline">nutmegchoi is offline</span>
+
+
+		
+		
+		
+		
+		&nbsp;
+        
+</div>
+	
+<div id="td_post_1162" class="main-column-text-wrapper buttons buttons-postings">
+<div class="main-column-text">  
+	
+		<div class="right"><!-- controls -->
+		
+		
+		
+			<a href="http://www.snowboardingforum.com/newreply.php?do=newreply&amp;p=2622897" rel="nofollow"><span class="sprite button quote">Quote</span></a>
+		
+		
+		
+			<a href="http://www.snowboardingforum.com/newreply.php?do=newreply&amp;p=2622897" rel="nofollow" id="qr_2622897" onclick="return false"><span class="sprite button quickreply">Quick Reply</span></a>
+		
+		
+		
+		
+		
+			
+		
+		
+		<!-- / controls -->
+        </div>
+</div>
+</div>
+
+</div>
+<!-- end text_wrapper -->
+</section>
+
+
+ 
+<!-- post 2622897 popup menu -->
+
+<!-- / post 2622897 popup menu -->
+
+
+
+
+
+
+
+	</div>
+	
+
+<!-- / post #2622897 --><!-- post #2622905 -->
+
+	
+	<div id="edit2622905" style="padding:0px 0px 0px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<section id="post2622905" class="tborder vbseo_like_postbit user-post" itemscope itemtype="http://schema.org/Comment">
+
+
+<div class="text_wrapper postbit_legacy_wrapper_thead thead" >
+	
+    
+    <span class="post-count"><a href="http://www.snowboardingforum.com/2622905-post6.html" target="new"  id="postcount2622905" name="6"><strong>post #6</strong> of 27</a> (<b><a href="http://www.snowboardingforum.com/resort-trip-reports/202457-epic-13-day-trip-jackson-hole.html#post2622905" title="Link to this Post">permalink</a></b>)
+			
+ </span>
+			<!-- status icon and date -->
+			<a name="post2622905"><span class="sprite inlineimg post_old">Old</span></a>
+			<span itemprop="dateCreated">02-12-2016, 02:02 PM</span>
+			
+			<!-- / status icon and date -->
+
+			
+			
+
+	
+ <span class="thread-starter">Thread Starter</span>   
+</div>
+
+<div class="text_wrapper postbit_legacy_wrapper">
+<div class="alt2 picture main-column-picture">
+
+			<div id="postmenu_2622905" itemprop="contributor">
+				
+				<a rel="nofollow" class="bigusername" href="http://www.snowboardingforum.com/members/nutmegchoi.html"><!-- google_ad_section_start(weight=ignore) -->nutmegchoi<!-- google_ad_section_end --></a>
+				
+				
+			</div>
+
+			<div class="smallfont">Veteran Member</div>
+			
+			
+
+			
+				<div class="smallfont">
+					&nbsp;<br /><a rel="nofollow" href="http://www.snowboardingforum.com/members/nutmegchoi.html"><img class="photo avatar" src="/images/SnowboardingForum_2015/misc/spacer.gif" data-original="customavatars/avatar128977_6.gif" width="96" height="89" alt="nutmegchoi's Avatar" border="0" /></a>
+				</div>
+			
+			<div class="smallfont">
+				&nbsp;<br />
+				<div>Join Date: Feb 2016</div>
+				<div>Location: Westchester, New York</div>
+				
+				<div>
+					Posts: 807
+				</div>
+				
+	<div>Mentioned: 6 Post(s)</div>
+
+
+	<div>Tagged: 1 Thread(s)</div>
+
+
+	<div>Quoted: 377 Post(s)</div>
+
+
+				
+				
+				
+				<div>    </div>
+			</div>
+
+</div>
+
+	
+    <div id="td_post_2622905" class="main-column-text-wrapper alt1">
+	<div class="main-column-text">
+	
+		
+		
+
+		<!-- message -->
+		<div id="post_message_2622905" itemprop="text">
+			
+			<!-- google_ad_section_start -->Iouri Iour&#1077;vich Podladtchikov aka iPod<br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Snow/IMG_2819_zpsbdccacyb.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Snow/IMG_2819_zpsbdccacyb.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+Bobby Brown<br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Snow/IMG_1817_zpsisi7zkwd.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Snow/IMG_1817_zpsisi7zkwd.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+Fabian Boesch<br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Snow/IMG_2843_zps2vsfcg7u.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Snow/IMG_2843_zps2vsfcg7u.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+Arielle Gold representing Broncos.<br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Snow/IMG_2906_zpsyviqcfnf.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Snow/IMG_2906_zpsyviqcfnf.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+Kelly Clark<br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Snow/IMG_1928_zpskgr4gbss.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Snow/IMG_1928_zpskgr4gbss.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+Chloe Kim signing my helmet.<br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Snow/Photo%20Jan%2031%204%2054%2054%20PM_zpsdrihhexg.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Snow/Photo%20Jan%2031%204%2054%2054%20PM_zpsdrihhexg.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Snow/Photo%20Jan%2031%206%2041%2057%20PM_zpsco71cibw.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Snow/Photo%20Jan%2031%206%2041%2057%20PM_zpsco71cibw.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+Got to touch X Games gold medal!<br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Snow/IMG_1971_zpsq20t45hs.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Snow/IMG_1971_zpsq20t45hs.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+X Games over, back to riding.<br />
+Snowmass greets me with 44 inch fresh snow.<br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Snow/Photo%20Feb%2001%202%2053%2047%20PM_zpsl14k9ogc.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Snow/Photo%20Feb%2001%202%2053%2047%20PM_zpsl14k9ogc.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Snow/Photo%20Feb%2001%204%2040%2025%20PM_zpspkivjda0.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Snow/Photo%20Feb%2001%204%2040%2025%20PM_zpspkivjda0.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><!-- google_ad_section_end -->
+		</div>
+		<!-- / message -->
+
+		
+
+		
+<div class="vbseo_buttons" id="lkbtn_1.202457.2622905">
+
+    <div class="alt2 vbseo_liked" style="display:none"></div>
+
+
+</div>
+
+		
+
+		
+
+		
+
+		
+		<!-- edit note -->
+			<div class="smallfont">
+				<hr class="dividing-line" />
+				<em>
+					
+						Last edited by nutmegchoi; 02-12-2016 at <span class="time">02:48 PM</span>.
+					
+					
+				</em>
+			</div>
+		<!-- / edit note -->
+		
+
+</div>
+</div>
+
+</div>
+<!-- end text_wrapper -->
+
+    
+<div class="text_wrapper postbit_legacy_wrapper postbit_legacy_wrapper_bottom">
+<div class="alt2 picture main-column-picture status-icons" >  
+		<span class="sprite inlineimg user_offline" title="nutmegchoi is offline">nutmegchoi is offline</span>
+
+
+		
+		
+		
+		
+		&nbsp;
+        
+</div>
+	
+<div id="td_post_1162" class="main-column-text-wrapper buttons buttons-postings">
+<div class="main-column-text">  
+	
+		<div class="right"><!-- controls -->
+		
+		
+		
+			<a href="http://www.snowboardingforum.com/newreply.php?do=newreply&amp;p=2622905" rel="nofollow"><span class="sprite button quote">Quote</span></a>
+		
+		
+		
+			<a href="http://www.snowboardingforum.com/newreply.php?do=newreply&amp;p=2622905" rel="nofollow" id="qr_2622905" onclick="return false"><span class="sprite button quickreply">Quick Reply</span></a>
+		
+		
+		
+		
+		
+			
+		
+		
+		<!-- / controls -->
+        </div>
+</div>
+</div>
+
+</div>
+<!-- end text_wrapper -->
+</section>
+
+
+ 
+<!-- post 2622905 popup menu -->
+
+<!-- / post 2622905 popup menu -->
+
+
+
+
+
+
+
+	</div>
+	
+
+<!-- / post #2622905 --><!-- post #2623017 -->
+
+	
+	<div id="edit2623017" style="padding:0px 0px 0px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<section id="post2623017" class="tborder vbseo_like_postbit user-post" itemscope itemtype="http://schema.org/Comment">
+
+
+<div class="text_wrapper postbit_legacy_wrapper_thead thead" >
+	
+    
+    <span class="post-count"><a href="http://www.snowboardingforum.com/2623017-post7.html" target="new"  id="postcount2623017" name="7"><strong>post #7</strong> of 27</a> (<b><a href="http://www.snowboardingforum.com/resort-trip-reports/202457-epic-13-day-trip-jackson-hole.html#post2623017" title="Link to this Post">permalink</a></b>)
+			
+ </span>
+			<!-- status icon and date -->
+			<a name="post2623017"><span class="sprite inlineimg post_old">Old</span></a>
+			<span itemprop="dateCreated">02-12-2016, 02:48 PM</span>
+			
+			<!-- / status icon and date -->
+
+			
+			
+
+	
+ <span class="thread-starter">Thread Starter</span>   
+</div>
+
+<div class="text_wrapper postbit_legacy_wrapper">
+<div class="alt2 picture main-column-picture">
+
+			<div id="postmenu_2623017" itemprop="contributor">
+				
+				<a rel="nofollow" class="bigusername" href="http://www.snowboardingforum.com/members/nutmegchoi.html"><!-- google_ad_section_start(weight=ignore) -->nutmegchoi<!-- google_ad_section_end --></a>
+				
+				
+			</div>
+
+			<div class="smallfont">Veteran Member</div>
+			
+			
+
+			
+				<div class="smallfont">
+					&nbsp;<br /><a rel="nofollow" href="http://www.snowboardingforum.com/members/nutmegchoi.html"><img class="photo avatar" src="/images/SnowboardingForum_2015/misc/spacer.gif" data-original="customavatars/avatar128977_6.gif" width="96" height="89" alt="nutmegchoi's Avatar" border="0" /></a>
+				</div>
+			
+			<div class="smallfont">
+				&nbsp;<br />
+				<div>Join Date: Feb 2016</div>
+				<div>Location: Westchester, New York</div>
+				
+				<div>
+					Posts: 807
+				</div>
+				
+	<div>Mentioned: 6 Post(s)</div>
+
+
+	<div>Tagged: 1 Thread(s)</div>
+
+
+	<div>Quoted: 377 Post(s)</div>
+
+
+				
+				
+				
+				<div>    </div>
+			</div>
+
+</div>
+
+	
+    <div id="td_post_2623017" class="main-column-text-wrapper alt1">
+	<div class="main-column-text">
+	
+		
+		
+
+		<!-- message -->
+		<div id="post_message_2623017" itemprop="text">
+			
+			<!-- google_ad_section_start -->Thankfully I wasn't much of a tree huger this time. lol<br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Snow/Photo%20Feb%2001%204%2040%2030%20PM_zpscnlz9mb5.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Snow/Photo%20Feb%2001%204%2040%2030%20PM_zpscnlz9mb5.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+ My GoPro HERO4 Black Edition is somewhere on Bull Run, buried under snow.<br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Snow/Photo%20Feb%2001%204%2040%2055%20PM_zpsslmmvih1.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Snow/Photo%20Feb%2001%204%2040%2055%20PM_zpsslmmvih1.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Snow/Photo%20Feb%2002%201%2009%2053%20PM_zpsmh7iuljb.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Snow/Photo%20Feb%2002%201%2009%2053%20PM_zpsmh7iuljb.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+Got trapped in deep snow couple times and had to dig myself out.<br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Snow/Photo%20Feb%2002%201%2013%2036%20PM_zpsua4voytr.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Snow/Photo%20Feb%2002%201%2013%2036%20PM_zpsua4voytr.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+Too bad didn't get to check out Cirque.<br />
+Avalanche cannon control was going off non stop.<br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Snow/IMG_2244_zpskvnap3zz.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Snow/IMG_2244_zpskvnap3zz.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Snow/Photo%20Feb%2002%204%2056%2018%20PM_zpsgetrvzzf.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Snow/Photo%20Feb%2002%204%2056%2018%20PM_zpsgetrvzzf.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Snow/SW_JLO_020216_202052897693_01_zpsgtnqzad3.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Snow/SW_JLO_020216_202052897693_01_zpsgtnqzad3.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+Denver airport before Super Bowl.<br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Snow/IMG_2300_zpsgnajypmd.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Snow/IMG_2300_zpsgnajypmd.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+Farewell big mountains, back to the city lights!<br />
+<br />
+Well, at least until next season.<br />
+Can't wait to go back!!<br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Snow/Photo%20Feb%2003%2010%2012%2015%20PM_zpszwhyuhb7.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Snow/Photo%20Feb%2003%2010%2012%2015%20PM_zpszwhyuhb7.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><!-- google_ad_section_end -->
+		</div>
+		<!-- / message -->
+
+		
+
+		
+<div class="vbseo_buttons" id="lkbtn_1.202457.2623017">
+
+    <div class="alt2 vbseo_liked"><a href="http://www.snowboardingforum.com/members/davichin.html">Davichin</a> likes this.</div>
+
+
+</div>
+
+		
+
+		
+
+		
+
+		
+		<!-- edit note -->
+			<div class="smallfont">
+				<hr class="dividing-line" />
+				<em>
+					
+						Last edited by nutmegchoi; 02-12-2016 at <span class="time">04:33 PM</span>.
+					
+					
+				</em>
+			</div>
+		<!-- / edit note -->
+		
+
+</div>
+</div>
+
+</div>
+<!-- end text_wrapper -->
+
+    
+<div class="text_wrapper postbit_legacy_wrapper postbit_legacy_wrapper_bottom">
+<div class="alt2 picture main-column-picture status-icons" >  
+		<span class="sprite inlineimg user_offline" title="nutmegchoi is offline">nutmegchoi is offline</span>
+
+
+		
+		
+		
+		
+		&nbsp;
+        
+</div>
+	
+<div id="td_post_1162" class="main-column-text-wrapper buttons buttons-postings">
+<div class="main-column-text">  
+	
+		<div class="right"><!-- controls -->
+		
+		
+		
+			<a href="http://www.snowboardingforum.com/newreply.php?do=newreply&amp;p=2623017" rel="nofollow"><span class="sprite button quote">Quote</span></a>
+		
+		
+		
+			<a href="http://www.snowboardingforum.com/newreply.php?do=newreply&amp;p=2623017" rel="nofollow" id="qr_2623017" onclick="return false"><span class="sprite button quickreply">Quick Reply</span></a>
+		
+		
+		
+		
+		
+			
+		
+		
+		<!-- / controls -->
+        </div>
+</div>
+</div>
+
+</div>
+<!-- end text_wrapper -->
+</section>
+
+
+ 
+<!-- post 2623017 popup menu -->
+
+<!-- / post 2623017 popup menu -->
+
+
+
+
+
+
+
+	</div>
+	
+
+<!-- / post #2623017 --><!-- post #2623057 -->
+
+	
+	<div id="edit2623057" style="padding:0px 0px 0px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<section id="post2623057" class="tborder vbseo_like_postbit user-post" itemscope itemtype="http://schema.org/Comment">
+
+
+<div class="text_wrapper postbit_legacy_wrapper_thead thead" >
+	
+    
+    <span class="post-count"><a href="http://www.snowboardingforum.com/2623057-post8.html" target="new"  id="postcount2623057" name="8"><strong>post #8</strong> of 27</a> (<b><a href="http://www.snowboardingforum.com/resort-trip-reports/202457-epic-13-day-trip-jackson-hole.html#post2623057" title="Link to this Post">permalink</a></b>)
+			
+ </span>
+			<!-- status icon and date -->
+			<a name="post2623057"><span class="sprite inlineimg post_old">Old</span></a>
+			<span itemprop="dateCreated">02-12-2016, 02:59 PM</span>
+			
+			<!-- / status icon and date -->
+
+			
+			
+
+	
+ <span class="thread-starter">Thread Starter</span>   
+</div>
+
+<div class="text_wrapper postbit_legacy_wrapper">
+<div class="alt2 picture main-column-picture">
+
+			<div id="postmenu_2623057" itemprop="contributor">
+				
+				<a rel="nofollow" class="bigusername" href="http://www.snowboardingforum.com/members/nutmegchoi.html"><!-- google_ad_section_start(weight=ignore) -->nutmegchoi<!-- google_ad_section_end --></a>
+				
+				
+			</div>
+
+			<div class="smallfont">Veteran Member</div>
+			
+			
+
+			
+				<div class="smallfont">
+					&nbsp;<br /><a rel="nofollow" href="http://www.snowboardingforum.com/members/nutmegchoi.html"><img class="photo avatar" src="/images/SnowboardingForum_2015/misc/spacer.gif" data-original="customavatars/avatar128977_6.gif" width="96" height="89" alt="nutmegchoi's Avatar" border="0" /></a>
+				</div>
+			
+			<div class="smallfont">
+				&nbsp;<br />
+				<div>Join Date: Feb 2016</div>
+				<div>Location: Westchester, New York</div>
+				
+				<div>
+					Posts: 807
+				</div>
+				
+	<div>Mentioned: 6 Post(s)</div>
+
+
+	<div>Tagged: 1 Thread(s)</div>
+
+
+	<div>Quoted: 377 Post(s)</div>
+
+
+				
+				
+				
+				<div>    </div>
+			</div>
+
+</div>
+
+	
+    <div id="td_post_2623057" class="main-column-text-wrapper alt1">
+	<div class="main-column-text">
+	
+		
+		
+
+		<!-- message -->
+		<div id="post_message_2623057" itemprop="text">
+			
+			<!-- google_ad_section_start -->I need a new helmet now. <img src="http://www.snowboardingforum.com/images/SnowboardingForum_2015/smilies/tango_face_grin.png" border="0" alt="" title="Big Grin" class="inlineimg" /><br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Snow/IMG_2316_zpsty3xdqyx.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Snow/IMG_2316_zpsty3xdqyx.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><br />
+<br />
+<a rel="nofollow" href="http://smg.photobucket.com/user/taeyoung/media/Snow/IMG_2317_zpsnnkmjgc6.jpg.html" target="_blank"><img src="http://img.photobucket.com/albums/v241/taeyoung/Snow/IMG_2317_zpsnnkmjgc6.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></a><!-- google_ad_section_end -->
+		</div>
+		<!-- / message -->
+
+		
+
+		
+<div class="vbseo_buttons" id="lkbtn_1.202457.2623057">
+
+    <div class="alt2 vbseo_liked" style="display:none"></div>
+
+
+</div>
+
+		
+
+		
+
+		
+
+		
+		<!-- edit note -->
+			<div class="smallfont">
+				<hr class="dividing-line" />
+				<em>
+					
+						Last edited by nutmegchoi; 02-12-2016 at <span class="time">04:12 PM</span>.
+					
+					
+				</em>
+			</div>
+		<!-- / edit note -->
+		
+
+</div>
+</div>
+
+</div>
+<!-- end text_wrapper -->
+
+    
+<div class="text_wrapper postbit_legacy_wrapper postbit_legacy_wrapper_bottom">
+<div class="alt2 picture main-column-picture status-icons" >  
+		<span class="sprite inlineimg user_offline" title="nutmegchoi is offline">nutmegchoi is offline</span>
+
+
+		
+		
+		
+		
+		&nbsp;
+        
+</div>
+	
+<div id="td_post_1162" class="main-column-text-wrapper buttons buttons-postings">
+<div class="main-column-text">  
+	
+		<div class="right"><!-- controls -->
+		
+		
+		
+			<a href="http://www.snowboardingforum.com/newreply.php?do=newreply&amp;p=2623057" rel="nofollow"><span class="sprite button quote">Quote</span></a>
+		
+		
+		
+			<a href="http://www.snowboardingforum.com/newreply.php?do=newreply&amp;p=2623057" rel="nofollow" id="qr_2623057" onclick="return false"><span class="sprite button quickreply">Quick Reply</span></a>
+		
+		
+		
+		
+		
+			
+		
+		
+		<!-- / controls -->
+        </div>
+</div>
+</div>
+
+</div>
+<!-- end text_wrapper -->
+</section>
+
+
+ 
+<!-- post 2623057 popup menu -->
+
+<!-- / post 2623057 popup menu -->
+
+
+
+
+
+
+
+	</div>
+	
+
+<!-- / post #2623057 --><!-- post #2623121 -->
+
+	
+	<div id="edit2623121" style="padding:0px 0px 0px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<section id="post2623121" class="tborder vbseo_like_postbit user-post" itemscope itemtype="http://schema.org/Comment">
+
+
+<div class="text_wrapper postbit_legacy_wrapper_thead thead" >
+	
+    
+    <span class="post-count"><a href="http://www.snowboardingforum.com/2623121-post9.html" target="new"  id="postcount2623121" name="9"><strong>post #9</strong> of 27</a> (<b><a href="http://www.snowboardingforum.com/resort-trip-reports/202457-epic-13-day-trip-jackson-hole.html#post2623121" title="Link to this Post">permalink</a></b>)
+			
+ </span>
+			<!-- status icon and date -->
+			<a name="post2623121"><span class="sprite inlineimg post_old">Old</span></a>
+			<span itemprop="dateCreated">02-12-2016, 03:13 PM</span>
+			
+			<!-- / status icon and date -->
+
+			
+			
+
+	
+    
+</div>
+
+<div class="text_wrapper postbit_legacy_wrapper">
+<div class="alt2 picture main-column-picture">
+
+			<div id="postmenu_2623121" itemprop="contributor">
+				
+				<a rel="nofollow" class="bigusername" href="http://www.snowboardingforum.com/members/argo.html"><!-- google_ad_section_start(weight=ignore) -->Argo<!-- google_ad_section_end --></a>
+				
+				
+			</div>
+
+			<div class="smallfont">-LIFETIME MEMBER-</div>
+			<div class="smallfont"><img src="http://www.snowboardingforum.com/images/ranks/member_lifetime.gif" alt="" border="" /></div>
+			
+
+			
+				<div class="smallfont">
+					&nbsp;<br /><a rel="nofollow" href="http://www.snowboardingforum.com/members/argo.html"><img class="photo avatar" src="/images/SnowboardingForum_2015/misc/spacer.gif" data-original="customavatars/avatar15704_1.gif" width="144" height="81" alt="Argo's Avatar" border="0" /></a>
+				</div>
+			
+			<div class="smallfont">
+				&nbsp;<br />
+				<div>Join Date: Feb 2010</div>
+				<div>Location: PNW USA</div>
+				
+				<div>
+					Posts: 6,781
+				</div>
+				
+	<div>Mentioned: 31 Post(s)</div>
+
+
+	<div>Tagged: 0 Thread(s)</div>
+
+
+	<div>Quoted: 893 Post(s)</div>
+
+
+				
+				
+				
+				<div>    </div>
+			</div>
+
+</div>
+
+	
+    <div id="td_post_2623121" class="main-column-text-wrapper alt1">
+	<div class="main-column-text">
+	
+		
+		
+
+		<!-- message -->
+		<div id="post_message_2623121" itemprop="text">
+			
+			<!-- google_ad_section_start -->Looks like a great trip.  Jackson is a favorite.<!-- google_ad_section_end -->
+		</div>
+		<!-- / message -->
+
+		
+
+		
+<div class="vbseo_buttons" id="lkbtn_1.202457.2623121">
+
+    <div class="alt2 vbseo_liked" style="display:none"></div>
+
+
+</div>
+
+		
+
+		
+
+		
+
+		
+
+</div>
+</div>
+
+</div>
+<!-- end text_wrapper -->
+
+    
+<div class="text_wrapper postbit_legacy_wrapper postbit_legacy_wrapper_bottom">
+<div class="alt2 picture main-column-picture status-icons" >  
+		<span class="sprite inlineimg user_offline" title="Argo is offline">Argo is offline</span>
+
+
+		
+		
+		
+		
+		&nbsp;
+        
+</div>
+	
+<div id="td_post_1162" class="main-column-text-wrapper buttons buttons-postings">
+<div class="main-column-text">  
+	
+		<div class="right"><!-- controls -->
+		
+		
+		
+			<a href="http://www.snowboardingforum.com/newreply.php?do=newreply&amp;p=2623121" rel="nofollow"><span class="sprite button quote">Quote</span></a>
+		
+		
+		
+			<a href="http://www.snowboardingforum.com/newreply.php?do=newreply&amp;p=2623121" rel="nofollow" id="qr_2623121" onclick="return false"><span class="sprite button quickreply">Quick Reply</span></a>
+		
+		
+		
+		
+		
+			
+		
+		
+		<!-- / controls -->
+        </div>
+</div>
+</div>
+
+</div>
+<!-- end text_wrapper -->
+</section>
+
+
+ 
+<!-- post 2623121 popup menu -->
+
+<!-- / post 2623121 popup menu -->
+
+
+
+
+
+
+
+	</div>
+	
+
+<!-- / post #2623121 --><!-- post #2623137 -->
+
+	
+	<div id="edit2623137" style="padding:0px 0px 0px 0px">
+	
+
+
+
+<section id="post2623137" class="tborder vbseo_like_postbit user-post" itemscope itemtype="http://schema.org/Comment">
+
+
+<div class="text_wrapper postbit_legacy_wrapper_thead thead" >
+	
+    
+    <span class="post-count"><a href="http://www.snowboardingforum.com/2623137-post10.html" target="new"  id="postcount2623137" name="10"><strong>post #10</strong> of 27</a> (<b><a href="http://www.snowboardingforum.com/resort-trip-reports/202457-epic-13-day-trip-jackson-hole.html#post2623137" title="Link to this Post">permalink</a></b>)
+			
+ </span>
+			<!-- status icon and date -->
+			<a name="post2623137"><span class="sprite inlineimg post_old">Old</span></a>
+			<span itemprop="dateCreated">02-12-2016, 03:15 PM</span>
+			
+			<!-- / status icon and date -->
+
+			
+			
+
+	
+ <span class="thread-starter">Thread Starter</span>   
+</div>
+
+<div class="text_wrapper postbit_legacy_wrapper">
+<div class="alt2 picture main-column-picture">
+
+			<div id="postmenu_2623137" itemprop="contributor">
+				
+				<a rel="nofollow" class="bigusername" href="http://www.snowboardingforum.com/members/nutmegchoi.html"><!-- google_ad_section_start(weight=ignore) -->nutmegchoi<!-- google_ad_section_end --></a>
+				
+				
+			</div>
+
+			<div class="smallfont">Veteran Member</div>
+			
+			
+
+			
+				<div class="smallfont">
+					&nbsp;<br /><a rel="nofollow" href="http://www.snowboardingforum.com/members/nutmegchoi.html"><img class="photo avatar" src="/images/SnowboardingForum_2015/misc/spacer.gif" data-original="customavatars/avatar128977_6.gif" width="96" height="89" alt="nutmegchoi's Avatar" border="0" /></a>
+				</div>
+			
+			<div class="smallfont">
+				&nbsp;<br />
+				<div>Join Date: Feb 2016</div>
+				<div>Location: Westchester, New York</div>
+				
+				<div>
+					Posts: 807
+				</div>
+				
+	<div>Mentioned: 6 Post(s)</div>
+
+
+	<div>Tagged: 1 Thread(s)</div>
+
+
+	<div>Quoted: 377 Post(s)</div>
+
+
+				
+				
+				
+				<div>    </div>
+			</div>
+
+</div>
+
+	
+    <div id="td_post_2623137" class="main-column-text-wrapper alt1">
+	<div class="main-column-text">
+	
+		
+		
+
+		<!-- message -->
+		<div id="post_message_2623137" itemprop="text">
+			
+			<!-- google_ad_section_start --><div style="margin:20px; margin-top:5px; ">
+
+	<div class="smallfont" style="margin-bottom:2px">Quote:</div>
+
+	
+
+			
+
+				<div>
+
+					Originally Posted by <strong>Argo</strong>
+
+					
+<a href="http://www.snowboardingforum.com/resort-trip-reports/202457-epic-13-day-trip-jackson-hole-post2623121.html#post2623121" rel="nofollow"><span class="sprite inlineimg sviewpost">View Post</span></a>
+
+				</div>
+
+				<div style="font-style:italic; border:1px inset; padding: 5px;" class="postquote">Looks like a great trip.  Jackson is a favorite.</div>
+
+			
+
+		
+
+</div>It really was.<br />
+Snowbird and Vail made me a better rider, Jackson taught me to be humble.<br />
+Jackson is my favorite as well.<br />
+Can't wait to go back.<!-- google_ad_section_end -->
+		</div>
+		<!-- / message -->
+
+		
+
+		
+<div class="vbseo_buttons" id="lkbtn_1.202457.2623137">
+
+    <div class="alt2 vbseo_liked" style="display:none"></div>
+
+
+</div>
+
+		
+
+		
+
+		
+
+		
+
+</div>
+</div>
+
+</div>
+<!-- end text_wrapper -->
+
+    
+<div class="text_wrapper postbit_legacy_wrapper postbit_legacy_wrapper_bottom">
+<div class="alt2 picture main-column-picture status-icons" >  
+		<span class="sprite inlineimg user_offline" title="nutmegchoi is offline">nutmegchoi is offline</span>
+
+
+		
+		
+		
+		
+		&nbsp;
+        
+</div>
+	
+<div id="td_post_1162" class="main-column-text-wrapper buttons buttons-postings">
+<div class="main-column-text">  
+	
+		<div class="right"><!-- controls -->
+		
+		
+		
+			<a href="http://www.snowboardingforum.com/newreply.php?do=newreply&amp;p=2623137" rel="nofollow"><span class="sprite button quote">Quote</span></a>
+		
+		
+		
+			<a href="http://www.snowboardingforum.com/newreply.php?do=newreply&amp;p=2623137" rel="nofollow" id="qr_2623137" onclick="return false"><span class="sprite button quickreply">Quick Reply</span></a>
+		
+		
+		
+		
+		
+			
+		
+		
+		<!-- / controls -->
+        </div>
+</div>
+</div>
+
+</div>
+<!-- end text_wrapper -->
+</section>
+
+
+ 
+<!-- post 2623137 popup menu -->
+
+<!-- / post 2623137 popup menu -->
+
+
+
+
+
+
+
+	</div>
+	
+
+<!-- / post #2623137 --><div id="lastpost"></div></div>
+
+
+
+<!-- start content table -->
+
+<!-- / start content table -->
+
+<!-- controls below postbits -->
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-top:3px" class="text_wrapper">
+<tr valign="top">
+	
+		<td class="smallfont"><a href="http://www.snowboardingforum.com/newreply.php?do=newreply&amp;noquote=1&amp;p=2623137" rel="nofollow"><span class="sprite button reply">Reply</span></a></td>
+	
+	
+		<td align="right"><div class="pagenav" align="right">
+<table class="tborder" cellpadding="0" cellspacing="0" border="0">
+<tr>
+	<td class="vbmenu_control" style="font-weight:normal">Page 1 of 3</td>
+	
+	
+		<td class="alt2"><span class="smallfont" title="Showing results 1 to 10 of 27"><strong>1</strong></span></td>
+ <td class="alt1"><a class="smallfont" href="http://www.snowboardingforum.com/resort-trip-reports/202457-epic-13-day-trip-jackson-hole-2.html" title="Show results 11 to 20 of 27">2</a></td><td class="alt1"><a class="smallfont" href="http://www.snowboardingforum.com/resort-trip-reports/202457-epic-13-day-trip-jackson-hole-3.html" title="Show results 21 to 27 of 27">3</a></td>
+	<td class="alt1 nextpage"><a rel="next" class="smallfont" href="http://www.snowboardingforum.com/resort-trip-reports/202457-epic-13-day-trip-jackson-hole-2.html" title="Next Page - Results 11 to 20 of 27"><span class="sprite greater-than"><!-- -->&nbsp;</span></a></td>
+	
+	<td class="vbmenu_control" title="showthread.php?t=202457"><a name="PageNav"></a></td>
+</tr>
+</table>
+</div>
+        <br>
+		
+		</td>
+	
+</tr>
+</table>
+<!-- / controls below postbits -->
+
+
+
+
+
+
+
+<!-- Taboola Content -->
+<div id="taboola-below-article-thumbnails-white"></div>
+<script type="text/javascript">
+  window._taboola = window._taboola || [];
+  _taboola.push({
+    mode: "thumbnails-c",
+  container: "taboola-below-article-thumbnails-white",
+    placement: "Below Article Thumbnails White - SP",
+    target_type: "mix"
+  });
+</script>
+<!-- /Taboola Content -->
+
+
+
+<!-- lightbox scripts -->
+
+	<script type="text/javascript">
+	<!--
+	vBulletin.register_control("vB_Lightbox_Container", "posts", 1);
+	//-->
+	</script>
+<!-- / lightbox scripts -->
+
+
+
+
+
+<!-- ajax errors table -->
+	<table class="tborder" cellpadding="0" cellspacing="0" border="0" style="display:none; position:absolute" id="ajax_post_errors">
+	<tr>
+		<td class="thead">
+			<span style="float:right"><input type="button" class="button" value=" X " onclick="vB_QuickEditor.hide_errors()" id="ajax_post_errors_closebtn" /></span>
+			vBulletin Message
+		</td>
+	</tr>
+	<tr>
+		<td class="alt2" colspan="2" id="ajax_post_errors_message">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="tfoot" colspan="2" align="center"><a href="http://www.snowboardingforum.com/resort-trip-reports/202457-epic-13-day-trip-jackson-hole.html#" onclick="vB_QuickEditor.abort(); return false;">Cancel Changes</a></td>
+	</tr>
+	</table>
+<!-- / ajax errors table -->
+
+<!-- scripts for quick reply and quick edit -->
+	<!-- Editor Scripts -->
+
+<script type="text/javascript">
+<!--
+var fontoptions = new Array();
+var sizeoptions = new Array();
+var smilieoptions = {  };
+
+var istyles = {  };
+var ltr = 'left';
+
+var smiliewindow_x = 240;
+var smiliewindow_y = 280;
+
+var ignorequotechars = 1;
+var allowbasicbbcode = true;
+
+// vB Phrases
+vbphrase["wysiwyg_please_wait"]          = "Please wait for the WYSIWYG editor to finish loading...";
+vbphrase["wysiwyg_initialized"]          = "WYSIWYG Editor initialized for %1$s in %2$s seconds.";
+vbphrase["wysiwyg_command_invalid"]      = "This command is invalid or not implemented.";
+vbphrase["moz_must_select_text"]         = "Mozilla requires that you must select some text for this function to work";
+vbphrase["moz_edit_config_file"]         = "You need to edit your Mozilla config file to allow this action.";
+vbphrase["enter_tag_option"]             = "Please enter the option for your %1$s tag:";
+vbphrase["must_select_text_to_use"]      = "You must select some text to use this function.";
+vbphrase["browser_is_safari_no_wysiwyg"] = "The Safari browser does not support WYSIWYG mode.";
+vbphrase["enter_option_x_tag"]           = "Enter the option for the [%1$s] tag:";
+vbphrase["enter_text_to_be_formatted"]   = "Enter the text to be formatted";
+vbphrase["enter_link_text"]              = "Enter the text to be displayed for the link (optional):";
+vbphrase["enter_list_type"]              = "What type of list do you want? Enter '1' for a numbered list, enter 'a' for an alphabetical list, or leave blank for a list with bullet points:";
+vbphrase["enter_list_item"]              = "Enter a list item.\r\nLeave the box empty or press 'Cancel' to complete the list:";
+vbphrase["must_enter_subject"]           = "You must enter a title / subject!";
+vbphrase["message_too_short"]            = "The message you have entered is too short. Please lengthen your message to at least %1$s characters.";
+vbphrase["enter_link_url"]               = "Please enter the URL of your link:";
+vbphrase["enter_image_url"]              = "Please enter the URL of your image:";
+vbphrase["enter_email_link"]             = "Please enter the email address for the link:";
+vbphrase["complete_image_verification"]  = "You did not complete the Image Verification";
+vbphrase["iespell_not_installed"]        = "ieSpell is a spell-checking tool for Internet Explorer.\r\n\r\nIf you would like to download ieSpell, click OK; otherwise click Cancel.\r\n\r\nieSpell can be downloaded from http://www.iespell.com";
+vbphrase["click_quick_reply_icon"]       = "Please click one of the Quick Reply icons in the posts above to activate Quick Reply.";
+vbphrase["insert_all"]                   = "Insert All";
+
+//-->
+</script>
+<!-- / Editor Scripts -->
+	
+
+		<script type="text/javascript">
+		<!--
+		vB_AJAX_QuickEdit_Init('posts');
+		//-->
+		</script>
+	
+<!-- / scripts for quick reply and quick edit -->
+
+
+
+
+<!-- quick reply -->
+	<br />
+	<form action="http://www.snowboardingforum.com/newreply.php?do=postreply&amp;t=202457" method="post" onsubmit="return vbpegp_qr_prepare_submit(this, 10);" name="vbform" id="qrform">
+	<table class="tborder" cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+	<thead>
+		<tr>
+			<td class="tcat" colspan="2">
+				<a style="float:right" href="http://www.snowboardingforum.com/resort-trip-reports/202457-epic-13-day-trip-jackson-hole.html#top" onclick="return toggle_collapse('quickreply');"><span class="sprite inlineimg collapseimg" id="collapseimg_quickreply"></span></a>
+				Quick Reply
+			</td>
+		</tr>
+	</thead>
+	<tbody id="qr_error_tbody" style="display:none">
+	<tr>
+		<td class="thead">The following errors occurred with your submission</td>
+	</tr>
+	<tr>
+		<td class="alt1" id="qr_error_td"></td>
+	</tr>
+	<tr>
+		<td class="tfoot" align="center"><span class="smallfont"><a href="http://www.snowboardingforum.com/resort-trip-reports/202457-epic-13-day-trip-jackson-hole.html#" onclick="return qr_hide_errors()">Okay</a></span></td>
+	</tr>
+	</tbody>
+	<tbody id="collapseobj_quickreply">
+	<tr>
+		<td class="panelsurround" align="center">
+			<div class="panel">
+				<div align="left" style="max-width:; width:auto !important; width:">
+					<div class="smallfont vs_msglabel">Message:</div>
+					<div id="vB_Editor_QR" class="vBulletin_editor">
+		<script type="text/javascript">
+		<!--
+			var threaded_mode = 0;
+			var require_click = 1;
+			var is_last_page = 0; // leave for people with cached JS files
+			var allow_ajax_qr = 0;
+			var ajax_last_post = 1484058529;
+		// -->
+		</script>
+		
+<div class="controlbar" style="padding-right:8px">
+	<fieldset style="border:0px; padding:0px; margin:0px">
+	
+	<textarea name="message" id="vB_Editor_QR_textarea" rows="10" cols="60" style="width:100%; height:200px" tabindex="1" dir="ltr" disabled="disabled">Please click one of the Quick Reply icons in the posts above to activate Quick Reply.</textarea>
+	
+	</fieldset>
+	<!--width:-->
+</div>
+
+<input type="hidden" name="wysiwyg" id="vB_Editor_QR_mode" value="0" />
+<input type="hidden" name="styleid" value="0" />
+
+<script type="text/javascript">
+<!--
+vB_Editor['vB_Editor_QR'] = new vB_Text_Editor('vB_Editor_QR', 0, '14', '1');
+var QR_EditorID = 'vB_Editor_QR';
+//-->
+</script>
+	</div>
+					
+					
+
+					<fieldset class="fieldset">
+						<legend>Options</legend>
+						<div style="padding:3px">
+							
+							<label for="qr_quickreply"><input type="checkbox" name="quickreply" value="1" id="qr_quickreply" accesskey="w" tabindex="4" />Quote message in reply?</label>
+						</div>
+					</fieldset> 			<style type="text/css">
+/* ***** red and green boxes for username verification used during registration ***** */
+.greenbox { border: 1px solid #337733; background: #bbffbb; color: #337733; padding: 3px; }
+.redbox { border:1px solid #773333; background: #ffbbbb; color: #773333; padding: 3px; }
+</style>
+<link type="text/css" rel="stylesheet" href="http://www.snowboardingforum.com/vbpegp/resources/css/register.css" />
+<div class="detailsContainer ">
+
+<style>
+table.registration .column_or .block_or {display: none;}
+.container table.registration .column_or .block_or {display: block;}
+</style>
+
+    <table width="100%" cellspacing="0" cellpadding="0"  class="registration">
+<tbody>
+<tr>
+<td width="55%" valign="top" class="" style="vertical-align:top">
+
+<div class="blockrow">
+<h2>
+Register Now
+</h2>
+            <br>
+<br>
+
+</div>
+<div class="smallfont" style="margin-bottom:3px">
+In order to be able to post messages on the Snowboarding Forum - Snowboard Enthusiast Forums forums, you must first register.<br />
+				Please enter your desired user name, your email address and other required details in the form below.<br><br>
+</div>
+<div class="smallfont" style="margin-bottom:3px">
+<strong>User Name</strong>:<br />
+<input class="bginput" id="regusername" type="text" name="username" maxlength="15" value="" /><img src="http://www.snowboardingforum.com/clear.gif" id="reg_verif_image" onclick="return toggle_collapse('dialog_box')" style="display:none;" alt="" />
+<div id="collapseobj_dialog_box"><div id="reg_verif_div" style="display:none;"></div></div>
+<script type="text/javascript" src="http://www.snowboardingforum.com/clientscript/vbulletin_ajax_nameverif.js?v=387"></script>
+<script type="text/javascript">
+<!--
+regname_verif = new vB_AJAX_NameVerify('regname_verif', 'regusername');
+//-->
+</script>
+</div>
+<fieldset class="fieldset">
+<legend>Password</legend>
+<table cellpadding="0" cellspacing="3" border="0" width="400">
+<tr>
+<td >Please enter a password for your user account. Note that passwords are case-sensitive.<Br><br></td>
+</tr>
+<tr>
+<td >
+Password:<br />
+<input type="password" class="bginput" name="password"  maxlength="50" value="" /><br><br>
+</td>
+
+</tr>
+            <tr>
+            <td>
+Confirm Password:<br />
+<input type="password" class="bginput" name="passwordconfirm"  maxlength="50" value="" />
+</td>
+            </tr>
+            
+</table>
+</fieldset>
+
+<fieldset class="fieldset">
+<legend>Email Address</legend>
+<table cellpadding="0" cellspacing="3" border="0" width="400">
+<tr>
+<td colspan="2">Please enter a valid email address for yourself.<br><br></td>
+</tr>
+<tr>
+<td>
+Email Address:<br />
+<input type="text" class="bginput" name="email" size="25" maxlength="50" value="" dir="ltr" />
+</td>
+<td>
+<!--
+Confirm Email Address:<br />
+<input type="text" class="bginput" name="emailconfirm" size="25" maxlength="50" value="" dir="ltr" />
+-->
+</td>
+</tr>
+
+</table>
+</fieldset>
+
+
+</td>
+<td class="column_or"><div class="block_or">OR</div></td>
+<td width="30%" valign="top" class="" style="vertical-align:top">
+
+
+<div class="blockrow">
+<h2>
+Log-in
+</h2><br>
+<br>
+
+</div>
+<table cellpadding="0" cellspacing="3" border="0" width="90%">
+<tr>
+<td class="smallfont" style="white-space: nowrap;"><label for="navbar_username2">User Name</label></td>
+<td align="right"><input type="text" style="font-size: 11px" name="vb_login_username" id="navbar_username2" size="10" accesskey="u" tabindex="1" value="" onfocus="if (this.value == 'User Name') this.value = '';" /></td>
+
+</tr>
+<tr>
+<td class="smallfont"><br>
+<label for="navbar_password2">Password</label><br><br>
+
+</td>
+<td align="right"><br>
+<input type="password" style="font-size: 11px" name="vb_login_password" id="navbar_password2" size="10" tabindex="1" /><br>
+<br>
+</td>
+
+</tr>
+        
+        <tr>
+        <td nowrap class="smallfont"><label for="cb_cookieuser_navbar2">Remember Me? <input type="checkbox" name="cookieuser" value="1" tabindex="1" id="cb_cookieuser_navbar2" accesskey="c" /></label></td>
+        <td align="right"><input type="submit" class="button" value="Log in" tabindex="1" title="Enter your username and password in the boxes provided to login, or click the 'register' button to create a profile for yourself." accesskey="s" /></td>
+        </tr>
+</table>
+
+
+        </td>
+      </tr>
+</tbody></table>
+</div>
+		
+		<fieldset><legend>Human Verification</legend>
+		<input type="hidden" name="humanverify[hash]" value="" />
+		<script type='text/javascript'>
+			var ACPuzzleOptions = { theme:    'red',
+									tabindex: 0,
+									lang:     'en'
+			};
+		</script>
+		<p>In order to verify that you are a human and not a spam bot, please enter the answer into the following box below based on the instructions contained in the graphic.</p><br/>
+		<script type="text/javascript" src="http://api.solvemedia.com/papi/challenge.script?k=21yS6.UmWQY13BGoBLOT-MEYXkoiF7rj"></script>
+
+	<noscript>
+  		<iframe src="http://api.solvemedia.com/papi/challenge.noscript?k=21yS6.UmWQY13BGoBLOT-MEYXkoiF7rj" height="300" width="500" frameborder="0"></iframe><br/>
+  		<textarea name="adcopy_challenge" rows="3" cols="40"></textarea>
+  		<input type="hidden" name="adcopy_response" value="manual_challenge"/>
+	</noscript>
+		</fieldset>
+		
+				</div>
+			</div>
+
+			<div class="vs_submit">
+				<input type="hidden" name="poststarttime" value="" />
+				<input type="hidden" name="posthash" value="" />
+				<input type="hidden" name="fromquickreply" value="1" />
+				<input type="hidden" name="s" value="" />
+				<input type="hidden" name="securitytoken" value="guest" />
+				<input type="hidden" name="do" value="postreply" />
+				<input type="hidden" name="t" value="202457" id="qr_threadid" />
+				<input type="hidden" name="p" value="0" id="qr_postid" />
+				<input type="hidden" name="specifiedpost" value="0" id="qr_specifiedpost" />
+				<input type="hidden" name="parseurl" value="1" />
+				<input type="hidden" name="loggedinuser" value="0" />
+				<input type="button" class="button" value="Post Quick Reply" accesskey="s" title="(Alt + S)" name="sbutton" tabindex="2" id="qr_submit" onclick="clickedelm = this.value; " /> 
+				<input type="submit" class="button" value="Go Advanced" accesskey="x" title="(Alt + X)" name="preview" tabindex="3" id="qr_preview" onclick="clickedelm = this.value" />
+
+			<div align="center" id="qr_posting_msg" style="display:none; margin-top:6px">
+				<span class="sprite inlineimg progress">Posting Quick Reply - Please Wait</span>&nbsp;<strong>Posting Quick Reply - Please Wait</strong>
+			</div>
+		</td>
+	</tr>
+	</tbody>
+	</table>
+	</form>
+
+	
+
+	<script type="text/javascript">
+	<!--
+		// initialize quick reply
+		qr_init();
+	//-->
+	</script>
+<!-- / quick reply -->
+
+
+
+<!-- next / previous links -->
+	<br />
+	<div class="smallfont" align="center">
+		<strong>&laquo;</strong>
+			<a href="http://www.snowboardingforum.com/resort-trip-reports/202457-epic-13-day-trip-jackson-hole-prev-thread.html" rel="nofollow">Previous Thread</a>
+			|
+			<a href="http://www.snowboardingforum.com/resort-trip-reports/202457-epic-13-day-trip-jackson-hole-next-thread.html" rel="nofollow">Next Thread</a>
+		<strong>&raquo;</strong>
+	</div>
+<!-- / next / previous links -->
+
+
+
+
+
+
+
+<!-- popup menu contents -->
+<br />
+
+<!-- thread tools menu -->
+<div class="vbmenu_popup" id="threadtools_menu" style="display:none">
+<form action="http://www.snowboardingforum.com/postings.php?t=202457&amp;pollid=" method="post" name="threadadminform">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">Thread Tools<a name="goto_threadtools"></a></td>
+	</tr>
+	<tr>
+		<td class="vbmenu_option"><span class="sprite inlineimg printer">Show Printable Version</span> <a href="http://www.snowboardingforum.com/resort-trip-reports/202457-epic-13-day-trip-jackson-hole-print.html" accesskey="3" rel="nofollow">Show Printable Version</a></td>
+	</tr>
+	
+	
+	
+	
+	</table>
+</form>
+</div>
+<!-- / thread tools menu -->
+
+<!-- **************************************************** -->
+
+<!-- thread display mode menu -->
+<div class="vbmenu_popup" id="displaymodes_menu" style="display:none">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">Display Modes<a name="goto_displaymodes"></a></td>
+	</tr>
+	<tr>
+	
+		<td class="vbmenu_option" title="nohilite"><span class="sprite inlineimg mode_linear">Linear Mode</span> <strong>Linear Mode</strong></td>
+	
+	</tr>
+	<tr>
+	
+		<td class="vbmenu_option"><span class="sprite inlineimg mode_hybrid">Hybrid Mode</span> <a rel="nofollow" href="http://www.snowboardingforum.com/resort-trip-reports/202457-epic-13-day-trip-jackson-hole.html?mode=hybrid">Switch to Hybrid Mode</a></td>
+	
+	</tr>
+	<tr>
+	
+		<td class="vbmenu_option"><span class="sprite inlineimg mode_threaded">Threaded Mode</span> <a rel="nofollow" href="http://www.snowboardingforum.com/resort-trip-reports/202457-epic-13-day-trip-jackson-hole.html?mode=threaded#post2622841">Switch to Threaded Mode</a></td>
+	
+	</tr>
+	</table>
+</div>
+<!-- / thread display mode menu -->
+
+<!-- **************************************************** -->
+
+
+
+<!-- **************************************************** -->
+
+
+
+<!-- / popup menu contents -->
+
+
+<!-- forum rules and admin links -->
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+<tr valign="bottom">
+	<td width="100%" valign="top">
+		
+	</td>
+	<td class="smallfont" align="right">
+		<table cellpadding="0" cellspacing="0" border="0">
+		
+		
+		</table>
+	</td>
+</tr>
+</table>
+<!-- /forum rules and admin links -->
+<br>
+
+<br />
+
+
+
+
+
+<table class="tborder forumrules" cellpadding="0" cellspacing="0" border="0" width="210">
+<thead>
+<tr>
+
+<td class="thead">
+Posting Rules
+</td>
+
+	<td class="thead" align="right">
+		<a style="float:right" href="http://www.snowboardingforum.com/resort-trip-reports/202457-epic-13-day-trip-jackson-hole.html#top" onclick="return toggle_collapse('forumrules')"><span id="collapseimg_forumrules" class="sprite inlineimg collapseimg"><!-- -->&nbsp;</span></a>
+		
+	</td>
+</tr>
+</thead>
+<tbody id="collapseobj_forumrules" style="">
+<tr>
+	<td colspan="2" class="alt1" nowrap="nowrap"><div class="smallfont">
+		
+		<div>You <strong>may</strong> post new threads</div>
+		<div>You <strong>may</strong> post replies</div>
+		<div>You <strong>may not</strong> post attachments</div>
+		<div>You <strong>may not</strong> edit your posts</div>
+		<hr />
+		
+		<div><a rel="nofollow" href="http://www.snowboardingforum.com/misc.php?do=bbcode" target="_blank">BB code</a> is <strong>On</strong></div>
+		<div><a rel="nofollow" href="http://www.snowboardingforum.com/misc.php?do=showsmilies" target="_blank">Smilies</a> are <strong>On</strong></div>
+		<div><a rel="nofollow" href="http://www.snowboardingforum.com/misc.php?do=bbcode#imgcode" target="_blank">[IMG]</a> code is <strong>On</strong></div>
+		<div>HTML code is <strong>Off</strong></div><div><a rel="nofollow" href="http://www.snowboardingforum.com/misc.php?do=linkbacks#trackbacks" target="_blank">Trackbacks</a> are <strong>On</strong></div>
+<div><a rel="nofollow" href="http://www.snowboardingforum.com/misc.php?do=linkbacks#pingbacks" target="_blank">Pingbacks</a> are <strong>On</strong></div>
+<div><a rel="nofollow" href="http://www.snowboardingforum.com/misc.php?do=linkbacks#refbacks" target="_blank">Refbacks</a> are <strong>On</strong></div>
+		<hr />
+		<div><a rel="nofollow" href="http://www.snowboardingforum.com/misc.php?do=showrules" target="_blank">Forum Rules</a></div>
+	</div></td>
+</tr>
+</tbody>
+</table>
+</div><!-- Close class="showthreadPage" -->
+
+
+<!-- temp -->
+<div style="display:none">
+	<!-- thread rate -->
+	
+		
+	
+	<!-- / thread rate -->
+</div>
+<script type="text/javascript" src="http://www.snowboardingforum.com/clientscript/vbulletin_autosave.js"></script>
+<!-- SlimCut -->
+<div style='width:100%; text-align:center;'><div id='SnowboardingForum_com_1x1_SlimCut_SP_Forum' style='width:auto; height:auto;'>
+						<script type='text/javascript'>
+							googletag.cmd.push(function() { googletag.display('SnowboardingForum_com_1x1_SlimCut_SP_Forum'); });
+						</script>
+					</div></div>
+
+<div class="vbmenu_popup" id="linkbacktools_menu" style="display:none">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">LinkBack<a name="goto_linkback"></a></td>
+	</tr>
+
+	<tr>
+		<td class="vbmenu_option"><img class="inlineimg" src="http://www.snowboardingforum.com/vbseo/resources/images/forum/linkback_url.gif" alt="LinkBack URL" /> <a href="http://www.snowboardingforum.com/resort-trip-reports/202457-epic-13-day-trip-jackson-hole.html" onclick="prompt('Use the following URL when referencing this thread from another forum or blog.','http://www.snowboardingforum.com/resort-trip-reports/202457-epic-13-day-trip-jackson-hole.html');return false;">LinkBack URL</a></td>
+	</tr>
+	<tr>
+		<td class="vbmenu_option"><img class="inlineimg" src="http://www.snowboardingforum.com/vbseo/resources/images/forum/linkback_about.gif" alt="About LinkBacks" /> <a rel="nofollow" href="http://www.snowboardingforum.com/misc.php?do=linkbacks">About LinkBacks</a></td>
+	</tr>
+
+	</table>
+</div>
+
+</div>
+</div>
+
+<aside class="noprint" id="sidebar">
+<div style="display: none;" class="sidebar-controls ">
+<span class="sprite inlineimg sidebar-controls-icon"></span>
+<span class="sprite inlineimg br-creditcheck"></span>
+<span class="sprite inlineimg br-warranty"></span>
+<span class="sprite inlineimg br-history"></span>
+<span class="sprite inlineimg br-shipping"></span>
+<span class="sprite inlineimg br-escrow"></span>
+<span class="sprite inlineimg br-tires"></span>
+<span class="sprite inlineimg br-inspections"></span>
+<span class="sprite inlineimg br-insurance"></span>
+</div>
+<div class="sidebar">
+<div class="search-in-one">
+    <div class="change_btn "><div class="image sprite-google-search"></div>
+        <ul class="search_menu">
+            <li data-search-type="google-search"><div class="icon sprite-google-search"></div> Google search</li>
+            <li data-search-type="vb-search"><div class="icon sprite-vb-search"></div> VB search</li>
+        </ul>
+    </div>
+    
+    <div class="search-item google-search">
+<div class='ams_gtsearch' style='width: 150px; margin:auto;' id='cse_gtsearch_form_5'></div>
+<script>
+vsamsgtsearches.push('cse_gtsearch_form_5');
+</script>
+    <!--<form action="http://www.snowboardingforum.com/gtsearch.php" id="">
+			<div>
+				<input type="hidden" name="cx" value="partner-pub-7865546952023728:ejj61qrmkgs" />
+				<input type="hidden" name="cof" value="FORID:11" />
+				<input type="hidden" name="ie" value="UTF-8" />
+				<input type="text" name="q" size="21" value=""/>
+				<input type="submit" name="sa" value="Search" />
+			</div>
+		</form>-->
+    </div> 
+    
+</div><section class="text_wrapper ad box-ad">
+<div style='width:100%; text-align:center;'><div id='SnowboardingForum_com_300x250_TopRight_SP_Forum' style='width:auto; height:auto;'>
+						<script type='text/javascript'>
+							googletag.cmd.push(function() { googletag.display('SnowboardingForum_com_300x250_TopRight_SP_Forum'); });
+						</script>
+					</div></div>
+
+
+</section>
+
+<section>
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="cmps-table" width="100%">
+		<thead>
+			<tr>
+				<td  colspan="0">
+				
+				<h2 class="title">Recent Discussions</h2></td>
+			</tr>
+		</thead>
+		<tbody id="collapseobj_module_41" style="">
+			
+				<tr>
+	<td class="alt1 columns columns-comments">
+
+	 <div class="picture main-column-picture">    
+
+		
+				<div style="padding-top:0px"><span class="sprite count">47</span></div>
+		
+	
+	</div>
+    
+    	<div class="main-column-text-wrapper">
+   	 <div class="text main-column-text">
+    
+    		<div class="smallfont">
+		
+				<span style="float:right">
+					
+						<a href="http://www.snowboardingforum.com/resort-trip-reports/202457-epic-13-day-trip-jackson-hole.html#" onclick="vba_attach_win(160537); return false"><span class="sprite inlineimg paperclip">210 Attachment(s)</span></a>
+					
+					
+				</span>
+		
+
+		
+		
+
+		
+				<a href="http://www.snowboardingforum.com/southwest-us/160537-building-utah.html"><span class="sprite inlineimg firstnew">Go to first new post</span></a>
+		
+			 <a href="http://www.snowboardingforum.com/southwest-us/160537-building-utah.html" title="UPDATE(3\21\2016)---Looking for licensed general contractors to give build bids\estimates for financing....will pay an hourly rate for your written..." itemprop="headline"><strong>Building Utah...</strong></a>
+		
+		
+		
+
+        
+        <div>
+        
+				 <span itemprop="dateModified">Today <span class="time">12:24 PM</span></span> by <a rel="nofollow" href="http://www.snowboardingforum.com/members/hikeswithdogs.html" itemprop="contributor">hikeswithdogs</a>
+                 <meta itemprop="author" content="hikeswithdogs">
+                 <meta itemprop="dateCreated" content="12-28-2014 03:50 AM">
+				
+			
+        </div>
+					
+		</div>
+		
+    </div>
+    </div>  
+    
+</td>
+</tr><tr>
+	<td class="alt2 columns columns-comments">
+
+	 <div class="picture main-column-picture">    
+
+		
+				<div style="padding-top:0px"><span class="sprite count">376</span></div>
+		
+	
+	</div>
+    
+    	<div class="main-column-text-wrapper">
+   	 <div class="text main-column-text">
+    
+    		<div class="smallfont">
+		
+				<span style="float:right">
+					
+						<a href="http://www.snowboardingforum.com/resort-trip-reports/202457-epic-13-day-trip-jackson-hole.html#" onclick="vba_attach_win(105417); return false"><span class="sprite inlineimg paperclip">743 Attachment(s)</span></a>
+					
+					
+				</span>
+		
+
+		
+		
+
+		
+				<a href="http://www.snowboardingforum.com/music-discussion/105417-what-you-listening.html"><span class="sprite inlineimg firstnew">Go to first new post</span></a>
+		
+			 <a href="http://www.snowboardingforum.com/music-discussion/105417-what-you-listening.html" title="A common forum thread. I thought I'd see what you all are listening to. 
+ 
+YouTube music videos are welcome!" itemprop="headline"><strong>What are you listening...</strong></a>
+		
+		
+		
+
+        
+        <div>
+        
+				 <span itemprop="dateModified">Today <span class="time">11:53 AM</span></span> by <a rel="nofollow" href="http://www.snowboardingforum.com/members/robotfood99.html" itemprop="contributor">robotfood99</a>
+                 <meta itemprop="author" content="Mad Dog Tannen">
+                 <meta itemprop="dateCreated" content="11-20-2013 01:42 PM">
+				
+			
+        </div>
+					
+		</div>
+		
+    </div>
+    </div>  
+    
+</td>
+</tr><tr>
+	<td class="alt1 columns columns-comments">
+
+	 <div class="picture main-column-picture">    
+
+		
+				<div style="padding-top:0px"><span class="sprite count">16</span></div>
+		
+	
+	</div>
+    
+    	<div class="main-column-text-wrapper">
+   	 <div class="text main-column-text">
+    
+    		<div class="smallfont">
+		
+
+		
+		
+
+		
+				<a href="http://www.snowboardingforum.com/buy-sell-snowboard-equipment/238626-sale-snowboard.html"><span class="sprite inlineimg firstnew">Go to first new post</span></a>
+		
+			 <a href="http://www.snowboardingforum.com/buy-sell-snowboard-equipment/238626-sale-snowboard.html" title="Selling my Snowboard Addiction Balance Bar for rail training 
+Good for carpet, cardboard, or outdoor use, significantly increases rail balance and..." itemprop="headline"><strong>For Sale: Snowboard...</strong></a>
+		
+		
+		
+
+        
+        <div>
+        
+				 <span itemprop="dateModified">Today <span class="time">11:09 AM</span></span> by <a rel="nofollow" href="http://www.snowboardingforum.com/members/timmytard.html" itemprop="contributor">timmytard</a>
+                 <meta itemprop="author" content="tecknojoe">
+                 <meta itemprop="dateCreated" content="07-21-2017 02:30 PM">
+				
+			
+        </div>
+					
+		</div>
+		
+    </div>
+    </div>  
+    
+</td>
+</tr><tr>
+	<td class="alt2 columns columns-comments">
+
+	 <div class="picture main-column-picture">    
+
+		
+				<div style="padding-top:0px"><span class="sprite count">4k</span></div>
+		
+	
+	</div>
+    
+    	<div class="main-column-text-wrapper">
+   	 <div class="text main-column-text">
+    
+    		<div class="smallfont">
+		
+				<span style="float:right">
+					
+						<a href="http://www.snowboardingforum.com/resort-trip-reports/202457-epic-13-day-trip-jackson-hole.html#" onclick="vba_attach_win(18154); return false"><span class="sprite inlineimg paperclip">7823 Attachment(s)</span></a>
+					
+					
+				</span>
+		
+
+		
+		
+
+		
+				<a href="http://www.snowboardingforum.com/off-topic-general-discussion/18154-today-i-hate-thread.html"><span class="sprite inlineimg firstnew">Go to first new post</span></a>
+		
+			 <a href="http://www.snowboardingforum.com/off-topic-general-discussion/18154-today-i-hate-thread.html" title="K so my day has been shit and my fucking knee hurts like a little man with a fucking jack hammer lives inside. That stupid broad posts stupid shit..." itemprop="headline"><strong>Today I Hate Thread!</strong></a>
+		
+		
+		
+
+        
+        <div>
+        
+				 <span itemprop="dateModified">Today <span class="time">04:53 AM</span></span> by <a rel="nofollow" href="http://www.snowboardingforum.com/members/motleybeast.html" itemprop="contributor">motleybeast</a>
+                 <meta itemprop="author" content="CaptT">
+                 <meta itemprop="dateCreated" content="10-06-2009 05:16 PM">
+				
+			
+        </div>
+					
+		</div>
+		
+    </div>
+    </div>  
+    
+</td>
+</tr><tr>
+	<td class="alt1 columns columns-comments">
+
+	 <div class="picture main-column-picture">    
+
+		
+				<div style="padding-top:0px"><span class="sprite count">1</span></div>
+		
+	
+	</div>
+    
+    	<div class="main-column-text-wrapper">
+   	 <div class="text main-column-text">
+    
+    		<div class="smallfont">
+		
+
+		
+		
+
+		
+				<a href="http://www.snowboardingforum.com/general-travel-forum/238650-december-2017-trip.html"><span class="sprite inlineimg firstnew">Go to first new post</span></a>
+		
+			 <a href="http://www.snowboardingforum.com/general-travel-forum/238650-december-2017-trip.html" title="What are all your thoughts on a December trip? PNW? Colorado? Tahoe? I know the PNW had a crazy year last year and had a lot more snow in December...." itemprop="headline"><strong>December 2017 Trip</strong></a>
+		
+		
+		
+
+        
+        <div>
+        
+				 <span itemprop="dateModified">Yesterday <span class="time">08:15 PM</span></span> by <a rel="nofollow" href="http://www.snowboardingforum.com/members/linvillegorge.html" itemprop="contributor">linvillegorge</a>
+                 <meta itemprop="author" content="phillyphan">
+                 <meta itemprop="dateCreated" content="Yesterday 06:35 PM">
+				
+			
+        </div>
+					
+		</div>
+		
+    </div>
+    </div>  
+    
+</td>
+</tr><tr>
+	<td class="alt2 columns columns-comments">
+
+	 <div class="picture main-column-picture">    
+
+		
+				<div style="padding-top:0px"><span class="sprite count">20</span></div>
+		
+	
+	</div>
+    
+    	<div class="main-column-text-wrapper">
+   	 <div class="text main-column-text">
+    
+    		<div class="smallfont">
+		
+
+		
+		
+
+		
+				<a href="http://www.snowboardingforum.com/snowboarding-general-chat/238065-another-large-guy-story.html"><span class="sprite inlineimg firstnew">Go to first new post</span></a>
+		
+			 <a href="http://www.snowboardingforum.com/snowboarding-general-chat/238065-another-large-guy-story.html" title="large guy checking in, will update with progress as and when it happens : 
+ 
+- have been steadily gaining weight since moving countries in 2004..." itemprop="headline"><strong>another large guy story</strong></a>
+		
+		
+		
+
+        
+        <div>
+        
+				 <span itemprop="dateModified">Yesterday <span class="time">01:14 PM</span></span> by <a rel="nofollow" href="http://www.snowboardingforum.com/members/htfu.html" itemprop="contributor">htfu</a>
+                 <meta itemprop="author" content="htfu">
+                 <meta itemprop="dateCreated" content="06-12-2017 06:58 PM">
+				
+			
+        </div>
+					
+		</div>
+		
+    </div>
+    </div>  
+    
+</td>
+</tr><tr>
+	<td class="alt1 columns columns-comments">
+
+	 <div class="picture main-column-picture">    
+
+		
+				<div style="padding-top:0px"><span class="sprite count">14</span></div>
+		
+	
+	</div>
+    
+    	<div class="main-column-text-wrapper">
+   	 <div class="text main-column-text">
+    
+    		<div class="smallfont">
+		
+
+		
+		
+
+		
+				<a href="http://www.snowboardingforum.com/bindings/238617-now-selects.html"><span class="sprite inlineimg firstnew">Go to first new post</span></a>
+		
+			 <a href="http://www.snowboardingforum.com/bindings/238617-now-selects.html" title="My beginner bindings, Burton Stilettos, were starting to feel very soft as I was trying to take on more difficult terrain and be a bit more..." itemprop="headline"><strong>Now Selects?</strong></a>
+		
+		
+		
+
+        
+        <div>
+        
+				 <span itemprop="dateModified">Yesterday <span class="time">12:03 PM</span></span> by <a rel="nofollow" href="http://www.snowboardingforum.com/members/bataleon85.html" itemprop="contributor">Bataleon85</a>
+                 <meta itemprop="author" content="Fire Rose">
+                 <meta itemprop="dateCreated" content="07-21-2017 12:07 AM">
+				
+			
+        </div>
+					
+		</div>
+		
+    </div>
+    </div>  
+    
+</td>
+</tr><tr>
+	<td class="alt2 columns columns-comments">
+
+	 <div class="picture main-column-picture">    
+
+		
+				<div style="padding-top:0px"><span class="sprite count">5</span></div>
+		
+	
+	</div>
+    
+    	<div class="main-column-text-wrapper">
+   	 <div class="text main-column-text">
+    
+    		<div class="smallfont">
+		
+
+		
+		
+
+		
+				<a href="http://www.snowboardingforum.com/boards/238642-brand-new-burton-bullet.html"><span class="sprite inlineimg firstnew">Go to first new post</span></a>
+		
+			 <a href="http://www.snowboardingforum.com/boards/238642-brand-new-burton-bullet.html" title="Hi, I have a 2005 burton bullet 167 board that has been sitting in storage, never been used. Bindings are lablanc-drake and new boots, ride size13...." itemprop="headline"><strong>Brand new burton bullet...</strong></a>
+		
+		
+		
+
+        
+        <div>
+        
+				 <span itemprop="dateModified">Yesterday <span class="time">11:50 AM</span></span> by <a rel="nofollow" href="http://www.snowboardingforum.com/members/snowqueen.html" itemprop="contributor">Snowqueen</a>
+                 <meta itemprop="author" content="Snowqueen">
+                 <meta itemprop="dateCreated" content="07-22-2017 04:18 PM">
+				
+			
+        </div>
+					
+		</div>
+		
+    </div>
+    </div>  
+    
+</td>
+</tr><tr>
+	<td class="alt1 columns columns-comments">
+
+	 <div class="picture main-column-picture">    
+
+		
+				<div style="padding-top:0px"><span class="sprite count">897</span></div>
+		
+	
+	</div>
+    
+    	<div class="main-column-text-wrapper">
+   	 <div class="text main-column-text">
+    
+    		<div class="smallfont">
+		
+				<span style="float:right">
+					
+						<a href="http://www.snowboardingforum.com/resort-trip-reports/202457-epic-13-day-trip-jackson-hole.html#" onclick="vba_attach_win(15228); return false"><span class="sprite inlineimg paperclip">1243 Attachment(s)</span></a>
+					
+					
+				</span>
+		
+
+		
+		
+
+		
+				<a href="http://www.snowboardingforum.com/off-topic-general-discussion/15228-totally-random-shit.html"><span class="sprite inlineimg firstnew">Go to first new post</span></a>
+		
+			 <a href="http://www.snowboardingforum.com/off-topic-general-discussion/15228-totally-random-shit.html" title="Post pictures/videos/quotes/etc that don't have any other place to BE FREE AND MULTIPLY 
+ 
+http://img8.imageshack.us/img8/6862/fthis.png..." itemprop="headline"><strong>Totally Random Shit...</strong></a>
+		
+		
+		
+
+        
+        <div>
+        
+				 <span itemprop="dateModified">Yesterday <span class="time">09:03 AM</span></span> by <a rel="nofollow" href="http://www.snowboardingforum.com/members/f00bar.html" itemprop="contributor">f00bar</a>
+                 <meta itemprop="author" content="legallyillegal">
+                 <meta itemprop="dateCreated" content="04-03-2009 05:31 AM">
+				
+			
+        </div>
+					
+		</div>
+		
+    </div>
+    </div>  
+    
+</td>
+</tr><tr>
+	<td class="alt2 columns columns-comments">
+
+	 <div class="picture main-column-picture">    
+
+		
+				<div style="padding-top:0px"><span class="sprite count">2</span></div>
+		
+	
+	</div>
+    
+    	<div class="main-column-text-wrapper">
+   	 <div class="text main-column-text">
+    
+    		<div class="smallfont">
+		
+				<span style="float:right">
+					
+						<a href="http://www.snowboardingforum.com/resort-trip-reports/202457-epic-13-day-trip-jackson-hole.html#" onclick="vba_attach_win(238634); return false"><span class="sprite inlineimg paperclip">4 Attachment(s)</span></a>
+					
+					
+				</span>
+		
+
+		
+		
+
+		
+				<a href="http://www.snowboardingforum.com/bindings/238634-switcback-bindings-w.html"><span class="sprite inlineimg firstnew">Go to first new post</span></a>
+		
+			 <a href="http://www.snowboardingforum.com/bindings/238634-switcback-bindings-w.html" title="Selling a pair of Switchback bindings (medium) that have been used for a couple of hours roughly. No marks as far as I can tell. I don't have the box..." itemprop="headline"><strong>Switcback Bindings (w/...</strong></a>
+		
+		
+		
+
+        
+        <div>
+        
+				 <span itemprop="dateModified">Yesterday <span class="time">01:57 AM</span></span> by <a rel="nofollow" href="http://www.snowboardingforum.com/members/bdobson10.html" itemprop="contributor">bdobson10</a>
+                 <meta itemprop="author" content="bdobson10">
+                 <meta itemprop="dateCreated" content="07-22-2017 08:27 AM">
+				
+			
+        </div>
+					
+		</div>
+		
+    </div>
+    </div>  
+    
+</td>
+</tr>
+			
+		</tbody>
+	</table>
+</section>
+<section class="text_wrapper ad box-ad">
+<div style='width:100%; text-align:center;'><div id='SnowboardingForum_com_300x250_TopLeft_SP_Forum' style='width:auto; height:auto;'>
+						<script type='text/javascript'>
+							googletag.cmd.push(function() { googletag.display('SnowboardingForum_com_300x250_TopLeft_SP_Forum'); });
+						</script>
+					</div></div>
+</section>
+<section id="facebook-like" class="section">
+<div align="center">
+<div style="text-align:center;" class="fb-page" data-href="https://www.facebook.com/SnowboardingForum/"
+  data-width="300" data-hide-cover="false" data-show-facepile="false" 
+  data-show-posts="false">
+</div>
+</div>
+</section>
+
+</div>
+</aside>
+
+<div class="clear"><!-- -->&nbsp;</div>
+</div>
+<!-- end wrapper -->
+
+
+<!-- Do NOT remove this copyright notice. Doing so is a violation of your user agreement! -->
+
+<div align="center" class="smallfont">Powered by <a rel="nofollow" href="http://www.vbadvanced.com/" target="_blank">vBadvanced</a> CMPS v3.2.3</div><script type="text/javascript">ame_toggle_view({other : 'true',post : 'true',blog : 'true',group : 'true',vm : 'true',sig : 'true'});</script><div class="Leaderboard">
+<div style='width:100%; text-align:center;'><div id='SnowboardingForum_com_728x90_Bottom_SP_Forum' style='width:auto; height:auto;'>
+						<script type='text/javascript'>
+							googletag.cmd.push(function() { googletag.display('SnowboardingForum_com_728x90_Bottom_SP_Forum'); });
+						</script>
+					</div></div>
+</div>
+
+
+
+
+
+
+<div id="footer" class="footer">
+<form action="http://www.snowboardingforum.com/forum.php" method="get" style="clear:left">
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%" class="page" align="center">
+<tr>
+	
+		<td class="tfoot" valign="top">
+			<select name="styleid" onchange="switch_id(this, 'style')">
+				<optgroup label="Quick Style Chooser">
+					<option value="26" class="" selected="selected">-- SnowboardingForum.com (Full)</option>
+<option value="34" class="" >-- SnowboardingForum.com (Classic)</option>
+<option value="42" class="" >-- SnowboardingForum.com (Mobile)</option>
+
+				</optgroup>
+			</select>
+		</td>
+	
+	
+	<td class="tfoot subnav-bottom" align="right" width="100%">
+		<div class="smallfont">
+			<strong>
+				<a href="http://www.snowboardingforum.com/sendmessage.php" rel="nofollow" accesskey="9">Contact Us</a> |<a href="/advertise.php" rel="nofollow" accesskey="9">Advertise</a> |
+				<a href="http://www.snowboardingforum.com">SnowboardingForum.com</a> | 
+				
+				
+				<a href="http://www.snowboardingforum.com/archive/">Archive</a> | 
+				
+				<a href="http://www.snowboardingforum.com/privacy-policy.php">Privacy Statement</a> | 
+				
+				<a href="http://www.snowboardingforum.com/resort-trip-reports/202457-epic-13-day-trip-jackson-hole.html#top" onclick="self.scrollTo(0, 0); return false;">Top</a>
+			</strong>
+		</div>
+	</td>
+</tr>
+</table>
+
+<br />
+
+
+
+
+<div align="center">
+<a href="http://www.snowboardingforum.com/resort-trip-reports/202457-epic-13-day-trip-jackson-hole.html#"><img class="photo" src="/images/SnowboardingForum_2015/misc/spacer.gif" data-original="/images/SnowboardingForum_2015/misc/footer-logo.png" border="0" height="60" width="250" alt="" /></a>
+</div>
+
+
+
+
+
+<div align="center">
+
+
+
+	<div class="smallfont" align="center">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+
+
+	</div>
+
+
+
+
+
+</form>
+
+
+
+
+
+
+
+
+
+</div>
+<!-- end footer -->
+
+</div></div></div><!-- end spacer_open -->
+
+</div>
+<!-- end container -->
+<script type="text/javascript">
+<!--
+	// Main vBulletin Javascript Initialization
+	vBulletin_init();
+//-->
+</script>
+
+
+
+
+<script>
+if (typeof(jQuery) == 'undefined'){
+        document.write('<scr' + 'ipt type="text/javascript" src=" http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></scr' + 'ipt>');
+}
+</script>
+
+<script src="http://www.snowboardingforum.com/clientscript/vs_scripts/sticky.js"></script>
+<script>
+                var $ = jQuery.noConflict();
+                jQuery(document).ready(function($) {
+                                $("#main-content, .sidebar").addClass('theiaStickySidebar');
+                                $("#main-content_wrapper, #sidebar").theiaStickySidebar({
+                      // Settings
+                      additionalMarginTop: 30
+                    });
+                });           
+</script>
+
+<script>
+(function ($, window) {
+$("#qr_submit").click(function(e){
+e.stopPropagation();
+$("#qrform").trigger('submit');
+});
+})(jQuery, window);
+</script>
+<!-- Quick search form touchscreen fix -->
+<style>.stayOpened{display:block !important;}</style>
+<script>
+(function ($, window) {
+if ('ontouchstart' in document.documentElement){
+$('#navbar_search_menu').click(function(event) {
+$('#navbar_search_menu').addClass("stayOpened");
+});
+$('#navbar_search').click(function(event) {
+if ($('#navbar_search_menu').hasClass("stayOpened")) $('#navbar_search_menu').removeClass("stayOpened");
+});
+}
+})(jQuery, window);
+</script>
+<!-- End Quick search form touchscreen fix-->
+
+<script>
+(function ($, window) {
+var currencySelects=$("select[name*='currency']");
+if (currencySelects.length){
+  currencySelects.find("option:last-child").attr('selected', 'selected');
+}
+})(jQuery, window);
+</script>
+
+
+<script src="http://www.snowboardingforum.com/clientscript/vs_scripts/scripts-bottom.js"></script>
+
+
+<script src="http://www.google.com/cse/brand?form=&amp;lang=en"></script>
+
+<script>
+//setTimeout(ghostwriter.loadscripts, 250); 
+</script>  
+
+<div id="update-browser">For the best viewing experience please update your browser to <a rel="nofollow" href="http://www.google.com/chrome" target="blank">Google Chrome</a></div>
+
+
+<!-- D_T_O  --><!-- vBadvanced 5-1-9-7-3 --><script>
+var renderVSAMSGTSearch = function() {
+	for(var a = 0; a < vsamsgtsearches.length; a++)     
+		google.search.cse.element.render({div: vsamsgtsearches[a], tag: 'searchbox-only'})
+}, startVSAMSGTSearch = function() {
+	'complete' == document.readyState ? renderVSAMSGTSearch() : google.setOnLoadCallback(renderVSAMSGTSearch)
+};
+			
+		window.__gcse = { parsetags: 'explicit', callback: startVSAMSGTSearch}, function() {
+			var cx = 'partner-pub-7865546952023728:ejj61qrmkgs';
+			var gcse = document.createElement('script');
+			gcse.type = 'text/javascript';
+			gcse.async = true;
+			gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(gcse, s);
+		}();
+</script>
+<table cellpadding="3" cellspacing="0" border="0" class="page" align="center" width="100%"><tr><td class="tfoot" align="center" width="100%"><div class="smallfont"><strong><a href="http://www.verticalscope.com/aboutus/tos.php?site=snowboardingforum.com">Terms of Use</a></strong></div></td></tr></table>
+
+
+
+
+<!-- Adblock Check -->
+<div class="afs_ads">&nbsp;</div>
+<script>
+(function() {
+    var adBlockDetector = function() {
+        setTimeout(function() {
+            if (!document.getElementsByClassName) return;
+            
+            var ads = document.getElementsByClassName("afs_ads");
+            ad  = ads[ads.length - 1];
+
+            if (!ad || ad.innerHTML.length == 0 || ad.clientHeight === 0) {
+                _gaq.push(["_trackEvent", "Adblock", "Blocked", "true",,true]);
+            } else {
+                ad.style.display = "none";
+                _gaq.push(["_trackEvent", "Adblock", "Unblocked", "false",,true]);
+            }
+
+        }, 500);
+    }
+
+    /* Attach a listener for page load */
+    if (window.addEventListener) {
+        window.addEventListener("load", adBlockDetector, false);
+    } else {
+        window.attachEvent("onload", adBlockDetector); //IE
+    }
+})();
+</script>
+<!-- /Adblock Check-->
+<!-- Lotame -->
+<script src="//tags.crwdcntrl.net/c/8060/cc_af.js"></script>
+<!-- /Lotame -->
+
+<!-- SWOOP -->
+<script type="text/javascript">
+  (function addSwoopOnce(domain) {
+    var win = window;
+    try {
+      while (!(win.parent == win || !win.parent.document)) {
+        win = win.parent;
+      }
+    } catch (e) {
+      /* noop */
+    }
+    var doc = win.document;
+    if (!doc.getElementById("swoop_sdk")) {
+      var serverbase = doc.location.protocol + "//ardrone.swoop.com/";
+      var s = doc.createElement("script");
+      s.type = "text/javascript";
+      s.src = serverbase + "js/spxw.js";
+      s.id = "swoop_sdk";
+      s.setAttribute("data-domain", domain);
+      s.setAttribute("data-serverbase", serverbase);
+      doc.head.appendChild(s);
+    }
+  })("SW-86972468-S1015");
+</script>
+<!-- /SWOOP -->
+<script type="text/javascript">
+<!-- 
+	var vBSecurity = {
+		imageBasePath : 'http://www.snowboardingforum.com/dbtech/vbsecurity_pro/images/',
+		rules : { passwordLength : {phrase : 'Must be at least 10 characters', params : {passwordLength : 10 }},containsLowerCase : {phrase : 'Must contain lower-case characters'},containsUpperCase : {phrase : 'Must contain upper-case characters'},containsNumbers : {phrase : 'Must contain numbers'},containsSymbols : {phrase : 'Must contain symbols'} },
+		vbversion : 3 // DO NOT CHANGE THIS OR YOU WILL BREAK EVERYTHING!
+	};
+// -->
+</script>
+<script type="text/javascript"> window.jQuery || document.write('<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">\x3C/script>'); </script>
+<script type="text/javascript" src="http://www.snowboardingforum.com/clientscript/vbulletin_md5.js?v=$vboptions[simpleversion]"></script><link rel="stylesheet" href="//img.verticalscope.com/images/vs_registration/registration_v3.css" type="text/css"><link href="//fonts.googleapis.com/css?family=Roboto:400,400i,500,700,900" rel="stylesheet"><script type="text/javascript">var forumHome = "http://www.snowboardingforum.com/forum.php"; </script><script type="text/javascript" src="//img.verticalscope.com/images/vs_registration/registration_v4a.js"></script><script type="text/javascript">
+var vs_api = vsapi.api();
+var vs_o = vs_api.vbulletinInit(0, [2622841,2622857,2622865,2622889,2622897,2622905,2623017,2623057,2623121,2623137]);
+vs_o.addPostElement(document.getElementById("post2622841"), document.getElementById("post_message_2622841"), 2622841, 202457, 14, 128977, 0);vs_o.addPostElement(document.getElementById("post2622857"), document.getElementById("post_message_2622857"), 2622857, 202457, 14, 128977, 1);vs_o.addPostElement(document.getElementById("post2622865"), document.getElementById("post_message_2622865"), 2622865, 202457, 14, 128977, 2);vs_o.addPostElement(document.getElementById("post2622889"), document.getElementById("post_message_2622889"), 2622889, 202457, 14, 128977, 3);vs_o.addPostElement(document.getElementById("post2622897"), document.getElementById("post_message_2622897"), 2622897, 202457, 14, 128977, 4);vs_o.addPostElement(document.getElementById("post2622905"), document.getElementById("post_message_2622905"), 2622905, 202457, 14, 128977, 5);vs_o.addPostElement(document.getElementById("post2623017"), document.getElementById("post_message_2623017"), 2623017, 202457, 14, 128977, 6);vs_o.addPostElement(document.getElementById("post2623057"), document.getElementById("post_message_2623057"), 2623057, 202457, 14, 128977, 7);vs_o.addPostElement(document.getElementById("post2623121"), document.getElementById("post_message_2623121"), 2623121, 202457, 14, 15704, 8);vs_o.addPostElement(document.getElementById("post2623137"), document.getElementById("post_message_2623137"), 2623137, 202457, 14, 128977, 9);
+</script>
+<br /><div style="z-index:3" class="smallfont" align="center"></div>      <!-- VigLink vBulletin Plugin v2.0.7.0001: http://viglink.com -->
+      <script type="text/javascript">
+        var vglnk = { api_url: '//api.viglink.com/api',
+                      key: 'f104b8cde7bcc1532b9a7f0838baecfb' };
+
+        (function(d, t) {
+          var s = d.createElement(t); s.type = 'text/javascript'; s.async = true;
+          s.src = ('https:' == document.location.protocol ? vglnk.api_url :
+                   '//cdn.viglink.com/api') + '/vglnk.js';
+          var r = d.getElementsByTagName(t)[0]; r.parentNode.insertBefore(s, r);
+        }(document, 'script'));
+      </script>
+      <!-- end VigLink -->
+<!-- Taboola Footer -->
+<script type="text/javascript">
+  window._taboola = window._taboola || [];
+  _taboola.push({flush: true});
+</script>
+<!-- /Taboola Footer -->
+
+<script type="text/javascript">
+//<![CDATA[
+
+window.orig_onload = window.onload;
+window.onload = function() {
+var cpost=document.location.hash.substring(1);var cpost2='';if(cpost && (typeof fetch_object != 'undefined')){ var ispost=cpost.substring(0,4)=='post';if(ispost)cpost2='post_'+cpost.substring(4);if((cobj = fetch_object(cpost))||(cobj = fetch_object(cpost2))){cobj.scrollIntoView(true);}else if(ispost){cpostno = cpost.substring(4,cpost.length);if(parseInt(cpostno)>0){location.replace('http://www.snowboardingforum.com/showthread.php?p='+cpostno);};} }
+
+if(typeof window.orig_onload == "function") window.orig_onload();
+}
+
+//]]>
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"0f2b0d60a0","applicationID":"2343450","transactionName":"YFMEZUdYCBADVRddVlkZM0NcFhABEVMMGklfRg==","queueTime":0,"applicationTime":681,"atts":"TBQHEw9CGx4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

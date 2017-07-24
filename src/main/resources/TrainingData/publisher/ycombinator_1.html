@@ -1,0 +1,611 @@
+
+
+<!DOCTYPE html >
+<!--[if IE 6]>
+<html id="ie6" lang="en-US" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://ogp.me/ns/fb#">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="en-US" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://ogp.me/ns/fb#">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="en-US" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://ogp.me/ns/fb#">
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en-US" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://ogp.me/ns/fb#">
+<!--<![endif]-->
+
+<head>
+<script>
+   document.documentElement.className += " js";
+</script>
+<link href="/wp-content/uploads/2016/11/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+
+<title>Making Music and Art Through Machine Learning &#8211; Doug Eck of Magenta</title>
+<meta name="description" content="Doug Eck is a research scientist at Google and he’s working on Magenta, a project making music and art through machine learning. If you want to learn more you can check out Magenta.Tensorflow.org.">
+
+<meta property="fb:app_id" content="670410906470129" /> 
+
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="http://blog.ycombinator.com/xmlrpc.php" />
+
+<title>Making Music and Art Through Machine Learning &#8211; Doug Eck of Magenta &#8211; Y Combinator</title>
+<link rel='dns-prefetch' href='//ws.sharethis.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Y Combinator &raquo; Feed" href="http://blog.ycombinator.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Y Combinator &raquo; Comments Feed" href="http://blog.ycombinator.com/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/blog.ycombinator.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=1500918794"}};
+			!function(a,b,c){function d(a){var c,d,e,f,g,h=b.createElement("canvas"),i=h.getContext&&h.getContext("2d"),j=String.fromCharCode;if(!i||!i.fillText)return!1;switch(i.textBaseline="top",i.font="600 32px Arial",a){case"flag":return i.fillText(j(55356,56806,55356,56826),0,0),!(h.toDataURL().length<3e3)&&(i.clearRect(0,0,h.width,h.height),i.fillText(j(55356,57331,65039,8205,55356,57096),0,0),c=h.toDataURL(),i.clearRect(0,0,h.width,h.height),i.fillText(j(55356,57331,55356,57096),0,0),d=h.toDataURL(),c!==d);case"diversity":return i.fillText(j(55356,57221),0,0),e=i.getImageData(16,16,1,1).data,f=e[0]+","+e[1]+","+e[2]+","+e[3],i.fillText(j(55356,57221,55356,57343),0,0),e=i.getImageData(16,16,1,1).data,g=e[0]+","+e[1]+","+e[2]+","+e[3],f!==g;case"simple":return i.fillText(j(55357,56835),0,0),0!==i.getImageData(16,16,1,1).data[0];case"unicode8":return i.fillText(j(55356,57135),0,0),0!==i.getImageData(16,16,1,1).data[0];case"unicode9":return i.fillText(j(55358,56631),0,0),0!==i.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity","unicode9"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='batch_css-css'  href='http://blog.ycombinator.com/wp-content/plugins/batchmove/css/batch.css?ver=1500918794' type='text/css' media='all' />
+<link rel='stylesheet' id='avatar-manager-css'  href='http://blog.ycombinator.com/wp-content/plugins/avatar-manager/assets/css/avatar-manager.min.css?ver=1500918794' type='text/css' media='all' />
+<link rel='stylesheet' id='fvp-frontend-css'  href='http://blog.ycombinator.com/wp-content/plugins/featured-video-plus/styles/frontend.css?ver=1500918794' type='text/css' media='all' />
+<link rel='stylesheet' id='ssbp_styles-css'  href='http://blog.ycombinator.com/wp-content/plugins/simple-share-buttons-plus/ssbp.min.css?ver=1500918794' type='text/css' media='all' />
+<link rel='stylesheet' id='google-font-lato-css'  href='//fonts.googleapis.com/css?family=Lato%3A400%2C100italic%2C100%2C300%2C300italic%2C700%2C700italic%2C900%2C900italic?ver=1500918794' type='text/css' media='all' />
+<link rel='stylesheet' id='afford-font-awesome-css'  href='http://blog.ycombinator.com/wp-content/themes/afford/assets/admin/css/font-awesome.4.1.0.css?ver=1500918794' type='text/css' media='all' />
+<link rel='stylesheet' id='afford-stylesheet-css'  href='http://blog.ycombinator.com/wp-content/themes/afford/style.css?ver=1500918794' type='text/css' media='all' />
+<link rel='stylesheet' id='wordpress-popular-posts-css'  href='http://blog.ycombinator.com/wp-content/plugins/wordpress-popular-posts/style/wpp.css?ver=1500918794' type='text/css' media='all' />
+<script type='text/javascript' src='http://blog.ycombinator.com/wp-content/plugins/batchmove/js/batch.js?ver=1500918794'></script>
+<script type='text/javascript' src='http://blog.ycombinator.com/wp-includes/js/jquery/jquery.js?ver=1500918794'></script>
+<script type='text/javascript' src='http://blog.ycombinator.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1500918794'></script>
+<script type='text/javascript' src='http://blog.ycombinator.com/wp-content/plugins/avatar-manager/assets/js/avatar-manager.min.js?ver=1500918794'></script>
+<script type='text/javascript' src='http://blog.ycombinator.com/wp-content/plugins/featured-video-plus/js/jquery.fitvids.min.js?ver=1500918794'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var fvpdata = {"ajaxurl":"http:\/\/blog.ycombinator.com\/wp-admin\/admin-ajax.php","nonce":"77cfa2c24b","fitvids":"1","dynamic":"","overlay":"","opacity":"0.75","color":"b","width":"640"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://blog.ycombinator.com/wp-content/plugins/featured-video-plus/js/frontend.min.js?ver=1500918794'></script>
+<script id='st_insights_js' type='text/javascript' src='https://ws.sharethis.com/button/st_insights.js?publisher=4d48b7c5-0ae3-43d4-bfbe-3ff8c17a8ae6&#038;product=simple-share-pro?ver=1500918794'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var cssTarget = "img.";
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://blog.ycombinator.com/wp-content/plugins/svg-support/js/min/svg-inline-min.js?ver=1500918794'></script>
+<link rel='https://api.w.org/' href='http://blog.ycombinator.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://blog.ycombinator.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://blog.ycombinator.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.6.6" />
+<link rel="canonical" href="http://blog.ycombinator.com/making-music-and-art-through-machine-learning-doug-eck-of-magenta/" />
+<link rel='shortlink' href='http://blog.ycombinator.com/?p=1100117' />
+<link rel="alternate" type="application/json+oembed" href="http://blog.ycombinator.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fblog.ycombinator.com%2Fmaking-music-and-art-through-machine-learning-doug-eck-of-magenta%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://blog.ycombinator.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fblog.ycombinator.com%2Fmaking-music-and-art-through-machine-learning-doug-eck-of-magenta%2F&#038;format=xml" />
+<style type="text/css">@font-face {
+					font-family: 'ssbp';
+					src:url('/wp-content/plugins/simple-share-buttons-plus/sharebuttons/assets/fonts/ssbp.eot?1xwfh1');
+					src:url('/wp-content/plugins/simple-share-buttons-plus/sharebuttons/assets/fonts/ssbp.eot?#iefix1xwfh1') format('embedded-opentype'),
+						url('/wp-content/plugins/simple-share-buttons-plus/sharebuttons/assets/fonts/ssbp.woff?1xwfh1') format('woff'),
+						url('/wp-content/plugins/simple-share-buttons-plus/sharebuttons/assets/fonts/ssbp.ttf?1xwfh1') format('truetype'),
+						url('/wp-content/plugins/simple-share-buttons-plus/sharebuttons/assets/fonts/ssbp.svg?1xwfh1#ssbp') format('svg');
+					font-weight: normal;
+					font-style: normal;
+
+					/* Better Font Rendering =========== */
+					-webkit-font-smoothing: antialiased;
+					-moz-osx-font-smoothing: grayscale;
+				}</style><script language="javascript" type="text/javascript">
+			 var style = document.createElement("style");
+			 style.type = "text/css";
+			 style.id = "antiClickjack";
+			 if ("cssText" in style){
+			   style.cssText = "body{display:none !important;}";
+			 }else{
+			   style.innerHTML = "body{display:none !important;}";
+			}
+			document.getElementsByTagName("head")[0].appendChild(style);
+
+			if (self === top) {
+			 var antiClickjack = document.getElementById("antiClickjack");
+			 antiClickjack.parentNode.removeChild(antiClickjack);
+			} else {
+			 top.location = self.location;
+			}
+		  </script><script type="text/javascript">
+var swiftypeConfig = {
+  filters: {
+    posts: {
+      object_type: ["post"]
+    }
+  }
+};
+</script>
+
+<!--[if lt IE 9]><script type='text/javascript' src='http://blog.ycombinator.com/wp-content/themes/afford/assets/global/js/respond.min.js?ver=1.4.2'></script><![endif]-->
+
+<style type="text/css">#wrapper .site-title a{color:#555555;}#wrapper .site-description{color:#555555;}#wrapper .loop-post-title h1 a{color:#444444;}#wrapper .loop-post-meta, #wrapper .loop-post-meta .loop-meta-comments a{color:#000000;}#wrapper .loop-post-excerpt{color:#000000;}#wrapper .post-title h1{color:#000000;}#wrapper .post-meta{color:#000000;}#wrapper .post-content{color:#000000;}</style>
+				<!-- WordPress Popular Posts v3.3.4 -->
+				<script type="text/javascript">
+
+					var sampling_active = 0;
+					var sampling_rate   = 100;
+					var do_request = false;
+
+					if ( !sampling_active ) {
+						do_request = true;
+					} else {
+						var num = Math.floor(Math.random() * sampling_rate) + 1;
+						do_request = ( 1 === num );
+					}
+
+					if ( do_request ) {
+
+						/* Create XMLHttpRequest object and set variables */
+						var xhr = ( window.XMLHttpRequest )
+						  ? new XMLHttpRequest()
+						  : new ActiveXObject( "Microsoft.XMLHTTP" ),
+						url = 'http://blog.ycombinator.com/wp-admin/admin-ajax.php',
+						params = 'action=update_views_ajax&token=9c4fa2df94&wpp_id=1100117';
+						/* Set request method and target URL */
+						xhr.open( "POST", url, true );
+						/* Set request header */
+						xhr.setRequestHeader( "Content-type", "application/x-www-form-urlencoded" );
+						/* Hook into onreadystatechange */
+						xhr.onreadystatechange = function() {
+							if ( 4 === xhr.readyState && 200 === xhr.status ) {
+								if ( window.console && window.console.log ) {
+									window.console.log( xhr.responseText );
+								}
+							}
+						};
+						/* Send request */
+						xhr.send( params );
+
+					}
+
+				</script>
+				<!-- End WordPress Popular Posts v3.3.4 -->
+				
+<!-- START - Facebook Open Graph, Google+ and Twitter Card Tags 2.0.6.1 -->
+ <!-- Facebook Open Graph -->
+  <meta property="og:image" content="http://blog.ycombinator.com/wp-content/uploads/2017/07/Making-Music-and-Art-Through-Machine-Learning-Doug-Eck-of-Magenta.jpeg"/>
+  <meta property="og:image:width" content="1280"/>
+  <meta property="og:image:height" content="720"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:site_name" content="Y Combinator"/>
+  <meta property="og:title" content="Making Music and Art Through Machine Learning - Doug Eck of Magenta"/>
+  <meta property="og:url" content="http://blog.ycombinator.com/making-music-and-art-through-machine-learning-doug-eck-of-magenta/"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:description" content="Doug Eck is a research scientist at Google and he’s working on Magenta, a project making music and art through machine learning. If you want to learn more you can check out Magenta.Tensorflow.org."/>
+  <meta property="article:published_time" content="2017-07-21T08:00:38+00:00"/>
+  <meta property="article:modified_time" content="2017-07-21T10:37:38+00:00" />
+  <meta property="og:updated_time" content="2017-07-21T10:37:38+00:00" />
+  <meta property="article:section" content="Podcast"/>
+  <meta property="article:section" content="Video"/>
+  <meta property="article:publisher" content="https://facebook.com/ycombinator"/>
+  <meta property="fb:app_id" content="670410906470129"/>
+ <!-- Google+ / Schema.org -->
+  <meta itemprop="name" content="Making Music and Art Through Machine Learning - Doug Eck of Magenta"/>
+  <meta itemprop="description" content="Doug Eck is a research scientist at Google and he’s working on Magenta, a project making music and art through machine learning. If you want to learn more you can check out Magenta.Tensorflow.org."/>
+  <meta itemprop="image" content="http://blog.ycombinator.com/wp-content/uploads/2017/07/Making-Music-and-Art-Through-Machine-Learning-Doug-Eck-of-Magenta.jpeg"/>
+ <!-- Twitter Cards -->
+  <meta name="twitter:title" content="Making Music and Art Through Machine Learning - Doug Eck of Magenta"/>
+  <meta name="twitter:url" content="http://blog.ycombinator.com/making-music-and-art-through-machine-learning-doug-eck-of-magenta/"/>
+  <meta name="twitter:description" content="Doug Eck is a research scientist at Google and he’s working on Magenta, a project making music and art through machine learning. If you want to learn more you can check out Magenta.Tensorflow.org."/>
+  <meta name="twitter:image" content="http://blog.ycombinator.com/wp-content/uploads/2017/07/Making-Music-and-Art-Through-Machine-Learning-Doug-Eck-of-Magenta.jpeg"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@ycombinator"/>
+ <!-- SEO -->
+  <meta name="author" content="Y Combinator"/>
+  <meta name="publisher" content="Y Combinator"/>
+ <!-- Misc. tags -->
+<!-- END - Facebook Open Graph, Google+ and Twitter Card Tags 2.0.6.1 -->
+
+
+<link rel="stylesheet" href="../responsive-nav/responsive-nav.css?ver=1500918794">
+<script src="../responsive-nav/responsive-nav.js"></script>
+<script src="../backtracks/bt-player.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51714649-5', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<!-- start Mixpanel --><script type="text/javascript">(function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
+0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
+mixpanel.init("516db9bd0bd2f7114cba991240230034");</script><!-- end Mixpanel -->
+
+</head>
+
+<body class="single single-post postid-1100117 single-format-standard single-template post-template orange right_sidebar theme-wide thumbnail-left">
+    <div id="parent-wrapper" class="parent-wrapper grid-col-16">
+        <div id="wrapper" class="wrapper grid-col-16">
+            
+                        <div class="header-bg-section clearfix">
+                <div id="header-section" class="header-section grid-col-16 clearfix">
+                    <div id="logo-section" class="logo-section grid-col-8 grid-float-left">
+                        <div id="site-title" class="site-title">
+                            <a href="/" title="Y Combinator" rel="home"><img src="/wp-content/uploads/2016/11/YC-square-logo-50.svg"></a>
+                        </div>
+                        
+<form role="search" method="get" id="searchform" action="http://blog.ycombinator.com/">
+    <div class="search-box clearfix">
+        <input type="text" value="" name="s" id="s" placeholder="Search" />
+        <input type="submit" id="searchsubmit" value="Go" />
+    </div>
+</form>                        
+                    </div>
+
+                    <nav class="nav-collapse nav-section grid-col-8 grid-float-right">
+                        <ul>
+                            <li id="research-li"><a href="/research">YC Research</a></li>
+                            <li id="subscribe-li"><a href="http://eepurl.com/cbJZnj">Subscribe</a></li>
+                            <li id="about-li"><a href="http://www.ycombinator.com/about/">About</a></li>
+                            <li id="apply-li"><a href="http://www.ycombinator.com/apply/">Apply</a></li>
+                        </ul>
+                    </nav>
+
+                </div><!-- header section ends -->
+            </div><!-- header bg section ends -->
+            		
+            <div id="main-section" class="main-section clearfix">
+
+<script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7&appId=863663047100625";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div id="content-section" class="content-section grid-col-16 clearfix">
+    <div id="post-1100117" class="inner-content-section single post-1100117 post type-post status-publish format-standard has-post-thumbnail hentry category-podcast category-video tag-feature has-post-video">
+
+                    <div class="loop-post-excerpt clearfix" >
+                                              <div class="loop-post-text grid-col-16 single-img" id="feature-img">
+                            <div class="loop-thumbnail"><!-- Featured Video Plus v2.2.3 -->
+<div class="featured-video-plus post-thumbnail fvp-responsive fvp-youtube fvp-center"><iframe width="780" height="439" src="https://www.youtube.com/embed/yz-fHidp1M8?autoplay&origin=http%3A%2F%2Fblog.ycombinator.com" frameborder="0" allowfullscreen></iframe></div>
+
+<img class="fvp-onload" src="http://blog.ycombinator.com/wp-content/plugins/featured-video-plus/img/playicon.png" alt="Featured Video Play Icon" onload="(function() {('initFeaturedVideoPlus' in this) && ('function' === typeof initFeaturedVideoPlus) && initFeaturedVideoPlus();})();" /></div>
+                        </div>
+                                          </div>
+
+                     <div class="loop-post-title single-title">
+                        <h1>Making Music and Art Through Machine Learning &#8211; Doug Eck of Magenta</h1>
+
+                        <div class="loop-post-meta loop-post-meta-single-author">
+                             <span class="loop-meta-author">By 
+                                <a href="http://blog.ycombinator.com/author/y-combinator/" title="Posts by Y Combinator" class="author url fn" rel="author">Y Combinator</a>  
+                              </span>
+                        </div>
+
+                        <div class="loop-post-meta loop-post-meta-single" style="display: inline;">
+                          <span class="post-share-buttons" style="display: inline-block;"><!-- Simple Share Buttons Plus (v1.2.1) simplesharebuttons.com/plus --><div class="ssbp-set--one ssbp--state-hidden ssbp-wrap ssbp-- ssbp--theme-2"><button class="ssbp-toggle-switch ssbp-toggle-close"><span></span></button><div class="ssbp-container" data-ssbp-share-text="" data-ssbp-url="http://blog.ycombinator.com/making-music-and-art-through-machine-learning-doug-eck-of-magenta/" data-ssbp-title="Making Music and Art Through Machine Learning &#8211; Doug Eck of Magenta" data-ssbp-short-url="" data-ssbp-post-id="1100117"><ul class="ssbp-list"><li class="ssbp-li--facebook"><a href="http://www.facebook.com/sharer.php?u=http://blog.ycombinator.com/making-music-and-art-through-machine-learning-doug-eck-of-magenta/" class="ssbp-btn ssbp-facebook ssbp-facebook--standard"  data-ssbp-title="Making Music and Art Through Machine Learning &#8211; Doug Eck of Magenta" data-ssbp-url="http://blog.ycombinator.com/making-music-and-art-through-machine-learning-doug-eck-of-magenta/" data-ssbp-site="Facebook" ><span class="ssbp-text">Facebook</span></a></li><li class="ssbp-li--twitter"><a href="https://twitter.com/share?url=http://blog.ycombinator.com/making-music-and-art-through-machine-learning-doug-eck-of-magenta/&amp;text=Making+Music+and+Art+Through+Machine+Learning+%E2%80%93+Doug+Eck+of+Magenta+&amp;hashtags=" class="ssbp-btn ssbp-twitter ssbp-twitter--standard" data-ssbp-title="Making Music and Art Through Machine Learning &#8211; Doug Eck of Magenta" data-ssbp-url="http://blog.ycombinator.com/making-music-and-art-through-machine-learning-doug-eck-of-magenta/" data-ssbp-site="Twitter" ><span class="ssbp-text">Twitter</span></a></li><li class="ssbp-li--linkedin"><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://blog.ycombinator.com/making-music-and-art-through-machine-learning-doug-eck-of-magenta/" class="ssbp-btn ssbp-linkedin"  data-ssbp-title="Making Music and Art Through Machine Learning &#8211; Doug Eck of Magenta" data-ssbp-url="http://blog.ycombinator.com/making-music-and-art-through-machine-learning-doug-eck-of-magenta/" data-ssbp-site="LinkedIn" ><span class="ssbp-text">Linkedin</span></a></li></ul><div class="ssbp-input-url-div"><input class="ssbp-input-url" type="text" value="http://blog.ycombinator.com/making-music-and-art-through-machine-learning-doug-eck-of-magenta/" /></div></div></div></span>
+                          <span class="post-category" style="display: inline-block;"><ul class="post-categories">
+	<li><a href="http://blog.ycombinator.com/category/podcast/" rel="category tag">Podcast</a></li>
+	<li><a href="http://blog.ycombinator.com/category/video/" rel="category tag">Video</a></li></ul></span>
+                          <span class="post-date" style="display: inline-block;">July 21, 2017</span>
+                        </div>
+
+                     </div>
+
+
+                    <div class="post-content">
+                         <p><a href="https://twitter.com/douglas_eck">Doug Eck</a> is a research scientist at Google and he’s working on Magenta, a project making music and art through machine learning.</p>
+<p>If you want to learn more you can check out <a href="https://magenta.tensorflow.org/">Magenta.Tensorflow.org</a></p>
+<hr />
+<div id="backtracks-player" data-bt-embed="https://player.backtracks.fm/ycombinator/ycombinator/m/20-making-music-and-art-through-machine-learning-doug-eck-of-magenta" data-bt-theme="orange" data-bt-show-art-cover="true" data-bt-show-comments="true">
+</div>
+<p><script>(function(p,l,a,y,e,r,s){if(p[y]) return;if(p[e]) return p[e]();s=l.createElement(a);l.head.appendChild((s.async=p[y]=true,s.src=r,s))}(window,document,"script","__btL","__btR","https://player.backtracks.fm/embedder.js"))</script></p>
+<p><script>
+(function(p,l,a,y,e,r,s){if(p[y]) return;
+if(p[e]) return p[e]();s=l.createElement(a);
+l.head.appendChild((s.async=p[y]=true,s.src=r,s))
+}(window,document,'script','__btL','__btR',
+'https://player.backtracks.fm/embedder.js'))
+</script></p>
+<p><script>
+!function(n,i,s,c){n[s]||(n[s]=function(i){n[s].q.push(i)}),n[s].q||(n[s].q=[]),
+c=i.createElement("script"),
+c.async=1,
+c.src="https://c.bktrks.com/utils-1.0.0.all.min.js",
+i.head.appendChild(c)}(window,document,"BTUtils");
+BTUtils(function(use) {
+  var options = {
+    autoplayLinks: false
+  };
+  use('backtracks-autolink', options).init();
+});
+</script></p>
+<hr />
+<h1>Subscribe</h1>
+<p><a href="https://itunes.apple.com/us/podcast/y-combinator/id1236907421">iTunes</a><br />
+<a href="https://play.google.com/music/m/I7pbd3gcjjeifbnm3wf7ag66ane?t=Y_Combinator">Google Play</a><br />
+<a href="http://www.stitcher.com/podcast/y-combinator">Stitcher</a><br />
+<a href="https://soundcloud.com/ycombinator">SoundCloud</a><br />
+<a href="http://backtracks.fm/ycombinator/ycombinator/feed">RSS</a></p>
+<hr />
+<h1>Transcript</h1>
+<p><span class="t-orange bt-listen" data-bt-time="0.254">Craig Cannon [00:00]</span> Hey, this is Craig Cannon, and you&#8217;re listening to Y Combinator&#8217;s podcast. Today&#8217;s episode is with Doug Eck, Doug&#8217;s a research scientist at Google, and he&#8217;s working on Magenta, which is a project making music and art through machine learning. Their goal is to basically create open-source tools and models that help creative people be even more creative. So if you want to learn more about Magenta, or get started using it, you can check out magenta.tensorflow.org. Alright, here we go. I wanted to start with the quote that you ended your IO talk with because I feel like that might be helpful for some folks. It&#8217;s a Brian Eno quote and I will have the slightly longer version if that&#8217;s okay.</p>
+<p><span class="t-orange bt-listen" data-bt-time="34.81">Doug Eck [00:34]</span> Yeah. Good, yeah.</p>
+<p><span class="t-orange bt-listen" data-bt-time="36.476">Craig Cannon [00:36]</span> So yeah, it goes like this. &#8220;Whatever you now find weird, ugly, uncomfortable, and nasty about a new medium will surely become its signature. CD distortion, the jitteriness of digital video, the crap sound of 8-bit, all of these will be cherished and emulated as soon as they can be avoided. It&#8217;s the sound of failure. So much modern art is the sound of things going out of control. Out of a medium, pushing to its limits and breaking apart.&#8221; That&#8217;s how you ended your IO talk.</p>
+<p><span class="t-orange bt-listen" data-bt-time="62.018">Doug Eck [01:02]</span> Correct.</p>
+<p><span class="t-orange bt-listen" data-bt-time="63.552">Craig Cannon [01:03]</span> What it kind of opened up for me was when you&#8217;re thinking about creating Magenta and all the projects therein as new mediums, how are you thinking about what&#8217;s going to be broken and what&#8217;s going to be created?</p>
+<p><span class="t-orange bt-listen" data-bt-time="79.444">Doug Eck [01:19]</span> The reason that I put that quote there I think is to be honest with the division between engineering, and research, and artistry, and to not think that what I&#8217;m doing is being a machine learning artist. But we&#8217;re trying to build interesting ways to make new kinds of art. I think it occurred to me, I read that quote, and I thought that&#8217;s it. No matter how hard Eastman or whomever invented the film camera. I&#8217;m sorry if that&#8217;s the wrong person. They clearly weren&#8217;t thinking of breakage, or they were trying to avoid certain kinds of breakage. I mean, you know guitar amplifiers aren&#8217;t supposed to distort. I thought well, what if we do that with machine learning? The first thing that you&#8217;re going to do if someone comes to you and says, &#8220;Here&#8217;s this really smart model that you can make art with,&#8221; what are you going to do? You&#8217;re going to try to show the world that it&#8217;s a stupid model, right? But maybe it&#8217;s smart enough that it&#8217;s kind of hard to make it stupid, so you get to have a lot of fun making it stupid.</p>
+<p><span class="t-orange bt-listen" data-bt-time="137.319">Craig Cannon [02:17]</span> I was playing with Quick, Draw! this morning with my girlfriend and what she was trying to do was make the most accurate picture that the computer wouldn&#8217;t recognize. Like, immediately out of the gate. She works in art and like yeah, doesn&#8217;t want to believe.</p>
+<p><span class="t-orange bt-listen" data-bt-time="150.88">Doug Eck [02:30]</span> That&#8217;s right. That&#8217;s a good intuition.</p>
+<p><span class="t-orange bt-listen" data-bt-time="154.196">Craig Cannon [02:34]</span> Yeah. Maybe the best way to start is then talk about what are you working on right now? What are you guys making?</p>
+<p><span class="t-orange bt-listen" data-bt-time="161.147">Doug Eck [02:41]</span> Right now we&#8217;re working on, god let me think. That&#8217;s a good question. We have this project called NSynth, which is trying to get deep learning models to generate new sounds. We&#8217;re working on a number of ways to make that better. I think one way to think about it is we have this latent space. To make that a little bit less a buzz word, we have a kind of compressed space, a space that doesn&#8217;t have the ability to memorize the original audio, but it&#8217;s set up in such a way that we can try to regenerate some of that audio. In regenerating it, we don&#8217;t get back exactly what we started with. But hopefully we get something close. That space is set up so that we can move around in that space, and come into new points in that space, and actually listen to what&#8217;s there. Right now it&#8217;s quite slow to listen so to speak. We&#8217;re not able to do things in real time. We also would love to be at kind of a meta level, building models that can generate those embeddings, having trained on other data, so that you&#8217;re able to move around in that space in different ways. So we&#8217;re moving, we&#8217;re continuing to work with Sound Generation for music. We also are spending quite a bit of time on rethinking the music sequence generation work that we&#8217;re doing. We put out some models that were, by any reasonable account, primitive. I mean kind of very simple recurrent neural networks that generate midi from midi and that maybe use a tension that maybe have a little bit smarter ways to sample as when doing inference, when generating. Now we&#8217;re actually taking seriously, wait a minute, what if we really look at large data sets of performed music? What if we actually start to care about expressive timing and dynamics, cared deeply about polyphony, and really care about like not putting out kind of what you would consider a simple reference model, but actually what we think is super good? I think those are the things we&#8217;re focusing on. I think we&#8217;re trying to actually make things, really pull up quality, and make things that are better, more usable for people.</p>
+<p><span class="t-orange bt-listen" data-bt-time="286.028">Craig Cannon [04:46]</span> With all that supervised learning, are you going to create a web app that people will evaluate how good the music is? Because I heard a couple interviews with you before where that was the issue, right? Like, how do you know what&#8217;s good?</p>
+<p><span class="t-orange bt-listen" data-bt-time="298.105">Doug Eck [04:58]</span> Yeah. I&#8217;m pausing because that&#8217;s the big question I think in my mind is how do we evaluate these models? At least for Magenta, I haven&#8217;t felt like the quality of what we&#8217;ve been generating has been good enough to bother so to speak. You find it, you cherry pick, you find some good things. You&#8217;re like, &#8220;Okay, this model trains, and it&#8217;s interesting,&#8221; and now we kind of understand that the API, the input output, of what we&#8217;re trying to do. I would love, yeah, I don&#8217;t know how to solve this. Conceptually what we do, here&#8217;s what we do, right? We build a mobile app and we make it go viral. That&#8217;s what we do, right? Then once it&#8217;s viral, we just keep feeding all of this great art and music in. I used to do music recommendation. We just build a collaborative filter, which is a kind of way to recommend items to people based upon what they like. We&#8217;d start giving people what they like, and we pay attention to what they like, and we make the models better. So all we need to do is make that app go viral.</p>
+<p><span class="t-orange bt-listen" data-bt-time="361.403">Craig Cannon [06:01]</span> One simple thing.</p>
+<p><span class="t-orange bt-listen" data-bt-time="362.736">Doug Eck [06:02]</span> In fact, maybe someone in the Y Combinator world can helps us do that, right?</p>
+<p><span class="t-orange bt-listen" data-bt-time="367.023">Craig Cannon [06:07]</span> Yeah, it&#8217;s like sliding between cow and trombone, what&#8217;s the best sound?</p>
+<p><span class="t-orange bt-listen" data-bt-time="370.599">Doug Eck [06:10]</span> Exactly, right. Maybe that particular web app is not the right answer. No, I mean I&#8217;m saying that as a joke, but I think, look at it this way. If we can find a way, or the community in general can find a way for machine generated media to be sort of out there for a large group of interested users to play with, I think we can learn from that signal and I think we can learn to improve. If we do, we&#8217;ll make quite a nice contribution to machine learning. We will learn to prove, based upon human feedback, to generate something of interest. So that&#8217;s a great goal. Today in this room, I wish I could tell you we had like a secret plan. Like, &#8220;Oh, he&#8217;s figured it out. The app&#8217;s going to launch tomorrow.&#8221; It&#8217;s really hard work.</p>
+<p><span class="t-orange bt-listen" data-bt-time="414.831">Craig Cannon [06:54]</span> Bleep, cut.</p>
+<p><span class="t-orange bt-listen" data-bt-time="416.481">Doug Eck [06:56]</span> Yeah, yeah exactly. Sorry.</p>
+<p><span class="t-orange bt-listen" data-bt-time="419.229">Craig Cannon [06:59]</span> Interesting, okay because I was wondering what kind of data you were getting back from artists? Do people just use all of your projects, all of the repos, to create things of their own interest, or are they pushing back valuable data to you?</p>
+<p><span class="t-orange bt-listen" data-bt-time="431.965">Doug Eck [07:11]</span> We&#8217;re getting some valuable data back and I think what we&#8217;re getting back, some of the signals that we&#8217;re getting back are giving us such an obvious direction for improvement. Like, why would I want to run a Python command to generate 1,000 midi files? That&#8217;s not what we do. You get that kind of feedback and you&#8217;re like okay, we wanted this command line version because we need it to be able to test some things. But if musicians are really going to use the music part of what we&#8217;re doing, we have to provide them with more fluid and more useful tools. There I think we&#8217;re still sitting with so many obvious hard problems to solve like integration with something like Ableton or really solid real time IO and things like that that we know what to work on. But I think we&#8217;ll get to the point pretty quickly where we&#8217;ll have something that solves the obvious problems, plugs in reasonably well to your workflow, and you can start to generate some things, and you can play with sound. Then we need to be much more careful about the questions we ask and how good we are at listening to how people use what we&#8217;re doing.</p>
+<p><span class="t-orange bt-listen" data-bt-time="492.477">Craig Cannon [08:12]</span> What are artists using it for at this point?</p>
+<p><span class="t-orange bt-listen" data-bt-time="495.141">Doug Eck [08:15]</span> Right now, most of what we&#8217;ve done so far had to do with music. If we look for a second away from music and look at Sketch-RNN, which is a model that learned to draw, we&#8217;ve actually seen quite a bit of, so first at a higher level, Sketch-RNN is a recurrent neural network trained on sketches to make sketches. The sketches came from a game that Google released called Quick, Draw! where people had 20 seconds to draw something to try to win at Pictionary with a computer, a classifier counterpart. We trained a model that can generate new cats, or dogs, or whatever. There&#8217;s some really cool classes in there. A cruise ship, that&#8217;s nice.</p>
+<p><span class="t-orange bt-listen" data-bt-time="538.145">Craig Cannon [08:58]</span> The one that always threw me was camouflage. It calls out camouflage all the time. I&#8217;m never, yeah.</p>
+<p><span class="t-orange bt-listen" data-bt-time="543.344">Doug Eck [09:03]</span> As if by definition, you can&#8217;t draw it, right?</p>
+<p><span class="t-orange bt-listen" data-bt-time="545.358">Craig Cannon [09:05]</span> Yeah. Nothing, pause for 20 seconds.</p>
+<p><span class="t-orange bt-listen" data-bt-time="549.128">Doug Eck [09:09]</span> Yeah, I actually won a Pictionary round with the word white and I just pointed at the paper. I&#8217;m like, &#8220;No way,&#8221; and she said, &#8220;White.&#8221; I&#8217;m like, &#8220;Yes.&#8221; You got to be kidding. Anyway, just kind of like a corollary to camouflage. We&#8217;ve seen artists start to sample from the model. We&#8217;ve seen artists using the model as a distance measure to look for weird examples because the model has an idea of what&#8217;s probable in the space. We&#8217;ve also seen artists just playing around with the raw data, and so there&#8217;s been a nice explosion there. I&#8217;m not expecting that artists really do a huge amount with this Quick, Draw! data because as cool as it is, these things were drawn in 20 seconds, right? There&#8217;s kind of a limit to how much we can do with them. On the music side, we&#8217;ve had a number of people playing with NSynth with just like dumps of samples from NSynth, so basically like a rudimentary synthesizer. There I&#8217;ve been surprised at the kind of&#8230; I would expect that if you&#8217;re really good at this, so like you&#8217;re Aphex Twin, or how about this? You want to be Aphex Twin, right? That you look at this and go, &#8220;Yeah, whatever. There are 50 other tools that I have that I can use.&#8221; But those are the people that we&#8217;ve found have been the most interested. Because I think we are generating some sounds that are new. So first, you can test. Someone pointed out on Hacker News you can take a few oscillators, and a noise generator, and make something new. But I think these are new in a way when you start sampling the space between a trombone and a flute or something like that. But these are new in a way that capture some very nice harmonic properties, capture some of the essence of some of the Brian Eno quote, are kind of broken, and glitchy, and edgy in a way. But that glitchiness is not the same as you would get from like digital clipping. The glitchiness sounds really harmonic. For example, Jesse on our team, Jesse Engel, he built some Ableton plugin where you&#8217;re listening to these notes, but you&#8217;re able to erase the beginnings of the notes. You erase the onsets, which is usually where most of the information is. Most of the information in a piano note is kind of that first percussive onset. But it&#8217;s the onsets that the model is doing such a great job of reproducing because it gradually moves away from, in times the temporal embedding and the noise kind of adds up as we move through the embedding in time. So it&#8217;s the tails of these notes that start to get ringy, and like they&#8217;ll detune, and you&#8217;ll hear these rushes of noise come in, or there&#8217;ll be this little weird&#8230; at the end. We&#8217;ve found that musicians who&#8217;ve actually played with sound a lot find these particular sounds immensely fascinating. I think they&#8217;re the kinds of sounds that sound interesting in a way that&#8217;s hard to describe unless you&#8217;ve played with them. I think they&#8217;re interesting because the model has been forced to capture some of the important sources of variance in real music audio. Even when it fails to reproduce all of them when it fills in with confusion so to speak, even that confusion is somehow driven by musical sound. Which you see by the corollary if you look at something like Deep Dream and you see what models are doing when they&#8217;re showing you what they&#8217;ve learned. It may not be what you expect from the world, but there&#8217;s something interesting about them, right? Anyway, that&#8217;s a long answer. But the short version of the answer is we&#8217;ve found that working with very talented musicians has been really fruitful. Our challenge is now to be good enough at what we do, and make it easy enough, and make it clean enough that even someone who&#8217;s not an Aphex Twin, and I&#8217;m not saying we worked with Aphex Twin. We didn&#8217;t work with Aphex Twin. But like that kind of artist.</p>
+<p><span class="t-orange bt-listen" data-bt-time="773.217">Craig Cannon [12:53]</span> Someone kind of</p>
+<p><span class="t-orange bt-listen" data-bt-time="774.763">Doug Eck [12:54]</span> Yeah, that we can also be saying, &#8220;Hey, this is really genuinely musically engaging for a much much larger audience.&#8221;</p>
+<p><span class="t-orange bt-listen" data-bt-time="781.621">Craig Cannon [13:01]</span> That&#8217;s surprising. So it&#8217;s not necessarily generating melodies for people so much as it is generating interesting sounds? That&#8217;s what&#8217;s brought them in?</p>
+<p><span class="t-orange bt-listen" data-bt-time="789.452">Doug Eck [13:09]</span> That&#8217;s what&#8217;s brought them in. Though the parallel has existed for the sequence generation stuff. What I noticed, even with A.I. Duet, which is this web based, like it&#8217;s a simple RNN. It&#8217;s like I can lay claim it&#8217;s technology that was published in 2002. It&#8217;s really a very simple&#8230;</p>
+<p><span class="t-orange bt-listen" data-bt-time="807.784">Craig Cannon [13:27]</span> It&#8217;s really fun though.</p>
+<p><span class="t-orange bt-listen" data-bt-time="808.804">Doug Eck [13:28]</span> Really simple. This model, if your viewers haven&#8217;t seen it, you play a little melody and then the model thinks for a minute. The AI genius, which is an LSTM network, comes back and plays something back to you, right? If you play Fur Elise, you know? Right? And you wait, you&#8217;re expecting maybe that it&#8217;ll continue the tune. It&#8217;s not going to, right? It&#8217;s going to go right? So this idea of expecting the model to carry these long arcs of melody along is not really understanding the model. What we saw was, especially jazz musicians, but musicians who listen, the game they play is to follow the model. I would see guys, or people, women too, to sit down and go like ♫ Dum dum dum dum and just wait, and it&#8217;s almost like pinging the model with an impulse response. Like, &#8220;What&#8217;s this thing going to do?&#8221; Then instead of trying to drive it, it comes back and goes ♫ Dum dum dum dum Right?</p>
+<p><span class="t-orange bt-listen" data-bt-time="865.182">Craig Cannon [14:25]</span> Yeah.</p>
+<p><span class="t-orange bt-listen" data-bt-time="866.015">Doug Eck [14:26]</span> Then the musician says, &#8220;Oh, I see. Let&#8217;s go up to the fifth.&#8221; Then you get this really, it&#8217;s almost like follow the leader, but you&#8217;re following the model. Then it&#8217;s super fun. It&#8217;s basically a challenge for the musician to try to understand how to play along with something that&#8217;s so primitive. But if you don&#8217;t have the musical, so basically it&#8217;s the musician bringing all the skill to the table, right? Even with the primitive sequence generation stuff, it&#8217;s still been interesting to see that it&#8217;s the musicians with a lot of musical talent and particularly the ability to improvise and listen that have managed to actually get what I would consider interesting results out of that.</p>
+<p><span class="t-orange bt-listen" data-bt-time="901.892">Craig Cannon [15:01]</span> Yeah, so it&#8217;s become more of like a call and response game than a tool?</p>
+<p><span class="t-orange bt-listen" data-bt-time="906.395">Doug Eck [15:06]</span> Yeah, I think so. That&#8217;s partially because the model&#8217;s pretty primitive. I think that if we can get the data pipelines in order so that we know what we&#8217;re training on and we can actually do some more modern sequence learning, having like generative adversarial feedback and things like that, we can do much better. Even we have some stuff that we haven&#8217;t released yet that I think is better. But yeah, as we make it better, it&#8217;ll be more of a, &#8220;This model&#8217;s going to give me some more ideas from what I&#8217;ve done.&#8221; Right now it&#8217;s more of a, &#8220;This mode&#8217;s kind of weird but I&#8217;m kind of try to understand what it&#8217;s doing.&#8221; Both are fun modes by the way. They&#8217;re both cool modes, right?</p>
+<p><span class="t-orange bt-listen" data-bt-time="946.339">Craig Cannon [15:46]</span> Yeah, I mean I haven&#8217;t tried, like I&#8217;m definitely not a pianist. I mean I&#8217;ve played guitar before. I tried to get a song going, but I had trouble with it.</p>
+<p><span class="t-orange bt-listen" data-bt-time="955.795">Doug Eck [15:55]</span> We&#8217;re sorry.</p>
+<p><span class="t-orange bt-listen" data-bt-time="956.628">Craig Cannon [15:56]</span> It&#8217;s okay. I think it&#8217;s mostly my fault to be honest. I love the YouTube video.</p>
+<p><span class="t-orange bt-listen" data-bt-time="961.124">Doug Eck [16:01]</span> Blame the user, right?</p>
+<p><span class="t-orange bt-listen" data-bt-time="961.957">Craig Cannon [16:01]</span> Yeah, yeah. The video where that guy played a song with it. That was amazing.</p>
+<p><span class="t-orange bt-listen" data-bt-time="967.35">Doug Eck [16:07]</span> Yeah, that was cool.</p>
+<p><span class="t-orange bt-listen" data-bt-time="968.399">Craig Cannon [16:08]</span> It was very cool. Have you seen a lot of that stuff as well?</p>
+<p><span class="t-orange bt-listen" data-bt-time="970.249">Doug Eck [16:10]</span> Yeah, we&#8217;ve seen. We saw like well, we haven&#8217;t pushed the sequence generation stuff much because we really wanted to focus on tamper. But when we have released things and tried to show people where they are, yeah we&#8217;ve gotten. If you look on them, there&#8217;s a Magenta mailing list that&#8217;s just like it&#8217;s linked, g.co/magenta, and if you look around, there&#8217;s a discussion list. Which is as flaming and spammy as some discussion lists, but a little bit less so. It&#8217;s pretty, you know. Every couple weeks, someone will put up some stuff they composed with Magenta and usually they&#8217;re more effective if they&#8217;ve layered their own stuff on top of it or they&#8217;ve taken time offline rather than in performance to generate. But some stuff&#8217;s actually quite good. It&#8217;s fun. It&#8217;s a start.</p>
+<p><span class="t-orange bt-listen" data-bt-time="1012.268">Craig Cannon [16:52]</span> Yeah. I think it&#8217;s great. You compared it to the work you did in 2002. Where has LSTM gone since then? You talk about like you ended up doing this project. I saw in your talk that because you kind of like failed at it a while ago.</p>
+<p><span class="t-orange bt-listen" data-bt-time="1028.579">Doug Eck [17:08]</span> Failure is good. Yeah, so there was a point in time, I was at a lab called IDSIA, the Dalle Molle Institute for Artificial Intelligence, and I was working for JÃ¼rgen Schmidhuber, who&#8217;s one of the coauthors. He was the advisor to Sepp Hochreiter who did LSTM. There was a point in time where there were three of us in a room in Manno, Switzerland, which is a suburb of Lugano, Switzerland, who are the only people in the world using LSTM. It was myself, Felix Gers, and Alex Graves. Among the three of us, by far Alex Graves has done the most with LSTM, so he continued after he finished his PhD. He continued doggedly to try to understand how recurrent neural networks worked, how to train them, and how to make them useful for sequence learning I think more than anybody else in the world including Sepp, the person who created LSTM. Alex just stuck with it and finally started to get winds in speech and language. I, more or less, put down LSTM as I started working with audio stuff and other more like cognitively different music stuff at University of Montreal. But it worked finally, right? You know there&#8217;s like this thing in music, a 20 year overnight success, right?</p>
+<p><span class="t-orange bt-listen" data-bt-time="1103.518">Craig Cannon [18:23]</span> Yeah.</p>
+<p><span class="t-orange bt-listen" data-bt-time="1104.351">Doug Eck [18:24]</span> This worked because he stuck with it. Now of course it&#8217;s become like the touchstone for recurrent models in time series analysis. Some version of it forms the core of what we&#8217;re doing with translation. These models have changed, right? They&#8217;ve evolved over time. But basically, recurrent neural networks as a family of models is around because of that effort of like, it&#8217;s interesting, right? There really were three of us.</p>
+<p><span class="t-orange bt-listen" data-bt-time="1131.425">Craig Cannon [18:51]</span> That&#8217;s so wild.</p>
+<p><span class="t-orange bt-listen" data-bt-time="1131.425">Doug Eck [18:51]</span> Felix went on with his life and I went on with my life. Alex stuck with it, this really one person caring for it. But you may get letters from people saying, &#8220;Hey wait, you forgot about me. You forgot about me.&#8221; This is a little bit reductionist. Obviously there were more, but it felt that way at the time, right?</p>
+<p><span class="t-orange bt-listen" data-bt-time="1145.542">Craig Cannon [19:05]</span> Right. What was the breakthrough then that like got people interested?</p>
+<p><span class="t-orange bt-listen" data-bt-time="1152.757">Doug Eck [19:12]</span> I think it was the same breakthrough that got people interested in deep neural networks and convolutional neural networks. It&#8217;s that these models don&#8217;t work that well with small training sets and small models, and then&#8230;</p>
+<p><span class="t-orange bt-listen" data-bt-time="1167.167">Craig Cannon [19:27]</span> So you like mentioned that with like the stuff</p>
+<p><span class="t-orange bt-listen" data-bt-time="1168.565">Doug Eck [19:28]</span> They&#8217;re data absorptive, meaning that they can absorb lots of data if they have it. Neural networks as a class are really good with high dimensional data. So as machines got faster, and memory got bigger, they started to work. We were working with really small machines, and working with LSTM networks that maybe had like 50 to 100 hidden units, and then a couple of gates to control them, and trying things that had to do with the dynamics of how these things can count, and how they can follow time series. You try to scale that to speech or you try to scale that to, you know, speech recognition was one of the first things. This stuff&#8217;s really hard to do. So I think a lot of this is just due to having faster machines and more memory. It&#8217;s kind of weird, right?</p>
+<p><span class="t-orange bt-listen" data-bt-time="1211.624">Craig Cannon [20:11]</span> It&#8217;s surprising that that would be it.</p>
+<p><span class="t-orange bt-listen" data-bt-time="1213.056">Doug Eck [20:13]</span> Yeah, I think it surprises everybody a little bit. Now the running joke, like having coffee here at Brain is sort of like what other technology from the &#8217;80s should we rescue?</p>
+<p><span class="t-orange bt-listen" data-bt-time="1222.915">Craig Cannon [20:22]</span> Waves</p>
+<p><span class="t-orange bt-listen" data-bt-time="1222.915">Doug Eck [20:22]</span> Exactly right.</p>
+<p><span class="t-orange bt-listen" data-bt-time="1225.184">Craig Cannon [20:25]</span> AI&#8217;s back.</p>
+<p><span class="t-orange bt-listen" data-bt-time="1222.915">Doug Eck [20:22]</span> Exactly right.</p>
+<p><span class="t-orange bt-listen" data-bt-time="1227.725">Craig Cannon [20:27]</span> How far have you pushed LSTM? Obviously there&#8217;s some amount of text generation that people are trying out. Have you let it create an entire song?</p>
+<p><span class="t-orange bt-listen" data-bt-time="1238.894">Doug Eck [20:38]</span> No we haven&#8217;t because we haven&#8217;t got the conditional part of it right yet. I think LSTM in its most vanilla form, I think everybody&#8217;s pretty convinced that it&#8217;s not going to handle really long time scale hierarchical patterning. I&#8217;d love it if someone comes along and says, &#8220;No, you don&#8217;t need anything but vanilla LSTM to do this.&#8221; But I think what makes music interesting over even after five seconds or 10 seconds is this idea that you&#8217;re getting repetition, you&#8217;re getting harmonic shifts like chord changes. There&#8217;s a they&#8217;re there, right? One way to talk about that they&#8217;re there is that you have some lower level pattern generation going on, but there&#8217;s some conditioning happening. Oh, now continue generating, but the conditions shifted. We just shifted chords for example. So I think if we start talking about conditional models, if we talk about models that are explicitly hierarchical. If we talk about models that we can sample from in different ways, we can start to get somewhere. But I think only a recurrent neural network is&#8230; It would be reductionist to say that it&#8217;s the whole answer. It&#8217;s in fact true, it&#8217;s not the whole answer.</p>
+<p><span class="t-orange bt-listen" data-bt-time="1308.811">Craig Cannon [21:48]</span> I was thinking about how you were, was it the TensorFlow or the IO talk where you were talking about Bach?</p>
+<p><span class="t-orange bt-listen" data-bt-time="1314.675">Doug Eck [21:54]</span> Oh, probably we did stuff that was like, &#8220;More Bach than Bach.&#8221; Yeah, we nailed it.</p>
+<p><span class="t-orange bt-listen" data-bt-time="1319.818">Craig Cannon [21:59]</span> Yeah, that&#8217;s it, like you start making things that are more palatable as like, &#8220;I&#8217;ll make the best Picasso painting for you,&#8221; but it&#8217;s not necessarily a Picasso painting because it&#8217;s not necessarily saying anything.</p>
+<p><span class="t-orange bt-listen" data-bt-time="1332.09">Doug Eck [22:12]</span> Precisely. I think by analogy, so first in case it&#8217;s not clear. I don&#8217;t believe that we made something that was better than Bach. But when we put these tunes out for untrained listeners to listen to, they sometimes voted them as sounding more Bach-y. Imagine what these models are learning, right? They&#8217;re learning the principal axes of variance. They&#8217;re learning what&#8217;s most important. They have to because they have a limited memory. They&#8217;re compressed. If you sample from Sketch-RNN with very low temperature, meaning without a lot of noise in the system, you actually get what like if you want to squint your eyes and break philosophy is like the Platonic cat. You get the cat that looks more like a cat anyone would draw, sort of the average cat. I think that&#8217;s what we&#8217;re getting from these time series models as well. They&#8217;re giving you something that&#8217;s more a caricature than a sample.</p>
+<p><span class="t-orange bt-listen" data-bt-time="1389.675">Craig Cannon [23:09]</span> Then in the creation of art, what are you predicting is going to happen as Magenta progresses?</p>
+<p><span class="t-orange bt-listen" data-bt-time="1398.78">Doug Eck [23:18]</span> Can I make predictions that are on the timeframe of like 28 to 40 years?</p>
+<p><span class="t-orange bt-listen" data-bt-time="1401.873">Craig Cannon [23:21]</span> Yeah, sure. Why not?</p>
+<p><span class="t-orange bt-listen" data-bt-time="1402.706">Doug Eck [23:22]</span> When no one will ever test.</p>
+<p><span class="t-orange bt-listen" data-bt-time="1403.557">Craig Cannon [23:23]</span> In 1,000 years.</p>
+<p><span class="t-orange bt-listen" data-bt-time="1404.656">Doug Eck [23:24]</span> In 1,000 years, Magenta is going to be the only, no. Joking aside, I do believe that the machine learning and AI will continue, like will become part of the toolkit for communicating and for expression, including art. I think that in the same way, I think that it&#8217;s healthy for me to admit that those of us who are doing this engineering won&#8217;t, almost by definition, know where it&#8217;s going to go. We can&#8217;t and we shouldn&#8217;t know where it&#8217;s going to go. I think our job is to build AI smart tools. At the same time, I want to point out some people find that answer boring, like it&#8217;s hedging. But I do think there are directions. I can imagine a direction that we could go on that&#8217;d be really cool. For example, thinking of literature, right? I think plot is really interesting in stories and that you can imagine that we have a particular way as humans, like the kind of cognitive constraints that we have of limitations in how we would draw plots out as an author. You&#8217;re not going to do it one pass, left to right, like in a recurrent neural network. It&#8217;s going to be like sketching out the plot and do we kill this character off? But I can imagine that generative models might be able to generate plots that are really really difficult for people to generate, but still make sense to us as readers, right?</p>
+<p><span class="t-orange bt-listen" data-bt-time="1493.172">Craig Cannon [24:53]</span> Oh man. Okay, yeah.</p>
+<p><span class="t-orange bt-listen" data-bt-time="1494.838">Doug Eck [24:54]</span> Think of it if you flip it around, like I think jokes are hard because it&#8217;s really hard to generate the surprising turns. You go in one direction and you land over here, but it still makes sense. I can imagine that the right kind of language model might be able to generate jokes that are super super funny to us and that actually might have a flavor to them of being like, &#8220;Yeah, I know. This joke must&#8217;ve been machine generated because it fits in so many different ways,&#8221; right?</p>
+<p><span class="t-orange bt-listen" data-bt-time="1523.117">Craig Cannon [25:23]</span> Yeah.</p>
+<p><span class="t-orange bt-listen" data-bt-time="1523.117">Doug Eck [25:23]</span> Right? It fits in so many different ways. In math, like in high dimensional space, but it&#8217;s super funny to us. I don&#8217;t know how to do that. But I can totally imagine that we would be in a world where we get that.</p>
+<p><span class="t-orange bt-listen" data-bt-time="1534.413">Craig Cannon [25:34]</span> I thought about it in the complete opposite way, but that makes sense. I was thinking about it, training it to create pulp fiction. That would be so simple in my mind. Just create these airport novels. It can just bang out the plots.</p>
+<p><span class="t-orange bt-listen" data-bt-time="1546.793">Doug Eck [25:46]</span> I mean that&#8217;s probably where we&#8217;ll start. I would love it if we could write, so everybody understands that&#8217;s listening or watching. We can&#8217;t generate a coherent paragraph. I don&#8217;t mean we, Magenta, I mean we, humanity.</p>
+<p><span class="t-orange bt-listen" data-bt-time="1561.183">Craig Cannon [26:01]</span> He&#8217;s like, &#8220;I can&#8217;t write at all.&#8221;</p>
+<p><span class="t-orange bt-listen" data-bt-time="1564.889">Doug Eck [26:04]</span> Yeah, it&#8217;s really hard. It all hits its structure at some level, like nested structure whether it&#8217;s music, or I think there&#8217;s like art, plays with geometry, or color, or something else. It&#8217;s meaning. It&#8217;s nested structure somewhere.</p>
+<p><span class="t-orange bt-listen" data-bt-time="1580.472">Craig Cannon [26:20]</span> Has the art world or I guess any kind of artist, any kind of creator, have people pushed back in the way that they&#8217;re scared? I imagine when photography came out, everyone was pushing back saying, &#8220;This might end painting,&#8221; because it&#8217;s about photography captures the essence. But then it ended up changing because people realized that painting wasn&#8217;t just about capturing something, capturing an exact moment.</p>
+<p><span class="t-orange bt-listen" data-bt-time="1604.735">Doug Eck [26:44]</span> Certainly the generative art world, and we&#8217;ve seen lots of that. Another researcher in London, someone posted on his Facebook something like, or he posted to us a tweet that was like, &#8220;What you&#8217;re doing is bad for humanity.&#8221; Like, really? He&#8217;s making new folk songs. He&#8217;s generating folk songs with an LSTM, he&#8217;s Bob Sturm. It&#8217;s probably not bad for humanity. So yeah, of course. But what I love about that is it&#8217;s okay if a bunch of people don&#8217;t like it. In fact, if it&#8217;s interesting, what art does everybody like?</p>
+<p><span class="t-orange bt-listen" data-bt-time="1637.875">Craig Cannon [27:17]</span> Zero.</p>
+<p><span class="t-orange bt-listen" data-bt-time="1638.708">Doug Eck [27:18]</span> Right or it&#8217;s really boring, right?</p>
+<p><span class="t-orange bt-listen" data-bt-time="1640.234">Craig Cannon [27:20]</span> Right.</p>
+<p><span class="t-orange bt-listen" data-bt-time="1642.067">Doug Eck [27:22]</span> You have this idea that if you want to really engage with people, you&#8217;re probably going to find an audience. That audience is going to be some slice. Frankly, it&#8217;s probably going to be some slice coming up from the next generation of people that have experienced technology, that are taking some things for granted that are still novel to someone like myself, right? But it&#8217;s okay if a bunch of people don&#8217;t like it.</p>
+<p><span class="t-orange bt-listen" data-bt-time="1667.237">Craig Cannon [27:47]</span> Yeah, well when we were talking before, I was surprised that you hadn&#8217;t gotten more pushback. It seems to be like most people in our world are just like, &#8220;All right, kay. Whatever.&#8221; It&#8217;s like, &#8220;Do your thing.&#8221; It&#8217;s opening up new territory rather than it it is challenging.</p>
+<p><span class="t-orange bt-listen" data-bt-time="1680.848">Doug Eck [28:00]</span> I think that I&#8217;ve gotten pushback in terms of questions. I think we have, and I think this is a community in Google, and outside of Google, and outside of Magenta, I think people are really clear that what&#8217;s interesting about a project like this is that it be a tool, not a replacement. I think if we presented this as, &#8220;Push this button and you&#8217;ll get your finished music,&#8221; it would be a very different story. But that&#8217;s boring.</p>
+<p><span class="t-orange bt-listen" data-bt-time="1709.811">Craig Cannon [28:29]</span> It&#8217;s funny you mentioned Hacker News because I was talking with one of the moderators.</p>
+<p><span class="t-orange bt-listen" data-bt-time="1715.592">Doug Eck [28:35]</span> We love you, Hacker News. Be nice to us.</p>
+<p><span class="t-orange bt-listen" data-bt-time="1717.583">Craig Cannon [28:37]</span> No, they&#8217;re great. Yeah, no it&#8217;s just impersonal. It&#8217;s so easy to critique people. But I was talking with Scott, one of the moderators, and he was wondering if you guys were concerned with the actual cathartic feeling of creating music, or if that&#8217;s just something you don&#8217;t even consider right now?</p>
+<p><span class="t-orange bt-listen" data-bt-time="1735.012">Doug Eck [28:55]</span> I mean as people, yeah of course.</p>
+<p><span class="t-orange bt-listen" data-bt-time="1736.657">Craig Cannon [28:56]</span> You have to.</p>
+<p><span class="t-orange bt-listen" data-bt-time="1737.627">Doug Eck [28:57]</span> Yeah and I think there&#8217;s a couple of levels there. I think you lose that if what you&#8217;re just doing is pushing a button. I think this is everywhere. The drum machine is such a great thing to fall back on. It is just not fun to just push the button and make the drum machine do its canned patterns. I think that was the goal. The reading that I&#8217;ve done is like this&#8217;ll make it really easy, right? But what makes the drum machine interesting is people working with it, writing their own loops or their own patterns, changing it, working against it, working with it. I think this project loses its interest if we don&#8217;t have people getting that cathartic release, which believe me, I understand what you mean. That&#8217;s thing one. The other thing I would mention is if there&#8217;s anything that we&#8217;re not getting that I wish we were getting more of is people coding creatively. We talk about creative coding in this handwavy sense. But I would love to have the right kind of mix of models in Magenta and in open source linking to other projects that you as a coder could come in and actually say, &#8220;I&#8217;m going to code for the evening and add some things. I&#8217;m going to maybe retrain, maybe I&#8217;m going to hack data, and I&#8217;m going to get the effect that I want,&#8221; and that part of what you&#8217;re doing is being an artist by coding. I think we haven&#8217;t hid that yet in Magenta. I&#8217;d love to get feedback from whomever, like in terms of ways to get there. The point is, there&#8217;s a certain catharsis for those of us that train the model. You get the model to train, and it worked.</p>
+<p><span class="t-orange bt-listen" data-bt-time="1829.437">Craig Cannon [30:29]</span> Just psyched.</p>
+<p><span class="t-orange bt-listen" data-bt-time="1831.056">Doug Eck [30:31]</span> It&#8217;s funny, you&#8217;ll be bored if you just push the button, but it feels good for me to push that button &#8217;cause I&#8217;m the one that made that button work. So there&#8217;s, that right?</p>
+<p><span class="t-orange bt-listen" data-bt-time="1838.312">Craig Cannon [30:38]</span> Yeah.</p>
+<p><span class="t-orange bt-listen" data-bt-time="1838.312">Doug Eck [30:38]</span> That&#8217;s a creative act in it&#8217;s own right.</p>
+<p><span class="t-orange bt-listen" data-bt-time="1840.499">Craig Cannon [30:40]</span> Have people been creatively breaking the code? Like, &#8220;Oh, it would be funny if it did this or interesting if it did that.&#8221;</p>
+<p><span class="t-orange bt-listen" data-bt-time="1848.173">Doug Eck [30:48]</span> A few. Though I think are code is so easy, like most open source projects need to be rewritten a couple times. I think we&#8217;ve gone through, we&#8217;re on our second rewrite, is that if the code is brittle enough that it&#8217;s easy to break uncreatively, then it&#8217;s hard to also break it creatively. Listen, I&#8217;m being pretty critical. I&#8217;m really proud of the quality of the Magenta open source effort. I actually think we have well tested, well thought out code. I think it&#8217;s just a really hard problem to do coding for art and music, and that if you get it wrong a little bit, it&#8217;s just wrong enough that you have to fix it. So we still have a lot of work to do.</p>
+<p><span class="t-orange bt-listen" data-bt-time="1885.603">Craig Cannon [31:25]</span> Then where does that creative coder world go? I&#8217;ve seen a lot of people that are concerned with even just preserving, I think Rhizome is doing a preserving digital art project. What direction do you think that&#8217;s going to go in?</p>
+<p><span class="t-orange bt-listen" data-bt-time="1899.405">Doug Eck [31:39]</span> Presumably a number of cool directions in parallel. The one that interests me personally the most is reinforcement learning and this idea that models trained&#8230; So there&#8217;s a long story or a short story. Which one do you want?</p>
+<p><span class="t-orange bt-listen" data-bt-time="1914.125">Craig Cannon [31:54]</span> Long.</p>
+<p><span class="t-orange bt-listen" data-bt-time="1914.958">Doug Eck [31:54]</span> Sure, yeah okay. We know..</p>
+<p><span class="t-orange bt-listen" data-bt-time="1915.827">Craig Cannon [31:55]</span> Well, how long?</p>
+<p><span class="t-orange bt-listen" data-bt-time="1917.122">Doug Eck [31:57]</span> It&#8217;s not that bad. Generative models 101, you start generating from a model trained just to be able to regenerate the data it&#8217;s trained on. You tend to get output that&#8217;s blurry, right? Or is just kind of wandery. That&#8217;s because all the model learns to do is sit somewhere on the big, imagine the distribution as a mountain range and it just sits on the high mountaintop.</p>
+<p><span class="t-orange bt-listen" data-bt-time="1940.452">Craig Cannon [32:20]</span> Kind of plays it safe.</p>
+<p><span class="t-orange bt-listen" data-bt-time="1941.861">Doug Eck [32:21]</span> Yep, it kind of plays it safe. All t-shirts are gray if you&#8217;re colorizing &#8217;cause that&#8217;s safe, you&#8217;re not going to punished. One revolution that came along thanks to Ian Goodfellow is this idea of a generative adversarial network. It&#8217;s a different cost for the model to minimize where the model is actually trying to create counterfeits and it&#8217;s forced to not just play it safe, right? I don&#8217;t know how, if this is too technical.</p>
+<p><span class="t-orange bt-listen" data-bt-time="1967.148">Craig Cannon [32:47]</span> It&#8217;s very interesting to me. Yeah, this was part of the talk, right? Where you cut out the square in the painting?</p>
+<p><span class="t-orange bt-listen" data-bt-time="1971.579">Doug Eck [32:51]</span> Exactly, yeah.</p>
+<p><span class="t-orange bt-listen" data-bt-time="1971.579">Craig Cannon [32:51]</span> Yeah, I saw that part.</p>
+<p><span class="t-orange bt-listen" data-bt-time="1973.359">Doug Eck [32:53]</span> Another way to do this is to use reinforcement learning. It&#8217;s slower to train because all you have is a single number, scale, or reward instead of this whole gradient flowing than GANs. But it also is more flexible. Okay, so my story here is that GANs are a part of a larger family of models that are some level, critical. Everybody needs a critic and they&#8217;re pushing back. They&#8217;re pushing you off of your, pushing you out of your safe spot, whatever that safe spot is, and that&#8217;s helping you be able to do a better job of generating. We have a particular idea that you can use reinforcement learning to provide a reward for following a certain set of rules or a certain set of heuristics. This is normally like, if you mention rules at a machine learning dinner party, everybody looks at you funny, right?</p>
+<p><span class="t-orange bt-listen" data-bt-time="2017.511">Craig Cannon [33:37]</span> Like you&#8217;re stepping backward, right?</p>
+<p><span class="t-orange bt-listen" data-bt-time="2018.796">Doug Eck [33:38]</span> Yeah, you&#8217;re not supposed to use rules. Come on, we don&#8217;t use rules. But instead of building the rules into the model, like the AI is not rules. The machine learning is not rules. It&#8217;s that the rules are out there in the world and you get rewarded for following them. We had, I thought, some very nice generated samples of music that were pretty boring with the LSTM network. But then the LSTM network trained additionally using a kind of reinforcement learning called deep Q-learning to follow some of these rules, the generation got way different and way better. It specifically got catchier. What were the rules? The rules were like rules of composition for counterpoint from the 1800s. They were super simple. Now, we don&#8217;t care about those rules. But there&#8217;s a really nice creative coding aspect, which is, think of it this way. I have a ton of data. I have a model that&#8217;s trained. I have a generative model, whatever it may be. It may be one trained to draw. It may be one trained for music. That model is kind of tried to disentangle all the sources of variants that are sitting in this data and so it&#8217;s smartly generating, it can generate new things. But now think as long as I can write a bit of code that takes a sample from the model and evaluates it, providing scale or reward, anything I stuff in that evaluator then I can get the generator to try to do a better job of generating stuff that makes that evaluator happy. It doesn&#8217;t have to be 18th century rules of counterpoint, right?</p>
+<p><span class="t-orange bt-listen" data-bt-time="2107.7">Craig Cannon [35:07]</span> No, yeah.</p>
+<p><span class="t-orange bt-listen" data-bt-time="2109.705">Doug Eck [35:09]</span> You could imagine taking something like Sketch-RNN and adding a reinforcement learning model that says, &#8220;I really hate straight lines.&#8221; Suddenly, the model&#8217;s going to try to learn to draw cats, but without straight lines. The data&#8217;s telling it to draw cats. Sometimes the cats have triangular ears with straight lines. But the model&#8217;s going to get rewarded for trying to draw those cats that it can without drawing straight lines. Straight lines was just one constraint that I picked off the top of my head. It has to be a constraint that you can measure in the output of the model. But musically speaking, if I could come up with an evaluator that described what I meant in my mind by shimmery, really fast changing small local changes, I should be able to get a kind of music that sounds shimmery by adding that reward to an existing model. Furthermore, the model still retains the nice realness that it gets from being trained on data. I&#8217;m not trying to come up with a rule to generate shimmery. I&#8217;m trying to come up with a rule that rewards a model for generating something that&#8217;s shimmery.</p>
+<p><span class="t-orange bt-listen" data-bt-time="2171.2">Craig Cannon [36:11]</span> Something shimmery, whatever that is.</p>
+<p><span class="t-orange bt-listen" data-bt-time="2172.394">Doug Eck [36:12]</span> Yeah, it&#8217;s very different, right?</p>
+<p><span class="t-orange bt-listen" data-bt-time="2173.227">Craig Cannon [36:13]</span> Yeah.</p>
+<p><span class="t-orange bt-listen" data-bt-time="2174.064">Doug Eck [36:14]</span> I think that&#8217;s one really interesting direction to go in, is like opening up the ability, if you can generate scale or reward, and drop it in this box over here, and we&#8217;ll take a model that&#8217;s already trained on data and we&#8217;ll tilt it to do what you want it to do.</p>
+<p><span class="t-orange bt-listen" data-bt-time="2184.645">Craig Cannon [36:24]</span> That underlies a fear that people have, right? Which is what happens when you can create the best pop song and what do people do? Do you have thoughts on A, is that possible, and B, what would the world look like if that world comes to be?</p>
+<p><span class="t-orange bt-listen" data-bt-time="2202.082">Doug Eck [36:42]</span> I had an algorithm for doing this, for the best pop song for me, which is when we used to sell used CDs, it was usually like a two to one. So every time if you have 1,000 CDs, you trade them in, and you have 500 that you like better. Then you just keep going. You finally get that one.</p>
+<p><span class="t-orange bt-listen" data-bt-time="2218.129">Craig Cannon [36:58]</span> Until that best one.</p>
+<p><span class="t-orange bt-listen" data-bt-time="2219.746">Doug Eck [36:59]</span> Yeah, exactly. Hill climbing in that space. Yeah, I think that&#8230; I&#8217;m not sure. A part of me wants to say people love the rawness and the variety of things that aren&#8217;t predictable pop. But let&#8217;s face it, people love pop music, of even like there&#8217;s a kind of pop music that you&#8217;ll catch on the radio sometimes that isn&#8217;t like, most of your listeners are probably in the same camp, or viewers. There&#8217;s pop that we love, like I love the poppiest of Frank Ocean&#8217;s music. I could listen to it forever. But then there&#8217;s just like the gutter of pop and so maybe we&#8217;ll&#8230;</p>
+<p><span class="t-orange bt-listen" data-bt-time="2261.807">Craig Cannon [37:41]</span> You can&#8217;t even distinguish who the artist is, but they play at the big festivals I guess.</p>
+<p><span class="t-orange bt-listen" data-bt-time="2265.765">Doug Eck [37:45]</span> I guess that unasks the perfect pop. I mean pop is such a broad thing. But yeah, I think I can imagine that with machine learning and AI at the table, we will&#8230; Here&#8217;s another way to look at it. Some things that used to but hard will be easy and so we&#8217;ll offload all of that. If people are happy just listening to the stuff that&#8217;s now easy, then yeah, it&#8217;s a problem solved and well be able to generate lots of it. But then what people tend to do is go look for something else hard. It&#8217;s like the drum machine argument. You solved the metronomic beat problem. Then what you actually find is that artists who are really good at this, they play off of it and they&#8217;re allowed, like when they sing, to do many more rhythmical things than they could do before because now they have this scaffolding they didn&#8217;t have to work with before.</p>
+<p><span class="t-orange bt-listen" data-bt-time="2313.396">Craig Cannon [38:33]</span> They just constantly break it, right?</p>
+<p><span class="t-orange bt-listen" data-bt-time="2314.872">Doug Eck [38:34]</span> Yeah.</p>
+<p><span class="t-orange bt-listen" data-bt-time="2314.872">Craig Cannon [38:34]</span> As soon as you distorted the electric guitar.</p>
+<p><span class="t-orange bt-listen" data-bt-time="2316.853">Doug Eck [38:36]</span> But I hope that&#8217;s an honest answer to your question. I mean your question was a different flavor. It&#8217;s like, &#8220;Hey, are we really moving towards a world where we&#8217;re going to generate the perfect pop song?&#8221; Yeah, I don&#8217;t know. I don&#8217;t think so.</p>
+<p><span class="t-orange bt-listen" data-bt-time="2328.588">Craig Cannon [38:48]</span> I don&#8217;t feel like that&#8217;s going to happen. But maybe it happens so quickly and then as soon as we realize like, &#8220;Okay, this is how we&#8217;re going to break it. This is how we&#8217;re going to retrain ourselves.&#8221; It can learn so fast, that it&#8217;s like, &#8220;Okay, now I can do that too.&#8221;</p>
+<p><span class="t-orange bt-listen" data-bt-time="2342.401">Doug Eck [39:02]</span> Yeah, that&#8217;s nice.</p>
+<p><span class="t-orange bt-listen" data-bt-time="2343.644">Craig Cannon [39:03]</span> Then what I was wondering is there like, in the next handful of years, is there a holy grail that you&#8217;re working toward for Magenta? Like, &#8220;Okay, now we&#8217;ve hit it. This is the benchmark that we&#8217;re going for.&#8221;</p>
+<p><span class="t-orange bt-listen" data-bt-time="2362.042">Doug Eck [39:22]</span> There are a couple of things I&#8217;d love to do. I think creating long form pieces, whether they&#8217;re music or art, I think is something we want to do. This hints at this idea of not just having these things that make sense at 20 seconds of music time, but actually say something more. That direction is really interesting because I think that not only, so let&#8217;s face it. That would be at least more interesting if you pushed the button and listened to it. But also, this leads to tools where composers can offload very interesting things. Some people, I&#8217;m one of these people. I&#8217;m really obsessed with expressive timing. I&#8217;m really obsessed with musical texture.</p>
+<p><span class="t-orange bt-listen" data-bt-time="2404.485">Craig Cannon [40:04]</span> Okay, I don&#8217;t know what that is.</p>
+<p><span class="t-orange bt-listen" data-bt-time="2406.491">Doug Eck [40:06]</span> Oh no, I just mean let&#8217;s say you&#8217;re playing piano&#8230;</p>
+<p><span class="t-orange bt-listen" data-bt-time="2409.087">Craig Cannon [40:09]</span> Oh, I saw that in the Grey art space, or the Grace talk. You were contrasting the piano played by a computer.</p>
+<p><span class="t-orange bt-listen" data-bt-time="2414.746">Doug Eck [40:14]</span> Hey, yeah. You did your homework. Yeah, exactly.</p>
+<p><span class="t-orange bt-listen" data-bt-time="2416.719">Craig Cannon [40:16]</span> I just watched a bunch of YouTube videos.</p>
+<p><span class="t-orange bt-listen" data-bt-time="2419.595">Doug Eck [40:19]</span> If you listen to someone play waltz, it&#8217;ll have a little lilt to it. Or like some of my favorite musicians, like Thelonious Monk if you&#8217;re familiar. If you&#8217;re not familiar with Thelonious Monk, homework, go listen to him. He played piano with a very very specific style that almost sounded lurching sometimes. He really cared about time in a way. If the way that you&#8217;re thinking about music and composition is really really caring about local stuff, it&#8217;d be very very interesting if you had a model that would handle for you some of the decisions that you would make for longer time scale things, like when do chord changes happen, right? Usually it&#8217;s the other way around. You have these AI machine learning models can handle local texture, but you have to decide that. Yeah, my point is if we get to models that can handle longer structure and nested structure, we&#8217;ll have a lot more ways in which we can decide what we want to work on versus what we have the machine help us with, right?</p>
+<p><span class="t-orange bt-listen" data-bt-time="2472.081">Craig Cannon [41:12]</span> Right. Has it affected your creative work or do you still do creative composition?</p>
+<p><span class="t-orange bt-listen" data-bt-time="2479.032">Doug Eck [41:19]</span> Yeah. I&#8217;m working here at Google. This is like a coalmine of work to do this project, Magenta like every day. No, joking aside.</p>
+<p><span class="t-orange bt-listen" data-bt-time="2489.758">Craig Cannon [41:29]</span> Yeah, as we&#8217;re here.</p>
+<p><span class="t-orange bt-listen" data-bt-time="2489.758">Doug Eck [41:29]</span> Yeah, plus two kids. Plus two kids.</p>
+<p><span class="t-orange bt-listen" data-bt-time="2491.543">Craig Cannon [41:31]</span> That&#8217;s true.</p>
+<p><span class="t-orange bt-listen" data-bt-time="2493.352">Doug Eck [41:33]</span> Basically I&#8217;ve been using music as more of a catharsis relaxation thing. I don&#8217;t feel like personally I&#8217;ve done anything recently that I would consider creative at a level that I want to share with someone else. It&#8217;s been more like jamming with friends or just throwaway compositions, jamming like, &#8220;Here&#8217;s 10 chords that sound good. Let&#8217;s jam over it for the evening,&#8221; and then don&#8217;t even remember it the next day. And really trying hard to understand this creative coding thing, like that&#8217;s the most I&#8217;ve worked on. A lot of it&#8217;s just like I&#8217;ll start and then I&#8217;ll get distracted. But yeah, that&#8217;s the level of my creative output I&#8217;m afraid.</p>
+<p><span class="t-orange bt-listen" data-bt-time="2524.33">Craig Cannon [42:04]</span> Well, the creative coding thing, it&#8217;s seemingly, I don&#8217;t know. So many people are looking for it in every venue and it&#8217;s so difficult to find people. They&#8217;re like one-offs now.</p>
+<p><span class="t-orange bt-listen" data-bt-time="2533.96">Doug Eck [42:13]</span> Yeah, I think that&#8217;s right. It&#8217;s so hard to have the right, I think maybe we need the GarageBand of this. We need to have something that&#8217;s so well put together that it makes it easy for a whole generation of people to jump in and try this even if they haven&#8217;t had four or five years of Python experience or something like that.</p>
+<p><span class="t-orange bt-listen" data-bt-time="2551.955">Craig Cannon [42:31]</span> I didn&#8217;t know if that&#8217;s what you were alluding to when you were saying that command-line, obviously not the way to do it where it dumps midi files. But now it&#8217;s an API, right?</p>
+<p><span class="t-orange bt-listen" data-bt-time="2561.554">Doug Eck [42:41]</span> Yeah.</p>
+<p><span class="t-orange bt-listen" data-bt-time="2561.554">Craig Cannon [42:41]</span> What is the next step that&#8217;s very obvious?</p>
+<p><span class="t-orange bt-listen" data-bt-time="2565.128">Doug Eck [42:45]</span> Try to make it more usable and more expressive. Expressivity&#8217;s hard in an API, right? It&#8217;s like so hard to get it right and I think it&#8217;s almost always multiple passes. We&#8217;ve got I think the API, the core API that allows us to move music around in real time in midi and actually have a meaningful conversation between an AI model and multiple musicians is there. There&#8217;s just a bunch more thinking that needs to happen to get it right. Cool, so if someone wants to become a creative coder, or wants to learn more about you guys, what would you advise them to check out? I would say the call to action for us is to visit our site. The shortest URL is g.co/Magenta. It&#8217;s also magenta.tensorflow.org.</p>
+<p><span class="t-orange bt-listen" data-bt-time="2607.842">Craig Cannon [43:27]</span> We can link it all up.</p>
+<p><span class="t-orange bt-listen" data-bt-time="2608.884">Doug Eck [43:28]</span> G.co and have a look at we have some open issues. We have a bunch of code that you can install on your computer, and hope that you can make work, and maybe you will be able to. We want feedback. We have a pretty active and we certainly follow our discussion list closely, our game for philosophical discussions, and our game for technical discussions. Beyond that, we&#8217;re just keeping rolling. We&#8217;re just going to try to keep doing research and keep trying to build this community.</p>
+<p><span class="t-orange bt-listen" data-bt-time="2638.607">Craig Cannon [43:58]</span> Okay, great. Thanks, man.</p>
+<p><span class="t-orange bt-listen" data-bt-time="2638.607">Doug Eck [43:58]</span> Sure. No, it was fun.</p>
+<p><span class="t-orange bt-listen" data-bt-time="2640.526">Craig Cannon [44:00]</span> Alright, and thanks for listening. So if you want to get started using Magenta, you can check out magenta.tensorflow.org. And if you want to watch the video, which we filmed in one of Google&#8217;s very swanky libraries, you can check out blog.ycombinator.com. Okay, see ya next time.</p>
+                                             </div>
+
+                                        <!-- Begin MailChimp Signup Form -->
+                    <div id="mc_embed_signup">
+                      <h3 id="mc_copy">Sign up for weekly updates from Y Combinator.</h3>
+                      <form action="//ycombinator.us7.list-manage.com/subscribe/post?u=6507bf4e4c2df3fdbae6ef738&amp;id=547725049b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                          <div id="mc_embed_signup_scroll">
+                            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Email Address" required>
+                            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_6507bf4e4c2df3fdbae6ef738_547725049b" tabindex="-1" value=""></div>
+                            <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                          </div>
+                      </form>
+                    </div>
+                    <!--End mc_embed_signup-->
+                            
+    </div><!-- inner-content-section ends -->
+    
+    <div class="sidebar-single">
+<div id="sidebar-right-section" class="sidebar-right-section grid-float-left">
+    
+    <h2 id="popular-posts">Popular Posts</h2>
+
+    <hr id="sidebar-line">
+    
+    
+<!-- WordPress Popular Posts Plugin v3.3.4 [PHP] [monthly] [views] [custom] -->
+
+<ul class="wpp-list">
+<li> <a href="http://blog.ycombinator.com/thoughts-on-insurance/" title="Thoughts on Insurance" class="wpp-post-title" target="_self">Thoughts on Insurance</a> <span class="post-categories"><a href="http://blog.ycombinator.com/category/essay/" class="cat-id-46">Essay</a></span> <span class="wpp-date">June 29, 2017</span></li>
+<li> <a href="http://blog.ycombinator.com/why-should-i-start-a-startup/" title="Why Should I Start a Startup?" class="wpp-post-title" target="_self">Why Should I Start a Startup?</a> <span class="post-categories"><a href="http://blog.ycombinator.com/category/essay/" class="cat-id-46">Essay</a></span> <span class="wpp-date">July 19, 2017</span></li>
+<li> <a href="http://blog.ycombinator.com/safes-are-not-bad-for-entrepreneurs/" title="Safes are not bad for entrepreneurs" class="wpp-post-title" target="_self">Safes are not bad for entrepreneurs</a> <span class="post-categories"><a href="http://blog.ycombinator.com/category/advice/" class="cat-id-5">Advice</a></span> <span class="wpp-date">July 11, 2017</span></li>
+<li> <a href="http://blog.ycombinator.com/growth-guide2017/" title="Growth Guide: How to Set Up, Staff and Scale a Growth Program" class="wpp-post-title" target="_self">Growth Guide: How to Set Up, Staff and Scale a Growth Program</a> <span class="post-categories"><a href="http://blog.ycombinator.com/category/yc-continuity/" class="cat-id-9">YC Continuity</a></span> <span class="wpp-date">July 20, 2017</span></li>
+<li> <a href="http://blog.ycombinator.com/ipfs-coinlist-and-the-filecoin-ico-with-juan-benet-and-dalton-caldwell/" title="IPFS, CoinList, and the Filecoin ICO with Juan Benet and Dalton Caldwell" class="wpp-post-title" target="_self">IPFS, CoinList, and the Filecoin ICO with Juan Benet and Dalton Caldwell</a> <span class="post-categories"><a href="http://blog.ycombinator.com/category/video/" class="cat-id-47">Video</a></span> <span class="wpp-date">June 30, 2017</span></li>
+<li> <a href="http://blog.ycombinator.com/how-to-raise-a-seed-round/" title="A Guide to Seed Fundraising" class="wpp-post-title" target="_self">A Guide to Seed Fundraising</a> <span class="post-categories"><a href="http://blog.ycombinator.com/category/essay/" class="cat-id-46">Essay</a></span> <span class="wpp-date">January 7, 2016</span></li>
+<li> <a href="http://blog.ycombinator.com/making-music-and-art-through-machine-learning-doug-eck-of-magenta/" title="Making Music and Art Through Machine Learning &#8211; Doug Eck of Magenta" class="wpp-post-title" target="_self">Making Music and Art Through Machine Learning &#8211; Doug Eck of Magenta</a> <span class="post-categories"><a href="http://blog.ycombinator.com/category/video/" class="cat-id-47">Video</a></span> <span class="wpp-date">July 21, 2017</span></li>
+<li> <a href="http://blog.ycombinator.com/ex-machinas-scientific-advisor-murray-shanahan/" title="Ex Machina&#8217;s Scientific Advisor &#8211; Murray Shanahan" class="wpp-post-title" target="_self">Ex Machina&#8217;s Scientific Advisor &#8211; Murray Shanahan</a> <span class="post-categories"><a href="http://blog.ycombinator.com/category/video/" class="cat-id-47">Video</a></span> <span class="wpp-date">June 28, 2017</span></li>
+<li> <a href="http://blog.ycombinator.com/making-culture-a-tangible-metric/" title="Making Culture a Tangible Metric" class="wpp-post-title" target="_self">Making Culture a Tangible Metric</a> <span class="post-categories"><a href="http://blog.ycombinator.com/category/essay/" class="cat-id-46">Essay</a></span> <span class="wpp-date">July 6, 2017</span></li>
+<li> <a href="http://blog.ycombinator.com/minimum-viable-product-process/" title="A Minimum Viable Product Is Not a Product, It&#8217;s a Process" class="wpp-post-title" target="_self">A Minimum Viable Product Is Not a Product, It&#8217;s a Process</a> <span class="post-categories"><a href="http://blog.ycombinator.com/category/essay/" class="cat-id-46">Essay</a></span> <span class="wpp-date">January 22, 2016</span></li>
+
+</ul>
+
+<!-- End WordPress Popular Posts Plugin v3.3.4 -->
+
+</div></div>
+    
+</div><!-- Content-section ends here -->
+
+
+
+
+</div> <!-- main section ends -->
+
+
+            <div class="footer-bg-section clearfix">
+                <div id="footer-section" class="footer-section">
+                    <div id="copyright" class="copyright"></a></div>
+                </div>
+            </div>
+        </div><!-- wrapper ends -->
+    </div><!-- parent-wrapper ends -->
+    <div id="ssbp-email-div"><span class="ssbp-x ssbp-close-email-div"></span><div class="ssbp-email-alert" id="ssbp-email-alert"></div><input type="hidden" id="_wpnonce" name="_wpnonce" value="b41b735295" /><input type="hidden" name="_wp_http_referer" value="/making-music-and-art-through-machine-learning-doug-eck-of-magenta/" /><form id="js-ssbp-email-form" method="post" action=""
+                data-success-alert-text="Thanks, your email has been sent"
+                data-warning-alert-text="Please check the fields and try again"
+                data-brute-alert-text="The email to friend functionality is restricted to one email every five minutes, please try again soon">
+                <input type="hidden" id="fill_me" name="fill_me" value="" />
+                <input type="hidden" id="url" name="url" value="http://blog.ycombinator.com/making-music-and-art-through-machine-learning-doug-eck-of-magenta/" /><input type="hidden" id="_wpnonce" name="_wpnonce" value="b41b735295" /><input type="hidden" name="_wp_http_referer" value="/making-music-and-art-through-machine-learning-doug-eck-of-magenta/" />
+                <div class="ssbp-form-group">
+                    <label for="email" class="ssbp-required">Friend's email</label>
+                    <input type="email" class="ssbp-form-control ssbp-required" id="email" name="email" placeholder="friends@email.com" required>
+                </div>
+                <div class="ssbp-form-group">
+                    <label for="message" class="ssbp-required">Message</label>
+                    <textarea maxlength="250" class="ssbp-form-control ssbp-required" rows="6" id="message" name="message" required> http://blog.ycombinator.com/making-music-and-art-through-machine-learning-doug-eck-of-magenta/</textarea>
+                </div>
+                <div class="ssbp-form-group ssbp-text-align-right">
+                    <button id="ssbp-email-send" type="submit" class="ssbp-btn-primary">Send</button>
+                </div>
+             </form><a href="https://simplesharebuttons.com/plus/?utm_source=plus&amp;utm_medium=plugin_powered_by&utm_campaign=powered_by&amp;utm_content=plus_email" target="_blank"><img class="ssbp-email-powered-by" src="http://blog.ycombinator.com/wp-content/plugins/simple-share-buttons-plus/images/simple-share-buttons-logo-white.png" alt="Simple Share Buttons" /></a></div><script type='text/javascript' src='http://blog.ycombinator.com/wp-content/plugins/simple-share-buttons-plus/js/ssbp_standard.min.js?ver=1500918794'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var ssbpEmail = {"ajax_url":"http:\/\/blog.ycombinator.com\/wp-admin\/admin-ajax.php","security":"e7099163ee"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://blog.ycombinator.com/wp-content/plugins/simple-share-buttons-plus/js/ssbp_email.min.js?ver=1500918794'></script>
+<script type='text/javascript' src='http://blog.ycombinator.com/wp-content/themes/afford/assets/global/js/superfish.min.js?ver=1500918794'></script>
+<script type='text/javascript' src='http://blog.ycombinator.com/wp-includes/js/jquery/jquery.color.min.js?ver=1500918794'></script>
+<script type='text/javascript' src='http://blog.ycombinator.com/wp-content/themes/afford/assets/global/js/custom.js?ver=1500918794'></script>
+<script type='text/javascript' src='http://blog.ycombinator.com/wp-includes/js/wp-embed.min.js?ver=1500918794'></script>
+    <script>
+      var navigation = responsiveNav(".nav-collapse", {
+        animate: false,                    // Boolean: Use CSS3 transitions, true or false
+        transition: 484,                  // Integer: Speed of the transition, in milliseconds
+        label: "Menu",                    // String: Label for the navigation toggle
+        insert: "before",                  // String: Insert the toggle before or after the navigation
+        customToggle: "",                 // Selector: Specify the ID of a custom toggle
+        closeOnNavClick: false,           // Boolean: Close the navigation when one of the links are clicked
+        openPos: "relative",              // String: Position of the opened nav, relative or static
+        navClass: "nav-collapse",         // String: Default CSS class. If changed, you need to edit the CSS too!
+        navActiveClass: "js-nav-active",  // String: Class that is added to <html> element when nav is active
+        jsClass: "js",                    // String: 'JS enabled' class which is added to <html> element
+        init: function(){},               // Function: Init callback
+        open: function(){},               // Function: Open callback
+        close: function(){}               // Function: Close callback
+      });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1002 @@
+
+<!DOCTYPE html>
+<html lang="en-US"
+ xmlns:fb="http://ogp.me/ns/fb#" prefix="og: http://ogp.me/ns#">
+	<head>
+		<meta charset="UTF-8"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="profile" href="http://gmpg.org/xfn/11">
+		<link rel="pingback" href="http://www.snowboardingforum.com/articles/xmlrpc.php">
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,800,600,800italic' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="http://www.snowboardingforum.com/articles/wp-content/themes/snowboardingforum/css/main.css">
+		<title>Welcome - snowboardingforum.com</title>
+
+<!-- This site is optimized with the Yoast SEO plugin v4.3 - https://yoast.com/wordpress/plugins/seo/ -->
+<link rel="canonical" href="http://www.snowboardingforum.com/articles/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Welcome - snowboardingforum.com" />
+<meta property="og:url" content="http://www.snowboardingforum.com/articles/" />
+<meta property="og:site_name" content="snowboardingforum.com" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Welcome - snowboardingforum.com" />
+<script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"WebSite","@id":"#website","url":"http:\/\/www.snowboardingforum.com\/articles\/","name":"snowboardingforum.com","potentialAction":{"@type":"SearchAction","target":"http:\/\/www.snowboardingforum.com\/articles\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='//ad.crwdcntrl.net' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="snowboardingforum.com &raquo; Feed" href="http://www.snowboardingforum.com/articles/feed/" />
+<link rel="alternate" type="application/rss+xml" title="snowboardingforum.com &raquo; Comments Feed" href="http://www.snowboardingforum.com/articles/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/www.snowboardingforum.com\/articles\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.7.2"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),!(j.toDataURL().length<3e3)&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,65039,8205,55356,57096),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,55356,57096),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55357,56425,55356,57341,8205,55357,56507),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55357,56425,55356,57341,55357,56507),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='ajax-load-more-css'  href='http://www.snowboardingforum.com/articles/wp-content/plugins/ajax-load-more/core/css/ajax-load-more.min.css?ver=4.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://www.snowboardingforum.com/articles/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='snowboardingforum-style-css'  href='http://www.snowboardingforum.com/articles/wp-content/themes/snowboardingforum/style.css?ver=4.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='wordpress-popular-posts-css'  href='http://www.snowboardingforum.com/articles/wp-content/plugins/wordpress-popular-posts/style/wpp.css?ver=3.3.4' type='text/css' media='all' />
+<script type='text/javascript' src='http://ad.crwdcntrl.net/5/c=8059/pe=y/var=ccauds?ver=4.7.2'></script>
+<script type='text/javascript' src='http://www.snowboardingforum.com/articles/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://www.snowboardingforum.com/articles/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='http://www.snowboardingforum.com/articles/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.snowboardingforum.com/articles/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.snowboardingforum.com/articles/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.7.2" />
+<link rel='shortlink' href='http://www.snowboardingforum.com/articles/' />
+<link rel="alternate" type="application/json+oembed" href="http://www.snowboardingforum.com/articles/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.snowboardingforum.com%2Farticles%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://www.snowboardingforum.com/articles/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.snowboardingforum.com%2Farticles%2F&#038;format=xml" />
+<meta property="fb:app_id" content="554220984731364"/>
+<!-- ConsolidatedFooters Headers -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30657-37']);
+  _gaq.push(['_setDomainName', '.snowboardingforum.com']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<script type="text/javascript">
+var _comscore = _comscore || [];
+_comscore.push({ c1: "2", c2: "6036030", c4: "snowboardingforum.com" });
+(function() {
+var s = document.createElement("script"), el =
+document.getElementsByTagName("script")[0]; s.async = true;
+s.src = (document.location.protocol == "https:" ? "https://sb" :
+"http://b") + ".scorecardresearch.com/beacon.js";
+el.parentNode.insertBefore(s, el);
+})(); </script>
+<noscript> <img src="http://b.scorecardresearch.com/p?c1=2&c2=6036030&c4=snowboardingforum.com&cv=2.0&cj=1" alt="" /> </noscript>
+<script type="text/javascript">
+  var vglnk = { api_url: '//api.viglink.com/api',
+                key: 'f104b8cde7bcc1532b9a7f0838baecfb' };
+
+  (function(d, t) {
+    var s = d.createElement(t); s.type = 'text/javascript'; s.async = true;
+    s.src = ('https:' == document.location.protocol ? vglnk.api_url :
+             '//cdn.viglink.com/api') + '/vglnk.js';
+    var r = d.getElementsByTagName(t)[0]; r.parentNode.insertBefore(s, r);
+  }(document, 'script'));
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start":
+new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
+"https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,"script","dataLayer","GTM-5H926N");</script>
+<!-- End Google Tag Manager -->
+
+<!-- /ConsolidatedFooters Headers -->
+
+
+		<script src="http://www.snowboardingforum.com/articles/wp-content/themes/snowboardingforum/js/modernizr.js"></script>
+		<script>
+			var site_url = 'http://www.snowboardingforum.com/articles', theme_url = 'http://www.snowboardingforum.com/articles/wp-content/themes/snowboardingforum/',
+			page_name = 'welcome', template_name = 'template-home';
+		</script>
+
+		
+		<script>
+			var $ = jQuery.noConflict();
+		</script>
+	</head>
+
+<body class="home page-template page-template-templates page-template-template-home page-template-templatestemplate-home-php page page-id-5 group-blog"> 
+<!-- ConsolidatedFooters Body Top -->
+
+<script>
+var captify_kw_query_11825 = "";
+(function(c,a,p,t,i,f,y){i=c.createElement(a);t=c.getElementsByTagName(a)[0];i.type="text/javascript";i.async=true;i.src=p;t.parentNode.insertBefore(i,t);})(document,"script","https://p.cpx.to/p/11825/px.js");
+</script>
+<script type="text/javascript"> 
+    var xl8_script = document.createElement("script"); 
+    xl8_script.src = "https://loadus.exelator.com/load/?p=239&g=049&c=1470956&ctg=Sports&cmake=Snowboarding&cmodel=&j=d"; 
+    xl8_script.type = "text/javascript"; 
+    xl8_script.async = true; 
+    document.body.appendChild(xl8_script); 
+</script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5H926N"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+<!-- /ConsolidatedFooters Body Top -->
+
+
+	<!-- Google Ads Start -->
+	<!-- async -->
+	<script type='text/javascript'>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+        (function() {
+        var gads = document.createElement('script');
+        gads.async = true;
+        gads.type = 'text/javascript';
+        var useSSL = 'https:' == document.location.protocol;
+        gads.src = (useSSL ? 'https:' : 'http:') + 
+        '//www.googletagservices.com/tag/js/gpt.js';
+        var node = document.getElementsByTagName('script')[0];
+        node.parentNode.insertBefore(gads, node);
+        })();
+	</script>
+	                
+	<script type='text/javascript'>
+        googletag.cmd.push(function() {
+        googletag.defineSlot('/1030735/SnowboardingForum_com_300x600_Top_SP_Homepage', [300, 600], 'SnowboardingForum_com_300x600_Top_SP_Homepage').addService(googletag.pubads());
+        googletag.defineSlot('/1030735/SnowboardingForum_com_300x250_Middle_SP_Homepage_0', [300, 250], 'SnowboardingForum_com_300x250_Middle_SP_Homepage_0').addService(googletag.pubads());
+        googletag.defineSlot('/1030735/SnowboardingForum_com_300x250_Middle_SP_Homepage_1', [300, 250], 'SnowboardingForum_com_300x250_Middle_SP_Homepage_1').addService(googletag.pubads());
+        googletag.defineSlot('/1030735/SnowboardingForum_com_300x250_Bottom_SP_Homepage_0', [300, 250], 'SnowboardingForum_com_300x250_Bottom_SP_Homepage_0').addService(googletag.pubads());
+        googletag.defineSlot('/1030735/SnowboardingForum_com_300x250_Bottom_SP_Homepage_1', [300, 250], 'SnowboardingForum_com_300x250_Bottom_SP_Homepage_1').addService(googletag.pubads());
+        if (typeof(ccauds) != 'undefined') {
+	(function(googletag, ccauds) {
+		var aud_abbr = [], audience = ccauds.Profile.Audiences.Audience;
+		for (var cci = 0; cci < audience.length; cci++) {
+			aud_abbr.push(audience[cci].abbr);
+		}
+		googletag.pubads().setTargeting("aud_abbr", aud_abbr);
+	})(googletag, ccauds);
+}				googletag.pubads().setTargeting("sitename", "SnowboardingForum.com");
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+        });
+	</script>
+
+	<!-- Google Ads End -->
+
+
+	<div id="page" class="hfeed site">
+		<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+	
+		<div class="top-bar clearfix">
+			<div class="row">
+				<ul class="clearfix">
+					<li>
+						<a target="_blank" href="https://www.facebook.com/Snowboarding-Forum-903492439738512/" class="text-uppercase">
+							<span class="hide-for-small like-us-text"><strong>Like Us</strong> on Facebook </span>
+							<i class="icon-facebook"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#search-bar" class="search-btn">
+							<i class="icon-search"></i>
+							<i class="icon-cancel"></i>
+						</a>
+
+						<form id="search-bar" action="http://www.snowboardingforum.com/articles/search_gcse" method="GET">
+							<input type="search" name="q" required />
+							<input type="submit" value="Search" />
+							<span class="icon-search"></span>
+						</form>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<header id="masthead" class="site-header" role="banner">
+			<div class="site-branding">
+									<p class="site-title"><a href="http://www.snowboardingforum.com/" rel="home">snowboardingforum.com</a></p>
+								<p class="site-description"></p>
+			</div><!-- .site-branding -->
+
+			<nav id="site-navigation" class="main-navigation show-for-large-up" role="navigation">
+				
+				<div class="row">
+					<a href="http://www.snowboardingforum.com/articles" class="site-link">
+						<img src="http://www.snowboardingforum.com/articles/wp-content/themes/snowboardingforum/img/sticky-logo.png" alt="snowboardingforum.com">
+					</a>
+				</div>
+
+				<div class="row"><ul id="primary-menu" class="menu"><li id="nav-menu-item-9" class="main-menu-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-custom menu-item-object-custom"><a href="/forum.php" class="menu-link main-menu-link">Forums</a><ul class='forum-sub-items'>
+                                <li class='heading'><a href='http://www.snowboardingforum.com/index.php?pageid=active_topics'>Active Topics</a></li>                    <li>
+                        <div class="forum-entry">
+                            <a href="http://www.snowboardingforum.com/southwest-us/160537-building-utah-backcountry-b-b-need.html" title="Building Utah Backcountry B&amp;B need help">
+                                Building Utah Backcountry B&amp;B need help
+                            </a>
+                            <span class="meta-details">
+                                Today 01:24 PM by hikeswithdogs
+                            </span>
+                        </div>
+                    </li>                    <li>
+                        <div class="forum-entry">
+                            <a href="http://www.snowboardingforum.com/music-discussion/105417-what-you-listening-right-now.html" title="What are you listening to right now?">
+                                What are you listening to right now?
+                            </a>
+                            <span class="meta-details">
+                                Today 12:53 PM by robotfood99
+                            </span>
+                        </div>
+                    </li>                    <li>
+                        <div class="forum-entry">
+                            <a href="http://www.snowboardingforum.com/buy-sell-snowboard-equipment/238626-sale-snowboard-balance-bar-trainer-denver.html" title="For Sale: Snowboard balance bar trainer - Denver - $50">
+                                For Sale: Snowboard balance bar trainer - Denve...
+                            </a>
+                            <span class="meta-details">
+                                Today 12:09 PM by timmytard
+                            </span>
+                        </div>
+                    </li>                    <li>
+                        <div class="forum-entry">
+                            <a href="http://www.snowboardingforum.com/off-topic-general-discussion/18154-today-i-hate-thread.html" title="Today I Hate Thread!">
+                                Today I Hate Thread!
+                            </a>
+                            <span class="meta-details">
+                                Today 05:53 AM by motleybeast
+                            </span>
+                        </div>
+                    </li>                    <li>
+                        <div class="forum-entry">
+                            <a href="http://www.snowboardingforum.com/general-travel-forum/238650-december-2017-trip.html" title="December 2017 Trip">
+                                December 2017 Trip
+                            </a>
+                            <span class="meta-details">
+                                Yesterday 09:15 PM by linvillegorge
+                            </span>
+                        </div>
+                    </li>                    <li>
+                        <div class="forum-entry">
+                            <a href="http://www.snowboardingforum.com/snowboarding-general-chat/238065-another-large-guy-story.html" title="another large guy story">
+                                another large guy story
+                            </a>
+                            <span class="meta-details">
+                                Yesterday 02:14 PM by htfu
+                            </span>
+                        </div>
+                    </li>                    <li>
+                        <div class="forum-entry">
+                            <a href="http://www.snowboardingforum.com/bindings/238617-now-selects.html" title="Now Selects?">
+                                Now Selects?
+                            </a>
+                            <span class="meta-details">
+                                Yesterday 01:03 PM by Bataleon85
+                            </span>
+                        </div>
+                    </li>                    <li>
+                        <div class="forum-entry">
+                            <a href="http://www.snowboardingforum.com/boards/238642-brand-new-burton-bullet-2005-worth.html" title="Brand new burton bullet 2005, worth?">
+                                Brand new burton bullet 2005, worth?
+                            </a>
+                            <span class="meta-details">
+                                Yesterday 12:50 PM by Snowqueen
+                            </span>
+                        </div>
+                    </li>                    <li>
+                        <div class="forum-entry">
+                            <a href="http://www.snowboardingforum.com/off-topic-general-discussion/15228-totally-random-shit-thread.html" title="Totally Random Shit Thread">
+                                Totally Random Shit Thread
+                            </a>
+                            <span class="meta-details">
+                                Yesterday 10:03 AM by f00bar
+                            </span>
+                        </div>
+                    </li>                    <li>
+                        <div class="forum-entry">
+                            <a href="http://www.snowboardingforum.com/bindings/238634-switcback-bindings-w-high-mid-backs.html" title="Switcback Bindings (w/ high and mid backs) - MUST SELL ASAP!!!">
+                                Switcback Bindings (w/ high and mid backs) - MU...
+                            </a>
+                            <span class="meta-details">
+                                Yesterday 02:57 AM by bdobson10
+                            </span>
+                        </div>
+                    </li></ul></li>
+<li id="nav-menu-item-17" class="main-menu-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://www.snowboardingforum.com/articles/category/videos/" class="menu-link main-menu-link">Videos</a><div class="sub-posts clearfix"><ul class="row "><li class='post-6706 post type-post status-publish format-standard has-post-thumbnail hentry category-videos tag-bear-mountain tag-bear-mountain-x-scott-stevens tag-scott-stevens tag-snowboarding tag-video'>
+                                        <a class='thumb-link' href='http://www.snowboardingforum.com/articles/scott-stevens-bear-video-best-thing-youll-see-week/'><img width="320" height="225" data-src="http://www.snowboardingforum.com/articles/wp-content/uploads/2017/03/ScottStevensAtBear-320x225.jpg" class="show-on-large attachment-thumbnail wp-post-image"></a><a href='http://www.snowboardingforum.com/articles/scott-stevens-bear-video-best-thing-youll-see-week/'><span class='article-title'>This Scott Stevens at Bear Video is t...</span></a></li><li class='post-6666 post type-post status-publish format-standard has-post-thumbnail hentry category-videos tag-double-backflips tag-eli-bouchard tag-homeslider tag-mark-mcmorris tag-max-henault tag-maximise tag-seb-toutant tag-video'>
+                                        <a class='thumb-link' href='http://www.snowboardingforum.com/articles/watch-9-year-old-eli-bouchard-double-backflips/'><img width="320" height="225" data-src="http://www.snowboardingforum.com/articles/wp-content/uploads/2017/03/EliBouchard-3-320x225.jpg" class="show-on-large attachment-thumbnail wp-post-image"></a><a href='http://www.snowboardingforum.com/articles/watch-9-year-old-eli-bouchard-double-backflips/'><span class='article-title'>Watch 9-Year-Old Eli Bouchard Do Doub...</span></a></li><li class='post-6609 post type-post status-publish format-standard has-post-thumbnail hentry category-videos tag-arthur-longo tag-chapter-one tag-editorial-picks tag-side-hits-euphoria tag-video'>
+                                        <a class='thumb-link' href='http://www.snowboardingforum.com/articles/arthur-longo-shows-why-side-hits-really-are-the-best-thing-in-snowboarding/'><img width="320" height="225" data-src="http://www.snowboardingforum.com/articles/wp-content/uploads/2017/01/ArthurLongoSideHit-320x225.jpg" class="show-on-large attachment-thumbnail wp-post-image"></a><a href='http://www.snowboardingforum.com/articles/arthur-longo-shows-why-side-hits-really-are-the-best-thing-in-snowboarding/'><span class='article-title'>Arthur Longo Shows Why Side Hits Real...</span></a></li><li class='post-6578 post type-post status-publish format-standard has-post-thumbnail hentry category-videos tag-craig-mcmorris tag-manboys tag-manboys-movie tag-snowboard tag-video'>
+                                        <a class='thumb-link' href='http://www.snowboardingforum.com/articles/craig-mcmorris-full-part-from-the-manboys-movie-2016/'><img width="320" height="225" data-src="http://www.snowboardingforum.com/articles/wp-content/uploads/2017/01/CraigMcMorrisFullPartManboys-320x225.jpg" class="show-on-large attachment-thumbnail wp-post-image"></a><a href='http://www.snowboardingforum.com/articles/craig-mcmorris-full-part-from-the-manboys-movie-2016/'><span class='article-title'>Craig McMorris Full Part From The MAN...</span></a></li><li class='post-6545 post type-post status-publish format-standard has-post-thumbnail hentry category-videos tag-mont-royal tag-seb-toutant tag-seb-toutant-mont-royal tag-video'>
+                                        <a class='thumb-link' href='http://www.snowboardingforum.com/articles/seb-toutant-snowboards-on-the-streets-and-cemeteries-of-montreal/'><img width="320" height="225" data-src="http://www.snowboardingforum.com/articles/wp-content/uploads/2016/12/SebToutantMontRoyal-320x225.jpg" class="show-on-large attachment-thumbnail wp-post-image"></a><a href='http://www.snowboardingforum.com/articles/seb-toutant-snowboards-on-the-streets-and-cemeteries-of-montreal/'><span class='article-title'>Seb Toutant Rides the Streets (and Ce...</span></a></li></ul></div></li>
+<li id="nav-menu-item-10" class="main-menu-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://www.snowboardingforum.com/articles/category/news/" class="menu-link main-menu-link">News</a><div class="sub-posts clearfix"><ul class="row "><li class='post-5721 post type-post status-publish format-standard has-post-thumbnail hentry category-news tag-noah-salsnek tag-now tag-yes'>
+                                        <a class='thumb-link' href='http://www.snowboardingforum.com/articles/help-noah-salasnek-and-you-could-win-this-yes-salasnek-snowboard-with-now-bindings/'><img width="320" height="225" data-src="http://www.snowboardingforum.com/articles/wp-content/uploads/2016/05/YesNoah2-320x225.jpg" class="show-on-large attachment-thumbnail wp-post-image"></a><a href='http://www.snowboardingforum.com/articles/help-noah-salasnek-and-you-could-win-this-yes-salasnek-snowboard-with-now-bindings/'><span class='article-title'>Help Noah Salasnek and You Could Win ...</span></a></li><li class='post-5473 post type-post status-publish format-standard has-post-thumbnail hentry category-news'>
+                                        <a class='thumb-link' href='http://www.snowboardingforum.com/articles/todays-top-3-threads-fraud-at-jay-peak-park-rats-in-hardboots-and-going-quiver-crazy/'><img width="320" height="225" data-src="http://www.snowboardingforum.com/articles/wp-content/uploads/2016/04/Skiboarding-320x225.jpg" class="show-on-large attachment-thumbnail wp-post-image"></a><a href='http://www.snowboardingforum.com/articles/todays-top-3-threads-fraud-at-jay-peak-park-rats-in-hardboots-and-going-quiver-crazy/'><span class='article-title'>Today&#8217;s Top 3 Threads: Fraud At...</span></a></li><li class='post-4977 post type-post status-publish format-standard has-post-thumbnail hentry category-news tag-dc tag-dc-hit-run tag-finn-finestone tag-scot-brown tag-spencer-obrien tag-tosh-krauskopf tag-truth-smith tag-whistler tag-whistler-blackcomb'>
+                                        <a class='thumb-link' href='http://www.snowboardingforum.com/articles/spencer-obrien-and-scot-brown-win-dc-hit-run-at-whistler-blackcomb/'><img width="320" height="225" data-src="http://www.snowboardingforum.com/articles/wp-content/uploads/2016/03/IMG_1186.Finestone-320x225.jpg" class="show-on-large attachment-thumbnail wp-post-image"></a><a href='http://www.snowboardingforum.com/articles/spencer-obrien-and-scot-brown-win-dc-hit-run-at-whistler-blackcomb/'><span class='article-title'>Spencer O&#8217;Brien and Scot Brown ...</span></a></li><li class='post-3841 post type-post status-publish format-standard has-post-thumbnail hentry category-news tag-cory-hackett tag-endeavor-clout-162 tag-eric-dionne tag-ottawa tag-prime-minister-justin-trudeau tag-prime-minister-justin-trudeau-snowboards tag-snowboard-shop tag-snowboarding tag-snowboards tag-top-of-the-world tag-union-bindings tag-vans-sequel'>
+                                        <a class='thumb-link' href='http://www.snowboardingforum.com/articles/heres-how-canadas-prime-minister-justin-trudeau-just-bought-his-new-snowboard-setup/'><img width="320" height="225" data-src="http://www.snowboardingforum.com/articles/wp-content/uploads/2016/02/PMtrudeaushreds-320x225.jpg" class="show-on-large attachment-thumbnail wp-post-image"></a><a href='http://www.snowboardingforum.com/articles/heres-how-canadas-prime-minister-justin-trudeau-just-bought-his-new-snowboard-setup/'><span class='article-title'>Here’s How Canada’s Prime Ministe...</span></a></li><li class='post-3729 post type-post status-publish format-standard has-post-thumbnail hentry category-news tag-billabong tag-jody-wachniak'>
+                                        <a class='thumb-link' href='http://www.snowboardingforum.com/articles/billabong-signs-jody-wachniak-to-north-american-pro-team/'><img width="320" height="225" data-src="http://www.snowboardingforum.com/articles/wp-content/uploads/2016/02/170105_montreal_563_2_jpg-320x225.jpeg" class="show-on-large attachment-thumbnail wp-post-image"></a><a href='http://www.snowboardingforum.com/articles/billabong-signs-jody-wachniak-to-north-american-pro-team/'><span class='article-title'>Billabong Signs Jody Wachniak to Nort...</span></a></li></ul></div></li>
+<li id="nav-menu-item-21" class="main-menu-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://www.snowboardingforum.com/articles/category/gear/" class="menu-link main-menu-link">Gear</a><div class="sub-posts clearfix"><ul class="row "><li class='post-379 post type-post status-publish format-standard has-post-thumbnail hentry category-gear tag-editorial-picks tag-endeavor tag-ozzy-osbourne tag-run-dmc tag-snowboards tag-universal-music'>
+                                        <a class='thumb-link' href='http://www.snowboardingforum.com/articles/endeavor-releases-ozzy-run-dmc-limited-series/'><img width="320" height="225" data-src="http://www.snowboardingforum.com/articles/wp-content/uploads/2015/11/Ozzy_Board-320x225.jpg" class="show-on-large attachment-thumbnail wp-post-image"></a><a href='http://www.snowboardingforum.com/articles/endeavor-releases-ozzy-run-dmc-limited-series/'><span class='article-title'>Endeavour Releases Ozzy Osbourne, RUN...</span></a></li><li class='post-1705 post type-post status-publish format-standard has-post-thumbnail hentry category-gear tag-danimals tag-helix-153cm tag-ride-snowboards'>
+                                        <a class='thumb-link' href='http://www.snowboardingforum.com/articles/danimals-just-turned-pro-so-ride-snowboards-did-this-to-celebrate/'><img width="320" height="225" data-src="http://www.snowboardingforum.com/articles/wp-content/uploads/2015/12/Danimals-holding-board-320x225.jpg" class="show-on-large attachment-thumbnail wp-post-image"></a><a href='http://www.snowboardingforum.com/articles/danimals-just-turned-pro-so-ride-snowboards-did-this-to-celebrate/'><span class='article-title'>Danimals Just Turned Pro So Ride Snow...</span></a></li><li class='post-818 post type-post status-publish format-standard has-post-thumbnail hentry category-gear tag-arbor tag-arbor-collective tag-arbor-snowboards tag-black-friday tag-bryan-iguchi tag-pro tag-video'>
+                                        <a class='thumb-link' href='http://www.snowboardingforum.com/articles/the-legend-gets-his-due-arbor-releases-bryan-iguchi-pro-model-today-for-black-friday/'><img width="320" height="225" data-src="http://www.snowboardingforum.com/articles/wp-content/uploads/2015/11/Guch-320x225.jpg" class="show-on-large attachment-thumbnail wp-post-image"></a><a href='http://www.snowboardingforum.com/articles/the-legend-gets-his-due-arbor-releases-bryan-iguchi-pro-model-today-for-black-friday/'><span class='article-title'>The Legend Gets His Due: Arbor Releas...</span></a></li><li class='post-35 post type-post status-publish format-standard has-post-thumbnail hentry category-gear tag-k2 tag-k2-cool-bean tag-k2-snowboards tag-powder-board tag-quiver-boards tag-review'>
+                                        <a class='thumb-link' href='http://www.snowboardingforum.com/articles/k2-cool-bean-turns-groomers-into-pow-fields/'><img width="320" height="225" data-src="http://www.snowboardingforum.com/articles/wp-content/uploads/2015/11/k2-cool-bean-snowboard-REAL-320x225.jpg" class="show-on-large attachment-thumbnail wp-post-image"></a><a href='http://www.snowboardingforum.com/articles/k2-cool-bean-turns-groomers-into-pow-fields/'><span class='article-title'>The K2 Cool Bean Turns Groomers into ...</span></a></li><li class='post-167 post type-post status-publish format-standard has-post-thumbnail hentry category-gear tag-flux-dl tag-now-o-drive tag-rome-katana tag-top-5-high-end-bindings tag-union-fc'>
+                                        <a class='thumb-link' href='http://www.snowboardingforum.com/articles/check-out-the-top-5-high-end-snowboard-bindings-of-2016/'><img width="320" height="225" data-src="http://www.snowboardingforum.com/articles/wp-content/uploads/2015/11/NOWreal-320x225.jpg" class="show-on-large attachment-thumbnail wp-post-image"></a><a href='http://www.snowboardingforum.com/articles/check-out-the-top-5-high-end-snowboard-bindings-of-2016/'><span class='article-title'>Check Out the Top 5 High-End Snowboar...</span></a></li></ul></div></li>
+<li id="nav-menu-item-20" class="main-menu-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://www.snowboardingforum.com/articles/category/features/" class="menu-link main-menu-link">Features</a><div class="sub-posts clearfix"><ul class="row "><li class='post-125 post type-post status-publish format-standard has-post-thumbnail hentry category-features tag-air tag-brendan-keenan tag-build-backcountry-booter tag-geoff-brown tag-homeslider tag-how-to tag-jump tag-matt-belzile tag-rube-goldberg tag-snowboard'>
+                                        <a class='thumb-link' href='http://www.snowboardingforum.com/articles/how-to-build-a-big-backcountry-kicker-style-jump/'><img width="320" height="225" data-src="http://www.snowboardingforum.com/articles/wp-content/uploads/2015/11/RBCP-CheeseWedge1Serfas-NEW-320x225.jpg" class="show-on-large attachment-thumbnail wp-post-image"></a><a href='http://www.snowboardingforum.com/articles/how-to-build-a-big-backcountry-kicker-style-jump/'><span class='article-title'>How To: Build a Big Backcountry Kicker</span></a></li><li class='post-246 post type-post status-publish format-standard has-post-thumbnail hentry category-features tag-getting-ready-for-winter tag-how-to tag-how-to-get-fit-for-snowboarding tag-how-to-get-fit-for-snowboarding-this-winter tag-recommended tag-snowboard tag-snowboard-exercises tag-snowboard-wax tag-tune-up'>
+                                        <a class='thumb-link' href='http://www.snowboardingforum.com/articles/how-to-get-your-everything-ready-for-snowboarding-this-winter/'><img width="320" height="225" data-src="http://www.snowboardingforum.com/articles/wp-content/uploads/2015/11/P-20140106-00018_News-320x225.jpg" class="show-on-large attachment-thumbnail wp-post-image"></a><a href='http://www.snowboardingforum.com/articles/how-to-get-your-everything-ready-for-snowboarding-this-winter/'><span class='article-title'>How To Get Ready for Snowboarding Thi...</span></a></li><li class='post-133 post type-post status-publish format-standard has-post-thumbnail hentry category-features category-travel tag-6-craziest-ski-lifts tag-alaska tag-chairlife tag-chairlift tag-cordova tag-editorial-picks tag-gondola-one tag-gulmarg-india tag-les-deux-alpes tag-mad-river-glen tag-mt-eyak tag-peak2peak tag-single-chair tag-ski tag-ski-lift tag-snowboarding tag-vail tag-vermont tag-vintage-lift tag-whistler tag-whistler-blackcomb tag-world'>
+                                        <a class='thumb-link' href='http://www.snowboardingforum.com/articles/check-out-the-six-craziest-ski-lifts-in-the-world/'><img width="320" height="225" data-src="http://www.snowboardingforum.com/articles/wp-content/uploads/2015/11/WBMitchWintonPhotoREAL-320x225.jpg" class="show-on-large attachment-thumbnail wp-post-image"></a><a href='http://www.snowboardingforum.com/articles/check-out-the-six-craziest-ski-lifts-in-the-world/'><span class='article-title'>Check Out the Six Craziest Ski Lifts ...</span></a></li><li class='post-105 post type-post status-publish format-standard has-post-thumbnail hentry category-features tag-diy tag-how-to-wax-your-snowboard tag-snowboarding tag-tune-your-snowboard tag-wax tag-waxing-your-snowboard'>
+                                        <a class='thumb-link' href='http://www.snowboardingforum.com/articles/the-diy-guide-to-waxing-your-snowboard/'><img width="320" height="225" data-src="http://www.snowboardingforum.com/articles/wp-content/uploads/2015/11/1_DSC_0013waxing-320x225.jpg" class="show-on-large attachment-thumbnail wp-post-image"></a><a href='http://www.snowboardingforum.com/articles/the-diy-guide-to-waxing-your-snowboard/'><span class='article-title'>How To Wax Your Snowboard</span></a></li><li class='post-5385 post type-post status-publish format-standard has-post-thumbnail hentry category-features tag-bad-conditions tag-best-park-board tag-best-park-board-under-250 tag-how-to-layer tag-layering tag-snowboard-advice tag-top-snowboard-advice tag-when-do-you-stop'>
+                                        <a class='thumb-link' href='http://www.snowboardingforum.com/articles/todays-top-3-threads-on-bad-conditions-layering-advice-and-which-park-board-is-the-best/'><img width="320" height="225" data-src="http://www.snowboardingforum.com/articles/wp-content/uploads/2016/04/RBCP-MarkMcMorrisInMotionBlccmbSerfas-320x225.jpg" class="show-on-large attachment-thumbnail wp-post-image"></a><a href='http://www.snowboardingforum.com/articles/todays-top-3-threads-on-bad-conditions-layering-advice-and-which-park-board-is-the-best/'><span class='article-title'>Today&#8217;s Top 3 Threads: On Bad C...</span></a></li></ul></div></li>
+<li id="nav-menu-item-22" class="main-menu-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://www.snowboardingforum.com/articles/category/travel/" class="menu-link main-menu-link">Travel</a><div class="sub-posts clearfix"><ul class="row "><li class='post-6242 post type-post status-publish format-standard has-post-thumbnail hentry category-travel category-videos tag-alex-yoder tag-editorial-picks tag-first-snowboarders tag-first-snowboarders-in-the-world tag-homeslider tag-kackar-mountains tag-nick-russell tag-patran tag-turkey tag-video'>
+                                        <a class='thumb-link' href='http://www.snowboardingforum.com/articles/is-this-turkish-village-made-up-of-the-first-snowboarders-in-the-world/'><img width="320" height="225" data-src="http://www.snowboardingforum.com/articles/wp-content/uploads/2016/10/FirstSnowboardEver-320x225.jpg" class="show-on-large attachment-thumbnail wp-post-image"></a><a href='http://www.snowboardingforum.com/articles/is-this-turkish-village-made-up-of-the-first-snowboarders-in-the-world/'><span class='article-title'>Is This Turkish Village Home to the F...</span></a></li><li class='post-133 post type-post status-publish format-standard has-post-thumbnail hentry category-features category-travel tag-6-craziest-ski-lifts tag-alaska tag-chairlife tag-chairlift tag-cordova tag-editorial-picks tag-gondola-one tag-gulmarg-india tag-les-deux-alpes tag-mad-river-glen tag-mt-eyak tag-peak2peak tag-single-chair tag-ski tag-ski-lift tag-snowboarding tag-vail tag-vermont tag-vintage-lift tag-whistler tag-whistler-blackcomb tag-world'>
+                                        <a class='thumb-link' href='http://www.snowboardingforum.com/articles/check-out-the-six-craziest-ski-lifts-in-the-world/'><img width="320" height="225" data-src="http://www.snowboardingforum.com/articles/wp-content/uploads/2015/11/WBMitchWintonPhotoREAL-320x225.jpg" class="show-on-large attachment-thumbnail wp-post-image"></a><a href='http://www.snowboardingforum.com/articles/check-out-the-six-craziest-ski-lifts-in-the-world/'><span class='article-title'>Check Out the Six Craziest Ski Lifts ...</span></a></li><li class='post-5209 post type-post status-publish format-standard has-post-thumbnail hentry category-travel category-videos tag-brett-moody tag-calirado tag-chris-sypert tag-eric-beauchemin tag-greydin-mccalla tag-josh-carreola tag-nik-baden tag-shred-bots tag-shredbots tag-spencer-whiting tag-torstein-horgmo'>
+                                        <a class='thumb-link' href='http://www.snowboardingforum.com/articles/the-mayhem-projects-calirado-with-shred-bots/'><img width="320" height="225" data-src="http://www.snowboardingforum.com/articles/wp-content/uploads/2016/04/Calirado-320x225.jpg" class="show-on-large attachment-thumbnail wp-post-image"></a><a href='http://www.snowboardingforum.com/articles/the-mayhem-projects-calirado-with-shred-bots/'><span class='article-title'>The Mayhem Projects: CALIRADO with Sh...</span></a></li><li class='post-4705 post type-post status-publish format-standard has-post-thumbnail hentry category-travel tag-editor tag-le-massif tag-le-massif-de-charlevoix tag-mont-sainte-anne tag-newsletter tag-quebec tag-quebec-city tag-ski tag-snowboard tag-snowboarding'>
+                                        <a class='thumb-link' href='http://www.snowboardingforum.com/articles/5-things-you-probably-didnt-know-about-le-massif-de-charlevoix-quebec/'><img width="320" height="225" data-src="http://www.snowboardingforum.com/articles/wp-content/uploads/2016/03/14483770178_ed4cd5ea33_k-320x225.jpg" class="show-on-large attachment-thumbnail wp-post-image"></a><a href='http://www.snowboardingforum.com/articles/5-things-you-probably-didnt-know-about-le-massif-de-charlevoix-quebec/'><span class='article-title'>5 Things You Probably Didn&#8217;t Kn...</span></a></li><li class='post-374 post type-post status-publish format-standard has-post-thumbnail hentry category-features category-travel tag-road-trip tag-road-trip-rules tag-snowboard tag-snowboarding tag-trip-etiquette'>
+                                        <a class='thumb-link' href='http://www.snowboardingforum.com/articles/planning-a-road-trip-this-year-here-are-7-must-read-rules-for-the-road/'><img width="320" height="225" data-src="http://www.snowboardingforum.com/articles/wp-content/uploads/2015/11/ONWayToCastle2-320x225.jpg" class="show-on-large attachment-thumbnail wp-post-image"></a><a href='http://www.snowboardingforum.com/articles/planning-a-road-trip-this-year-here-are-7-must-read-rules-for-the-road/'><span class='article-title'>Planning A Road Trip This Year? Here ...</span></a></li></ul></div></li>
+</ul></div>			</nav><!-- #site-navigation -->
+
+			<!-- Mobile Menu -->
+			<div class="hide">
+				<div class="mobile-menu"><ul id="mobile-menu" class="menu"><li id="menu-item-9" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9"><a href="/forum.php">Forums</a></li>
+<li id="menu-item-17" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-17"><a href="http://www.snowboardingforum.com/articles/category/videos/">Videos</a></li>
+<li id="menu-item-10" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10"><a href="http://www.snowboardingforum.com/articles/category/news/">News</a></li>
+<li id="menu-item-21" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-21"><a href="http://www.snowboardingforum.com/articles/category/gear/">Gear</a></li>
+<li id="menu-item-20" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20"><a href="http://www.snowboardingforum.com/articles/category/features/">Features</a></li>
+<li id="menu-item-22" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-22"><a href="http://www.snowboardingforum.com/articles/category/travel/">Travel</a></li>
+</ul></div>			</div>
+
+					</header><!-- #masthead -->
+
+		<div id="content" class="site-content">
+			<div class="header-form subscribe-form top">
+				<div class="row">
+					<h2 class="columns medium-6 large-5 vertically-center">
+						<span>
+							<i class="icon-mail"></i> Get
+							<span class="blue-text">Email Updates</span>
+							<span class="mobile-block">
+								From SnowBoardingForum
+							</span>
+						</span>
+						
+					</h2>
+
+					<div class="medium-6 large-7 fields-container columns">
+				      <div class="row collapse">
+						<form action="http://email.snowboardingforum.com/newsletter-signup/" method="post">
+							<div class="small-8 medium-5 large-6 columns">
+								<span class="email">
+									<input type="email" name="form[email]" value="" size="40" id="email" aria-invalid="false" 
+									placeholder="Email" required>
+								</span>
+							</div>
+								<input type="hidden" name="form[subscribeCheck]" value="1">
+								<input type="hidden" name="form[source]" value="wp_generic" />								
+							<div class="small-4 medium-2 columns">
+								<input type="submit" value="Sign-up" class=" button postfix" id="signup">
+							</div>
+						</form>
+
+				      					      	</div>
+				    </div>
+				</div>
+			</div>
+
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+		
+			
+
+			<div class="flexslider" id="home-slider">
+				<ul class="slides">
+
+												<li>
+								<img alt="" src="http://www.snowboardingforum.com/articles/wp-content/uploads/2017/03/EliBouchard-3-320x225.jpg" data-interchange="[http://www.snowboardingforum.com/articles/wp-content/uploads/2017/03/EliBouchard-3-320x225.jpg, (default)],[http://www.snowboardingforum.com/articles/wp-content/uploads/2017/03/EliBouchard-3-320x225.jpg, (only screen and (min-width: 320px))],[http://www.snowboardingforum.com/articles/wp-content/uploads/2017/03/EliBouchard-3-980x377.jpg, (only screen and (min-width: 641px))],[http://www.snowboardingforum.com/articles/wp-content/uploads/2017/03/EliBouchard-3-1300x500.jpg, (only screen and (min-width: 1024px))],">								
+								<div class="flex-caption">
+									<div class="caption-contents text-center">
+										<p>
+											Watch 9-Year-Old Eli Bouchard Do Double Backflips										</p>
+										
+										<a href="http://www.snowboardingforum.com/articles/watch-9-year-old-eli-bouchard-double-backflips/" class="btn">
+											Read More
+										</a>
+									</div>
+								</div>
+							</li>
+														<li>
+								<img alt="" src="http://www.snowboardingforum.com/articles/wp-content/uploads/2016/12/CaseyHumanFlyingDrone-320x225.jpg" data-interchange="[http://www.snowboardingforum.com/articles/wp-content/uploads/2016/12/CaseyHumanFlyingDrone-320x225.jpg, (default)],[http://www.snowboardingforum.com/articles/wp-content/uploads/2016/12/CaseyHumanFlyingDrone-320x225.jpg, (only screen and (min-width: 320px))],[http://www.snowboardingforum.com/articles/wp-content/uploads/2016/12/CaseyHumanFlyingDrone-980x377.jpg, (only screen and (min-width: 641px))],[http://www.snowboardingforum.com/articles/wp-content/uploads/2016/12/CaseyHumanFlyingDrone-1300x500.jpg, (only screen and (min-width: 1024px))],">								
+								<div class="flex-caption">
+									<div class="caption-contents text-center">
+										<p>
+											This Guy Just Built A Drone That Can Lift A Snowboarder Into The Air										</p>
+										
+										<a href="http://www.snowboardingforum.com/articles/this-guy-just-built-a-drone-that-can-lift-a-snowboarder-into-the-air/" class="btn">
+											Read More
+										</a>
+									</div>
+								</div>
+							</li>
+														<li>
+								<img alt="" src="http://www.snowboardingforum.com/articles/wp-content/uploads/2016/11/PeacePark2016-320x225.jpg" data-interchange="[http://www.snowboardingforum.com/articles/wp-content/uploads/2016/11/PeacePark2016-320x225.jpg, (default)],[http://www.snowboardingforum.com/articles/wp-content/uploads/2016/11/PeacePark2016-320x225.jpg, (only screen and (min-width: 320px))],[http://www.snowboardingforum.com/articles/wp-content/uploads/2016/11/PeacePark2016-980x377.jpg, (only screen and (min-width: 641px))],[http://www.snowboardingforum.com/articles/wp-content/uploads/2016/11/PeacePark2016-1300x500.jpg, (only screen and (min-width: 1024px))],">								
+								<div class="flex-caption">
+									<div class="caption-contents text-center">
+										<p>
+											Danny Davis&#8217; Peace Park 2016 Full Video										</p>
+										
+										<a href="http://www.snowboardingforum.com/articles/danny-davis-peace-park-2016-full-video/" class="btn">
+											Read More
+										</a>
+									</div>
+								</div>
+							</li>
+														<li>
+								<img alt="" src="http://www.snowboardingforum.com/articles/wp-content/uploads/2016/11/MarcusVideo-320x225.jpg" data-interchange="[http://www.snowboardingforum.com/articles/wp-content/uploads/2016/11/MarcusVideo-320x225.jpg, (default)],[http://www.snowboardingforum.com/articles/wp-content/uploads/2016/11/MarcusVideo-320x225.jpg, (only screen and (min-width: 320px))],[http://www.snowboardingforum.com/articles/wp-content/uploads/2016/11/MarcusVideo-980x377.jpg, (only screen and (min-width: 641px))],[http://www.snowboardingforum.com/articles/wp-content/uploads/2016/11/MarcusVideo-1300x500.jpg, (only screen and (min-width: 1024px))],">								
+								<div class="flex-caption">
+									<div class="caption-contents text-center">
+										<p>
+											Did Marcus Kleveland Just Change Snowboarding?										</p>
+										
+										<a href="http://www.snowboardingforum.com/articles/did-marcus-kleveland-just-change-snowboarding/" class="btn">
+											Read More
+										</a>
+									</div>
+								</div>
+							</li>
+											</ul>
+			</div>
+
+						<div class="latest-articles" data-interchange="[http://www.snowboardingforum.com/articles/wp-content/themes/snowboardingforum/img/mobile-article-background.jpg, (small)], [http://www.snowboardingforum.com/articles/wp-content/themes/snowboardingforum/img/article-background.jpg, (medium)]">
+				<div class="row small-collapse">
+					<h2 class="fancy-heading">
+						Latest Articles
+					</h2>
+
+					<div class="columns large-8 stick-to-parent"  data-equalizer data-equalizer-mq="medium-up">
+						<div class="theiaStickySidebar">
+							<div class='columns medium-6 post-container' data-equalizer-watch>
+<article id="post-6706" class="post-6706 post type-post status-publish format-standard has-post-thumbnail hentry category-videos tag-bear-mountain tag-bear-mountain-x-scott-stevens tag-scott-stevens tag-snowboarding tag-video">
+	<header class="entry-header">
+		<a rel="bookmark" class="thumb-link" href="http://www.snowboardingforum.com/articles/scott-stevens-bear-video-best-thing-youll-see-week/"><img width="320" height="225" src="http://www.snowboardingforum.com/articles/wp-content/uploads/2017/03/ScottStevensAtBear-320x225.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Scott Stevens" srcset="http://www.snowboardingforum.com/articles/wp-content/uploads/2017/03/ScottStevensAtBear-320x225.jpg 320w, http://www.snowboardingforum.com/articles/wp-content/uploads/2017/03/ScottStevensAtBear-980x688.jpg 980w, http://www.snowboardingforum.com/articles/wp-content/uploads/2017/03/ScottStevensAtBear-768x539.jpg 768w, http://www.snowboardingforum.com/articles/wp-content/uploads/2017/03/ScottStevensAtBear.jpg 983w" sizes="(max-width: 320px) 100vw, 320px" /></a>		<h2 class="entry-title"><a href="http://www.snowboardingforum.com/articles/scott-stevens-bear-video-best-thing-youll-see-week/" rel="bookmark">This Scott Stevens at Bear Video is the Best Thing You&#8217;ll See All Week</a></h2>
+				<div class="entry-meta">
+			<span class="byline"> by <span class="author vcard"><a class="url fn n" href="http://www.snowboardingforum.com/articles/author/scott-birke/">Scott Birke</a></span></span>		</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+	<footer class="entry-footer">
+		<span class="cat-links"><a href="http://www.snowboardingforum.com/articles/category/videos/" rel="category tag">Videos</a></span><span class="tags-links"><a href="http://www.snowboardingforum.com/articles/tag/bear-mountain/" rel="tag">bear mountain</a>, <a href="http://www.snowboardingforum.com/articles/tag/bear-mountain-x-scott-stevens/" rel="tag">bear mountain x scott stevens</a>, <a href="http://www.snowboardingforum.com/articles/tag/scott-stevens/" rel="tag">Scott Stevens</a>, <a href="http://www.snowboardingforum.com/articles/tag/snowboarding/" rel="tag">snowboarding</a>, <a href="http://www.snowboardingforum.com/articles/tag/video/" rel="tag">Video</a></span>	</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+</div><div class='columns medium-6 post-container' data-equalizer-watch>
+<article id="post-6666" class="post-6666 post type-post status-publish format-standard has-post-thumbnail hentry category-videos tag-double-backflips tag-eli-bouchard tag-homeslider tag-mark-mcmorris tag-max-henault tag-maximise tag-seb-toutant tag-video">
+	<header class="entry-header">
+		<a rel="bookmark" class="thumb-link" href="http://www.snowboardingforum.com/articles/watch-9-year-old-eli-bouchard-double-backflips/"><img width="320" height="225" src="http://www.snowboardingforum.com/articles/wp-content/uploads/2017/03/EliBouchard-3-320x225.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Eli Bouchard" /></a>		<h2 class="entry-title"><a href="http://www.snowboardingforum.com/articles/watch-9-year-old-eli-bouchard-double-backflips/" rel="bookmark">Watch 9-Year-Old Eli Bouchard Do Double Backflips</a></h2>
+				<div class="entry-meta">
+			<span class="byline"> by <span class="author vcard"><a class="url fn n" href="http://www.snowboardingforum.com/articles/author/scott-birke/">Scott Birke</a></span></span>		</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+	<footer class="entry-footer">
+		<span class="cat-links"><a href="http://www.snowboardingforum.com/articles/category/videos/" rel="category tag">Videos</a></span><span class="tags-links"><a href="http://www.snowboardingforum.com/articles/tag/double-backflips/" rel="tag">double backflips</a>, <a href="http://www.snowboardingforum.com/articles/tag/eli-bouchard/" rel="tag">eli bouchard</a>, <a href="http://www.snowboardingforum.com/articles/tag/homeslider/" rel="tag">homeslider</a>, <a href="http://www.snowboardingforum.com/articles/tag/mark-mcmorris/" rel="tag">Mark McMorris</a>, <a href="http://www.snowboardingforum.com/articles/tag/max-henault/" rel="tag">Max Henault</a>, <a href="http://www.snowboardingforum.com/articles/tag/maximise/" rel="tag">maximise</a>, <a href="http://www.snowboardingforum.com/articles/tag/seb-toutant/" rel="tag">Seb Toutant</a>, <a href="http://www.snowboardingforum.com/articles/tag/video/" rel="tag">Video</a></span>	</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+</div><div class='columns medium-6 post-container' data-equalizer-watch>
+<article id="post-6609" class="post-6609 post type-post status-publish format-standard has-post-thumbnail hentry category-videos tag-arthur-longo tag-chapter-one tag-editorial-picks tag-side-hits-euphoria tag-video">
+	<header class="entry-header">
+		<a rel="bookmark" class="thumb-link" href="http://www.snowboardingforum.com/articles/arthur-longo-shows-why-side-hits-really-are-the-best-thing-in-snowboarding/"><img width="320" height="225" src="http://www.snowboardingforum.com/articles/wp-content/uploads/2017/01/ArthurLongoSideHit-320x225.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Arthur Longo&#039;s Side Hits Euphoria: Chapter One" srcset="http://www.snowboardingforum.com/articles/wp-content/uploads/2017/01/ArthurLongoSideHit-320x225.jpg 320w, http://www.snowboardingforum.com/articles/wp-content/uploads/2017/01/ArthurLongoSideHit.jpg 980w" sizes="(max-width: 320px) 100vw, 320px" /></a>		<h2 class="entry-title"><a href="http://www.snowboardingforum.com/articles/arthur-longo-shows-why-side-hits-really-are-the-best-thing-in-snowboarding/" rel="bookmark">Arthur Longo Shows Why Side Hits Really Are The Best Thing in Snowboarding</a></h2>
+				<div class="entry-meta">
+			<span class="byline"> by <span class="author vcard"><a class="url fn n" href="http://www.snowboardingforum.com/articles/author/snowboardingforum-com-staff/">Staff</a></span></span>		</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+	<footer class="entry-footer">
+		<span class="cat-links"><a href="http://www.snowboardingforum.com/articles/category/videos/" rel="category tag">Videos</a></span><span class="tags-links"><a href="http://www.snowboardingforum.com/articles/tag/arthur-longo/" rel="tag">Arthur Longo</a>, <a href="http://www.snowboardingforum.com/articles/tag/chapter-one/" rel="tag">Chapter One</a>, <a href="http://www.snowboardingforum.com/articles/tag/editorial-picks/" rel="tag">Editorial Picks</a>, <a href="http://www.snowboardingforum.com/articles/tag/side-hits-euphoria/" rel="tag">Side Hits Euphoria</a>, <a href="http://www.snowboardingforum.com/articles/tag/video/" rel="tag">Video</a></span>	</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+</div><div class='columns medium-6 post-container' data-equalizer-watch>
+<article id="post-6578" class="post-6578 post type-post status-publish format-standard has-post-thumbnail hentry category-videos tag-craig-mcmorris tag-manboys tag-manboys-movie tag-snowboard tag-video">
+	<header class="entry-header">
+		<a rel="bookmark" class="thumb-link" href="http://www.snowboardingforum.com/articles/craig-mcmorris-full-part-from-the-manboys-movie-2016/"><img width="320" height="225" src="http://www.snowboardingforum.com/articles/wp-content/uploads/2017/01/CraigMcMorrisFullPartManboys-320x225.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Craig McMorris" srcset="http://www.snowboardingforum.com/articles/wp-content/uploads/2017/01/CraigMcMorrisFullPartManboys-320x225.jpg 320w, http://www.snowboardingforum.com/articles/wp-content/uploads/2017/01/CraigMcMorrisFullPartManboys.jpg 980w" sizes="(max-width: 320px) 100vw, 320px" /></a>		<h2 class="entry-title"><a href="http://www.snowboardingforum.com/articles/craig-mcmorris-full-part-from-the-manboys-movie-2016/" rel="bookmark">Craig McMorris Full Part From The MANBOYS MOVIE 2016</a></h2>
+				<div class="entry-meta">
+			<span class="byline"> by <span class="author vcard"><a class="url fn n" href="http://www.snowboardingforum.com/articles/author/snowboardingforum-com-staff/">Staff</a></span></span>		</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+	<footer class="entry-footer">
+		<span class="cat-links"><a href="http://www.snowboardingforum.com/articles/category/videos/" rel="category tag">Videos</a></span><span class="tags-links"><a href="http://www.snowboardingforum.com/articles/tag/craig-mcmorris/" rel="tag">Craig McMorris</a>, <a href="http://www.snowboardingforum.com/articles/tag/manboys/" rel="tag">manboys</a>, <a href="http://www.snowboardingforum.com/articles/tag/manboys-movie/" rel="tag">Manboys movie</a>, <a href="http://www.snowboardingforum.com/articles/tag/snowboard/" rel="tag">snowboard</a>, <a href="http://www.snowboardingforum.com/articles/tag/video/" rel="tag">Video</a></span>	</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+</div>						</div>
+					</div>
+
+					<div class="columns large-4 home-like-container stick-to-parent">
+						<div class="theiaStickySidebar">
+							<div class="row">
+								<a href="https://www.facebook.com/Snowboarding-Forum-903492439738512/" target="_blank" class="like-on-facebook columns">
+									<div class="like-on-facebook-container">
+										<span class="icon-container">
+											<i class="icon-facebook"></i>
+										</span>
+										Like us on <strong>Facebook</strong>
+									</div>
+								</a>
+
+								<div class="ad-container text-center">
+									<div class='ad-container'><!-- 300x600 TopRight -->
+							<div id='SnowboardingForum_com_300x600_Top_SP_Homepage' style='width:auto; height:auto;'>
+							<script type='text/javascript'>
+							googletag.cmd.push(function() { googletag.display('SnowboardingForum_com_300x600_Top_SP_Homepage'); });
+							</script>
+							</div></div>
+											</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			
+			<div class="row collapse">
+			 	
+			 	<div class="column medium-12 other-news" data-equalizer data-equalizer-mq="medium-up">
+			 		<div class='columns medium-4 large-4' data-equalizer-watch>
+				 		<div class="ad-container text-center">
+				 			<div class='ad-container'><!-- 300x250 Middle First -->
+							<div id='SnowboardingForum_com_300x250_Middle_SP_Homepage_0' style='width:auto; height:auto;'>
+							<script type='text/javascript'>
+							googletag.cmd.push(function() { googletag.display('SnowboardingForum_com_300x250_Middle_SP_Homepage_0'); });
+							</script>
+							</div></div>
+							 		</div>
+					</div>
+
+				 	<div class='columns medium-4 large-4 post-container' data-equalizer-watch>
+<article id="post-6545" class="post-6545 post type-post status-publish format-standard has-post-thumbnail hentry category-videos tag-mont-royal tag-seb-toutant tag-seb-toutant-mont-royal tag-video">
+	<header class="entry-header">
+		<a rel="bookmark" class="thumb-link" href="http://www.snowboardingforum.com/articles/seb-toutant-snowboards-on-the-streets-and-cemeteries-of-montreal/"><img width="320" height="225" src="http://www.snowboardingforum.com/articles/wp-content/uploads/2016/12/SebToutantMontRoyal-320x225.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Seb Toutant Mont Royal" srcset="http://www.snowboardingforum.com/articles/wp-content/uploads/2016/12/SebToutantMontRoyal-320x225.jpg 320w, http://www.snowboardingforum.com/articles/wp-content/uploads/2016/12/SebToutantMontRoyal.jpg 980w" sizes="(max-width: 320px) 100vw, 320px" /></a>		<h2 class="entry-title"><a href="http://www.snowboardingforum.com/articles/seb-toutant-snowboards-on-the-streets-and-cemeteries-of-montreal/" rel="bookmark">Seb Toutant Rides the Streets (and Cemeteries) of Montreal</a></h2>
+				<div class="entry-meta">
+			<span class="byline"> by <span class="author vcard"><a class="url fn n" href="http://www.snowboardingforum.com/articles/author/snowboardingforum-com-staff/">Staff</a></span></span>		</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+	<footer class="entry-footer">
+		<span class="cat-links"><a href="http://www.snowboardingforum.com/articles/category/videos/" rel="category tag">Videos</a></span><span class="tags-links"><a href="http://www.snowboardingforum.com/articles/tag/mont-royal/" rel="tag">Mont Royal</a>, <a href="http://www.snowboardingforum.com/articles/tag/seb-toutant/" rel="tag">Seb Toutant</a>, <a href="http://www.snowboardingforum.com/articles/tag/seb-toutant-mont-royal/" rel="tag">Seb Toutant Mont Royal</a>, <a href="http://www.snowboardingforum.com/articles/tag/video/" rel="tag">Video</a></span>	</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+</div><div class='columns medium-4 large-4 post-container' data-equalizer-watch>
+<article id="post-6465" class="post-6465 post type-post status-publish format-standard has-post-thumbnail hentry category-videos tag-alex-tank tag-ben-ferguson tag-christian-haller tag-david-bertschinger-karg tag-full-video tag-gabriele-torriani tag-glue-full-movie tag-jan-scherrer tag-scotty-james tag-video">
+	<header class="entry-header">
+		<a rel="bookmark" class="thumb-link" href="http://www.snowboardingforum.com/articles/christian-hallers-new-full-movie-glue-is-artfully-incredible/"><img width="320" height="225" src="http://www.snowboardingforum.com/articles/wp-content/uploads/2016/12/GlueMovie-320x225.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Glue Movie" srcset="http://www.snowboardingforum.com/articles/wp-content/uploads/2016/12/GlueMovie-320x225.jpg 320w, http://www.snowboardingforum.com/articles/wp-content/uploads/2016/12/GlueMovie.jpg 980w" sizes="(max-width: 320px) 100vw, 320px" /></a>		<h2 class="entry-title"><a href="http://www.snowboardingforum.com/articles/christian-hallers-new-full-movie-glue-is-artfully-incredible/" rel="bookmark">Christian Haller&#8217;s New Full Movie GLUE is Artfully Incredible</a></h2>
+				<div class="entry-meta">
+			<span class="byline"> by <span class="author vcard"><a class="url fn n" href="http://www.snowboardingforum.com/articles/author/snowboardingforum-com-staff/">Staff</a></span></span>		</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+	<footer class="entry-footer">
+		<span class="cat-links"><a href="http://www.snowboardingforum.com/articles/category/videos/" rel="category tag">Videos</a></span><span class="tags-links"><a href="http://www.snowboardingforum.com/articles/tag/alex-tank/" rel="tag">ALEX TANK</a>, <a href="http://www.snowboardingforum.com/articles/tag/ben-ferguson/" rel="tag">Ben Ferguson</a>, <a href="http://www.snowboardingforum.com/articles/tag/christian-haller/" rel="tag">Christian Haller</a>, <a href="http://www.snowboardingforum.com/articles/tag/david-bertschinger-karg/" rel="tag">David Bertschinger Karg</a>, <a href="http://www.snowboardingforum.com/articles/tag/full-video/" rel="tag">full video</a>, <a href="http://www.snowboardingforum.com/articles/tag/gabriele-torriani/" rel="tag">GABRIELE TORRIANI</a>, <a href="http://www.snowboardingforum.com/articles/tag/glue-full-movie/" rel="tag">Glue full movie</a>, <a href="http://www.snowboardingforum.com/articles/tag/jan-scherrer/" rel="tag">Jan Scherrer</a>, <a href="http://www.snowboardingforum.com/articles/tag/scotty-james/" rel="tag">Scotty James</a>, <a href="http://www.snowboardingforum.com/articles/tag/video/" rel="tag">Video</a></span>	</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+</div><div class='columns medium-4 large-4 post-container' data-equalizer-watch>
+<article id="post-6417" class="post-6417 post type-post status-publish format-standard has-post-thumbnail hentry category-videos tag-drone tag-snowboarding">
+	<header class="entry-header">
+		<a rel="bookmark" class="thumb-link" href="http://www.snowboardingforum.com/articles/would-you-pay-to-have-a-drone-film-you-snowboarding/"><img width="320" height="225" src="http://www.snowboardingforum.com/articles/wp-content/uploads/2016/12/DroneTahoe-320x225.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Drone Filming" srcset="http://www.snowboardingforum.com/articles/wp-content/uploads/2016/12/DroneTahoe-320x225.jpg 320w, http://www.snowboardingforum.com/articles/wp-content/uploads/2016/12/DroneTahoe.jpg 980w" sizes="(max-width: 320px) 100vw, 320px" /></a>		<h2 class="entry-title"><a href="http://www.snowboardingforum.com/articles/would-you-pay-to-have-a-drone-film-you-snowboarding/" rel="bookmark">Would You Pay to Have a Drone Film You Snowboarding?</a></h2>
+				<div class="entry-meta">
+			<span class="byline"> by <span class="author vcard"><a class="url fn n" href="http://www.snowboardingforum.com/articles/author/snowboardingforum-com-staff/">Staff</a></span></span>		</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+	<footer class="entry-footer">
+		<span class="cat-links"><a href="http://www.snowboardingforum.com/articles/category/videos/" rel="category tag">Videos</a></span><span class="tags-links"><a href="http://www.snowboardingforum.com/articles/tag/drone/" rel="tag">Drone</a>, <a href="http://www.snowboardingforum.com/articles/tag/snowboarding/" rel="tag">snowboarding</a></span>	</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+</div><div class='columns medium-4 large-4 post-container' data-equalizer-watch>
+<article id="post-6505" class="post-6505 post type-post status-publish format-standard has-post-thumbnail hentry category-videos tag-casey-neistat tag-casey-neistat-human-flying-drone tag-editorial-picks tag-homepage-1 tag-homeslider tag-human-flying-drone tag-video tag-youtube">
+	<header class="entry-header">
+		<a rel="bookmark" class="thumb-link" href="http://www.snowboardingforum.com/articles/this-guy-just-built-a-drone-that-can-lift-a-snowboarder-into-the-air/"><img width="320" height="225" src="http://www.snowboardingforum.com/articles/wp-content/uploads/2016/12/CaseyHumanFlyingDrone-320x225.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Casey Neistat Human Flying Drone" /></a>		<h2 class="entry-title"><a href="http://www.snowboardingforum.com/articles/this-guy-just-built-a-drone-that-can-lift-a-snowboarder-into-the-air/" rel="bookmark">This Guy Just Built A Drone That Can Lift A Snowboarder Into The Air</a></h2>
+				<div class="entry-meta">
+			<span class="byline"> by <span class="author vcard"><a class="url fn n" href="http://www.snowboardingforum.com/articles/author/snowboardingforum-com-staff/">Staff</a></span></span>		</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+	<footer class="entry-footer">
+		<span class="cat-links"><a href="http://www.snowboardingforum.com/articles/category/videos/" rel="category tag">Videos</a></span><span class="tags-links"><a href="http://www.snowboardingforum.com/articles/tag/casey-neistat/" rel="tag">Casey Neistat</a>, <a href="http://www.snowboardingforum.com/articles/tag/casey-neistat-human-flying-drone/" rel="tag">Casey Neistat Human Flying Drone</a>, <a href="http://www.snowboardingforum.com/articles/tag/editorial-picks/" rel="tag">Editorial Picks</a>, <a href="http://www.snowboardingforum.com/articles/tag/homepage-1/" rel="tag">Homepage 1</a>, <a href="http://www.snowboardingforum.com/articles/tag/homeslider/" rel="tag">homeslider</a>, <a href="http://www.snowboardingforum.com/articles/tag/human-flying-drone/" rel="tag">human flying drone</a>, <a href="http://www.snowboardingforum.com/articles/tag/video/" rel="tag">Video</a>, <a href="http://www.snowboardingforum.com/articles/tag/youtube/" rel="tag">youtube</a></span>	</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+</div><div class='columns medium-4 large-4 post-container' data-equalizer-watch>
+<article id="post-6393" class="post-6393 post type-post status-publish format-standard has-post-thumbnail hentry category-videos tag-danny-davis tag-homeslider tag-peace-park-2016 tag-peace-park-2016-full-video tag-video">
+	<header class="entry-header">
+		<a rel="bookmark" class="thumb-link" href="http://www.snowboardingforum.com/articles/danny-davis-peace-park-2016-full-video/"><img width="320" height="225" src="http://www.snowboardingforum.com/articles/wp-content/uploads/2016/11/PeacePark2016-320x225.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Peace Park 2016 Full Video" /></a>		<h2 class="entry-title"><a href="http://www.snowboardingforum.com/articles/danny-davis-peace-park-2016-full-video/" rel="bookmark">Danny Davis&#8217; Peace Park 2016 Full Video</a></h2>
+				<div class="entry-meta">
+			<span class="byline"> by <span class="author vcard"><a class="url fn n" href="http://www.snowboardingforum.com/articles/author/snowboardingforum-com-staff/">Staff</a></span></span>		</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+	<footer class="entry-footer">
+		<span class="cat-links"><a href="http://www.snowboardingforum.com/articles/category/videos/" rel="category tag">Videos</a></span><span class="tags-links"><a href="http://www.snowboardingforum.com/articles/tag/danny-davis/" rel="tag">danny davis</a>, <a href="http://www.snowboardingforum.com/articles/tag/homeslider/" rel="tag">homeslider</a>, <a href="http://www.snowboardingforum.com/articles/tag/peace-park-2016/" rel="tag">Peace Park 2016</a>, <a href="http://www.snowboardingforum.com/articles/tag/peace-park-2016-full-video/" rel="tag">Peace Park 2016 Full Video</a>, <a href="http://www.snowboardingforum.com/articles/tag/video/" rel="tag">Video</a></span>	</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+</div>				</div>
+			</div>
+
+			
+			<div class="editors-pick" data-interchange="[http://www.snowboardingforum.com/articles/wp-content/themes/snowboardingforum/img/mobile-editors-pick-background.jpg, (small)], [http://www.snowboardingforum.com/articles/wp-content/themes/snowboardingforum/img/editors-pick-background.jpg, (medium)]">
+		 		<div class="row large-collapse">
+		 			<div class="column medium-12">
+			 			<h2 class="fancy-heading">
+							Editor's Picks
+						</h2>
+
+						<div class="row collapse medium-uncollapse"  data-equalizer data-equalizer-mq="medium-up">
+
+							<div class='columns medium-6 large-3 post-container' data-equalizer-watch>
+<article id="post-6609" class="post-6609 post type-post status-publish format-standard has-post-thumbnail hentry category-videos tag-arthur-longo tag-chapter-one tag-editorial-picks tag-side-hits-euphoria tag-video">
+	<header class="entry-header">
+		<a rel="bookmark" class="thumb-link" href="http://www.snowboardingforum.com/articles/arthur-longo-shows-why-side-hits-really-are-the-best-thing-in-snowboarding/"><img width="320" height="225" src="http://www.snowboardingforum.com/articles/wp-content/uploads/2017/01/ArthurLongoSideHit-320x225.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Arthur Longo&#039;s Side Hits Euphoria: Chapter One" srcset="http://www.snowboardingforum.com/articles/wp-content/uploads/2017/01/ArthurLongoSideHit-320x225.jpg 320w, http://www.snowboardingforum.com/articles/wp-content/uploads/2017/01/ArthurLongoSideHit.jpg 980w" sizes="(max-width: 320px) 100vw, 320px" /></a>		<h2 class="entry-title"><a href="http://www.snowboardingforum.com/articles/arthur-longo-shows-why-side-hits-really-are-the-best-thing-in-snowboarding/" rel="bookmark">Arthur Longo Shows Why Side Hits Really Are The Best Thing in Snowboarding</a></h2>
+				<div class="entry-meta">
+			<span class="byline"> by <span class="author vcard"><a class="url fn n" href="http://www.snowboardingforum.com/articles/author/snowboardingforum-com-staff/">Staff</a></span></span>		</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+	<footer class="entry-footer">
+		<span class="cat-links"><a href="http://www.snowboardingforum.com/articles/category/videos/" rel="category tag">Videos</a></span><span class="tags-links"><a href="http://www.snowboardingforum.com/articles/tag/arthur-longo/" rel="tag">Arthur Longo</a>, <a href="http://www.snowboardingforum.com/articles/tag/chapter-one/" rel="tag">Chapter One</a>, <a href="http://www.snowboardingforum.com/articles/tag/editorial-picks/" rel="tag">Editorial Picks</a>, <a href="http://www.snowboardingforum.com/articles/tag/side-hits-euphoria/" rel="tag">Side Hits Euphoria</a>, <a href="http://www.snowboardingforum.com/articles/tag/video/" rel="tag">Video</a></span>	</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+</div><div class='columns medium-6 large-3 post-container' data-equalizer-watch>
+<article id="post-6505" class="post-6505 post type-post status-publish format-standard has-post-thumbnail hentry category-videos tag-casey-neistat tag-casey-neistat-human-flying-drone tag-editorial-picks tag-homepage-1 tag-homeslider tag-human-flying-drone tag-video tag-youtube">
+	<header class="entry-header">
+		<a rel="bookmark" class="thumb-link" href="http://www.snowboardingforum.com/articles/this-guy-just-built-a-drone-that-can-lift-a-snowboarder-into-the-air/"><img width="320" height="225" src="http://www.snowboardingforum.com/articles/wp-content/uploads/2016/12/CaseyHumanFlyingDrone-320x225.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Casey Neistat Human Flying Drone" /></a>		<h2 class="entry-title"><a href="http://www.snowboardingforum.com/articles/this-guy-just-built-a-drone-that-can-lift-a-snowboarder-into-the-air/" rel="bookmark">This Guy Just Built A Drone That Can Lift A Snowboarder Into The Air</a></h2>
+				<div class="entry-meta">
+			<span class="byline"> by <span class="author vcard"><a class="url fn n" href="http://www.snowboardingforum.com/articles/author/snowboardingforum-com-staff/">Staff</a></span></span>		</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+	<footer class="entry-footer">
+		<span class="cat-links"><a href="http://www.snowboardingforum.com/articles/category/videos/" rel="category tag">Videos</a></span><span class="tags-links"><a href="http://www.snowboardingforum.com/articles/tag/casey-neistat/" rel="tag">Casey Neistat</a>, <a href="http://www.snowboardingforum.com/articles/tag/casey-neistat-human-flying-drone/" rel="tag">Casey Neistat Human Flying Drone</a>, <a href="http://www.snowboardingforum.com/articles/tag/editorial-picks/" rel="tag">Editorial Picks</a>, <a href="http://www.snowboardingforum.com/articles/tag/homepage-1/" rel="tag">Homepage 1</a>, <a href="http://www.snowboardingforum.com/articles/tag/homeslider/" rel="tag">homeslider</a>, <a href="http://www.snowboardingforum.com/articles/tag/human-flying-drone/" rel="tag">human flying drone</a>, <a href="http://www.snowboardingforum.com/articles/tag/video/" rel="tag">Video</a>, <a href="http://www.snowboardingforum.com/articles/tag/youtube/" rel="tag">youtube</a></span>	</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+</div><div class='columns medium-6 large-3 post-container' data-equalizer-watch>
+<article id="post-6242" class="post-6242 post type-post status-publish format-standard has-post-thumbnail hentry category-travel category-videos tag-alex-yoder tag-editorial-picks tag-first-snowboarders tag-first-snowboarders-in-the-world tag-homeslider tag-kackar-mountains tag-nick-russell tag-patran tag-turkey tag-video">
+	<header class="entry-header">
+		<a rel="bookmark" class="thumb-link" href="http://www.snowboardingforum.com/articles/is-this-turkish-village-made-up-of-the-first-snowboarders-in-the-world/"><img width="320" height="225" src="http://www.snowboardingforum.com/articles/wp-content/uploads/2016/10/FirstSnowboardEver-320x225.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="First Snowboarders in the World?" /></a>		<h2 class="entry-title"><a href="http://www.snowboardingforum.com/articles/is-this-turkish-village-made-up-of-the-first-snowboarders-in-the-world/" rel="bookmark">Is This Turkish Village Home to the First Snowboarders in the World?</a></h2>
+				<div class="entry-meta">
+			<span class="byline"> by <span class="author vcard"><a class="url fn n" href="http://www.snowboardingforum.com/articles/author/snowboardingforum-com-staff/">Staff</a></span></span>		</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+	<footer class="entry-footer">
+		<span class="cat-links"><a href="http://www.snowboardingforum.com/articles/category/travel/" rel="category tag">Travel</a>, <a href="http://www.snowboardingforum.com/articles/category/videos/" rel="category tag">Videos</a></span><span class="tags-links"><a href="http://www.snowboardingforum.com/articles/tag/alex-yoder/" rel="tag">Alex Yoder</a>, <a href="http://www.snowboardingforum.com/articles/tag/editorial-picks/" rel="tag">Editorial Picks</a>, <a href="http://www.snowboardingforum.com/articles/tag/first-snowboarders/" rel="tag">First Snowboarders</a>, <a href="http://www.snowboardingforum.com/articles/tag/first-snowboarders-in-the-world/" rel="tag">First Snowboarders in the World?</a>, <a href="http://www.snowboardingforum.com/articles/tag/homeslider/" rel="tag">homeslider</a>, <a href="http://www.snowboardingforum.com/articles/tag/kackar-mountains/" rel="tag">Kaçkar Mountains</a>, <a href="http://www.snowboardingforum.com/articles/tag/nick-russell/" rel="tag">Nick Russell</a>, <a href="http://www.snowboardingforum.com/articles/tag/patran/" rel="tag">patran</a>, <a href="http://www.snowboardingforum.com/articles/tag/turkey/" rel="tag">Turkey</a>, <a href="http://www.snowboardingforum.com/articles/tag/video/" rel="tag">Video</a></span>	</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+</div><div class='columns medium-6 large-3 post-container' data-equalizer-watch>
+<article id="post-133" class="post-133 post type-post status-publish format-standard has-post-thumbnail hentry category-features category-travel tag-6-craziest-ski-lifts tag-alaska tag-chairlife tag-chairlift tag-cordova tag-editorial-picks tag-gondola-one tag-gulmarg-india tag-les-deux-alpes tag-mad-river-glen tag-mt-eyak tag-peak2peak tag-single-chair tag-ski tag-ski-lift tag-snowboarding tag-vail tag-vermont tag-vintage-lift tag-whistler tag-whistler-blackcomb tag-world">
+	<header class="entry-header">
+		<a rel="bookmark" class="thumb-link" href="http://www.snowboardingforum.com/articles/check-out-the-six-craziest-ski-lifts-in-the-world/"><img width="320" height="225" src="http://www.snowboardingforum.com/articles/wp-content/uploads/2015/11/WBMitchWintonPhotoREAL-320x225.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="The 6 Craziest Ski Lifts in the World" srcset="http://www.snowboardingforum.com/articles/wp-content/uploads/2015/11/WBMitchWintonPhotoREAL-320x225.jpg 320w, http://www.snowboardingforum.com/articles/wp-content/uploads/2015/11/WBMitchWintonPhotoREAL-710x500.jpg 710w, http://www.snowboardingforum.com/articles/wp-content/uploads/2015/11/WBMitchWintonPhotoREAL.jpg 980w" sizes="(max-width: 320px) 100vw, 320px" /></a>		<h2 class="entry-title"><a href="http://www.snowboardingforum.com/articles/check-out-the-six-craziest-ski-lifts-in-the-world/" rel="bookmark">Check Out the Six Craziest Ski Lifts in the World</a></h2>
+				<div class="entry-meta">
+			<span class="byline"> by <span class="author vcard"><a class="url fn n" href="http://www.snowboardingforum.com/articles/author/dean-seguin/">Dean Seguin</a></span></span>		</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+	<footer class="entry-footer">
+		<span class="cat-links"><a href="http://www.snowboardingforum.com/articles/category/features/" rel="category tag">Features</a>, <a href="http://www.snowboardingforum.com/articles/category/travel/" rel="category tag">Travel</a></span><span class="tags-links"><a href="http://www.snowboardingforum.com/articles/tag/6-craziest-ski-lifts/" rel="tag">6 craziest ski lifts</a>, <a href="http://www.snowboardingforum.com/articles/tag/alaska/" rel="tag">alaska</a>, <a href="http://www.snowboardingforum.com/articles/tag/chairlife/" rel="tag">chairlife</a>, <a href="http://www.snowboardingforum.com/articles/tag/chairlift/" rel="tag">chairlift</a>, <a href="http://www.snowboardingforum.com/articles/tag/cordova/" rel="tag">cordova</a>, <a href="http://www.snowboardingforum.com/articles/tag/editorial-picks/" rel="tag">Editorial Picks</a>, <a href="http://www.snowboardingforum.com/articles/tag/gondola-one/" rel="tag">gondola one</a>, <a href="http://www.snowboardingforum.com/articles/tag/gulmarg-india/" rel="tag">gulmarg india</a>, <a href="http://www.snowboardingforum.com/articles/tag/les-deux-alpes/" rel="tag">les deux alpes</a>, <a href="http://www.snowboardingforum.com/articles/tag/mad-river-glen/" rel="tag">mad river glen</a>, <a href="http://www.snowboardingforum.com/articles/tag/mt-eyak/" rel="tag">mt. eyak</a>, <a href="http://www.snowboardingforum.com/articles/tag/peak2peak/" rel="tag">peak2peak</a>, <a href="http://www.snowboardingforum.com/articles/tag/single-chair/" rel="tag">single chair</a>, <a href="http://www.snowboardingforum.com/articles/tag/ski/" rel="tag">ski</a>, <a href="http://www.snowboardingforum.com/articles/tag/ski-lift/" rel="tag">ski lift</a>, <a href="http://www.snowboardingforum.com/articles/tag/snowboarding/" rel="tag">snowboarding</a>, <a href="http://www.snowboardingforum.com/articles/tag/vail/" rel="tag">vail</a>, <a href="http://www.snowboardingforum.com/articles/tag/vermont/" rel="tag">vermont</a>, <a href="http://www.snowboardingforum.com/articles/tag/vintage-lift/" rel="tag">vintage lift</a>, <a href="http://www.snowboardingforum.com/articles/tag/whistler/" rel="tag">whistler</a>, <a href="http://www.snowboardingforum.com/articles/tag/whistler-blackcomb/" rel="tag">whistler blackcomb</a>, <a href="http://www.snowboardingforum.com/articles/tag/world/" rel="tag">world</a></span>	</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+</div>						</div>
+					</div>
+		 		</div>
+			
+
+								<div class="row latest-news-popular-container" data-equalizer>
+					<div class="columns medium-6">
+														<div class="black-updates-container" data-equalizer-watch>
+									<h2>
+										Latest News
+									</h2>
+
+									<ul class="normalize-ul">
+																						<li>
+													<a href="http://www.snowboardingforum.com/articles/scott-stevens-bear-video-best-thing-youll-see-week/">
+														This Scott Stevens at Bear Video is the Best Thing You&#8217;ll See All Week													</a>
+												</li>
+																								<li>
+													<a href="http://www.snowboardingforum.com/articles/watch-9-year-old-eli-bouchard-double-backflips/">
+														Watch 9-Year-Old Eli Bouchard Do Double Backflips													</a>
+												</li>
+																								<li>
+													<a href="http://www.snowboardingforum.com/articles/arthur-longo-shows-why-side-hits-really-are-the-best-thing-in-snowboarding/">
+														Arthur Longo Shows Why Side Hits Really Are The Best Thing in Snowboarding													</a>
+												</li>
+																								<li>
+													<a href="http://www.snowboardingforum.com/articles/craig-mcmorris-full-part-from-the-manboys-movie-2016/">
+														Craig McMorris Full Part From The MANBOYS MOVIE 2016													</a>
+												</li>
+																								<li>
+													<a href="http://www.snowboardingforum.com/articles/seb-toutant-snowboards-on-the-streets-and-cemeteries-of-montreal/">
+														Seb Toutant Rides the Streets (and Cemeteries) of Montreal													</a>
+												</li>
+																					</ul>
+								</div>
+
+													</div>
+					<div class="columns medium-6">
+														<div class="black-updates-container" data-equalizer-watch>
+									<h2>
+										Popular Discussions
+									</h2>
+
+									<ul class="normalize-ul">
+																							<li>
+														<a href="http://www.snowboardingforum.com/boards/237545-anyone-ride-endeavor-maverick-archetype.html">
+															Anyone ride the Endeavor Maverick/Archetype?														</a>
+													</li>
+																										<li>
+														<a href="http://www.snowboardingforum.com/general-travel-forum/237449-depression-setting.html">
+															The Depression is Setting In.														</a>
+													</li>
+																										<li>
+														<a href="http://www.snowboardingforum.com/meets-events/237226-baker-2018-a.html">
+															Baker 2018?														</a>
+													</li>
+																										<li>
+														<a href="http://www.snowboardingforum.com/boards/237393-intermediate-board-never-summer-ptt-jones.html">
+															Intermediate board - Never Summer PTT / Jones Mountain Twin														</a>
+													</li>
+																										<li>
+														<a href="http://www.snowboardingforum.com/northwest-us/237778-moving-seattle-awd-car.html">
+															Moving to Seattle. AWD car?														</a>
+													</li>
+																						</ul>
+								</div>
+
+
+					</div>
+				</div>
+			</div>
+						<div class="row">
+				<div class="columns small-12">
+					<div class="subscribe-form footer-form large-container clearfix">
+						<div class="columns large-8">
+							<h2>
+								<i class="icon-mail"></i> Get
+								<span class="blue-text">Email Updates</span>
+								From SnowBoardingForum
+							</h2>
+							<p>
+								Subscribe today to get the latest from SnowboardingForum.com right in your inbox
+							</p>
+						</div>
+						
+
+						<div class="medium-12 large-4 columns end">
+					      <div class="row collapse">
+					        
+
+					        <form action="http://email.snowboardingforum.com/newsletter-signup/" method="post">
+								<div class="small-8 medium-5 large-4 columns">
+									<span class="email">
+										<input type="email" name="form[email]" value="" size="40" id="email" aria-invalid="false" 
+										placeholder="Get email updates" required>
+									</span>
+								</div>
+								<input type="hidden" name="form[subscribeCheck]" value="1">
+								<input type="hidden" name="form[source]" value="wp_generic" />
+								<div class="small-4 medium-2 columns">
+									<input type="submit" value="Sign-up" class=" button postfix" id="signup">
+								</div>
+							</form>
+					      </div>
+					      
+					    </div>
+					</div>
+				</div>
+			</div>
+
+			
+			<div class="row collapse last-set">
+			 	<div class="column medium-12" data-equalizer data-equalizer-mq="medium-up">
+			 		<div class="columns medium-6 large-4" data-equalizer-watch>
+			 			<div class="ad-wrapper hentry">
+					 		<div class="ad-container text-center no-margin">
+					 			<div class='ad-container'><!-- 300x250 Middle Second -->
+							<div id='SnowboardingForum_com_300x250_Middle_SP_Homepage_1' style='width:auto; height:auto;'>
+							<script type='text/javascript'>
+							googletag.cmd.push(function() { googletag.display('SnowboardingForum_com_300x250_Middle_SP_Homepage_1'); });
+							</script>
+							</div></div>
+								 		</div>			 			
+				 		</div>
+			 		</div>
+
+				 	<div class='columns medium-6 large-4 post-container' data-equalizer-watch>
+<article id="post-6370" class="post-6370 post type-post status-publish format-standard has-post-thumbnail hentry category-videos tag-homeslider tag-marcus-kleveland tag-snowboarding tag-video">
+	<header class="entry-header">
+		<a rel="bookmark" class="thumb-link" href="http://www.snowboardingforum.com/articles/did-marcus-kleveland-just-change-snowboarding/"><img width="320" height="225" src="http://www.snowboardingforum.com/articles/wp-content/uploads/2016/11/MarcusVideo-320x225.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Marcus Kleveland" /></a>		<h2 class="entry-title"><a href="http://www.snowboardingforum.com/articles/did-marcus-kleveland-just-change-snowboarding/" rel="bookmark">Did Marcus Kleveland Just Change Snowboarding?</a></h2>
+				<div class="entry-meta">
+			<span class="byline"> by <span class="author vcard"><a class="url fn n" href="http://www.snowboardingforum.com/articles/author/snowboardingforum-com-staff/">Staff</a></span></span>		</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+	<footer class="entry-footer">
+		<span class="cat-links"><a href="http://www.snowboardingforum.com/articles/category/videos/" rel="category tag">Videos</a></span><span class="tags-links"><a href="http://www.snowboardingforum.com/articles/tag/homeslider/" rel="tag">homeslider</a>, <a href="http://www.snowboardingforum.com/articles/tag/marcus-kleveland/" rel="tag">Marcus Kleveland</a>, <a href="http://www.snowboardingforum.com/articles/tag/snowboarding/" rel="tag">snowboarding</a>, <a href="http://www.snowboardingforum.com/articles/tag/video/" rel="tag">Video</a></span>	</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+</div><div class='columns medium-6 large-4 post-container' data-equalizer-watch>
+<article id="post-6338" class="post-6338 post type-post status-publish format-standard has-post-thumbnail hentry category-videos tag-all-girls tag-baldface tag-elena-hight tag-full-moon tag-gopro tag-hana-beaman tag-leanne-pelosi tag-marie-france-roy tag-robin-van-gyn tag-video tag-whistler">
+	<header class="entry-header">
+		<a rel="bookmark" class="thumb-link" href="http://www.snowboardingforum.com/articles/gopro-snow-riding-big-mountain-lines-with-the-full-moon-crew/"><img width="320" height="225" src="http://www.snowboardingforum.com/articles/wp-content/uploads/2016/11/FullMoon-320x225.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Full Moon Film" /></a>		<h2 class="entry-title"><a href="http://www.snowboardingforum.com/articles/gopro-snow-riding-big-mountain-lines-with-the-full-moon-crew/" rel="bookmark">GoPro Snow: Riding Big Mountain Lines with the Full Moon Crew</a></h2>
+				<div class="entry-meta">
+			<span class="byline"> by <span class="author vcard"><a class="url fn n" href="http://www.snowboardingforum.com/articles/author/snowboardingforum-com-staff/">Staff</a></span></span>		</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+	<footer class="entry-footer">
+		<span class="cat-links"><a href="http://www.snowboardingforum.com/articles/category/videos/" rel="category tag">Videos</a></span><span class="tags-links"><a href="http://www.snowboardingforum.com/articles/tag/all-girls/" rel="tag">all girls</a>, <a href="http://www.snowboardingforum.com/articles/tag/baldface/" rel="tag">baldface</a>, <a href="http://www.snowboardingforum.com/articles/tag/elena-hight/" rel="tag">elena hight</a>, <a href="http://www.snowboardingforum.com/articles/tag/full-moon/" rel="tag">full moon</a>, <a href="http://www.snowboardingforum.com/articles/tag/gopro/" rel="tag">gopro</a>, <a href="http://www.snowboardingforum.com/articles/tag/hana-beaman/" rel="tag">hana beaman</a>, <a href="http://www.snowboardingforum.com/articles/tag/leanne-pelosi/" rel="tag">Leanne Pelosi</a>, <a href="http://www.snowboardingforum.com/articles/tag/marie-france-roy/" rel="tag">Marie-France Roy</a>, <a href="http://www.snowboardingforum.com/articles/tag/robin-van-gyn/" rel="tag">Robin Van Gyn</a>, <a href="http://www.snowboardingforum.com/articles/tag/video/" rel="tag">Video</a>, <a href="http://www.snowboardingforum.com/articles/tag/whistler/" rel="tag">whistler</a></span>	</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+</div><div class='columns medium-6 large-4 post-container' data-equalizer-watch>
+<article id="post-6282" class="post-6282 post type-post status-publish format-standard has-post-thumbnail hentry category-videos tag-empire-shop tag-giro tag-lifeproof tag-oneill tag-oakley tag-red-bull tag-saas-fee tag-seb-toots tag-seb-toutant tag-switzerland">
+	<header class="entry-header">
+		<a rel="bookmark" class="thumb-link" href="http://www.snowboardingforum.com/articles/seb-toots-in-a-private-park-at-saas-fee-switzerland/"><img width="320" height="225" src="http://www.snowboardingforum.com/articles/wp-content/uploads/2016/10/SebTootsSaasFee-320x225.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Seb Toots Saas Fee" /></a>		<h2 class="entry-title"><a href="http://www.snowboardingforum.com/articles/seb-toots-in-a-private-park-at-saas-fee-switzerland/" rel="bookmark">Seb Toots in a Private Park at Saas Fee, Switzerland</a></h2>
+				<div class="entry-meta">
+			<span class="byline"> by <span class="author vcard"><a class="url fn n" href="http://www.snowboardingforum.com/articles/author/snowboardingforum-com-staff/">Staff</a></span></span>		</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+	<footer class="entry-footer">
+		<span class="cat-links"><a href="http://www.snowboardingforum.com/articles/category/videos/" rel="category tag">Videos</a></span><span class="tags-links"><a href="http://www.snowboardingforum.com/articles/tag/empire-shop/" rel="tag">Empire shop</a>, <a href="http://www.snowboardingforum.com/articles/tag/giro/" rel="tag">Giro</a>, <a href="http://www.snowboardingforum.com/articles/tag/lifeproof/" rel="tag">Lifeproof</a>, <a href="http://www.snowboardingforum.com/articles/tag/oneill/" rel="tag">O'Neill</a>, <a href="http://www.snowboardingforum.com/articles/tag/oakley/" rel="tag">Oakley</a>, <a href="http://www.snowboardingforum.com/articles/tag/red-bull/" rel="tag">red bull</a>, <a href="http://www.snowboardingforum.com/articles/tag/saas-fee/" rel="tag">Saas Fee</a>, <a href="http://www.snowboardingforum.com/articles/tag/seb-toots/" rel="tag">Seb Toots</a>, <a href="http://www.snowboardingforum.com/articles/tag/seb-toutant/" rel="tag">Seb Toutant</a>, <a href="http://www.snowboardingforum.com/articles/tag/switzerland/" rel="tag">Switzerland</a></span>	</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+</div><div class='columns medium-6 large-4 post-container' data-equalizer-watch>
+<article id="post-6242" class="post-6242 post type-post status-publish format-standard has-post-thumbnail hentry category-travel category-videos tag-alex-yoder tag-editorial-picks tag-first-snowboarders tag-first-snowboarders-in-the-world tag-homeslider tag-kackar-mountains tag-nick-russell tag-patran tag-turkey tag-video">
+	<header class="entry-header">
+		<a rel="bookmark" class="thumb-link" href="http://www.snowboardingforum.com/articles/is-this-turkish-village-made-up-of-the-first-snowboarders-in-the-world/"><img width="320" height="225" src="http://www.snowboardingforum.com/articles/wp-content/uploads/2016/10/FirstSnowboardEver-320x225.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="First Snowboarders in the World?" /></a>		<h2 class="entry-title"><a href="http://www.snowboardingforum.com/articles/is-this-turkish-village-made-up-of-the-first-snowboarders-in-the-world/" rel="bookmark">Is This Turkish Village Home to the First Snowboarders in the World?</a></h2>
+				<div class="entry-meta">
+			<span class="byline"> by <span class="author vcard"><a class="url fn n" href="http://www.snowboardingforum.com/articles/author/snowboardingforum-com-staff/">Staff</a></span></span>		</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+	<footer class="entry-footer">
+		<span class="cat-links"><a href="http://www.snowboardingforum.com/articles/category/travel/" rel="category tag">Travel</a>, <a href="http://www.snowboardingforum.com/articles/category/videos/" rel="category tag">Videos</a></span><span class="tags-links"><a href="http://www.snowboardingforum.com/articles/tag/alex-yoder/" rel="tag">Alex Yoder</a>, <a href="http://www.snowboardingforum.com/articles/tag/editorial-picks/" rel="tag">Editorial Picks</a>, <a href="http://www.snowboardingforum.com/articles/tag/first-snowboarders/" rel="tag">First Snowboarders</a>, <a href="http://www.snowboardingforum.com/articles/tag/first-snowboarders-in-the-world/" rel="tag">First Snowboarders in the World?</a>, <a href="http://www.snowboardingforum.com/articles/tag/homeslider/" rel="tag">homeslider</a>, <a href="http://www.snowboardingforum.com/articles/tag/kackar-mountains/" rel="tag">Kaçkar Mountains</a>, <a href="http://www.snowboardingforum.com/articles/tag/nick-russell/" rel="tag">Nick Russell</a>, <a href="http://www.snowboardingforum.com/articles/tag/patran/" rel="tag">patran</a>, <a href="http://www.snowboardingforum.com/articles/tag/turkey/" rel="tag">Turkey</a>, <a href="http://www.snowboardingforum.com/articles/tag/video/" rel="tag">Video</a></span>	</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+</div><div class='columns medium-6 large-4 post-container' data-equalizer-watch>
+<article id="post-6170" class="post-6170 post type-post status-publish format-standard has-post-thumbnail hentry category-videos tag-cole-navin tag-dillon-ojo tag-jesse-gouveia tag-jon-stark tag-snowboarding tag-the-most-insane-boardslide-ever tag-video tag-videograss">
+	<header class="entry-header">
+		<a rel="bookmark" class="thumb-link" href="http://www.snowboardingforum.com/articles/emile-veilleux-might-have-just-landed-the-most-insane-boardslide-ever/"><img width="320" height="225" src="http://www.snowboardingforum.com/articles/wp-content/uploads/2016/10/BoardslideMadnessMain-320x225.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Is this the most insane board slide ever?" srcset="http://www.snowboardingforum.com/articles/wp-content/uploads/2016/10/BoardslideMadnessMain-320x225.jpg 320w, http://www.snowboardingforum.com/articles/wp-content/uploads/2016/10/BoardslideMadnessMain.jpg 980w" sizes="(max-width: 320px) 100vw, 320px" /></a>		<h2 class="entry-title"><a href="http://www.snowboardingforum.com/articles/emile-veilleux-might-have-just-landed-the-most-insane-boardslide-ever/" rel="bookmark">Emile Veilleux Might Have Stuck The Most Insane Boardslide Ever</a></h2>
+				<div class="entry-meta">
+			<span class="byline"> by <span class="author vcard"><a class="url fn n" href="http://www.snowboardingforum.com/articles/author/scott-birke/">Scott Birke</a></span></span>		</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+	<footer class="entry-footer">
+		<span class="cat-links"><a href="http://www.snowboardingforum.com/articles/category/videos/" rel="category tag">Videos</a></span><span class="tags-links"><a href="http://www.snowboardingforum.com/articles/tag/cole-navin/" rel="tag">Cole Navin</a>, <a href="http://www.snowboardingforum.com/articles/tag/dillon-ojo/" rel="tag">Dillon Ojo</a>, <a href="http://www.snowboardingforum.com/articles/tag/jesse-gouveia/" rel="tag">Jesse Gouveia</a>, <a href="http://www.snowboardingforum.com/articles/tag/jon-stark/" rel="tag">Jon Stark</a>, <a href="http://www.snowboardingforum.com/articles/tag/snowboarding/" rel="tag">snowboarding</a>, <a href="http://www.snowboardingforum.com/articles/tag/the-most-insane-boardslide-ever/" rel="tag">The Most Insane Boardslide Ever</a>, <a href="http://www.snowboardingforum.com/articles/tag/video/" rel="tag">Video</a>, <a href="http://www.snowboardingforum.com/articles/tag/videograss/" rel="tag">Videograss</a></span>	</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+</div>				</div>
+			</div>
+
+			<div class="row more-contents-container" data-equalizer data-equalizer-mq="medium-up">
+				<div id="ajax-load-more" class="ajax-load-more-wrap"  data-alm-id="" data-canonical-url="http://www.snowboardingforum.com/articles/" data-slug="home" ><div class="alm-listing alm-ajax  loaded-more-content" data-repeater="default" data-post-type="post" data-post-format="" data-category="" data-category-not-in="" data-tag="" data-tag-not-in="" data-taxonomy="" data-taxonomy-terms="" data-taxonomy-operator="" data-taxonomy-relation="" data-meta-key="" data-meta-value="" data-meta-compare="" data-meta-relation="" data-meta-type="" data-year="" data-month="" data-day="" data-author="" data-post-in="" data-post-not-in="" data-exclude="" data-search="" data-custom-args="" data-post-status="" data-order="DESC" data-orderby="date" data-offset="14" data-posts-per-page="5" data-lang="" data-scroll="false" data-scroll-distance="150" data-max-pages="0" data-pause-override="false" data-pause="true" data-button-label="Load More Stories" data-button-class="" data-destroy-after="2" data-transition="slide" data-images-loaded="false"></div></div>				<div class="load-more-all">
+					<div id="ajax-load-more-2" class="ajax-load-more-wrap"  data-alm-id="" data-canonical-url="http://www.snowboardingforum.com/articles/" data-slug="home" ><div class="alm-listing alm-ajax  loaded-more-content" data-repeater="default" data-post-type="post" data-post-format="" data-category="" data-category-not-in="" data-tag="" data-tag-not-in="" data-taxonomy="" data-taxonomy-terms="" data-taxonomy-operator="" data-taxonomy-relation="" data-meta-key="" data-meta-value="" data-meta-compare="" data-meta-relation="" data-meta-type="" data-year="" data-month="" data-day="" data-author="" data-post-in="" data-post-not-in="" data-exclude="" data-search="" data-custom-args="" data-post-status="" data-order="DESC" data-orderby="date" data-offset="24" data-posts-per-page="6" data-lang="" data-scroll="false" data-scroll-distance="150" data-max-pages="0" data-pause-override="false" data-pause="true" data-button-label="Load More Stories" data-button-class="" data-destroy-after="" data-transition="slide" data-images-loaded="false"></div></div>					
+				</div>
+			</div>
+
+
+		
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+		
+			</div><!-- #content -->
+
+
+			<footer id="colophon" class="site-footer" role="contentinfo">
+				<div class="row">
+					<div class="site-info columns medium-5">
+						<a href="http://www.snowboardingforum.com/articles" class="site-url">
+							<img src="http://www.snowboardingforum.com/articles/wp-content/themes/snowboardingforum/img/footer-logo.png" alt="snowboardingforum.com">
+						</a>
+					</div><!-- .site-info -->
+
+					<div class="columns medium-7">
+						<div class="footer-nav">
+							<div class="menu-footer-container"><ul id="footer-menu" class="menu"><li id="menu-item-54" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-54"><a href="http://www.snowboardingforum.com/articles/about-us/">About Us</a></li>
+<li id="menu-item-53" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-53"><a href="http://www.snowboardingforum.com/articles/advertise/">Advertise</a></li>
+<li id="menu-item-52" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-52"><a href="http://www.snowboardingforum.com/articles/privacy/">Privacy Statement</a></li>
+<li id="menu-item-51" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-51"><a href="http://www.snowboardingforum.com/articles/terms/">Terms of Use</a></li>
+<li id="menu-item-50" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-50"><a href="http://www.snowboardingforum.com/articles/contact-us/">Contact Us</a></li>
+</ul></div>						</div>
+
+						<div class="subscribe-form plain clearfix">
+							<div class="medium-12 large-12 footer-subscription-container columns">
+						      <div class="row collapse">
+																<form action="http://email.snowboardingforum.com/newsletter-signup/" method="post" class="wpcf7-form">
+									<div class="small-9 medium-8 columns">
+										<span class="email">
+											<input type="email" name="form[email]" value="" size="40" id="email" required aria-invalid="false"
+											placeholder="Get email updates">
+										</span>
+									</div>
+								<input type="hidden" name="form[subscribeCheck]" value="1">
+								<input type="hidden" name="form[source]" value="wp_generic" />									
+									<div class="small-3 medium-4 columns">
+										<input type="submit" value="Sign-up" class=" button postfix" id="signup">
+									</div>
+								</form>
+						      </div>
+						    </div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="columns medium-12">
+						<div class="copyrights">
+							<p>
+								<a href="http://verticalscope.com">&copy; Verticalscope, Inc. All Rights Reserved.</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</footer><!-- #colophon -->
+		</div><!-- #page -->
+
+		<script type='text/javascript'>
+/* <![CDATA[ */
+var scriptParams = {"google_search_engine_id":"partner-pub-7865546952023728:ejj61qrmkgs"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.snowboardingforum.com/articles/wp-content/plugins/wp-google-search/assets/js/google_cse_v2.js?ver=1'></script>
+<script type='text/javascript' src='http://www.snowboardingforum.com/articles/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpcf7 = {"recaptcha":{"messages":{"empty":"Please verify that you are not a robot."}}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.snowboardingforum.com/articles/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.6.1'></script>
+<script type='text/javascript' src='http://www.snowboardingforum.com/articles/wp-content/themes/snowboardingforum/js/functions.js?ver=20120206'></script>
+<script type='text/javascript' src='http://www.snowboardingforum.com/articles/wp-content/themes/snowboardingforum/js/plugins.js?ver=20120206'></script>
+<script type='text/javascript' src='http://www.snowboardingforum.com/articles/wp-content/themes/snowboardingforum/js/html5shiv.js?ver=20120206'></script>
+<script type='text/javascript' src='http://www.snowboardingforum.com/articles/wp-content/themes/snowboardingforum/js/prefixfree.min.js?ver=20120206'></script>
+<script type='text/javascript' src='http://www.snowboardingforum.com/articles/wp-content/themes/snowboardingforum/js/foundation.min.js?ver=20120206'></script>
+<script type='text/javascript' src='http://www.snowboardingforum.com/articles/wp-content/themes/snowboardingforum/js/main.js?ver=20120206'></script>
+<script type='text/javascript' src='http://www.snowboardingforum.com/articles/wp-includes/js/wp-embed.min.js?ver=4.7.2'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var alm_localize = {"ajaxurl":"http:\/\/www.snowboardingforum.com\/articles\/wp-admin\/admin-ajax.php","alm_nonce":"38893dd625","pluginurl":"http:\/\/www.snowboardingforum.com\/articles\/wp-content\/plugins\/ajax-load-more","scrolltop":"false","ajax_object":{"is_single":true,"is_singular":true}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.snowboardingforum.com/articles/wp-content/plugins/ajax-load-more/core/js/ajax-load-more.min.js?ver=2.14.0'></script>
+<!-- Facebook Comments Plugin for WordPress: http://peadig.com/wordpress-plugins/facebook-comments/ -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=554220984731364&version=v2.3";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- ConsolidatedFooters Footers -->
+<table cellpadding="3" cellspacing="0" border="0" class="page" align="center" width="100%"><tr><td class="tfoot" align="center" width="100%"><div class="smallfont"><strong><a href="http://www.verticalscope.com/aboutus/tos.php?site=snowboardingforum.com">Terms of Use</a></strong></div></td></tr></table>
+<!-- Adblock Check -->
+<div class="afs_ads">&nbsp;</div>
+<script>
+(function() {
+    var adBlockDetector = function() {
+        setTimeout(function() {
+            if (!document.getElementsByClassName) return;
+            
+            var ads = document.getElementsByClassName("afs_ads");
+            ad  = ads[ads.length - 1];
+
+            if (!ad || ad.innerHTML.length == 0 || ad.clientHeight === 0) {
+                _gaq.push(["_trackEvent", "Adblock", "Blocked", "true",,true]);
+            } else {
+                ad.style.display = "none";
+                _gaq.push(["_trackEvent", "Adblock", "Unblocked", "false",,true]);
+            }
+
+        }, 500);
+    }
+
+    /* Attach a listener for page load */
+    if (window.addEventListener) {
+        window.addEventListener("load", adBlockDetector, false);
+    } else {
+        window.attachEvent("onload", adBlockDetector); //IE
+    }
+})();
+</script>
+<!-- /Adblock Check--><!-- Lotame -->
+<script src="//tags.crwdcntrl.net/c/8060/cc_af.js"></script>
+<!-- /Lotame -->
+
+<!-- SWOOP -->
+<script type="text/javascript">
+  (function addSwoopOnce(domain) {
+    var win = window;
+    try {
+      while (!(win.parent == win || !win.parent.document)) {
+        win = win.parent;
+      }
+    } catch (e) {
+      /* noop */
+    }
+    var doc = win.document;
+    if (!doc.getElementById("swoop_sdk")) {
+      var serverbase = doc.location.protocol + "//ardrone.swoop.com/";
+      var s = doc.createElement("script");
+      s.type = "text/javascript";
+      s.src = serverbase + "js/spxw.js";
+      s.id = "swoop_sdk";
+      s.setAttribute("data-domain", domain);
+      s.setAttribute("data-serverbase", serverbase);
+      doc.head.appendChild(s);
+    }
+  })("SW-86972468-S1015");
+</script>
+<!-- /SWOOP -->
+
+<!-- /ConsolidatedFooters Footers -->
+			<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"0f2b0d60a0","applicationID":"2343450","transactionName":"YFMEZUdYCBADVRddVlkZJ1JBUAkNTUIGWUlbVxJUGFEJDgc=","queueTime":0,"applicationTime":1105,"atts":"TBQHEw9CGx4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

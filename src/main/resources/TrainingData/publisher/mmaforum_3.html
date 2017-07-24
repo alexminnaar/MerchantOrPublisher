@@ -1,0 +1,2914 @@
+
+<!DOCTYPE html><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<!-- BEGIN TEMPLATE: SHOWTHREAD -->
+
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en">
+<head>
+<base href="http://www.mmaforum.com/" /><!--[if IE]></base><![endif]-->
+	
+<!-- Amazon Tag Top -->
+<script type='text/javascript' src='//c.amazon-adsystem.com/aax2/amzn_ads.js'></script>
+<script type='text/javascript'>
+    try {
+            amznads.getAds('3274');
+        } catch (e) { /*ignore*/ }
+</script>
+<!-- /Amazon Tag Top -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<!-- BEGIN TEMPLATE: headinclude -->
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<meta name="keywords" content="Event,25,UFC,Fight,Night,70, Event #25: UFC Fight Night 70, " />
+<meta name="description" content="Any fighters from the following organizations are eligible to receive points. UFC and Bellator. If your fighter is on the card: +5 points If your" />
+
+
+<!-- CSS Stylesheet -->
+<link href="http://www.mmaforum.com/clientscript/vbulletin_css/style-fb0dfea4-00057.css" rel="stylesheet">
+
+
+<!-- / CSS Stylesheet -->
+
+<!--[if lt IE 9]>
+<style>
+#update-browser{display:block}
+</style>
+<script>
+// HTML 5 Shiv. for older IE - should be an if statement?  /
+(function(){if(!/*@cc_on!@*/0)return;var e="abbr,article,aside,audio,bb,canvas,datagrid,datalist,details,dialog,eventsource,figure,footer,header,hgroup,mark,menu,meter,nav,output,progress,section,time,video".split(',');for(var i=0;i<e.length;i++){document.createElement(e[i])}})()
+</script>
+<![endif]-->
+
+
+<script src="http://www.mmaforum.com/clientscript/vs_scripts/scripts.js"></script> 
+
+
+
+<style>
+/* 
+Sticky Sidebar Styles
+*/
+#main-content_wrapper{
+margin: 0;
+width: calc(100% - 343px);
+}
+#main-content{
+margin-right: 0;
+padding: 8px 10px 20px 0px !important;
+border: none;
+}
+#sidebar, #sidebar .sidebar{
+width: 328px;
+
+}
+#main-content, .sidebar{
+-webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    padding: 8px 0 15px !important;
+}
+#main-content img, #sidebar img{
+max-width: 100%;
+}
+
+#main-content td img {max-width: none;}
+
+@media screen and (max-width: 1024px){
+#main-content_wrapper{
+margin-right: 0 !important;
+width: 100% !important;
+}
+#main-content{
+margin-right: 0;
+}
+#sidebar{
+width: 326px;
+position: fixed !important;
+}
+#sidebar .sidebar{
+width: auto;
+}
+}
+
+
+</style>
+<!--[if lt IE 9]>
+<style>
+#main-content_wrapper{
+margin-right: -343px !important;
+width: 100% !important;
+}
+#main-content{
+margin-right: 328px;
+}
+#sidebar, #sidebar .sidebar{
+width: 328px;
+}
+#sidebar{
+position: static !important;
+}
+</style>
+<![endif]-->
+
+
+
+
+<style>
+/* #5 heart icon */
+.vbseo_buttons .vbseo_liked {background-image: url(http://img.verticalscope.com/images/like_update.png) !important;}
+
+/* #7 upgrade Reply Box */
+.controlbar .smilies-table td {display: table-cell;}
+.controlbar iframe, .controlbar textarea {width: calc(100% - 20px) !important;}
+
+/* #11 oversized smilies in preview */
+/* could exist already */
+.vs_preview .postquote img.inlineimg, .vs_preview .postquote img {max-width: 100%; width: auto;}
+
+/* fix indent issue*/
+.user-post .alt1 ul, .user-post .alt1 ol, blockquote {margin-left: 20px; margin-bottom: 10px;}
+
+#main-content .newreply_reviewbit img {max-width: 400px;}
+</style>
+
+<script async type="text/javascript">
+<!--
+var SESSIONURL = "";
+var SECURITYTOKEN = "guest";
+var IMGDIR_MISC = "/images/MMAforum_2015/misc";
+var vb_disable_ajax = parseInt("0", 10);
+// -->
+</script>
+
+
+
+
+
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setCustomVar',3,'styleid','57',3]);
+</script>
+
+
+
+
+<script src='http://www.mmaforum.com/clientscript/dnd.js'>Your browser does not support scripts.</script><script src='http://www.mmaforum.com/clientscript/vbulletin_attachment.js?v=387'></script>
+
+
+
+<!-- REGISTRATION CODE STARTS -->
+
+<!-- REGISTRATION CODE ENDS -->
+
+<style>
+.ams_gtsearch{min-height:20px;}
+#navbar_search_menu input.gsc-input{min-width:120px; min-height:20px;}
+</style>
+<script type="text/javascript" src="http://www.mmaforum.com/clientscript/ame.js" ></script><script type="text/javascript">
+<!--
+function vba_attach_win(threadid)
+{
+	openWindow('http://www.mmaforum.com//misc.php?do=showattachments&t=' + threadid, 480, 300);
+}
+-->
+</script><style>
+div.ams_gtsearch .gsc-clear-button { display: none !important }
+</style>
+<script>
+vsamsgtsearches=[];
+</script> 
+<!-- END TEMPLATE: headinclude -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30657-44']);
+  _gaq.push(['_setDomainName', '.mmaforum.com']);
+  _gaq.push(['_setCustomVar',1,'grp','guest', 2]);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+<script type="text/javascript">
+var _comscore = _comscore || [];
+_comscore.push({ c1: "2", c2: "6036030", c4: "mmaforum.com" });
+(function() {
+var s = document.createElement("script"), el =
+document.getElementsByTagName("script")[0]; s.async = true;
+s.src = (document.location.protocol == "https:" ? "https://sb" :
+"http://b") + ".scorecardresearch.com/beacon.js";
+el.parentNode.insertBefore(s, el);
+})(); </script>
+<noscript> <img src="http://b.scorecardresearch.com/p?c1=2&c2=6036030&c4=mmaforum.com&cv=2.0&cj=1" alt="" /> </noscript>
+
+<script type='text/javascript'>
+  var vglnk = { api_url: '//api.viglink.com/api',
+                key: 'e9c25e5ab5a5addd57471706e4448371' };
+
+  (function(d, t) {
+    var s = d.createElement(t); s.type = 'text/javascript'; s.async = true;
+    s.src = ('https:' == document.location.protocol ? vglnk.api_url :
+             '//cdn.viglink.com/api') + '/vglnk.js';
+    var r = d.getElementsByTagName(t)[0]; r.parentNode.insertBefore(s, r);
+  }(document, 'script'));
+</script>
+
+
+<script type="text/javascript">
+netseer_tag_id="27080"; 
+netseer_publisher_label="mmaforum.com";
+</script>
+<script async src="//ps.ns-cdn.com/dsatserving2/scripts/ns_vmtag.js" type="text/javascript"></script>
+
+<!-- Video Player -->
+<script type="text/javascript" src="/videoplayer/jwplayer.js?v=1407419748"></script>
+<script type="text/javascript" src="/videoplayer/playerscripts.min.js.php?v=1407430177"></script>
+<!-- /Video Player -->
+
+<!-- DFP TAG -->
+
+<script type="text/javascript" src="//ad.crwdcntrl.net/5/c=8059/pe=y/var=ccauds"></script>
+
+<script type="text/javascript" src="//native.sharethrough.com/assets/sfp.js"></script>
+<script type='text/javascript'>
+var PREBID_TIMEOUT = 1000;
+
+// prebid only works with ga so the gaconnector has been created to convert the analytics.js calls to ga.js compatible calls
+var _gaq = _gaq || [];
+var gaconnector = function(send, event, eventCategory, eventAction, eventLabel, eventValue, fieldsObject) {
+	var isNonInteraction = (typeof(fieldsObject) == 'object' && fieldsObject.nonInteraction) ? true : false;
+	_gaq.push(['_trackEvent', eventCategory, eventAction, eventLabel, eventValue, isNonInteraction]);
+}
+
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+
+function initAdserver() {
+    if (pbjs.initAdserverSet) return;
+    (function() {
+        var gads = document.createElement('script');
+        gads.async = true;
+        gads.type = 'text/javascript';
+        var useSSL = 'https:' == document.location.protocol;
+        gads.src = (useSSL ? 'https:' : 'http:') +
+        '//www.googletagservices.com/tag/js/gpt.js';
+        var node = document.getElementsByTagName('script')[0];
+        node.parentNode.insertBefore(gads, node);
+    })();
+    pbjs.initAdserverSet = true;
+};
+setTimeout(initAdserver, PREBID_TIMEOUT);
+
+var pbjs = pbjs || {};
+pbjs.que = pbjs.que || [];
+(function() {
+    var pbjsEl = document.createElement("script");
+    pbjsEl.type = "text/javascript";
+    pbjsEl.async = true;
+    pbjsEl.src = "//dz2fz0bgyq9tn.cloudfront.net/prebid-0.13.1-v7.js";
+    var pbjsTargetEl = document.getElementsByTagName("head")[0];
+    pbjsTargetEl.insertBefore(pbjsEl, pbjsTargetEl.firstChild);
+})();
+pbjs.que.push(function() {
+    pbjs.enableAnalytics({
+        provider: 'ga',
+        options: {
+            global: 'gaconnector',
+            enableDistribution: true,
+        }
+    });
+});
+pbjs.que.push(function() {
+    var adUnits = [{"code":"MMAForum_com_728x90_Top_SP_Forum","sizes":[[728,90]],"bids":[{"bidder":"aol","params":{"placement":"4256783","network":"9430.1"}},{"bidder":"appnexus","params":{"placementId":"7643367"}},{"bidder":"brealtime","params":{"placementId":"9840862"}},{"bidder":"districtm","params":{"placementId":"9843784"}},{"bidder":"indexExchange","params":{"id":1,"siteID":"190329"}},{"bidder":"pulsepoint","params":{"cf":"728x90","cp":"560903","ct":"551341"}},{"bidder":"rubicon","params":{"accountId":"1019","siteId":"17463","zoneId":"48599","sizes":[2],"keywords":["MMAForum.com"],"inventory":{"vsdomain":"MMAForum.com"}}},{"bidder":"sekindoapn","params":{"placementId":"9899461"}},{"bidder":"sovrn","params":{"tagid":"336866"}}]},{"code":"MMAForum_com_300x250_TopLeft_SP_Forum","sizes":[[300,250]],"bids":[{"bidder":"aol","params":{"placement":"4256785","network":"9430.1"}},{"bidder":"appnexus","params":{"placementId":"7643367"}},{"bidder":"brealtime","params":{"placementId":"9840861"}},{"bidder":"districtm","params":{"placementId":"9843784"}},{"bidder":"indexExchange","params":{"id":2,"siteID":"190330"}},{"bidder":"pulsepoint","params":{"cf":"300x250","cp":"560903","ct":"551340"}},{"bidder":"rubicon","params":{"accountId":"1019","siteId":"17463","zoneId":"48599","sizes":[15],"keywords":["MMAForum.com"],"inventory":{"vsdomain":"MMAForum.com"}}},{"bidder":"sekindo","params":{"spaceId":"72491"}},{"bidder":"sekindoapn","params":{"placementId":"9900289"}},{"bidder":"sovrn","params":{"tagid":"336871"}}]},{"code":"MMAForum_com_300x250_TopRight_SP_Forum","sizes":[[300,250]],"bids":[{"bidder":"aol","params":{"placement":"4256785","network":"9430.1"}},{"bidder":"appnexus","params":{"placementId":"7643367"}},{"bidder":"brealtime","params":{"placementId":"9840861"}},{"bidder":"districtm","params":{"placementId":"9843784"}},{"bidder":"indexExchange","params":{"id":3,"siteID":"190331"}},{"bidder":"pulsepoint","params":{"cf":"300x250","cp":"560903","ct":"551340"}},{"bidder":"rubicon","params":{"accountId":"1019","siteId":"17463","zoneId":"48599","sizes":[15],"keywords":["MMAForum.com"],"inventory":{"vsdomain":"MMAForum.com"}}},{"bidder":"sekindo","params":{"spaceId":"72491"}},{"bidder":"sekindoapn","params":{"placementId":"9900289"}},{"bidder":"sovrn","params":{"tagid":"336872"}}]},{"code":"MMAForum_com_728x90_Bottom_SP_Forum","sizes":[[728,90]],"bids":[{"bidder":"aol","params":{"placement":"4256783","network":"9430.1"}},{"bidder":"appnexus","params":{"placementId":"7643367"}},{"bidder":"brealtime","params":{"placementId":"9840862"}},{"bidder":"districtm","params":{"placementId":"9843784"}},{"bidder":"indexExchange","params":{"id":5,"siteID":"190333"}},{"bidder":"pulsepoint","params":{"cf":"728x90","cp":"560903","ct":"551341"}},{"bidder":"rubicon","params":{"accountId":"1019","siteId":"17463","zoneId":"48599","sizes":[2],"keywords":["MMAForum.com"],"inventory":{"vsdomain":"MMAForum.com"}}},{"bidder":"sekindoapn","params":{"placementId":"9899461"}},{"bidder":"sovrn","params":{"tagid":"336867"}}]},{"code":"MMAForum_com_300x250_Postbit_SP_Forum","sizes":[[300,250]],"bids":[{"bidder":"aol","params":{"placement":"4256785","network":"9430.1"}},{"bidder":"appnexus","params":{"placementId":"7643367"}},{"bidder":"brealtime","params":{"placementId":"9840861"}},{"bidder":"districtm","params":{"placementId":"9843784"}},{"bidder":"indexExchange","params":{"id":4,"siteID":"190332"}},{"bidder":"pulsepoint","params":{"cf":"300x250","cp":"560903","ct":"551340"}},{"bidder":"rubicon","params":{"accountId":"1019","siteId":"17463","zoneId":"48599","sizes":[15],"keywords":["MMAForum.com"],"inventory":{"vsdomain":"MMAForum.com"}}},{"bidder":"sekindo","params":{"spaceId":"72491"}},{"bidder":"sekindoapn","params":{"placementId":"9900289"}},{"bidder":"sovrn","params":{"tagid":"336873"}}]}];
+    pbjs.addAdUnits(adUnits);
+        
+    pbjs.bidderSettings = {
+        standard: {
+            alwaysUseBid: false,
+            adserverTargeting: [{
+                key: "hb_bidder",
+                val: function(bidResponse) {                    
+                    return bidResponse.bidder;
+                }
+            }, {
+                key: "hb_adid",
+                val: function(bidResponse) {
+                    return bidResponse.adId;
+                }
+            }, {
+                key: "hb_pb",
+                val: function(bidResponse) {
+                    var cpm = bidResponse.cpm;
+                    if (cpm < 0.1) cpm = 0.10;
+                    if (cpm > 20) cpm = 20.00;
+                    var newCpm = (Math.floor(cpm * 10) / 10).toFixed(2);
+                    return "pb" + newCpm.replace(".", "");
+                }
+            }, {
+                key: "hb_size",
+                val: function(bidResponse) {
+                    return bidResponse.size;
+                }
+            }]
+        }
+    }
+    
+    pbjs.requestBids({
+        bidsBackHandler: function(bidResponses) {
+            initAdserver();
+        }
+    });
+});
+</script>
+<script id='dfpsetup' type='text/javascript'>
+googletag.cmd.push(function() {
+
+var dfpMapping728x90 = googletag.sizeMapping()
+	.addSize([320, 400], [320, 50])
+	.addSize([320, 700], [320, 50])
+	.addSize([480, 200], [320, 50])
+	.addSize([768, 200], [728, 90])
+	.addSize([1024, 200], [728, 90])
+	.build();
+
+googletag
+	.defineSlot('/1030735/MMAForum_com_728x90_Top_SP_Forum', [[320, 50], [728, 90]], 'MMAForum_com_728x90_Top_SP_Forum')
+	.defineSizeMapping(dfpMapping728x90)
+	.set("adsense_background_color", "acacac")
+	.set("adsense_border_color", "acacac")
+	.addService(googletag.pubads());
+
+googletag
+	.defineSlot('/1030735/MMAForum_com_300x250_TopLeft_SP_Forum', [300, 250], 'MMAForum_com_300x250_TopLeft_SP_Forum')
+	.addService(googletag.pubads());
+
+googletag
+	.defineSlot('/1030735/MMAForum_com_300x250_TopRight_SP_Forum', [300, 250], 'MMAForum_com_300x250_TopRight_SP_Forum')
+	.addService(googletag.pubads());
+
+googletag
+	.defineSlot('/1030735/MMAForum_com_728x90_Bottom_SP_Forum', [[320, 50], [728, 90]], 'MMAForum_com_728x90_Bottom_SP_Forum')
+	.defineSizeMapping(dfpMapping728x90)
+	.set("adsense_background_color", "acacac")
+	.set("adsense_border_color", "acacac")
+	.addService(googletag.pubads());
+
+googletag
+	.defineSlot('/1030735/MMAForum_com_300x250_Postbit_SP_Forum', [[300, 250], [500, 250], [600, 250]], 'MMAForum_com_300x250_Postbit_SP_Forum')
+	.addService(googletag.pubads());
+
+googletag
+	.defineSlot('/1030735/MMAForum_com_300x250_Pre-Roll', [300, 250], 'MMAForum_com_300x250_Pre-Roll')
+	.addService(googletag.pubads());
+
+googletag
+	.defineSlot('/1030735/MMAForum_com_1x1_SlimCut_SP_Forum', [1, 1], 'MMAForum_com_1x1_SlimCut_SP_Forum')
+	.addService(googletag.pubads());
+
+googletag.pubads().setTargeting("sitename", "MMAForum.com");
+googletag.pubads().setTargeting("make", "");
+googletag.pubads().setTargeting("model", "");
+googletag.pubads().setTargeting("group_id", "1");
+googletag.pubads().setTargeting("group_name", "Unregistered / Not Logged In");
+googletag.pubads().setTargeting("forum_id", "141");
+googletag.pubads().setTargeting("forum_name", "MMA Forum Fantasy Fight League (FFL)");
+googletag.pubads().setTargeting("PageID", "209185");
+googletag.pubads().setTargeting("registered", "false");
+if (typeof(ccauds) != "undefined") {
+    (function(googletag, ccauds) {
+        var aud_abbr = [], audience = ccauds.Profile.Audiences.Audience;
+        for (var cci = 0; cci < audience.length; cci++) {
+            aud_abbr.push(audience[cci].abbr);
+        }
+        googletag.pubads().setTargeting("aud_abbr", aud_abbr);
+    })(googletag, ccauds);
+}
+
+googletag.pubads().setTargeting("strNativeKey", "URMBsimDVDFEJ3HgirLTPgUW");
+
+
+if (typeof(ccauds) != "undefined" && typeof(ccauds.Profile.tpid) != "undefined" && ccauds.Profile.tpid != "") {  
+	googletag.pubads().setTargeting("tpid", ccauds.Profile.tpid); 
+} else { 
+	googletag.pubads().setTargeting("tpid", "0"); 
+}
+
+pbjs.que.push(function() {
+    pbjs.setTargetingForGPTAsync();
+});
+googletag.pubads().enableSingleRequest();
+googletag.enableServices();
+});
+googletag.cmd.push(function() {            
+googletag.pubads().set("adsense_background_color", "ffffff");
+googletag.pubads().set("adsense_border_color", "ffffff");
+googletag.pubads().set("adsense_link_color", "205190");
+googletag.pubads().set("adsense_text_color", "000000");
+googletag.pubads().set("adsense_url_color", "205190");
+googletag.pubads().set("google_ad_bg", "ffffff");
+googletag.pubads().set("google_ad_border", "ffffff");
+googletag.pubads().set("google_ad_link", "205190");
+googletag.pubads().set("google_ad_text", "000000");
+googletag.pubads().set("google_ad_url", "205190");
+googletag.pubads().set("page_url", "http://www.mmaforum.com/showthread.php?t=209185");});
+</script>
+<!-- /DFP TAG -->
+
+<!-- Amazon Tag Bottom -->
+<script type='text/javascript'>
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+  try { amznads.setTargetingForGPTAsync('passback'); } catch(e) { /*ignore*/}
+</script>
+<!-- /Amazon Tag Bottom -->
+
+        <!-- App Indexing for Google Search -->
+        <link href="android-app://com.quoord.tapatalkpro.activity/tapatalk/www.mmaforum.com/?location=topic&amp;fid=141&amp;tid=209185&amp;channel=google-indexing" rel="alternate" />
+        <link href="ios-app://307880732/tapatalk/www.mmaforum.com/?location=topic&amp;fid=141&amp;tid=209185&amp;channel=google-indexing" rel="alternate" />
+        
+        <meta property="al:android:package" content="com.quoord.tapatalkpro.activity" />
+        <meta property="al:android:url" content="tapatalk://www.mmaforum.com/?location=topic&amp;fid=141&amp;tid=209185&amp;channel=facebook-indexing" />
+        <meta property="al:android:app_name" content="Tapatalk" />
+        <meta property="al:ios:url" content="tapatalk://www.mmaforum.com/?location=topic&amp;fid=141&amp;tid=209185&amp;channel=facebook-indexing" />
+        <meta property="al:ios:app_store_id" content="307880732" />
+        <meta property="al:ios:app_name" content="Tapatalk" />
+        
+        <!-- twitter app card start-->
+        <!-- https://dev.twitter.com/docs/cards/types/app-card -->
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@tapatalk" />
+        <meta name="twitter:title" content="Event #25: UFC Fight Night 70" />
+        <meta name="twitter:description" content="MMA Forum - UFC Forums - UFC Results - MMA Videos" />
+        <meta name="twitter:image" content="http://www.mmaforum.com/mobiquo/smartbanner/images/tapatalk-banner-logo.png" />
+        <meta name="twitter:app:id:iphone" content="307880732" />
+        <meta name="twitter:app:url:iphone" content="tapatalk://www.mmaforum.com/?location=topic&amp;fid=141&amp;tid=209185&amp;channel=twitter-indexing" />
+        <meta name="twitter:app:id:ipad" content="307880732" />
+        <meta name="twitter:app:url:ipad" content="tapatalk://www.mmaforum.com/?location=topic&amp;fid=141&amp;tid=209185&amp;channel=twitter-indexing" />
+        <meta name="twitter:app:id:googleplay" content="com.quoord.tapatalkpro.activity" />
+        <meta name="twitter:app:url:googleplay" content="tapatalk://www.mmaforum.com/?location=topic&amp;fid=141&amp;tid=209185&amp;channel=twitter-indexing" />
+        <!-- twitter app card -->
+        <!-- Editor CSS automatically added by functions_editor.php at line 680 -->
+<!-- BEGIN TEMPLATE: editor_css -->
+
+<!-- END TEMPLATE: editor_css --><script type="text/javascript" src="//d1r55yzuc1b1bw.cloudfront.net/vsapi.all.min.js"></script>
+	<title> Event #25: UFC Fight Night 70 - MMA Forum - UFC Forums - UFC Results - MMA Videos</title>
+
+
+<!-- Taboola Header -->
+<script type="text/javascript">
+  window._taboola = window._taboola || [];
+  _taboola.push({article:"auto"});
+  !function (e, f, u) {
+    e.async = 1;
+    e.src = u;
+    f.parentNode.insertBefore(e, f);
+  }(document.createElement("script"),
+  document.getElementsByTagName("script")[0],
+  '//cdn.taboola.com/libtrc/verticalscope-network/loader.js');
+</script>
+<!-- /Taboola Header -->
+<!-- BEGIN TEMPLATE: vbseo_ui_headinc -->
+<link rel="stylesheet" type="text/css" href="vbseo/resources/css/vbseo_buttons.css?v=a4" />
+<script type="text/javascript" src="vbseo/resources/scripts/vbseo_ui.js?v=a4"></script>
+
+<script type="text/javascript">
+ YAHOO.util.Event.onDOMReady(function (){
+ 	vbseoui = new vBSEO_UI();
+ 	vbseoui.page_init(Array('postbody','blogbit','content','postcontainer','vbseo_like_postbit'), Array("php",1));
+ });
+</script>
+
+<!-- END TEMPLATE: vbseo_ui_headinc -->
+</head>
+<body onload="">
+
+<script>
+var captify_kw_query_11825 = "";
+(function(c,a,p,t,i,f,y){i=c.createElement(a);t=c.getElementsByTagName(a)[0];i.type="text/javascript";i.async=true;i.src=p;t.parentNode.insertBefore(i,t);})(document,"script","https://p.cpx.to/p/11825/px.js");
+</script>
+
+<script type="text/javascript"> 
+    var xl8_script = document.createElement("script"); 
+    xl8_script.src = "https://loadus.exelator.com/load/?p=239&g=047&c=23705&ctg=Sports&sprt=MMA&j=d"; 
+    xl8_script.type = "text/javascript"; 
+    xl8_script.async = true; 
+    document.body.appendChild(xl8_script); 
+</script>
+
+
+
+
+
+
+
+
+<!-- Tapatalk Detect body start -->
+<script type="text/javascript">if (typeof(tapatalkDetect) == "function") tapatalkDetect()</script>
+<!-- Tapatalk Detect banner body end -->
+
+<!-- BEGIN TEMPLATE: header -->
+
+<div class="container">
+
+<!-- logo -->
+<a name="top"></a>
+<table border="0" width="100%" cellpadding="0" cellspacing="0" align="center" id="header" class="header" style="background: url(/images/MMAforum_2015/misc/head-middle.jpg) repeat-x;"><tr><td align="left"><a href="http://www.mmaforum.com/forumindex.php"><img src="/images/MMAforum_2015/misc/head-left.jpg" border="0" height="146" width="1020" alt="MMA Forum - UFC Forums - UFC Results - MMA Videos" /></a></td><td align="right" id="header_right_cell"><img src="/images/MMAforum_2015/misc/head-right.jpg" border="0" height="146" width="1" alt="" /></td>
+</tr></table>
+<!-- /logo -->
+
+<!-- content table -->
+<!-- BEGIN TEMPLATE: spacer_open -->
+<!-- open content container -->
+
+<div align="center" itemscope itemtype="http://schema.org/WebPage">
+	<div id="page" class="page page-background" style="width:100%; text-align:left">
+		<div style="padding:0px 0px 0px 0px" align="left">
+
+<!-- END TEMPLATE: spacer_open -->
+
+
+
+<!-- BEGIN TEMPLATE: ad_header_end -->
+
+<!-- END TEMPLATE: ad_header_end -->
+<!-- END TEMPLATE: header -->
+<!-- BEGIN TEMPLATE: navbar -->
+<!-- nav buttons bar -->
+<nav>
+<div class="search-in-one">
+    <div class="change_btn "><div class="image sprite-google-search"></div>
+        <ul class="search_menu">
+            
+<li data-search-type="google-search"><div class="icon sprite-google-search"></div> Google search</li>
+
+            <li data-search-type="vb-search"><div class="icon sprite-vb-search"></div> VB search</li>
+        </ul>
+    </div>
+
+    
+    <div class="search-item google-search">
+    <div class='ams_gtsearch' style='max-width: 250px; margin:auto;' id='cse_gtsearch_form_3'></div>
+<script>
+vsamsgtsearches.push('cse_gtsearch_form_3');
+</script>
+    </div> 
+    
+
+    
+</div>
+
+
+
+<ul class="vbmenu_control navbar_search">
+<li><a id="navbar_search" href="http://www.mmaforum.com/search.php" accesskey="4" rel="nofollow">Search</a> <script type="text/javascript"> vbmenu_register("navbar_search"); </script>
+</li></ul>
+
+
+<ul class="nav" id="nav">
+    
+    <li class="vbmenu_control"><a href="http://www.mmaforum.com/">Home</a></li>
+    
+    			
+
+	<li class="vbmenu_control hovertouch">
+		<a href="/forumindex.php" id="navforums">Forums <img src="/images/misc/menu_open.gif" border="0" width="8" height="4" title="" alt=""></a>
+		<div class="vbmenu_popup tools_wrapper forum-menu_wrapper" id="forum-menu">
+			<ul class="subnav" >
+				<style>
+.subnav li.mobile_forumlink {display: none;}
+@media screen and (max-width: 1024px){
+.subnav li.mobile_forumlink {display: list-item;}
+}
+</style>
+<li class="vbmenu_control mobile_forumlink"><a href="http://www.mmaforum.com/forumindex.php">Forums</a></li>
+			
+<li class="vbmenu_control hovertouch">
+	<a href="http://www.mmaforum.com/ring/">In The Ring!</a>
+	
+		<div class="vbmenu_popup" style="display:none;" align="left">
+			<ul class="subnav">
+				
+			
+<li class="vbmenu_control">
+	<a href="http://www.mmaforum.com/k-1-grand-prix/">K-1 Grand Prix</a>
+</li>		
+		
+			
+<li class="vbmenu_control">
+	<a href="http://www.mmaforum.com/other-mma-amateur-mma/">Other MMA &amp; Amateur MMA</a>
+</li>		
+		
+			
+<li class="vbmenu_control">
+	<a href="http://www.mmaforum.com/blogs/">MMAF Blogs!</a>
+</li>		
+		
+			
+<li class="vbmenu_control">
+	<a href="http://www.mmaforum.com/mmaf-member-competitions/">MMAF Member Competitions</a>
+</li>		
+		
+			
+<li class="vbmenu_control">
+	<a href="http://www.mmaforum.com/foreign-speaking-mma-discussion/">Foreign Speaking MMA Discussion</a>
+</li>		
+		
+			
+<li class="vbmenu_control">
+	<a href="http://www.mmaforum.com/calendar.php">MMA Event Calendar</a>
+</li>		
+		
+			
+<li class="vbmenu_control">
+	<a href="http://www.mmaforum.com/general-mma-discussion/">General MMA Discussion</a>
+</li>		
+		
+			
+<li class="vbmenu_control">
+	<a href="http://www.mmaforum.com/ufc/">UFC</a>
+</li>		
+		
+			
+<li class="vbmenu_control">
+	<a href="http://www.mmaforum.com/bellator-fc/">Bellator FC</a>
+</li>		
+		
+			
+<li class="vbmenu_control">
+	<a href="http://www.mmaforum.com/mma-classifieds/">MMA Classifieds</a>
+</li>		
+		
+			</ul>
+		</div>
+	
+</li>
+			
+					
+<li class="vbmenu_control hovertouch">
+	<a href="http://www.mmaforum.com/mmaf-competitions/">MMAF Competitions</a>
+	
+		<div class="vbmenu_popup" style="display:none;" align="left">
+			<ul class="subnav">
+				
+			
+<li class="vbmenu_control">
+	<a href="http://www.mmaforum.com/mma-forum-fantasy-fight-league-ffl/">MMA Forum Fantasy Fight League (FFL)</a>
+</li>		
+		
+			
+<li class="vbmenu_control">
+	<a href="http://www.mmaforum.com/championship-pick-em-league/">Championship Pick 'em League</a>
+</li>		
+		
+			
+<li class="vbmenu_control">
+	<a href="http://www.mmaforum.com/mma-forum-grand-prix/">MMA Forum Grand Prix</a>
+</li>		
+		
+			</ul>
+		</div>
+	
+</li>
+			
+					
+<li class="vbmenu_control hovertouch">
+	<a href="http://www.mmaforum.com/mma-forum-news/">MMA Forum News</a>
+	
+		<div class="vbmenu_popup" style="display:none;" align="left">
+			<ul class="subnav">
+				
+			
+<li class="vbmenu_control">
+	<a href="http://www.mmaforum.com/mma-forum-news-announcements/">MMA Forum News And Announcements</a>
+</li>		
+		
+			</ul>
+		</div>
+	
+</li>
+			
+					
+<li class="vbmenu_control hovertouch">
+	<a href="http://www.mmaforum.com/gym/">In The Gym!</a>
+	
+		<div class="vbmenu_popup" style="display:none;" align="left">
+			<ul class="subnav">
+				
+			
+<li class="vbmenu_control">
+	<a href="http://www.mmaforum.com/technique-training-nutrition/">Technique, Training and Nutrition</a>
+</li>		
+		
+			</ul>
+		</div>
+	
+</li>
+			
+					
+<li class="vbmenu_control hovertouch">
+	<a href="http://www.mmaforum.com/non-mixed-martial-arts-discussion/">Non Mixed Martial Arts Discussion</a>
+	
+		<div class="vbmenu_popup" style="display:none;" align="left">
+			<ul class="subnav">
+				
+			
+<li class="vbmenu_control">
+	<a href="http://www.mmaforum.com/introductions-greets/">Introductions &amp; Greets</a>
+</li>		
+		
+			
+<li class="vbmenu_control">
+	<a href="http://www.mmaforum.com/entertainment/">Entertainment</a>
+</li>		
+		
+			
+<li class="vbmenu_control">
+	<a href="http://www.mmaforum.com/lounge/">The Lounge</a>
+</li>		
+		
+			
+<li class="vbmenu_control">
+	<a href="http://www.mmaforum.com/forum-feedback/">Forum Feedback</a>
+</li>		
+		
+			
+<li class="vbmenu_control">
+	<a href="http://www.mmaforum.com/graphics-showroom/">Graphics Showroom</a>
+</li>		
+		
+			
+<li class="vbmenu_control">
+	<a href="http://www.mmaforum.com/sports/">Sports</a>
+</li>		
+		
+			
+<li class="vbmenu_control">
+	<a href="http://www.mmaforum.com/credit-shop/">The Credit Shop</a>
+</li>		
+		
+			</ul>
+		</div>
+	
+</li>
+			
+					
+<li class="vbmenu_control hovertouch">
+	<a href="http://www.mmaforum.com/vendor-section/">Vendor Section</a>
+	
+		<div class="vbmenu_popup" style="display:none;" align="left">
+			<ul class="subnav">
+				
+			
+<li class="vbmenu_control">
+	<a href="http://www.mmaforum.com/vendor-deals/">Vendor Deals</a>
+</li>		
+		
+			</ul>
+		</div>
+	
+</li>
+			
+					
+<li class="vbmenu_control hovertouch">
+	<a href="http://www.mmaforum.com/mmaforum-com-forum-tech-support/">mmaforum.com Forum Tech Support</a>
+	
+		<div class="vbmenu_popup" style="display:none;" align="left">
+			<ul class="subnav">
+				
+			
+<li class="vbmenu_control">
+	<a href="http://www.mmaforum.com/mmaforum-com-forum-help-desk/">mmaforum.com Forum Help Desk</a>
+</li>		
+		
+			</ul>
+		</div>
+	
+</li>
+			
+		
+			</ul>
+		</div>
+	</li>
+
+			
+		
+    <if>
+    
+    <li class="vbmenu_control"><a rel="nofollow" href="http://www.mmaforum.com/index.php?page=active_topics">Active Topics</a></li>
+    
+    
+    <li class="vbmenu_control"><a href="http://www.mmaforum.com/search.php?do=getdaily" accesskey="2">Latest Posts</a></li>
+    
+    
+    <li class="vbmenu_control"><a href="http://www.mmaforum.com/all_albums.php">Gallery</a></li>
+    
+    
+<li class="vbmenu_control" id="tmp_garage">
+		
+		
+</li>
+		
+
+    
+</li>
+
+
+
+		
+		
+        <!-- <li class="mobile-hide"><a rel="nofollow" href="http://www.autoguide.com/buyers-guide/auto-insurance.html" target="_blank">Insurance</a><li> -->
+        
+        
+    <li class="vbmenu_control vs_register"><a href="http://www.mmaforum.com/register.php" onclick="event.preventDefault(); window.location.href='http://www.mmaforum.com//register.php?autodisplayreg=true'" rel="nofollow">Register</a></li>
+    
+
+</ul>
+</nav>
+<!-- / nav buttons bar -->
+
+<!-- breadcrumb, login, pm info -->
+<div class="text_wrapper info-bar">
+<span class="login-or-links">
+
+
+
+		<!-- login form -->
+		<form action="http://www.mmaforum.com/login.php?do=login" method="post" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+
+
+<a rel="nofollow" href="http://www.mmaforum.com/register.php?do=social&amp;provider=facebook&amp;reg=1" class="social_btn facebook_btn gradient"><span class="sprite inlineimg facebook_sprite">Facebook</span></a>
+
+
+
+
+		
+<input type="text" class="bginput"  name="vb_login_username" id="navbar_username" size="10" accesskey="u" tabindex="101" value="User Name" onfocus="if (this.value == 'User Name') this.value = '';" />
+
+<input type="password" class="bginput"  name="vb_login_password" id="navbar_password" size="10" tabindex="102" /  value="Password" onfocus="if (this.value == 'Password') this.value = '';">
+
+
+<input type="submit" class="button" value="Log in" tabindex="104" title="Enter your username and password in the boxes provided to login, or click the 'register' button to create a profile for yourself." accesskey="s" />
+
+<label for="cb_cookieuser_navbar"><input type="checkbox" name="cookieuser" value="1" tabindex="103" id="cb_cookieuser_navbar" accesskey="c" /><span class="mobile-hide">Remember Me?</span></label>
+
+
+		<input type="hidden" name="s" value="" />
+		<input type="hidden" name="securitytoken" value="guest" />
+		<input type="hidden" name="do" value="login" />
+		<input type="hidden" name="vb_login_md5password" />
+		<input type="hidden" name="vb_login_md5password_utf" />
+		</form>
+		<!-- / login form -->
+     
+
+       
+</span> 
+
+
+
+
+</div>
+
+
+
+
+
+	<table class="tborder" cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+	<tr>
+		<td class="alt1" width="100%"><strong>MMA Forum Fantasy Fight League (FFL)</strong> <span class="smallfont">The one, the only, the MMAF Fantasy Fight League!</span></td>
+	</tr>
+	</table>
+	<br />
+
+
+
+<!-- NAVBAR POPUP MENUS -->
+
+	
+	<!-- community link menu -->
+	<div class="vbmenu_popup" id="community_menu" style="display:none;" align="left">
+		<table cellpadding="4" cellspacing="1" border="0">
+		<tr><td class="thead">Community Links</td></tr>
+		
+		
+					<tr><td class="vbmenu_option"><a href="http://www.mmaforum.com/groups/">Social Groups</a></td></tr>
+		
+		
+					<tr><td class="vbmenu_option"><a href="http://www.mmaforum.com/members/albums.html">Pictures &amp; Albums </a></td></tr>
+		
+		
+		<!-- old_member_list -->
+		<!-- BEGIN TEMPLATE: dbtech_usertag_quicklinks_link -->
+<tr><td class="vbmenu_option"><a rel="nofollow" href="http://www.mmaforum.com/usertag.php?do=statistics">User Tagging Statistics</a></td></tr>
+<!--DBT_PRO_START--><tr><td class="vbmenu_option"><a rel="nofollow" href="http://www.mmaforum.com/usertag.php?do=list&amp;action=hashes">Hash Tag Subscriptions</a></td></tr><!--DBT_PRO_END-->
+<!-- END TEMPLATE: dbtech_usertag_quicklinks_link -->
+		</table>
+	</div>
+	<!-- / community link menu -->
+	
+	
+
+	
+	<!-- header quick search form -->
+	<div class="vbmenu_popup" id="navbar_search_menu" style="display:none;" align="left">
+		<table cellpadding="4" cellspacing="1" border="0">
+		<tr>
+			<td class="thead">Search Forums</td>
+		</tr>
+		<tr>
+			<td class="vbmenu_option" title="nohilite">
+				<form action="http://www.mmaforum.com/search.php?do=process" method="post">
+
+					<input type="hidden" name="do" value="process" />
+					<input type="hidden" name="quicksearch" value="1" />
+					<input type="hidden" name="childforums" value="1" />
+					<input type="hidden" name="exactname" value="1" />
+					<input type="hidden" name="s" value="" />
+					<input type="hidden" name="securitytoken" value="guest" />
+					<div><input type="text" class="bginput" name="query" size="25" tabindex="1001" /><input type="submit" class="button go_button" value="Go" tabindex="1004" /></div>
+					<div style="margin-top:5px;">
+						<label for="rb_nb_sp0"><input type="radio" name="showposts" value="0" id="rb_nb_sp0" tabindex="1002" checked="checked" />Show Threads</label>
+						&nbsp;
+						<label for="rb_nb_sp1"><input type="radio" name="showposts" value="1" id="rb_nb_sp1" tabindex="1003" />Show Posts</label>
+					</div>
+				</form>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="vbmenu_option"><a href="http://www.mmaforum.com/tags/" rel="nofollow">Tag Search</a></td>
+		</tr>
+		
+		<tr>
+			<td class="vbmenu_option"><a href="http://www.mmaforum.com/search.php" accesskey="4" rel="nofollow">Advanced Search</a></td>
+		</tr>
+		<tr><td class='thead' align=''>Google Search</td></tr><tr><td class='vbmenu_option' title='nohilite'><div class='ams_gtsearch' style='max-width: 250px; margin:auto;' id='cse_search_box'></div>
+<script>
+vsamsgtsearches.push('cse_search_box');
+</script></td></tr><!-- BEGIN TEMPLATE: blog_navbar_search -->
+<tr>
+	<td class="thead">Search Blogs</td>
+</tr>
+<tr>
+	<td class="vbmenu_option" title="nohilite">
+		<form action="http://www.mmaforum.com/blog_search.php?do=dosearch" method="post">
+			<input type="hidden" name="s" value="" />
+			<input type="hidden" name="do" value="dosearch" />
+			<input type="hidden" name="quicksearch" value="1" />
+			<div><input type="text" class="bginput" name="title" size="25" tabindex="2003" /><input type="submit" class="button" value="Go" tabindex="2004" /></div>
+		</form>
+	</td>
+</tr>
+<tr>
+	<td class="vbmenu_option"><a rel="nofollow" href="http://www.mmaforum.com/blog_search.php?do=search">Advanced Search</a></td>
+</tr>
+<!-- END TEMPLATE: blog_navbar_search -->
+		</table>
+	</div>
+
+
+
+
+
+	
+	
+
+<!-- PAGENAV POPUP -->
+	<div class="vbmenu_popup" id="pagenav_menu" style="display:none">
+		<table cellpadding="4" cellspacing="1" border="0" width="100%">
+		<tr>
+			<td class="thead" nowrap="nowrap">Go to Page...</td>
+		</tr>
+		<tr>
+			<td class="vbmenu_option" title="nohilite">
+			<form action="http://www.mmaforum.com/forumindex.php" method="get" onsubmit="return this.gotopage()" id="pagenav_form">
+				<input type="text" class="bginput" id="pagenav_itxt" size="4" />
+				<input type="button" class="button go_button" id="pagenav_ibtn" value="Go" />
+			</form>
+			</td>
+		</tr>
+		</table>
+	</div>
+<!-- / PAGENAV POPUP -->
+
+
+
+
+<!-- BEGIN TEMPLATE: ad_navbar_below -->
+
+
+<div class="Leaderboard LeaderboardHeight">
+<div style='width:100%; text-align:center;'><div id='MMAForum_com_728x90_Top_SP_Forum' style='width:auto; height:auto;'>
+						<script type='text/javascript'>
+							googletag.cmd.push(function() { googletag.display('MMAForum_com_728x90_Top_SP_Forum'); });
+						</script>
+					</div></div>
+
+</div>
+
+
+
+<!-- END TEMPLATE: ad_navbar_below -->
+
+<!-- BEGIN TEMPLATE: ad_header_logo -->
+
+<!-- END TEMPLATE: ad_header_logo -->
+
+<div class="text_wrapper navbar_wrapper">
+<div class="breadcrumb" itemprop="breadcrumb">		
+
+			
+			<span class="navbar"><a href="http://www.mmaforum.com/forumindex.php" accesskey="1">MMA Forum - UFC Forums - UFC Results - MMA Videos</a></span> <!-- BEGIN TEMPLATE: navbar_link -->
+
+	<span class="navbar">&gt; <a href="http://www.mmaforum.com/mmaf-competitions/">MMAF Competitions</a></span>
+
+
+<!-- END TEMPLATE: navbar_link --><!-- BEGIN TEMPLATE: navbar_link -->
+
+	<span class="navbar">&gt; <a href="http://www.mmaforum.com/mma-forum-fantasy-fight-league-ffl/">MMA Forum Fantasy Fight League (FFL)</a></span>
+
+
+<!-- END TEMPLATE: navbar_link -->
+                ><a href="http://www.mmaforum.com/mma-forum-fantasy-fight-league-ffl/209185-event-25-ufc-fight-night-70-a.html"></a> <strong><!-- BEGIN TEMPLATE: navbar_link -->
+
+	 Event #25: UFC Fight Night 70
+
+
+<!-- END TEMPLATE: navbar_link --></strong>
+		
+</div>
+</div>
+<!-- / breadcrumb, login, pm info -->
+
+
+<!-- END TEMPLATE: navbar -->
+
+
+
+<div id="wrapper" class="wrapper">
+<div id="main-content_wrapper" class="center">    
+<div id="main-content">
+
+
+
+<div class="showthreadPage">
+
+
+
+
+
+<a name="poststop" id="poststop"></a> 
+
+
+<!-- controls above postbits -->
+<div class="controls" id="fixed-controls">
+<div class="fixed-controls-container">
+
+		<a href="http://www.mmaforum.com/newreply.php?do=newreply&amp;noquote=1&amp;p=3293905" rel="nofollow"><span class="sprite button reply">Reply</span></a>
+	
+<span class="item pagenav">
+	
+</span>
+
+<span class="item item-social"><!-- BEGIN TEMPLATE: vbpsni_buttons -->
+
+			
+<div class="socialIcons threadPage">
+	<div class="gplus"><g:plusone size="medium"></g:plusone></div>
+	<a
+rel="nofollow" 
+		href="http://twitter.com/share"
+		class="twitter-share-button"
+		data-count="horizontal"
+		
+	>Tweet</a>
+	<fb:like href="" send="false" layout="button_count" width="70" show_faces="false" action="like" font=""></fb:like>
+</div>
+<div style="clear:both;"></div>
+			
+		
+<!-- END TEMPLATE: vbpsni_buttons --></span>
+
+</div>
+</div>
+<!-- / controls above postbits -->
+<div id="placeholder"></div>
+
+ 
+
+<!-- toolbar -->
+<table class="tborder toolbar " cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="border-bottom-width:0px">
+<tr>
+	<td class="tcat" >
+		<div class="smallfont">
+		
+		&nbsp;
+		</div>
+	</td>
+	<!-- BEGIN TEMPLATE: vbseo_linkbackmenu_entry -->
+<td class="vbmenu_control tcat" id="linkbacktools" nowrap="nowrap">
+	<a rel="nofollow" href="http://www.mmaforum.com/mma-forum-fantasy-fight-league-ffl/209185-event-25-ufc-fight-night-70-a.html?nojs=1#links">LinkBack</a>
+	<script type="text/javascript"> vbmenu_register("linkbacktools"); </script>
+</td>
+
+<!-- END TEMPLATE: vbseo_linkbackmenu_entry --><td class="tcat" id="threadtools" >
+		<a rel="nofollow" href="http://www.mmaforum.com/mma-forum-fantasy-fight-league-ffl/209185-event-25-ufc-fight-night-70-a.html?nojs=1#goto_threadtools">Thread Tools</a>
+		<script type="text/javascript"> vbmenu_register("threadtools"); </script>
+	</td>
+	
+	
+	<!-- BEGIN TEMPLATE: vbpsni_showthread_wrapper -->
+
+
+<!-- END TEMPLATE: vbpsni_showthread_wrapper --> 
+	<td class="tcat" id="displaymodes" >
+		<a rel="nofollow" href="http://www.mmaforum.com/mma-forum-fantasy-fight-league-ffl/209185-event-25-ufc-fight-night-70-a.html?nojs=1#goto_displaymodes">Display Modes</a>
+		<script type="text/javascript"> vbmenu_register("displaymodes"); </script>
+	</td>
+	
+
+	
+
+</tr>
+</table>
+<!-- / toolbar -->
+
+
+
+<!-- end content table -->
+
+<!-- / end content table -->
+
+
+
+
+
+<div id="posts" itemscope itemtype="http://schema.org/Blog"><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- post #3293905 -->
+
+	
+	<div id="edit3293905" style="padding:0px 0px 0px 0px">
+	
+
+
+<!-- BEGIN TEMPLATE: postbit_legacy -->
+
+<section id="post3293905" class="tborder vbseo_like_postbit user-post" itemscope itemtype="http://schema.org/Comment">
+
+
+<div class="text_wrapper postbit_legacy_wrapper_thead thead" >
+	
+    
+    <span class="post-count"><a href="http://www.mmaforum.com/3293905-post1.html" target="new" rel="nofollow" id="postcount3293905" name="1"><strong>post #1</strong> of 1</a> (<b><a href="http://www.mmaforum.com/mma-forum-fantasy-fight-league-ffl/209185-event-25-ufc-fight-night-70-a.html#post3293905" title="Link to this Post">permalink</a></b>)
+			
+ </span>
+			<!-- status icon and date -->
+			<a name="post3293905"><span class="sprite inlineimg post_old">Old</span></a>
+			<span itemprop="dateCreated">06-28-2015, 01:45 PM</span>
+			
+			<!-- / status icon and date -->
+
+			
+			
+
+	
+ <span class="thread-starter">Thread Starter</span>   
+</div>
+
+<div class="text_wrapper postbit_legacy_wrapper">
+<div class="alt2 picture main-column-picture">
+
+			<div id="postmenu_3293905" itemprop="contributor">
+				
+				<a rel="nofollow" class="bigusername" href="http://www.mmaforum.com/32417-hitorgethit.html"><!-- google_ad_section_start(weight=ignore) --><span style="color: #808000"><b>HitOrGetHit</b></span><!-- google_ad_section_end --></a>
+				
+				
+			</div>
+
+			<div class="smallfont"><B><span style="font-weight: bold;"><span style="color:#000000;">-DIBKIS-</span></span></B></div>
+			<div class="smallfont"><img src="http://tinyimg.io/i/UqnjbjB.png"</img></div>
+			
+
+			
+				<div class="smallfont">
+					&nbsp;<br /><a rel="nofollow" href="http://www.mmaforum.com/32417-hitorgethit.html"><img class="photo avatar" src="/images/MMAforum_2015/misc/spacer.gif" data-original="customavatars/avatar32417_73.gif" width="114" height="168" alt="HitOrGetHit's Avatar" border="0" /></a>
+				</div>
+			
+			<div class="smallfont">
+				&nbsp;<br />
+				<div>Join Date: Jun 2009</div>
+				
+				
+				<div>
+					Posts: 20,914
+				</div>
+				<!-- BEGIN TEMPLATE: blog_postbit_entries_link -->
+<div>Blog Entries: <a href="http://www.mmaforum.com/blogs/hitorgethit/">13</a></div>
+<!-- END TEMPLATE: blog_postbit_entries_link -->
+
+				
+				<div><span id="repdisplay_3293905_32417"><!-- BEGIN TEMPLATE: postbit_reputation -->
+<span class="sprite inlineimg reputation_pos" title="HitOrGetHit MMAF Godfather"><!-- -->&nbsp;</span>
+<!-- END TEMPLATE: postbit_reputation --><!-- BEGIN TEMPLATE: postbit_reputation -->
+<span class="sprite inlineimg reputation_pos" title="HitOrGetHit MMAF Godfather"><!-- -->&nbsp;</span>
+<!-- END TEMPLATE: postbit_reputation --><!-- BEGIN TEMPLATE: postbit_reputation -->
+<span class="sprite inlineimg reputation_pos" title="HitOrGetHit MMAF Godfather"><!-- -->&nbsp;</span>
+<!-- END TEMPLATE: postbit_reputation --><!-- BEGIN TEMPLATE: postbit_reputation -->
+<span class="sprite inlineimg reputation_pos" title="HitOrGetHit MMAF Godfather"><!-- -->&nbsp;</span>
+<!-- END TEMPLATE: postbit_reputation --><!-- BEGIN TEMPLATE: postbit_reputation -->
+<span class="sprite inlineimg reputation_pos" title="HitOrGetHit MMAF Godfather"><!-- -->&nbsp;</span>
+<!-- END TEMPLATE: postbit_reputation --><!-- BEGIN TEMPLATE: postbit_reputation -->
+<span class="sprite inlineimg reputation_highpos" title="HitOrGetHit MMAF Godfather"><!-- -->&nbsp;</span>
+<!-- END TEMPLATE: postbit_reputation --><!-- BEGIN TEMPLATE: postbit_reputation -->
+<span class="sprite inlineimg reputation_highpos" title="HitOrGetHit MMAF Godfather"><!-- -->&nbsp;</span>
+<!-- END TEMPLATE: postbit_reputation --><!-- BEGIN TEMPLATE: postbit_reputation -->
+<span class="sprite inlineimg reputation_highpos" title="HitOrGetHit MMAF Godfather"><!-- -->&nbsp;</span>
+<!-- END TEMPLATE: postbit_reputation --><!-- BEGIN TEMPLATE: postbit_reputation -->
+<span class="sprite inlineimg reputation_highpos" title="HitOrGetHit MMAF Godfather"><!-- -->&nbsp;</span>
+<!-- END TEMPLATE: postbit_reputation --><!-- BEGIN TEMPLATE: postbit_reputation -->
+<span class="sprite inlineimg reputation_highpos" title="HitOrGetHit MMAF Godfather"><!-- -->&nbsp;</span>
+<!-- END TEMPLATE: postbit_reputation --><!-- BEGIN TEMPLATE: postbit_reputation -->
+<span class="sprite inlineimg reputation_highpos" title="HitOrGetHit MMAF Godfather"><!-- -->&nbsp;</span>
+<!-- END TEMPLATE: postbit_reputation --></span></div>
+				
+				<div>    </div>
+			</div>
+
+</div>
+
+	
+    <div id="td_post_3293905" class="main-column-text-wrapper alt1">
+	<div class="main-column-text">
+	
+		
+		
+			<!-- icon and title -->
+			<div class="smallfont">
+				
+				 <strong itemprop="alternativeHeadline"><!-- google_ad_section_start -->Event #25: UFC Fight Night 70<!-- google_ad_section_end --></strong>
+			</div>
+			<hr class="dividing-line" />
+
+
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_3293905" itemprop="text">
+			<!-- BEGIN TEMPLATE: ad_showthread_firstpost_start -->
+
+<!-- END TEMPLATE: ad_showthread_firstpost_start -->
+			<!-- google_ad_section_start --><!-- BEGIN TEMPLATE: bbcode_quote -->
+<div style="margin:20px; margin-top:5px; ">
+
+	<div class="smallfont" style="margin-bottom:2px">Quote:</div>
+
+	
+
+			
+
+				<div style="font-style:italic; border:1px inset; padding: 5px;" class="postquote">Any fighters from the following organizations are eligible to receive points. UFC and Bellator.<br />
+<br />
+If your fighter is on the card: +5 points<br />
+If your fighter is in a title fight: +6 points<br />
+If your fighter wins said title fight: +2 points<br />
+If your fighter is involved in the Main Event (LAST FIGHT of the event): +3 points (regardless of win / loss)<br />
+<br />
+If your fighter wins in 1st round: +8 points<br />
+If your fighter wins in 2nd round: +6 points<br />
+If your fighter wins in 3rd round: +5 points<br />
+If your fighter wins in 4th round: +4 points<br />
+If your fighter wins in 5th round: +3 points<br />
+<br />
+- via KO: +6 point bonus<br />
+- via TKO: +5 point bonus<br />
+- via Sub: +5 point bonus<br />
+<br />
+If your fighter wins by Unanimous Decision: +3 points<br />
+If your fighter wins by Majority Decision: +2 points<br />
+If your fighter wins by Split Decision: +1 points<br />
+<br />
+If your fighter loses a fight: -3 points<br />
+If your fighter is Disqualified: -4 points<br />
+If your fighter is involved in a Draw: +1 point value<br /></div>
+
+			
+
+		
+
+</div>
+<!-- END TEMPLATE: bbcode_quote --><b><u>Users with fighters on the card: <i>Fighter Predictions</i></u></b><br />
+<br />
+<b>Lyoto Machida - <font color="Red">AlanS</font></b><br />
+<br />
+<b><u>Scores:</u></b><br />
+<br />
+<b><font color="red">AlanS</font>:</b> +5<br />
+<br />
+<b><u>Scoring Breakdown:</u></b><br />
+<br />
+<b>Lyoto Machida:</b> On Card <b>(+5)</b>, Main Event <b>(+3)</b>, Loss <b>(-3)</b><!-- google_ad_section_end -->
+		</div>
+		<!-- / message -->
+
+		
+
+		<!-- BEGIN TEMPLATE: vbseo_likeshare -->
+<div class="text_wrapper vbseo_buttons" id="lkbtn_1.209185.3293905">
+
+    <div class="alt2 vbseo_liked" style="display:none"></div>
+
+
+</div>
+
+<!-- END TEMPLATE: vbseo_likeshare -->
+		<!-- BEGIN TEMPLATE: ad_showthread_firstpost_sig -->
+
+<!-- END TEMPLATE: ad_showthread_firstpost_sig -->
+
+		
+
+		
+
+		
+
+</div>
+</div>
+
+</div>
+<!-- end text_wrapper -->
+
+    
+<div class="text_wrapper postbit_legacy_wrapper postbit_legacy_wrapper_bottom">
+<div class="alt2 picture main-column-picture status-icons" >  
+		<!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<span class="sprite inlineimg user_offline" title="HitOrGetHit is offline">HitOrGetHit is offline</span>
+
+
+<!-- END TEMPLATE: postbit_onlinestatus -->
+		
+		
+		
+		
+		&nbsp;
+        
+</div>
+	
+<div id="td_post_1162" class="main-column-text-wrapper buttons buttons-postings">
+<div class="main-column-text">  
+	
+		<div class="right"><!-- controls -->
+        
+      
+    
+    
+		
+		
+		
+			<a href="http://www.mmaforum.com/newreply.php?do=newreply&amp;p=3293905" rel="nofollow"><span class="sprite button quote">Quote</span></a>
+		
+		
+		
+			<a href="http://www.mmaforum.com/newreply.php?do=newreply&amp;p=3293905" rel="nofollow" id="qr_3293905" onclick="return false"><span class="sprite button quickreply">Quick Reply</span></a>
+		
+		
+		
+		
+		
+			
+		
+		
+		<!-- / controls -->
+        </div>
+</div>
+</div>
+
+</div>
+<!-- end text_wrapper -->
+</section>
+
+
+ 
+<!-- post 3293905 popup menu -->
+
+<!-- / post 3293905 popup menu -->
+
+
+
+
+
+<!-- END TEMPLATE: postbit_legacy -->
+
+
+	</div>
+	
+
+<!-- / post #3293905 -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: ad_showthread_firstpost -->
+
+<!-- END TEMPLATE: ad_showthread_firstpost --><div id="lastpost"></div></div>
+
+
+
+<!-- start content table -->
+
+<!-- / start content table -->
+
+<!-- controls below postbits -->
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-top:3px" class="text_wrapper">
+<tr valign="top">
+	
+		<td class="smallfont"><a href="http://www.mmaforum.com/newreply.php?do=newreply&amp;noquote=1&amp;p=3293905" rel="nofollow"><span class="sprite button reply">Reply</span></a></td>
+	
+	
+</tr>
+</table>
+<!-- / controls below postbits -->
+
+
+
+
+
+
+
+<!-- BEGIN TEMPLATE: ad_showthread_beforeqr -->
+
+<!-- END TEMPLATE: ad_showthread_beforeqr --><!-- Taboola Content -->
+<div id="taboola-below-article-thumbnails-white"></div>
+<script type="text/javascript">
+  window._taboola = window._taboola || [];
+  _taboola.push({
+    mode: "thumbnails-c",
+  container: "taboola-below-article-thumbnails-white",
+    placement: "Below Article Thumbnails White - SP",
+    target_type: "mix"
+  });
+</script>
+<!-- /Taboola Content -->
+
+
+
+<!-- lightbox scripts -->
+
+	<script type="text/javascript">
+	<!--
+	vBulletin.register_control("vB_Lightbox_Container", "posts", 1);
+	//-->
+	</script>
+<!-- / lightbox scripts -->
+
+
+
+
+
+<!-- ajax errors table -->
+	<table class="tborder" cellpadding="0" cellspacing="0" border="0" style="display:none; position:absolute" id="ajax_post_errors">
+	<tr>
+		<td class="thead">
+			<span style="float:right"><input type="button" class="button" value=" X " onclick="vB_QuickEditor.hide_errors()" id="ajax_post_errors_closebtn" /></span>
+			No Permission
+		</td>
+	</tr>
+	<tr>
+		<td class="alt2" colspan="2" id="ajax_post_errors_message">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="tfoot" colspan="2" align="center"><a href="http://www.mmaforum.com/mma-forum-fantasy-fight-league-ffl/209185-event-25-ufc-fight-night-70-a.html#" onclick="vB_QuickEditor.abort(); return false;">Cancel Changes</a></td>
+	</tr>
+	</table>
+<!-- / ajax errors table -->
+
+<!-- scripts for quick reply and quick edit -->
+	<!-- BEGIN TEMPLATE: editor_clientscript -->
+<!-- Editor Scripts -->
+
+<script type="text/javascript">
+<!--
+var fontoptions = new Array();
+var sizeoptions = new Array();
+var smilieoptions = {  };
+
+var istyles = {  };
+var ltr = 'left';
+
+var smiliewindow_x = 240;
+var smiliewindow_y = 280;
+
+var ignorequotechars = 1;
+var allowbasicbbcode = true;
+
+// vB Phrases
+vbphrase["wysiwyg_please_wait"]          = "Please wait for the WYSIWYG editor to finish loading...";
+vbphrase["wysiwyg_initialized"]          = "WYSIWYG Editor initialized for %1$s in %2$s seconds.";
+vbphrase["wysiwyg_command_invalid"]      = "This command is invalid or not implemented.";
+vbphrase["moz_must_select_text"]         = "Mozilla requires that you must select some text for this function to work";
+vbphrase["moz_edit_config_file"]         = "You need to edit your Mozilla config file to allow this action.";
+vbphrase["enter_tag_option"]             = "Please enter the option for your %1$s tag:";
+vbphrase["must_select_text_to_use"]      = "You must select some text to use this function.";
+vbphrase["browser_is_safari_no_wysiwyg"] = "The Safari browser does not support WYSIWYG mode.";
+vbphrase["enter_option_x_tag"]           = "Enter the option for the [%1$s] tag:";
+vbphrase["enter_text_to_be_formatted"]   = "Enter the text to be formatted";
+vbphrase["enter_link_text"]              = "Enter the text to be displayed for the link (optional):";
+vbphrase["enter_list_type"]              = "What type of list do you want? Enter '1' for a numbered list, enter 'a' for an alphabetical list, or leave blank for a list with bullet points:";
+vbphrase["enter_list_item"]              = "Enter a list item.\r\nLeave the box empty or press 'Cancel' to complete the list:";
+vbphrase["must_enter_subject"]           = "You must enter a title / subject!";
+vbphrase["message_too_short"]            = "The message you have entered is too short. Please lengthen your message to at least %1$s characters.";
+vbphrase["enter_link_url"]               = "Please enter the URL of your link:";
+vbphrase["enter_image_url"]              = "Please enter the URL of your image:";
+vbphrase["enter_email_link"]             = "Please enter the email address for the link:";
+vbphrase["complete_image_verification"]  = "You did not complete the Image Verification";
+vbphrase["iespell_not_installed"]        = "ieSpell is a spell-checking tool for Internet Explorer.\r\n\r\nIf you would like to download ieSpell, click OK; otherwise click Cancel.\r\n\r\nieSpell can be downloaded from http://www.iespell.com";
+vbphrase["click_quick_reply_icon"]       = "Please click one of the Quick Reply icons in the posts above to activate Quick Reply.";
+vbphrase["insert_all"]                   = "Insert All";
+
+//-->
+</script>
+<!-- / Editor Scripts -->
+<!-- END TEMPLATE: editor_clientscript -->
+	
+
+		<script type="text/javascript">
+		<!--
+		vB_AJAX_QuickEdit_Init('posts');
+		//-->
+		</script>
+	
+<!-- / scripts for quick reply and quick edit -->
+
+
+
+
+<!-- quick reply -->
+	<br />
+	<form action="http://www.mmaforum.com/newreply.php?do=postreply&amp;t=209185" method="post" onsubmit="return vbpegp_qr_prepare_submit(this, 5);" name="vbform" id="qrform">
+	<table class="tborder" cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+	<thead>
+		<tr>
+			<td class="tcat" colspan="2">
+				<a style="float:right" href="http://www.mmaforum.com/mma-forum-fantasy-fight-league-ffl/209185-event-25-ufc-fight-night-70-a.html#top" onclick="return toggle_collapse('quickreply');"><span class="sprite inlineimg collapseimg" id="collapseimg_quickreply"></span></a>
+				Quick Reply
+			</td>
+		</tr>
+	</thead>
+	<tbody id="qr_error_tbody" style="display:none">
+	<tr>
+		<td class="thead">The following errors occurred with your submission</td>
+	</tr>
+	<tr>
+		<td class="alt1" id="qr_error_td"></td>
+	</tr>
+	<tr>
+		<td class="tfoot" align="center"><span class="smallfont"><a href="http://www.mmaforum.com/mma-forum-fantasy-fight-league-ffl/209185-event-25-ufc-fight-night-70-a.html#" onclick="return qr_hide_errors()">Okay</a></span></td>
+	</tr>
+	</tbody>
+	<tbody id="collapseobj_quickreply">
+	<tr>
+		<td class="panelsurround" align="center">
+			<div class="panel">
+				<div align="left" style="max-width:; width:auto !important; width:">
+					<div class="smallfont vs_msglabel">Message:</div>
+					<div id="vB_Editor_QR" class="vBulletin_editor">
+		<script type="text/javascript">
+		<!--
+			var threaded_mode = 0;
+			var require_click = 1;
+			var is_last_page = 1; // leave for people with cached JS files
+			var allow_ajax_qr = 1;
+			var ajax_last_post = 1435513536;
+		// -->
+		</script>
+		<!-- BEGIN TEMPLATE: showthread_quickreply -->
+
+<div class="controlbar" style="padding-right:8px">
+	<fieldset style="border:0px; padding:0px; margin:0px">
+	
+	<textarea name="message" id="vB_Editor_QR_textarea" rows="10" cols="60" style="width:100%; height:200px" tabindex="1" dir="ltr" disabled="disabled">Please click one of the Quick Reply icons in the posts above to activate Quick Reply.</textarea>
+	
+	</fieldset>
+	<!--width:480px-->
+</div>
+
+<input type="hidden" name="wysiwyg" id="vB_Editor_QR_mode" value="0" />
+<input type="hidden" name="styleid" value="0" />
+
+<script type="text/javascript">
+<!--
+vB_Editor['vB_Editor_QR'] = new vB_Text_Editor('vB_Editor_QR', 0, '141', '1');
+var QR_EditorID = 'vB_Editor_QR';
+//-->
+</script>
+<!-- END TEMPLATE: showthread_quickreply -->
+	</div>
+					
+					
+
+					<fieldset class="fieldset">
+						<legend>Options</legend>
+						<div style="padding:3px">
+							
+							<label for="qr_quickreply"><input type="checkbox" name="quickreply" value="1" id="qr_quickreply" accesskey="w" tabindex="4" />Quote message in reply?</label>
+						</div>
+					</fieldset> <!-- BEGIN TEMPLATE: vbpegp_registerForm3 -->
+<style type="text/css">
+/* ***** red and green boxes for username verification used during registration ***** */
+.greenbox { border: 1px solid #337733; background: #bbffbb; color: #337733; padding: 3px; }
+.redbox { border:1px solid #773333; background: #ffbbbb; color: #773333; padding: 3px; }
+</style>
+<link type="text/css" rel="stylesheet" href="http://www.mmaforum.com/vbpegp/resources/css/register.css" />
+<div class="detailsContainer ">
+
+<style>
+table.registration .column_or .block_or {display: none;}
+.container table.registration .column_or .block_or {display: block;}
+</style>
+
+    <table width="100%" cellspacing="0" cellpadding="0"  class="registration">
+<tbody>
+<tr>
+<td width="55%" valign="top" class="" style="vertical-align:top">
+
+<div class="blockrow">
+<h2>
+Register Now
+</h2>
+            <br>
+<br>
+
+</div>
+<div class="smallfont" style="margin-bottom:3px">
+In order to be able to post messages on the MMA Forum - UFC Forums - UFC Results - MMA Videos forums, you must first register.<br />
+				Please enter your desired user name, your email address and other required details in the form below.<br><br>
+</div>
+<div class="smallfont" style="margin-bottom:3px">
+<strong>User Name</strong>:<br />
+<input class="bginput" id="regusername" type="text" name="username" maxlength="15" value="" /><img src="http://www.mmaforum.com/clear.gif" id="reg_verif_image" onclick="return toggle_collapse('dialog_box')" style="display:none;" alt="" />
+<div id="collapseobj_dialog_box"><div id="reg_verif_div" style="display:none;"></div></div>
+<script type="text/javascript" src="http://www.mmaforum.com/clientscript/vbulletin_ajax_nameverif.js?v=387"></script>
+<script type="text/javascript">
+<!--
+regname_verif = new vB_AJAX_NameVerify('regname_verif', 'regusername');
+//-->
+</script>
+</div>
+<fieldset class="fieldset">
+<legend>Password</legend>
+<table cellpadding="0" cellspacing="3" border="0" width="400">
+<tr>
+<td >Please enter a password for your user account. Note that passwords are case-sensitive.<Br><br></td>
+</tr>
+<tr>
+<td >
+Password:<br />
+<input type="password" class="bginput" name="password"  maxlength="50" value="" /><br><br>
+</td>
+
+</tr>
+            <tr>
+            <td>
+Confirm Password:<br />
+<input type="password" class="bginput" name="passwordconfirm"  maxlength="50" value="" />
+</td>
+            </tr>
+            
+</table>
+</fieldset>
+
+<fieldset class="fieldset">
+<legend>Email Address</legend>
+<table cellpadding="0" cellspacing="3" border="0" width="400">
+<tr>
+<td colspan="2">Please enter a valid email address for yourself.<br><br></td>
+</tr>
+<tr>
+<td>
+Email Address:<br />
+<input type="text" class="bginput" name="email" size="25" maxlength="50" value="" dir="ltr" />
+</td>
+<td>
+<!--
+Confirm Email Address:<br />
+<input type="text" class="bginput" name="emailconfirm" size="25" maxlength="50" value="" dir="ltr" />
+-->
+</td>
+</tr>
+
+</table>
+</fieldset>
+
+
+</td>
+<td class="column_or"><div class="block_or">OR</div></td>
+<td width="30%" valign="top" class="" style="vertical-align:top">
+
+
+<div class="blockrow">
+<h2>
+Log-in
+</h2><br>
+<br>
+
+</div>
+<table cellpadding="0" cellspacing="3" border="0" width="90%">
+<tr>
+<td class="smallfont" style="white-space: nowrap;"><label for="navbar_username2">User Name</label></td>
+<td align="right"><input type="text" style="font-size: 11px" name="vb_login_username" id="navbar_username2" size="10" accesskey="u" tabindex="1" value="" onfocus="if (this.value == 'User Name') this.value = '';" /></td>
+
+</tr>
+<tr>
+<td class="smallfont"><br>
+<label for="navbar_password2">Password</label><br><br>
+
+</td>
+<td align="right"><br>
+<input type="password" style="font-size: 11px" name="vb_login_password" id="navbar_password2" size="10" tabindex="1" /><br>
+<br>
+</td>
+
+</tr>
+        
+        <tr>
+        <td nowrap class="smallfont"><label for="cb_cookieuser_navbar2">Remember Me? <input type="checkbox" name="cookieuser" value="1" tabindex="1" id="cb_cookieuser_navbar2" accesskey="c" /></label></td>
+        <td align="right"><input type="submit" class="button" value="Log in" tabindex="1" title="Enter your username and password in the boxes provided to login, or click the 'register' button to create a profile for yourself." accesskey="s" /></td>
+        </tr>
+</table>
+
+
+        </td>
+      </tr>
+</tbody></table>
+</div>
+<!-- END TEMPLATE: vbpegp_registerForm3 --><!-- BEGIN TEMPLATE: humanverify_solvemedia -->
+
+		
+		<fieldset><legend>Human Verification</legend>
+		<input type="hidden" name="humanverify[hash]" value="" />
+		<script type='text/javascript'>
+			var ACPuzzleOptions = { theme:    'red',
+									tabindex: 0,
+									lang:     'en'
+			};
+		</script>
+		<p>In order to verify that you are a human and not a spam bot, please enter the answer into the following box below based on the instructions contained in the graphic.</p><br/>
+		<script type="text/javascript" src="http://api.solvemedia.com/papi/challenge.script?k=7nQZZFvquU1BJ8lbsHBQJiVgHbmhGB0K"></script>
+
+	<noscript>
+  		<iframe src="http://api.solvemedia.com/papi/challenge.noscript?k=7nQZZFvquU1BJ8lbsHBQJiVgHbmhGB0K" height="300" width="500" frameborder="0"></iframe><br/>
+  		<textarea name="adcopy_challenge" rows="3" cols="40"></textarea>
+  		<input type="hidden" name="adcopy_response" value="manual_challenge"/>
+	</noscript>
+		</fieldset>
+		
+<!-- END TEMPLATE: humanverify_solvemedia -->
+				</div>
+			</div>
+
+			<div class="vs_submit">
+				<input type="hidden" name="poststarttime" value="" />
+				<input type="hidden" name="posthash" value="" />
+				<input type="hidden" name="fromquickreply" value="1" />
+				<input type="hidden" name="s" value="" />
+				<input type="hidden" name="securitytoken" value="guest" />
+				<input type="hidden" name="do" value="postreply" />
+				<input type="hidden" name="t" value="209185" id="qr_threadid" />
+				<input type="hidden" name="p" value="0" id="qr_postid" />
+				<input type="hidden" name="specifiedpost" value="0" id="qr_specifiedpost" />
+				<input type="hidden" name="parseurl" value="1" />
+				<input type="hidden" name="loggedinuser" value="0" />
+				<input type="button" class="button" value="Post Quick Reply" accesskey="s" title="(Alt + S)" name="sbutton" tabindex="2" id="qr_submit" onclick="clickedelm = this.value; " /> 
+				<input type="submit" class="button" value="Go Advanced" accesskey="x" title="(Alt + X)" name="preview" tabindex="3" id="qr_preview" onclick="clickedelm = this.value" />
+
+			<div align="center" id="qr_posting_msg" style="display:none; margin-top:6px">
+				<span class="sprite inlineimg progress">Posting Quick Reply - Please Wait</span>&nbsp;<strong>Posting Quick Reply - Please Wait</strong>
+			</div>
+		</td>
+	</tr>
+	</tbody>
+	</table>
+	</form>
+
+	
+
+	<script type="text/javascript">
+	<!--
+		// initialize quick reply
+		qr_init();
+	//-->
+	</script>
+<!-- / quick reply -->
+
+
+
+<!-- next / previous links -->
+	<br />
+	<div class="smallfont" align="center">
+		<strong>&laquo;</strong>
+			<a href="http://www.mmaforum.com/mma-forum-fantasy-fight-league-ffl/209185-event-25-ufc-fight-night-70-a-prev-thread.html" rel="nofollow">Previous Thread</a>
+			|
+			<a href="http://www.mmaforum.com/mma-forum-fantasy-fight-league-ffl/209185-event-25-ufc-fight-night-70-a-next-thread.html" rel="nofollow">Next Thread</a>
+		<strong>&raquo;</strong>
+	</div>
+<!-- / next / previous links -->
+
+
+
+
+<!-- currently active users -->
+	<br />
+	<table class="tborder" cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+	<tr>
+		<td class="tcat" colspan="2">
+			Currently Active Users Viewing This Thread: 1 <span class="normal">(0 members and 1 guests)</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="alt1" colspan="2">
+			<span class="smallfont">&nbsp;</span>
+		</td>
+	</tr>
+	</table>
+<!-- end currently active users -->
+
+
+
+
+
+<!-- popup menu contents -->
+<br />
+
+<!-- thread tools menu -->
+<div class="vbmenu_popup" id="threadtools_menu" style="display:none">
+<form action="http://www.mmaforum.com/postings.php?t=209185&amp;pollid=" method="post" name="threadadminform">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">Thread Tools<a name="goto_threadtools"></a></td>
+	</tr>
+	<tr>
+		<td class="vbmenu_option"><span class="sprite inlineimg printer">Show Printable Version</span> <a href="http://www.mmaforum.com/mma-forum-fantasy-fight-league-ffl/209185-event-25-ufc-fight-night-70-a-print.html" accesskey="3" rel="nofollow">Show Printable Version</a></td>
+	</tr>
+	
+	
+	
+	
+	</table>
+</form>
+</div>
+<!-- / thread tools menu -->
+
+<!-- **************************************************** -->
+
+<!-- thread display mode menu -->
+<div class="vbmenu_popup" id="displaymodes_menu" style="display:none">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">Display Modes<a name="goto_displaymodes"></a></td>
+	</tr>
+	<tr>
+	
+		<td class="vbmenu_option" title="nohilite"><span class="sprite inlineimg mode_linear">Linear Mode</span> <strong>Linear Mode</strong></td>
+	
+	</tr>
+	<tr>
+	
+		<td class="vbmenu_option"><span class="sprite inlineimg mode_hybrid">Hybrid Mode</span> <a rel="nofollow" href="http://www.mmaforum.com/mma-forum-fantasy-fight-league-ffl/209185-event-25-ufc-fight-night-70-a.html?mode=hybrid">Switch to Hybrid Mode</a></td>
+	
+	</tr>
+	<tr>
+	
+		<td class="vbmenu_option"><span class="sprite inlineimg mode_threaded">Threaded Mode</span> <a rel="nofollow" href="http://www.mmaforum.com/mma-forum-fantasy-fight-league-ffl/209185-event-25-ufc-fight-night-70-a.html?mode=threaded#post3293905">Switch to Threaded Mode</a></td>
+	
+	</tr>
+	</table>
+</div>
+<!-- / thread display mode menu -->
+
+<!-- **************************************************** -->
+
+
+
+<!-- **************************************************** -->
+
+
+
+<!-- / popup menu contents -->
+
+
+<!-- forum rules and admin links -->
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+<tr valign="bottom">
+	<td width="100%" valign="top">
+		
+	</td>
+	<td class="smallfont" align="right">
+		<table cellpadding="0" cellspacing="0" border="0">
+		
+		
+		</table>
+	</td>
+</tr>
+</table>
+<!-- /forum rules and admin links -->
+<br>
+
+<br />
+
+
+
+
+<!-- BEGIN TEMPLATE: forumrules -->
+<table class="tborder forumrules" cellpadding="0" cellspacing="0" border="0" width="210">
+<thead>
+<tr>
+
+<td class="thead">
+Posting Rules
+</td>
+
+	<td class="thead" align="right">
+		<a style="float:right" href="http://www.mmaforum.com/mma-forum-fantasy-fight-league-ffl/209185-event-25-ufc-fight-night-70-a.html#top" onclick="return toggle_collapse('forumrules')"><span id="collapseimg_forumrules" class="sprite inlineimg collapseimg"><!-- -->&nbsp;</span></a>
+		
+	</td>
+</tr>
+</thead>
+<tbody id="collapseobj_forumrules" style="">
+<tr>
+	<td colspan="2" class="alt1" nowrap="nowrap"><div class="smallfont">
+		
+		<div>You <strong>may</strong> post new threads</div>
+		<div>You <strong>may</strong> post replies</div>
+		<div>You <strong>may not</strong> post attachments</div>
+		<div>You <strong>may not</strong> edit your posts</div>
+		<hr />
+		
+		<div><a rel="nofollow" href="http://www.mmaforum.com/misc.php?do=bbcode" target="_blank">BB code</a> is <strong>On</strong></div>
+		<div><a rel="nofollow" href="http://www.mmaforum.com/misc.php?do=showsmilies" target="_blank">Smilies</a> are <strong>On</strong></div>
+		<div><a rel="nofollow" href="http://www.mmaforum.com/misc.php?do=bbcode#imgcode" target="_blank">[IMG]</a> code is <strong>On</strong></div>
+		<div>HTML code is <strong>Off</strong></div><div><a rel="nofollow" href="http://www.mmaforum.com/misc.php?do=linkbacks#trackbacks" target="_blank">Trackbacks</a> are <strong>Off</strong></div>
+<div><a rel="nofollow" href="http://www.mmaforum.com/misc.php?do=linkbacks#pingbacks" target="_blank">Pingbacks</a> are <strong>Off</strong></div>
+<div><a rel="nofollow" href="http://www.mmaforum.com/misc.php?do=linkbacks#refbacks" target="_blank">Refbacks</a> are <strong>On</strong></div>
+		<hr />
+		<div><a rel="nofollow" href="http://www.mmaforum.com/misc.php?do=showrules" target="_blank">Forum Rules</a></div>
+	</div></td>
+</tr>
+</tbody>
+</table>
+<!-- END TEMPLATE: forumrules -->
+</div><!-- Close class="showthreadPage" -->
+
+
+<!-- temp -->
+<div style="display:none">
+	<!-- thread rate -->
+	
+		
+	
+	<!-- / thread rate -->
+</div>
+<script type="text/javascript" src="http://www.mmaforum.com/clientscript/vbulletin_autosave.js"></script>
+<!-- SlimCut -->
+<div style='width:100%; text-align:center;'><div id='MMAForum_com_1x1_SlimCut_SP_Forum' style='width:auto; height:auto;'>
+						<script type='text/javascript'>
+							googletag.cmd.push(function() { googletag.display('MMAForum_com_1x1_SlimCut_SP_Forum'); });
+						</script>
+					</div></div>
+<!-- BEGIN TEMPLATE: vbseo_linkbackmenu -->
+
+<div class="vbmenu_popup" id="linkbacktools_menu" style="display:none">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">LinkBack<a name="goto_linkback"></a></td>
+	</tr>
+
+	<tr>
+		<td class="vbmenu_option"><img class="inlineimg" src="http://www.mmaforum.com/vbseo/resources/images/forum/linkback_url.gif" alt="LinkBack URL" /> <a href="http://www.mmaforum.com/mma-forum-fantasy-fight-league-ffl/209185-event-25-ufc-fight-night-70-a.html" onclick="prompt('Use the following URL when referencing this thread from another forum or blog.','http://www.mmaforum.com/mma-forum-fantasy-fight-league-ffl/209185-event-25-ufc-fight-night-70-a.html');return false;">LinkBack URL</a></td>
+	</tr>
+	<tr>
+		<td class="vbmenu_option"><img class="inlineimg" src="http://www.mmaforum.com/vbseo/resources/images/forum/linkback_about.gif" alt="About LinkBacks" /> <a rel="nofollow" href="http://www.mmaforum.com/misc.php?do=linkbacks">About LinkBacks</a></td>
+	</tr>
+
+	</table>
+</div>
+
+<!-- END TEMPLATE: vbseo_linkbackmenu --><!-- BEGIN TEMPLATE: adv_portal_homepage_bottom_ad -->
+
+<!-- END TEMPLATE: adv_portal_homepage_bottom_ad -->
+</div>
+</div>
+
+<aside class="noprint" id="sidebar">
+<div style="display: none;" class="sidebar-controls ">
+<span class="sprite inlineimg sidebar-controls-icon"></span>
+<span class="sprite inlineimg br-creditcheck"></span>
+<span class="sprite inlineimg br-warranty"></span>
+<span class="sprite inlineimg br-history"></span>
+<span class="sprite inlineimg br-shipping"></span>
+<span class="sprite inlineimg br-escrow"></span>
+<span class="sprite inlineimg br-tires"></span>
+<span class="sprite inlineimg br-inspections"></span>
+<span class="sprite inlineimg br-insurance"></span>
+</div>
+<div class="sidebar">
+<!-- BEGIN TEMPLATE: adv_portal_module_wrapper -->
+<script src="http://www.mmaforum.com/clientscript/vbulletin_md5.js?387" type="text/javascript"></script> <form action="http://www.mmaforum.com/login.php" method="post" onsubmit="md5hash(vb_login_password,vb_login_md5password)"> <input name="vb_login_md5password" type="hidden" /> <input name="s" type="hidden" value="" /> <input name="do" type="hidden" value="login" /><input type="hidden" name="securitytoken" value="guest" />
+
+<section>
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="cmps-table" width="100%">
+		<thead>
+			<tr>
+				<td  colspan="2">
+				
+				<h2 class="title">Log in</h2></td>
+			</tr>
+		</thead>
+		<tbody id="collapseobj_module_9" style="">
+			
+				<!-- BEGIN TEMPLATE: adv_portal_welcomeblock_lean -->
+<tr>
+	<td class="alt1">
+
+		
+			<div class="smallfont" style="padding:0px">User Name:<br />
+				<input class="bginput" name="vb_login_username" size="12" type="text" tabindex="577" /><br />
+				Password:<br />
+				<input class="bginput" name="vb_login_password" size="12" type="password" tabindex="578" /><br />
+				<input checked="checked" class="bginput" name="cookieuser" id="cb_cookieuser" type="checkbox" value="1" /><label for="cb_cookieuser">Remember Me?</label>
+
+				<div style="padding-top:0px; padding-bottom:0px;">
+					<input class="button" type="submit" value="Log in" tabindex="579" />
+				</div>
+
+			Not a member yet?<br />
+<a href="http://www.mmaforum.com/register.php" onclick="event.preventDefault(); window.location.href='http://www.mmaforum.com//register.php?autodisplayreg=true'">Register Now!</a>
+			</div>
+
+		
+
+	</td>
+</tr>
+<!-- END TEMPLATE: adv_portal_welcomeblock_lean -->
+			
+		</tbody>
+	</table>
+</section>
+</form>
+<!-- END TEMPLATE: adv_portal_module_wrapper --><!-- BEGIN TEMPLATE: adv_portal_search_in_one -->
+<div class="search-in-one">
+    <div class="change_btn "><div class="image sprite-google-search"></div>
+        <ul class="search_menu">
+            <li data-search-type="google-search"><div class="icon sprite-google-search"></div> Google search</li>
+            <li data-search-type="vb-search"><div class="icon sprite-vb-search"></div> VB search</li>
+        </ul>
+    </div>
+    
+    <div class="search-item google-search">
+<div class='ams_gtsearch' style='width: 150px; margin:auto;' id='cse_gtsearch_form_5'></div>
+<script>
+vsamsgtsearches.push('cse_gtsearch_form_5');
+</script>
+    <!--<form action="http://www.mmaforum.com/gtsearch.php" id="">
+			<div>
+				<input type="hidden" name="cx" value="partner-pub-7865546952023728:mdcdjklrvlo" />
+				<input type="hidden" name="cof" value="FORID:11" />
+				<input type="hidden" name="ie" value="UTF-8" />
+				<input type="text" name="q" size="21" value=""/>
+				<input type="submit" name="sa" value="Search" />
+			</div>
+		</form>-->
+    </div> 
+    
+</div>
+<!-- END TEMPLATE: adv_portal_search_in_one --><!-- BEGIN TEMPLATE: adv_portal_sponsors -->
+<section class="text_wrapper ad box-ad">
+<div style='width:100%; text-align:center;'><div id='MMAForum_com_300x250_TopRight_SP_Forum' style='width:auto; height:auto;'>
+						<script type='text/javascript'>
+							googletag.cmd.push(function() { googletag.display('MMAForum_com_300x250_TopRight_SP_Forum'); });
+						</script>
+					</div></div>
+
+
+</section>
+<!-- END TEMPLATE: adv_portal_sponsors --><!-- BEGIN TEMPLATE: adv_portal_module_wrapper -->
+
+
+<section>
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="cmps-table" width="100%">
+		<thead>
+			<tr>
+				<td  colspan="0">
+				
+				<h2 class="title">Recent Discussions</h2></td>
+			</tr>
+		</thead>
+		<tbody id="collapseobj_module_73" style="">
+			
+				<!-- BEGIN TEMPLATE: adv_portal_recthreads_lean -->
+<tr>
+	<td class="alt1 columns columns-comments">
+
+	 <div class="picture main-column-picture">    
+
+		
+				<div style="padding-top:0px"><span class="sprite count">1</span></div>
+		
+	
+	</div>
+    
+    	<div class="main-column-text-wrapper">
+   	 <div class="text main-column-text">
+    
+    		<div class="smallfont">
+		
+
+		
+		
+
+		
+				<a href="http://www.mmaforum.com/ufc/262250-warning-urgent-scam.html"><span class="sprite inlineimg firstnew">Go to first new post</span></a>
+		
+			 <a href="http://www.mmaforum.com/ufc/262250-warning-urgent-scam.html" title="http://i.imgur.com/5pKn7K5.jpg 
+:D" itemprop="headline"><strong>Warning urgent scam...</strong></a>
+		
+		
+		
+
+        
+        <div>
+        
+				 <span itemprop="dateModified">Today <span class="time">05:06 PM</span></span> by <a rel="nofollow" href="http://www.mmaforum.com/26731-m-c.html" itemprop="contributor">M.C</a>
+                 <meta itemprop="author" content="Anteries">
+                 <meta itemprop="dateCreated" content="Today 04:29 PM">
+				
+			
+        </div>
+					
+		</div>
+		
+    </div>
+    </div>  
+    
+</td>
+</tr>
+<!-- END TEMPLATE: adv_portal_recthreads_lean --><!-- BEGIN TEMPLATE: adv_portal_recthreads_lean -->
+<tr>
+	<td class="alt2 columns columns-comments">
+
+	 <div class="picture main-column-picture">    
+
+		
+				<div style="padding-top:0px"><span class="sprite count">6</span></div>
+		
+	
+	</div>
+    
+    	<div class="main-column-text-wrapper">
+   	 <div class="text main-column-text">
+    
+    		<div class="smallfont">
+		
+
+		
+		
+
+		
+				<a href="http://www.mmaforum.com/ufc/262217-weidman-vs-gastelum.html"><span class="sprite inlineimg firstnew">Go to first new post</span></a>
+		
+			 <a href="http://www.mmaforum.com/ufc/262217-weidman-vs-gastelum.html" title="http://i1051.photobucket.com/albums/s438/MMAForumStaff/UFCFIGHTNIGHTNEW_zpsa4b1af94.png 
+..." itemprop="headline"><strong>Weidman vs. Gastelum...</strong></a>
+		
+		
+		
+
+        
+        <div>
+        
+				 <span itemprop="dateModified">Today <span class="time">04:26 PM</span></span> by <a rel="nofollow" href="http://www.mmaforum.com/33618-volcomx311.html" itemprop="contributor">VolcomX311</a>
+                 <meta itemprop="author" content="LizaG">
+                 <meta itemprop="dateCreated" content="Yesterday 08:53 AM">
+				
+			
+        </div>
+					
+		</div>
+		
+    </div>
+    </div>  
+    
+</td>
+</tr>
+<!-- END TEMPLATE: adv_portal_recthreads_lean --><!-- BEGIN TEMPLATE: adv_portal_recthreads_lean -->
+<tr>
+	<td class="alt1 columns columns-comments">
+
+	 <div class="picture main-column-picture">    
+
+		
+				<div style="padding-top:0px"><span class="sprite count">6</span></div>
+		
+	
+	</div>
+    
+    	<div class="main-column-text-wrapper">
+   	 <div class="text main-column-text">
+    
+    		<div class="smallfont">
+		
+
+		
+		
+
+		
+				<a href="http://www.mmaforum.com/ufc/262241-connors-can.html"><span class="sprite inlineimg firstnew">Go to first new post</span></a>
+		
+			 <a href="http://www.mmaforum.com/ufc/262241-connors-can.html" title="for real.couldn't outbox nate diaz and people give him a shot at the best boxer ever. 
+ 
+zero chance.impossible." itemprop="headline"><strong>connors a can</strong></a>
+		
+		
+		
+
+        
+        <div>
+        
+				 <span itemprop="dateModified">Today <span class="time">03:53 PM</span></span> by <a rel="nofollow" href="http://www.mmaforum.com/32417-hitorgethit.html" itemprop="contributor">HitOrGetHit</a>
+                 <meta itemprop="author" content="tyronebiggums">
+                 <meta itemprop="dateCreated" content="Yesterday 08:38 PM">
+				
+			
+        </div>
+					
+		</div>
+		
+    </div>
+    </div>  
+    
+</td>
+</tr>
+<!-- END TEMPLATE: adv_portal_recthreads_lean --><!-- BEGIN TEMPLATE: adv_portal_recthreads_lean -->
+<tr>
+	<td class="alt2 columns columns-comments">
+
+	 <div class="picture main-column-picture">    
+
+		
+				<div style="padding-top:0px"><span class="sprite count">3</span></div>
+		
+	
+	</div>
+    
+    	<div class="main-column-text-wrapper">
+   	 <div class="text main-column-text">
+    
+    		<div class="smallfont">
+		
+
+		
+		
+
+		
+				<a href="http://www.mmaforum.com/ufc/262225-top-mma-trainers-discuss.html"><span class="sprite inlineimg firstnew">Go to first new post</span></a>
+		
+			 <a href="http://www.mmaforum.com/ufc/262225-top-mma-trainers-discuss.html" title="How top MMA trainers would prepare Conor McGregor for Floyd Mayweather 
+ 
+Brett Okamoto 
+ESPN Staff Writer 
+ 
+When it comes to Floyd Mayweather..." itemprop="headline"><strong>Top MMA trainers discuss...</strong></a>
+		
+		
+		
+
+        
+        <div>
+        
+				 <span itemprop="dateModified">Today <span class="time">02:04 PM</span></span> by <a rel="nofollow" href="http://www.mmaforum.com/35621-trix.html" itemprop="contributor">Trix</a>
+                 <meta itemprop="author" content="Calminian">
+                 <meta itemprop="dateCreated" content="Yesterday 06:34 PM">
+				
+			
+        </div>
+					
+		</div>
+		
+    </div>
+    </div>  
+    
+</td>
+</tr>
+<!-- END TEMPLATE: adv_portal_recthreads_lean --><!-- BEGIN TEMPLATE: adv_portal_recthreads_lean -->
+<tr>
+	<td class="alt1 columns columns-comments">
+
+	 <div class="picture main-column-picture">    
+
+		
+				<div style="padding-top:0px"><span class="sprite count">28</span></div>
+		
+	
+	</div>
+    
+    	<div class="main-column-text-wrapper">
+   	 <div class="text main-column-text">
+    
+    		<div class="smallfont">
+		
+
+		
+		
+
+		
+				<a href="http://www.mmaforum.com/ufc/261969-call-unity-after.html"><span class="sprite inlineimg firstnew">Go to first new post</span></a>
+		
+			 <a href="http://www.mmaforum.com/ufc/261969-call-unity-after.html" title="Dear brothers and sisters I know McGregor and Mayweather fans are poles apart and passionate about the fighter they support.  But I call for unity,..." itemprop="headline"><strong>A call for unity after...</strong></a>
+		
+		
+		
+
+        
+        <div>
+        
+				 <span itemprop="dateModified">Today <span class="time">09:24 AM</span></span> by <a rel="nofollow" href="http://www.mmaforum.com/41431-hadoq.html" itemprop="contributor">hadoq</a>
+                 <meta itemprop="author" content="Anteries">
+                 <meta itemprop="dateCreated" content="07-16-2017 06:45 AM">
+				
+			
+        </div>
+					
+		</div>
+		
+    </div>
+    </div>  
+    
+</td>
+</tr>
+<!-- END TEMPLATE: adv_portal_recthreads_lean --><!-- BEGIN TEMPLATE: adv_portal_recthreads_lean -->
+<tr>
+	<td class="alt2 columns columns-comments">
+
+	 <div class="picture main-column-picture">    
+
+		
+				<div style="padding-top:0px"><span class="sprite count">8</span></div>
+		
+	
+	</div>
+    
+    	<div class="main-column-text-wrapper">
+   	 <div class="text main-column-text">
+    
+    		<div class="smallfont">
+		
+
+		
+		
+
+		
+				<a href="http://www.mmaforum.com/ufc/262113-sarah-moras-starts.html"><span class="sprite inlineimg firstnew">Go to first new post</span></a>
+		
+			 <a href="http://www.mmaforum.com/ufc/262113-sarah-moras-starts.html" title="http://i63.tinypic.com/n6qbtk.jpg 
+ 
+https://www.gofundme.com/sarahcheesecakemorasufc215 
+ 
+Could be the start of a trend. 
+ 
+I remember Chris..." itemprop="headline"><strong>Sarah Moras starts...</strong></a>
+		
+		
+		
+
+        
+        <div>
+        
+				 <span itemprop="dateModified">Yesterday <span class="time">10:48 PM</span></span> by <a rel="nofollow" href="http://www.mmaforum.com/31994-kantowrestler.html" itemprop="contributor">kantowrestler</a>
+                 <meta itemprop="author" content="Trix">
+                 <meta itemprop="dateCreated" content="07-18-2017 08:22 PM">
+				
+			
+        </div>
+					
+		</div>
+		
+    </div>
+    </div>  
+    
+</td>
+</tr>
+<!-- END TEMPLATE: adv_portal_recthreads_lean --><!-- BEGIN TEMPLATE: adv_portal_recthreads_lean -->
+<tr>
+	<td class="alt1 columns columns-comments">
+
+	 <div class="picture main-column-picture">    
+
+		
+				<div style="padding-top:0px"><span class="sprite count">0</span></div>
+		
+	
+	</div>
+    
+    	<div class="main-column-text-wrapper">
+   	 <div class="text main-column-text">
+    
+    		<div class="smallfont">
+		
+
+		
+		
+
+		
+				<a href="http://www.mmaforum.com/mma-smacktalk/262249-brilliant-jiu-jitsu.html"><span class="sprite inlineimg firstnew">Go to first new post</span></a>
+		
+			 <a href="http://www.mmaforum.com/mma-smacktalk/262249-brilliant-jiu-jitsu.html" title="very well done.a true inside look at this deadly martial art and its roots. 
+ 
+ 
+https://www.youtube.com/watch?v=JzdT-kerHac" itemprop="headline"><strong>brilliant Jiu-jitsu...</strong></a>
+		
+		
+		
+
+        
+        <div>
+        
+				 <span itemprop="dateModified">Yesterday <span class="time">08:52 PM</span></span> by <a rel="nofollow" href="http://www.mmaforum.com/105961-tyronebiggums.html" itemprop="contributor">tyronebiggums</a>
+                 <meta itemprop="author" content="tyronebiggums">
+                 <meta itemprop="dateCreated" content="Yesterday 08:52 PM">
+				
+			
+        </div>
+					
+		</div>
+		
+    </div>
+    </div>  
+    
+</td>
+</tr>
+<!-- END TEMPLATE: adv_portal_recthreads_lean --><!-- BEGIN TEMPLATE: adv_portal_recthreads_lean -->
+<tr>
+	<td class="alt2 columns columns-comments">
+
+	 <div class="picture main-column-picture">    
+
+		
+				<div style="padding-top:0px"><span class="sprite count">0</span></div>
+		
+	
+	</div>
+    
+    	<div class="main-column-text-wrapper">
+   	 <div class="text main-column-text">
+    
+    		<div class="smallfont">
+		
+
+		
+		
+
+		
+				<a href="http://www.mmaforum.com/introductions-greets/262233-hey-folks-any-rogan.html"><span class="sprite inlineimg firstnew">Go to first new post</span></a>
+		
+			 <a href="http://www.mmaforum.com/introductions-greets/262233-hey-folks-any-rogan.html" title="if there is, say hi you miserable queers. 
+ 
+ 
+                                 your pal, 
+ 
+                                         Tyrone Biggums,..." itemprop="headline"><strong>Hey folks, any Rogan...</strong></a>
+		
+		
+		
+
+        
+        <div>
+        
+				 <span itemprop="dateModified">Yesterday <span class="time">08:30 PM</span></span> by <a rel="nofollow" href="http://www.mmaforum.com/105961-tyronebiggums.html" itemprop="contributor">tyronebiggums</a>
+                 <meta itemprop="author" content="tyronebiggums">
+                 <meta itemprop="dateCreated" content="Yesterday 08:30 PM">
+				
+			
+        </div>
+					
+		</div>
+		
+    </div>
+    </div>  
+    
+</td>
+</tr>
+<!-- END TEMPLATE: adv_portal_recthreads_lean --><!-- BEGIN TEMPLATE: adv_portal_recthreads_lean -->
+<tr>
+	<td class="alt1 columns columns-comments">
+
+	 <div class="picture main-column-picture">    
+
+		
+				<div style="padding-top:0px"><span class="sprite count">12</span></div>
+		
+	
+	</div>
+    
+    	<div class="main-column-text-wrapper">
+   	 <div class="text main-column-text">
+    
+    		<div class="smallfont">
+		
+
+		
+		
+
+		
+			 <a href="http://www.mmaforum.com/ufc/262057-kevin-lee-talks-conor.html" title="nhbG67dLoQU&amp;t" itemprop="headline">Kevin Lee talks Conor...</a>
+		
+		
+		
+
+        
+        <div>
+        
+				 <span itemprop="dateModified">Yesterday <span class="time">05:29 PM</span></span> by <a rel="nofollow" href="http://www.mmaforum.com/29980-joabbuac.html" itemprop="contributor">Joabbuac</a>
+                 <meta itemprop="author" content="MMA Crazy TV">
+                 <meta itemprop="dateCreated" content="07-17-2017 07:27 PM">
+				
+			
+        </div>
+					
+		</div>
+		
+    </div>
+    </div>  
+    
+</td>
+</tr>
+<!-- END TEMPLATE: adv_portal_recthreads_lean --><!-- BEGIN TEMPLATE: adv_portal_recthreads_lean -->
+<tr>
+	<td class="alt2 columns columns-comments">
+
+	 <div class="picture main-column-picture">    
+
+		
+				<div style="padding-top:0px"><span class="sprite count">0</span></div>
+		
+	
+	</div>
+    
+    	<div class="main-column-text-wrapper">
+   	 <div class="text main-column-text">
+    
+    		<div class="smallfont">
+		
+
+		
+		
+
+		
+			 <a href="http://www.mmaforum.com/mma-forum-news-announcements/262209-ufc-fox-weidman-vs.html" title="https://punchfacedotcom.files.wordpress.com/2017/05/csm_weidman_gastelum_a635da9794.jpg 
+ 
+ 
+Date: July 22, 2017  
+Venue: Nassau Veterans Memorial..." itemprop="headline">UFC on Fox: Weidman vs....</a>
+		
+		
+		
+
+        
+        <div>
+        
+				 <span itemprop="dateModified">Yesterday <span class="time">08:51 AM</span></span> by <a rel="nofollow" href="http://www.mmaforum.com/25749-lizag.html" itemprop="contributor">LizaG</a>
+                 <meta itemprop="author" content="LizaG">
+                 <meta itemprop="dateCreated" content="Yesterday 08:51 AM">
+				
+			
+        </div>
+					
+		</div>
+		
+    </div>
+    </div>  
+    
+</td>
+</tr>
+<!-- END TEMPLATE: adv_portal_recthreads_lean -->
+			
+		</tbody>
+	</table>
+</section>
+
+<!-- END TEMPLATE: adv_portal_module_wrapper --><!-- BEGIN TEMPLATE: adv_portal_sponsors2 -->
+<section class="text_wrapper ad box-ad">
+<div style='width:100%; text-align:center;'><div id='MMAForum_com_300x250_TopLeft_SP_Forum' style='width:auto; height:auto;'>
+						<script type='text/javascript'>
+							googletag.cmd.push(function() { googletag.display('MMAForum_com_300x250_TopLeft_SP_Forum'); });
+						</script>
+					</div></div>
+</section>
+<!-- END TEMPLATE: adv_portal_sponsors2 -->
+</div>
+</aside>
+
+<div class="clear"><!-- -->&nbsp;</div>
+</div>
+<!-- end wrapper -->
+
+
+<!-- BEGIN TEMPLATE: footer -->
+<script type="text/javascript">ame_toggle_view({other : 'true',post : 'true',blog : 'true',group : 'true',vm : 'true',sig : 'true'});</script><!-- BEGIN TEMPLATE: ad_footer_start -->
+<div class="Leaderboard">
+<div style='width:100%; text-align:center;'><div id='MMAForum_com_728x90_Bottom_SP_Forum' style='width:auto; height:auto;'>
+						<script type='text/javascript'>
+							googletag.cmd.push(function() { googletag.display('MMAForum_com_728x90_Bottom_SP_Forum'); });
+						</script>
+					</div></div>
+</div>
+
+
+
+
+<!-- END TEMPLATE: ad_footer_start -->
+
+
+<div id="footer" class="footer">
+<form action="http://www.mmaforum.com/forumindex.php" method="get" style="clear:left">
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%" class="page" align="center">
+<tr>
+	
+		<td class="tfoot" valign="top">
+			<select name="styleid" onchange="switch_id(this, 'style')">
+				<optgroup label="Quick Style Chooser">
+					<!-- BEGIN TEMPLATE: option -->
+<option value="57" class="" selected="selected">-- MMAForum.com (Full)</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="98" class="" >-- MMAForum.com (Classic)</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="89" class="" >-- MMAForum.com (Mobile)</option>
+
+<!-- END TEMPLATE: option -->
+				</optgroup>
+			</select>
+		</td>
+	
+	
+	<td class="tfoot subnav-bottom" align="right" width="100%">
+		<div class="smallfont">
+			<strong>
+				<a href="http://www.mmaforum.com/sendmessage.php" rel="nofollow" accesskey="9">Contact Us</a> |<a href="/advertise.php" rel="nofollow" accesskey="9">Advertise</a> |
+				<a href="http://www.mmaforum.com">MMA Forum - UFC Forums</a> | 
+				
+				
+				<a href="http://www.mmaforum.com/archive/">Archive</a> | 
+				
+				<a href="http://www.mmaforum.com/privacy-policy.php">Privacy Statement</a> | 
+				
+				<a href="http://www.mmaforum.com/mma-forum-fantasy-fight-league-ffl/209185-event-25-ufc-fight-night-70-a.html#top" onclick="self.scrollTo(0, 0); return false;">Top</a>
+			</strong>
+		</div>
+	</td>
+</tr>
+</table>
+
+<br />
+
+
+
+
+<!-- <div align="center">
+<a rel="nofollow" href="http://www.autoguide.com/"><img class="photo" src="/images/MMAforum_2015/misc/spacer.gif" data-original="/images/MMAforum_2015/misc/footer-logo.png" border="0" height="60" width="250" alt="AutoGuide.com Group" /></a>
+</div> -->
+
+
+
+
+
+<div align="center">
+
+
+
+	<div class="smallfont" align="center">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+<div><a rel="nofollow" href="http://www.vbcredits.com/">vBCredits</a> v1.4 Copyright &copy;2007, <a rel="nofollow" href="http://www.pixelfxstudios.ca/">PixelFX Studios</a></div>
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+
+
+	</div>
+
+
+
+
+
+</form>
+
+
+
+<!-- BEGIN TEMPLATE: ad_footer_end -->
+
+<!-- END TEMPLATE: ad_footer_end -->
+
+
+
+
+
+</div>
+<!-- end footer -->
+
+</div></div></div><!-- end spacer_open -->
+
+</div>
+<!-- end container -->
+<script type="text/javascript">
+<!--
+	// Main vBulletin Javascript Initialization
+	vBulletin_init();
+//-->
+</script>
+
+
+
+
+<script>
+if (typeof(jQuery) == 'undefined'){
+        document.write('<scr' + 'ipt type="text/javascript" src=" http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></scr' + 'ipt>');
+}
+</script>
+
+<script src="http://www.mmaforum.com/clientscript/vs_scripts/sticky.js"></script>
+<script>
+                var $ = jQuery.noConflict();
+                jQuery(document).ready(function($) {
+                                $("#main-content, .sidebar").addClass('theiaStickySidebar');
+                                $("#main-content_wrapper, #sidebar").theiaStickySidebar({
+                      // Settings
+                      additionalMarginTop: 30
+                    });
+                });           
+</script>
+
+<script>
+(function ($, window) {
+$("#qr_submit").click(function(e){
+e.stopPropagation();
+$("#qrform").trigger('submit');
+});
+})(jQuery, window);
+</script>
+<!-- Quick search form touchscreen fix -->
+<style>.stayOpened{display:block !important;}</style>
+<script>
+(function ($, window) {
+if ('ontouchstart' in document.documentElement){
+$('#navbar_search_menu').click(function(event) {
+$('#navbar_search_menu').addClass("stayOpened");
+});
+$('#navbar_search').click(function(event) {
+if ($('#navbar_search_menu').hasClass("stayOpened")) $('#navbar_search_menu').removeClass("stayOpened");
+});
+}
+})(jQuery, window);
+</script>
+<!-- End Quick search form touchscreen fix-->
+
+<script>
+(function ($, window) {
+var currencySelects=$("select[name*='currency']");
+if (currencySelects.length){
+  currencySelects.find("option:last-child").attr('selected', 'selected');
+}
+})(jQuery, window);
+</script>
+
+
+<script src="http://www.mmaforum.com/clientscript/vs_scripts/scripts-bottom.js"></script>
+
+
+<script src="http://www.google.com/cse/brand?form=&amp;lang=en"></script>
+
+<script>
+//setTimeout(ghostwriter.loadscripts, 250); 
+</script>  
+
+<div id="update-browser">For the best viewing experience please update your browser to <a rel="nofollow" href="http://www.google.com/chrome" target="blank">Google Chrome</a></div>
+
+
+<!-- vBadvanced 5-1-9-7-3 --><script>
+var renderVSAMSGTSearch = function() {
+	for(var a = 0; a < vsamsgtsearches.length; a++)     
+		google.search.cse.element.render({div: vsamsgtsearches[a], tag: 'searchbox-only'})
+}, startVSAMSGTSearch = function() {
+	'complete' == document.readyState ? renderVSAMSGTSearch() : google.setOnLoadCallback(renderVSAMSGTSearch)
+};
+			
+		window.__gcse = { parsetags: 'explicit', callback: startVSAMSGTSearch}, function() {
+			var cx = 'partner-pub-7865546952023728:mdcdjklrvlo';
+			var gcse = document.createElement('script');
+			gcse.type = 'text/javascript';
+			gcse.async = true;
+			gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(gcse, s);
+		}();
+</script>
+<!-- END TEMPLATE: footer -->
+<table cellpadding="3" cellspacing="0" border="0" class="page" align="center" width="100%"><tr><td class="tfoot" align="center" width="100%"><div class="smallfont"><strong><a href="http://www.verticalscope.com/aboutus/tos.php?site=mmaforum.com">Terms of Use</a></strong></div></td></tr></table>
+
+
+
+
+<!-- Adblock Check -->
+<div class="afs_ads">&nbsp;</div>
+<script>
+(function() {
+    var adBlockDetector = function() {
+        setTimeout(function() {
+            if (!document.getElementsByClassName) return;
+            
+            var ads = document.getElementsByClassName("afs_ads");
+            ad  = ads[ads.length - 1];
+
+            if (!ad || ad.innerHTML.length == 0 || ad.clientHeight === 0) {
+                _gaq.push(["_trackEvent", "Adblock", "Blocked", "true",,true]);
+            } else {
+                ad.style.display = "none";
+                _gaq.push(["_trackEvent", "Adblock", "Unblocked", "false",,true]);
+            }
+
+        }, 500);
+    }
+
+    /* Attach a listener for page load */
+    if (window.addEventListener) {
+        window.addEventListener("load", adBlockDetector, false);
+    } else {
+        window.attachEvent("onload", adBlockDetector); //IE
+    }
+})();
+</script>
+<!-- /Adblock Check-->
+<!-- Lotame -->
+<script src="//tags.crwdcntrl.net/c/8060/cc_af.js"></script>
+<!-- /Lotame -->
+
+<!-- SWOOP -->
+<script type="text/javascript">
+  (function addSwoopOnce(domain) {
+    var win = window;
+    try {
+      while (!(win.parent == win || !win.parent.document)) {
+        win = win.parent;
+      }
+    } catch (e) {
+      /* noop */
+    }
+    var doc = win.document;
+    if (!doc.getElementById("swoop_sdk")) {
+      var serverbase = doc.location.protocol + "//ardrone.swoop.com/";
+      var s = doc.createElement("script");
+      s.type = "text/javascript";
+      s.src = serverbase + "js/spxw.js";
+      s.id = "swoop_sdk";
+      s.setAttribute("data-domain", domain);
+      s.setAttribute("data-serverbase", serverbase);
+      doc.head.appendChild(s);
+    }
+  })("SW-86972468-S1010");
+</script>
+<!-- /SWOOP -->
+<!-- BEGIN TEMPLATE: dbtech_vbsecurity_passwordcheck -->
+<script type="text/javascript">
+<!-- 
+	var vBSecurity = {
+		imageBasePath : 'http://www.mmaforum.com//dbtech/vbsecurity_pro/images/',
+		rules : { passwordLength : {phrase : 'Must be at least 10 characters', params : {passwordLength : 10 }},containsLowerCase : {phrase : 'Must contain lower-case characters'},containsUpperCase : {phrase : 'Must contain upper-case characters'},containsNumbers : {phrase : 'Must contain numbers'},containsSymbols : {phrase : 'Must contain symbols'} },
+		vbversion : 3 // DO NOT CHANGE THIS OR YOU WILL BREAK EVERYTHING!
+	};
+// -->
+</script>
+<script type="text/javascript"> window.jQuery || document.write('<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">\x3C/script>'); </script>
+
+<!-- END TEMPLATE: dbtech_vbsecurity_passwordcheck --><script type="text/javascript" src="http://www.mmaforum.com/clientscript/vbulletin_md5.js?v=$vboptions[simpleversion]"></script><link rel="stylesheet" href="//img.verticalscope.com/images/vs_registration/registration_v3.css" type="text/css"><link href="//fonts.googleapis.com/css?family=Roboto:400,400i,500,700,900" rel="stylesheet"><script type="text/javascript">var forumHome = "http://www.mmaforum.com//forumindex.php"; </script><script type="text/javascript" src="//img.verticalscope.com/images/vs_registration/registration_v4a.js"></script><script type="text/javascript">
+var vs_api = vsapi.api();
+var vs_o = vs_api.vbulletinInit(0, [3293905]);
+vs_o.addPostElement(document.getElementById("post3293905"), document.getElementById("post_message_3293905"), 3293905, 209185, 141, 32417, 0);
+</script>
+<!-- Taboola Footer -->
+<script type="text/javascript">
+  window._taboola = window._taboola || [];
+  _taboola.push({flush: true});
+</script>
+<!-- /Taboola Footer -->
+
+<script type="text/javascript">
+//<![CDATA[
+
+window.orig_onload = window.onload;
+window.onload = function() {
+var cpost=document.location.hash.substring(1);var cpost2='';if(cpost && (typeof fetch_object != 'undefined')){ var ispost=cpost.substring(0,4)=='post';if(ispost)cpost2='post_'+cpost.substring(4);if((cobj = fetch_object(cpost))||(cobj = fetch_object(cpost2))){cobj.scrollIntoView(true);}else if(ispost){cpostno = cpost.substring(4,cpost.length);if(parseInt(cpostno)>0){location.replace('http://www.mmaforum.com/showthread.php?p='+cpostno);};} }
+
+if(typeof window.orig_onload == "function") window.orig_onload();
+}
+
+//]]>
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"0f2b0d60a0","applicationID":"2343426","transactionName":"YFMEZUdYCBADVRddVlkZM0NcFhABEVMMGklfRg==","queueTime":0,"applicationTime":432,"atts":"TBQHEw9CGx4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
