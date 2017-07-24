@@ -1,0 +1,4118 @@
+
+<!DOCTYPE html><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<!-- BEGIN TEMPLATE: SHOWTHREAD -->
+
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en">
+<head>
+<base href="http://www.avsforum.com/forum/" /><!--[if IE]></base><![endif]-->
+	
+<!-- Amazon Tag Top -->
+<script type='text/javascript' src='//c.amazon-adsystem.com/aax2/amzn_ads.js'></script>
+<script type='text/javascript'>
+    try {
+            amznads.getAds('3274');
+        } catch (e) { /*ignore*/ }
+</script>
+<!-- /Amazon Tag Top -->
+<!-- BEGIN TEMPLATE: headinclude -->
+<!--<link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Doppio One' rel='stylesheet' type='text/css'>-->
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<!-- meta tags -->
+
+
+
+
+<meta name="keywords" content="Need,advice,70,quot,Bravia,Vertical,lines, Need advice 70&quot; Bravia Vertical lines, home theater, speakers, headphones, oled, hdtv, hdmi, surround sound" />
+<meta name="description" content="Long story short, turn on my TV one day and suddenly I have nothing but vertical lines. (KDL 70w850b) Considering this tv isn't even 2 years old.. I" />
+
+
+
+<!-- meta tags -->
+
+<!-- CSS Stylesheet -->
+<style>@import url(http://fonts.googleapis.com/css?family=Oswald:400,700);</style>
+<style type="text/css" id="vbulletin_css">
+/**
+* vBulletin 3.8.7 CSS
+* Style: 'AVSForum (Default)'; Style ID: 113
+*/
+@import url("http://www.avsforum.com/forum/clientscript/vbulletin_css/style-0f1bf299-00113.css");
+</style>
+
+
+<!-- / CSS Stylesheet -->
+
+<!--[if lt IE 9]>
+<style>
+#update-browser{display:block}
+</style>
+<script>
+// HTML 5 Shiv. for older IE - should be an if statement?  /
+(function(){if(!/*@cc_on!@*/0)return;var e="abbr,article,aside,audio,bb,canvas,datagrid,datalist,details,dialog,eventsource,figure,footer,header,hgroup,mark,menu,meter,nav,output,progress,section,time,video".split(',');for(var i=0;i<e.length;i++){document.createElement(e[i])}})()
+</script>
+<![endif]-->
+
+<script>
+if (typeof(jQuery) == 'undefined'){
+        document.write('<scr' + 'ipt type="text/javascript" src=" http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></scr' + 'ipt>');
+}
+</script>
+<script src="http://www.avsforum.com/forum/clientscript/scripts.js"></script>
+
+
+
+<script async type="text/javascript">
+<!--
+var SESSIONURL = "";
+var SECURITYTOKEN = "guest";
+var IMGDIR_MISC = "/forum/images/AVSForum/misc";
+var vb_disable_ajax = parseInt("1", 10);
+// -->
+</script>
+
+<script>
+
+
+/* Sticky script */
+/* WORKING SCRIPT */
+(function() {
+    var e, t;
+    e = this.jQuery;
+    t = e(window);
+    e.fn.stick_in_parent = function(n) {
+        var r, i, s, o, u, a, f,offsetLeft,sidebar,wasScrolled;
+		wasScrolled=false;
+        null == n && (n = {});
+        o = n.sticky_class;
+        r = n.inner_scrolling;
+        s = n.parent;
+        i = n.offset_top;		
+        null == i && (i = 0);
+        null == s && (s = void 0);
+        null == r && (r = !0);
+        null == o && (o = "is_stuck");
+		sidebar=e('#sidebar');
+        u = function(n, u, a, f, l, c, h) {
+            var p, d, v, g, y, w, E, S, x, T;
+            if (!n.data("sticky_kit")) {
+                n.data("sticky_kit", !0);
+                w = n.parent();
+                null != s && (w = w.closest(s));
+                if (!w.length) throw "failed to find stick parent";
+                p = v = !1;
+				offsetLeft = sidebar.offset().left;
+                x = e("<div />");
+                x.css("position", n.css("position"));
+                E = function() {
+                    var e, t;
+                    e = parseInt(w.css("border-top-width"), 10);
+                    t = parseInt(w.css("padding-top"), 10);
+                    u = parseInt(w.css("padding-bottom"), 10);
+                    a = w.offset().top + e + t;
+                    f = w.height();
+                    e = v ? (v = !1, p = !1, n.css({
+                        position: "",
+                        top: "",
+                        width: "",
+                        bottom: "",
+						left:""
+                    }), x.detach(), !0) : void 0;
+                    l = n.offset().top - parseInt(n.css("margin-top"), 10) - i;
+                    c = n.outerHeight(!0);
+                    h = n.css("float");
+                    x.css({
+                        width: n.outerWidth(!0),
+                        height: c,
+                        display: n.css("display"),
+                        "vertical-align": n.css("vertical-align"),
+                        "float": h
+                    });
+                    if (e) return T()
+                };
+                E();
+                if (c !== f) return g = void 0, y = i, T = function() {
+                    var e, s, d, b;
+                    f = w.height();
+                    d = t.scrollTop();
+					ScrollLeft = t.scrollLeft();
+					offsetLeft = sidebar.offset().left;
+                    null != g && (s = d - g);
+					if ((ScrollLeft>0 || wasScrolled) && o=="is_stuck" && n.css("position")!="absolute") {
+						n.css({
+							left:offsetLeft-ScrollLeft
+						});
+						wasScrolled=true;
+						if (ScrollLeft==0) wasScrolled=false;
+					}
+                    g = d;
+                    v ? (b = d + c + y > f + a, p && !b && (p = !1, n.css({
+                        position: "fixed",
+                        bottom: "",
+                        top: y
+                    }).trigger("sticky_kit:unbottom")), d < l && (v = !1, y = i, "left" !== h && "right" !== h || n, x.detach(), e = {
+                        position: "",
+                        width: "",
+                        top: ""
+                    }, n.css(e).removeClass(o).trigger("sticky_kit:unstick")), r && (e = t.height(), c > e && !p && (y -= s, y = Math.max(e - c, y), y = Math.min(i, y), v && n.css({
+                        top: y + "px"
+                    })))) : d > l && (v = !0, e = {
+                        position: "fixed",
+                        top: y
+                    }, e.width = "border-box" === n.css("box-sizing") ? n.outerWidth() + "px" : n.width() + "px", n.css(e).addClass(o).after(x), "left" !== h && "right" !== h || x.append(n), n.trigger("sticky_kit:stick"));
+                    if (v && (null == b && (b = d + c + y > f + a), !p && b)) return p = !0, "static" === w.css("position") && w.css({
+                        position: "relative"
+                    }), n.css({
+                        position: "absolute",
+                        bottom: u,
+						left: "",
+                        top: "auto"
+                    }).trigger("sticky_kit:bottom")
+                }, S = function() {
+                    E();
+                    return T()
+                }, d = function() {
+                    t.off("scroll", T);
+					offsetLeft = sidebar.offset().left;
+                    e(document.body).off("sticky_kit:recalc", S);
+                    n.off("sticky_kit:detach", d);
+                    n.removeData("sticky_kit");
+                    n.css({
+                        position: "",
+                        bottom: "",
+                        top: ""
+                    });
+                    w.position("position", "");
+                    if (v) return n.removeClass(o), x.remove()
+                }, t.on("touchmove", T), t.on("scroll", T), e(document.body).on("sticky_kit:recalc", S), n.on("sticky_kit:detach", d), setTimeout(T, 0)
+            }
+        };
+        a = 0;
+        for (f = this.length; a < f; a++) n = this[a], u(e(n));
+        return this
+    }
+}).call(this)
+
+
+
+jQ(document).ready(function(){
+var viewportWidth=jQ(window).width();
+if (viewportWidth>999){
+var wrapperS=jQ('#wrapper');
+var wrapper=jQ('#main-content_wrapper');
+var sideber=jQ('#sidebar');
+if (wrapperS.length>0 && sideber.length>0 && typeof sidebar != 'undefined' ){ //if sidebar exist
+sideber.find('.sb-recentdisscussions').addClass('makeStick');
+sideber.find('.box-ad:last-child').addClass('makeStick');
+sideber.find('.makeStick').wrapAll( "<div class='makeStickWrapper' />");
+(function($,sr){
+
+  // debouncing function from John Hann
+  // http://unscriptable.com/index.php/2009/03/20/debouncing-javascript-methods/
+  var debounce = function (func, threshold, execAsap) {
+      var timeout;
+
+      return function debounced () {
+          var obj = this, args = arguments;
+          function delayed () {
+              if (!execAsap)
+                  func.apply(obj, args);
+              timeout = null; 
+          };
+
+          if (timeout)
+              clearTimeout(timeout);
+          else if (execAsap)
+              func.apply(obj, args);
+
+          timeout = setTimeout(delayed, threshold || 300); 
+      };
+  }
+    // smartresize 
+    //jQuery.fn[sr] = function(fn){  return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr); };
+
+})(jQuery,'smartresize');
+
+
+if (wrapper.height()>sideber.height()){ //If content is longer
+sideber.find('.sidebar').height(wrapper.height());
+sideber.find('.makeStickWrapper').stick_in_parent();
+var adIframe=jQ(".sidebar").find('.box-ad:last-child iframe');
+
+/*
+jQ(window).smartresize(function(){  
+  sideber.find('.sidebar').height(wrapper.height());      
+  jQ(document.body).trigger("sticky_kit:recalc");  
+  adIframe.css("display ","none");
+  adIframe.css("display ","block");
+});
+*/
+
+}//end If content is longer
+}//end if sidebar exists
+}//end viewportWidth>999
+
+
+
+
+/* Show Spoiler */
+jQ("a.spoiler-link").click(function(e){
+  e.stopPropagation(); 
+  jQ(this).next(".spoiler-hidden").toggle();
+  return false;
+});
+});
+</script>
+
+
+
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setCustomVar',3,'styleid','113',3]);
+</script>
+
+
+
+  <script type='text/javascript' src="//cdnjs.cloudflare.com/ajax/libs/qtip2/2.2.1/basic/jquery.qtip.js"></script>
+    
+  
+    
+      <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/qtip2/2.2.1/basic/jquery.qtip.css"/>
+
+
+<script type='text/javascript'>//<![CDATA[ 
+jQ(window).load(function(){
+// Create the tooltips only when document ready
+jQ(document).ready(function () {
+    
+    // This will automatically grab the 'title' attribute and replace
+    // the regular browser tooltips for all <a> elements with a title attribute!
+    jQ('a[title]').qtip({ 
+    style: { classes: 'qtip-bootstrap' }, 
+    position: { 
+          viewport: jQ(window),
+          adjust: {
+            x: -20
+           }
+    }
+    });
+    
+});
+});//]]>  
+
+</script>
+
+
+<link type='text/css' rel='stylesheet' href='http://www.avsforum.com/forum/clientscript/custom_css/dnd.css'/>
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '246673915698068');
+fbq('track', "PageView");</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=246673915698068&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+
+<!-- REGISTRATION CODE STARTS -->
+
+<!-- REGISTRATION CODE ENDS -->
+
+<style>
+.ams_gtsearch{min-height:20px;}
+#navbar_search_menu input.gsc-input{min-width:120px; min-height:20px;}
+</style>
+<script type="text/javascript">
+<!--
+function vba_attach_win(threadid)
+{
+	openWindow('http://www.avsforum.com/forum/misc.php?do=showattachments&t=' + threadid, 480, 300);
+}
+-->
+</script><style>
+div.ams_gtsearch .gsc-clear-button { display: none !important }
+</style>
+<script>
+vsamsgtsearches=[];
+</script> 
+<!-- END TEMPLATE: headinclude -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1195331-1']);
+  _gaq.push(['_setDomainName', '.avsforum.com']);
+  _gaq.push(['_setCustomVar',1,'grp','guest', 2]);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+<script type="text/javascript">
+var _comscore = _comscore || [];
+_comscore.push({ c1: "2", c2: "6036030", c4: "avsforum.com" });
+(function() {
+var s = document.createElement("script"), el =
+document.getElementsByTagName("script")[0]; s.async = true;
+s.src = (document.location.protocol == "https:" ? "https://sb" :
+"http://b") + ".scorecardresearch.com/beacon.js";
+el.parentNode.insertBefore(s, el);
+})(); </script>
+<noscript> <img src="http://b.scorecardresearch.com/p?c1=2&c2=6036030&c4=avsforum.com&cv=2.0&cj=1" alt="" /> </noscript>
+
+
+
+
+<!-- DFP TAG -->
+
+<script type="text/javascript" src="//ad.crwdcntrl.net/5/c=8059/pe=y/var=ccauds"></script>
+
+<script type="text/javascript" src="//native.sharethrough.com/assets/sfp.js"></script>
+<script type='text/javascript'>
+var PREBID_TIMEOUT = 1000;
+
+// prebid only works with ga so the gaconnector has been created to convert the analytics.js calls to ga.js compatible calls
+var _gaq = _gaq || [];
+var gaconnector = function(send, event, eventCategory, eventAction, eventLabel, eventValue, fieldsObject) {
+	var isNonInteraction = (typeof(fieldsObject) == 'object' && fieldsObject.nonInteraction) ? true : false;
+	_gaq.push(['_trackEvent', eventCategory, eventAction, eventLabel, eventValue, isNonInteraction]);
+}
+
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+
+function initAdserver() {
+    if (pbjs.initAdserverSet) return;
+    (function() {
+        var gads = document.createElement('script');
+        gads.async = true;
+        gads.type = 'text/javascript';
+        var useSSL = 'https:' == document.location.protocol;
+        gads.src = (useSSL ? 'https:' : 'http:') +
+        '//www.googletagservices.com/tag/js/gpt.js';
+        var node = document.getElementsByTagName('script')[0];
+        node.parentNode.insertBefore(gads, node);
+    })();
+    pbjs.initAdserverSet = true;
+};
+setTimeout(initAdserver, PREBID_TIMEOUT);
+
+var pbjs = pbjs || {};
+pbjs.que = pbjs.que || [];
+(function() {
+    var pbjsEl = document.createElement("script");
+    pbjsEl.type = "text/javascript";
+    pbjsEl.async = true;
+    pbjsEl.src = "//dz2fz0bgyq9tn.cloudfront.net/prebid-0.13.1-v7.js";
+    var pbjsTargetEl = document.getElementsByTagName("head")[0];
+    pbjsTargetEl.insertBefore(pbjsEl, pbjsTargetEl.firstChild);
+})();
+pbjs.que.push(function() {
+    pbjs.enableAnalytics({
+        provider: 'ga',
+        options: {
+            global: 'gaconnector',
+            enableDistribution: true,
+        }
+    });
+});
+pbjs.que.push(function() {
+    var adUnits = [{"code":"AVSForum_com_728x90_Top_TECH_Forum","sizes":[[728,90]],"bids":[{"bidder":"aol","params":{"placement":"4256786","network":"9430.1"}},{"bidder":"appnexus","params":{"placementId":"7643368"}},{"bidder":"brealtime","params":{"placementId":"9840868"}},{"bidder":"districtm","params":{"placementId":"9114765"}},{"bidder":"indexExchange","params":{"id":1,"siteID":"190296"}},{"bidder":"openx","params":{"delDomain":"verticalscope-d.openx.net","unit":"538604138"}},{"bidder":"rubicon","params":{"accountId":"1019","siteId":"17461","zoneId":"48593","sizes":[2],"keywords":["AVSForum.com"],"inventory":{"vsdomain":"AVSForum.com"}}},{"bidder":"sekindoapn","params":{"placementId":"9899462"}},{"bidder":"sovrn","params":{"tagid":"336866"}}]},{"code":"AVSForum_com_728x90_Bottom_TECH_Forum","sizes":[[728,90]],"bids":[{"bidder":"aol","params":{"placement":"4256786","network":"9430.1"}},{"bidder":"appnexus","params":{"placementId":"7643368"}},{"bidder":"brealtime","params":{"placementId":"9840868"}},{"bidder":"districtm","params":{"placementId":"9114765"}},{"bidder":"indexExchange","params":{"id":5,"siteID":"190300"}},{"bidder":"openx","params":{"delDomain":"verticalscope-d.openx.net","unit":"538604138"}},{"bidder":"rubicon","params":{"accountId":"1019","siteId":"17461","zoneId":"48593","sizes":[2],"keywords":["AVSForum.com"],"inventory":{"vsdomain":"AVSForum.com"}}},{"bidder":"sekindoapn","params":{"placementId":"9899462"}},{"bidder":"sovrn","params":{"tagid":"336867"}}]},{"code":"AVSForum_com_300x250_Postbit_TECH_Forum","sizes":[[300,250]],"bids":[{"bidder":"aol","params":{"placement":"4256788","network":"9430.1"}},{"bidder":"appnexus","params":{"placementId":"7643368"}},{"bidder":"brealtime","params":{"placementId":"9840866"}},{"bidder":"districtm","params":{"placementId":"9114765"}},{"bidder":"indexExchange","params":{"id":2,"siteID":"190297"}},{"bidder":"rubicon","params":{"accountId":"1019","siteId":"17461","zoneId":"48593","sizes":[15],"keywords":["AVSForum.com"],"inventory":{"vsdomain":"AVSForum.com"}}},{"bidder":"sekindo","params":{"spaceId":"72497"}},{"bidder":"sekindoapn","params":{"placementId":"9900290"}},{"bidder":"sovrn","params":{"tagid":"336871"}}]},{"code":"AVSForum_com_300x250_TopRight_TECH_Forum","sizes":[[300,250]],"bids":[{"bidder":"aol","params":{"placement":"4256788","network":"9430.1"}},{"bidder":"appnexus","params":{"placementId":"7643368"}},{"bidder":"brealtime","params":{"placementId":"9840866"}},{"bidder":"districtm","params":{"placementId":"9114765"}},{"bidder":"indexExchange","params":{"id":3,"siteID":"190298"}},{"bidder":"rubicon","params":{"accountId":"1019","siteId":"17461","zoneId":"48593","sizes":[15],"keywords":["AVSForum.com"],"inventory":{"vsdomain":"AVSForum.com"}}},{"bidder":"sekindo","params":{"spaceId":"72497"}},{"bidder":"sekindoapn","params":{"placementId":"9900290"}},{"bidder":"sovrn","params":{"tagid":"336872"}}]},{"code":"AVSForum_com_300x250_TopLeft_TECH_Forum","sizes":[[300,250]],"bids":[{"bidder":"aol","params":{"placement":"4256788","network":"9430.1"}},{"bidder":"appnexus","params":{"placementId":"7643368"}},{"bidder":"brealtime","params":{"placementId":"9840866"}},{"bidder":"districtm","params":{"placementId":"9114765"}},{"bidder":"indexExchange","params":{"id":4,"siteID":"190299"}},{"bidder":"rubicon","params":{"accountId":"1019","siteId":"17461","zoneId":"48593","sizes":[15],"keywords":["AVSForum.com"],"inventory":{"vsdomain":"AVSForum.com"}}},{"bidder":"sekindo","params":{"spaceId":"72497"}},{"bidder":"sekindoapn","params":{"placementId":"9900290"}},{"bidder":"sovrn","params":{"tagid":"336873"}}]},{"code":"AVSForum_com_300x250_PostbitLower_TECH_Forum","sizes":[[300,250]],"bids":[{"bidder":"aol","params":{"placement":"4256788","network":"9430.1"}},{"bidder":"appnexus","params":{"placementId":"7643368"}},{"bidder":"brealtime","params":{"placementId":"9840866"}},{"bidder":"districtm","params":{"placementId":"9114765"}},{"bidder":"rubicon","params":{"accountId":"1019","siteId":"17461","zoneId":"48593","sizes":[15],"keywords":["AVSForum.com"],"inventory":{"vsdomain":"AVSForum.com"}}},{"bidder":"sekindo","params":{"spaceId":"72497"}},{"bidder":"sekindoapn","params":{"placementId":"9900290"}},{"bidder":"sovrn","params":{"tagid":"336874"}}]}];
+    pbjs.addAdUnits(adUnits);
+        
+    pbjs.bidderSettings = {
+        standard: {
+            alwaysUseBid: false,
+            adserverTargeting: [{
+                key: "hb_bidder",
+                val: function(bidResponse) {                    
+                    return bidResponse.bidder;
+                }
+            }, {
+                key: "hb_adid",
+                val: function(bidResponse) {
+                    return bidResponse.adId;
+                }
+            }, {
+                key: "hb_pb",
+                val: function(bidResponse) {
+                    var cpm = bidResponse.cpm;
+                    if (cpm < 0.1) cpm = 0.10;
+                    if (cpm > 20) cpm = 20.00;
+                    var newCpm = (Math.floor(cpm * 10) / 10).toFixed(2);
+                    return "pb" + newCpm.replace(".", "");
+                }
+            }, {
+                key: "hb_size",
+                val: function(bidResponse) {
+                    return bidResponse.size;
+                }
+            }]
+        }
+    }
+    
+    pbjs.requestBids({
+        bidsBackHandler: function(bidResponses) {
+            initAdserver();
+        }
+    });
+});
+</script>
+<script id='dfpsetup' type='text/javascript'>
+googletag.cmd.push(function() {
+
+googletag
+	.defineSlot('/1030735/AVSForum_com_728x90_Top_TECH_Forum', [728, 90], 'AVSForum_com_728x90_Top_TECH_Forum')
+	.addService(googletag.pubads());
+
+googletag
+	.defineSlot('/1030735/AVSForum_com_728x90_Bottom_TECH_Forum', [728, 90], 'AVSForum_com_728x90_Bottom_TECH_Forum')
+	.addService(googletag.pubads());
+
+googletag
+	.defineSlot('/1030735/AVSForum_com_300x250_Postbit_TECH_Forum', [[300, 250], [500, 250], [600, 250]], 'AVSForum_com_300x250_Postbit_TECH_Forum')
+	.set("adsense_background_color", "E6EDF5")
+	.set("adsense_border_color", "E6EDF5")
+	.set("adsense_link_color", "3F7CAE")
+	.set("adsense_url_color", "3F7CAE")
+	.addService(googletag.pubads());
+
+googletag
+	.defineSlot('/1030735/AVSForum_com_300x250_TopRight_TECH_Forum', [[300, 250], [300, 600]], 'AVSForum_com_300x250_TopRight_TECH_Forum')
+	.addService(googletag.pubads());
+
+googletag
+	.defineSlot('/1030735/AVSForum_com_300x250_TopLeft_TECH_Forum', [[300, 250], [300, 600]], 'AVSForum_com_300x250_TopLeft_TECH_Forum')
+	.addService(googletag.pubads());
+
+googletag
+	.defineSlot('/1030735/AVSForum_com_300x150_Sponsor_TECH_Forum', [300, 150], 'AVSForum_com_300x150_Sponsor_TECH_Forum')
+	.addService(googletag.pubads());
+
+googletag
+	.defineSlot('/1030735/AVSForum_com_140x140_VisualApex_TECH_Forum', [140, 140], 'AVSForum_com_140x140_VisualApex_TECH_Forum')
+	.addService(googletag.pubads());
+
+googletag
+	.defineSlot('/1030735/AVSForum_com_140x140_MonoPrice_TECH_Forum', [140, 140], 'AVSForum_com_140x140_MonoPrice_TECH_Forum')
+	.addService(googletag.pubads());
+
+googletag
+	.defineSlot('/1030735/AVSForum_com_140x140_HSU_TECH_Forum', [140, 140], 'AVSForum_com_140x140_HSU_TECH_Forum')
+	.addService(googletag.pubads());
+
+googletag
+	.defineSlot('/1030735/AVSForum_com_140x140_ClevelandPlasma_TECH_Forum', [140, 140], 'AVSForum_com_140x140_ClevelandPlasma_TECH_Forum')
+	.addService(googletag.pubads());
+
+googletag
+	.defineSlot('/1030735/AVSForum_com_140x140_BlueJeans_TECH_Forum', [140, 140], 'AVSForum_com_140x140_BlueJeans_TECH_Forum')
+	.addService(googletag.pubads());
+
+googletag
+	.defineSlot('/1030735/AVSForum_com_140x140_StandoutDesign_TECH_Forum', [140, 140], 'AVSForum_com_140x140_StandoutDesign_TECH_Forum')
+	.addService(googletag.pubads());
+
+googletag
+	.defineSlot('/1030735/AVSForum_com_140x140_EliteScreen_TECH_Forum', [140, 140], 'AVSForum_com_140x140_EliteScreen_TECH_Forum')
+	.addService(googletag.pubads());
+
+googletag
+	.defineSlot('/1030735/AVSForum_com_140x140_RythmikAudio_TECH_Forum', [140, 140], 'AVSForum_com_140x140_RythmikAudio_TECH_Forum')
+	.addService(googletag.pubads());
+
+googletag
+	.defineSlot('/1030735/AVSForum_com_953x631_Sponsor_TECH_Forum', [953, 631], 'AVSForum_com_953x631_Sponsor_TECH_Forum')
+	.addService(googletag.pubads());
+
+googletag
+	.defineSlot('/1030735/AVSForum_com_1x1_SlimCut_TECH_Forum', [1, 1], 'AVSForum_com_1x1_SlimCut_TECH_Forum')
+	.addService(googletag.pubads());
+
+googletag
+	.defineSlot('/1030735/AVSForum_com_300x250_PostbitLower_TECH_Forum', [[300, 250], [500, 250], [600, 250]], 'AVSForum_com_300x250_PostbitLower_TECH_Forum')
+	.set("adsense_background_color", "E6EDF5")
+	.set("adsense_border_color", "E6EDF5")
+	.set("adsense_link_color", "3F7CAE")
+	.set("adsense_url_color", "3F7CAE")
+	.addService(googletag.pubads());
+
+googletag.pubads().setTargeting("sitename", "AVSForum.com");
+googletag.pubads().setTargeting("make", "");
+googletag.pubads().setTargeting("model", "");
+googletag.pubads().setTargeting("group_id", "1");
+googletag.pubads().setTargeting("group_name", "");
+googletag.pubads().setTargeting("forum_id", "166");
+googletag.pubads().setTargeting("forum_name", "LCD Flat Panel Displays");
+googletag.pubads().setTargeting("PageID", "2902529");
+googletag.pubads().setTargeting("registered", "false");
+
+if (typeof(ccauds) != "undefined" && typeof(ccauds.Profile.tpid) != "undefined" && ccauds.Profile.tpid != "") {  
+	googletag.pubads().setTargeting("tpid", ccauds.Profile.tpid); 
+} else { 
+	googletag.pubads().setTargeting("tpid", "0"); 
+}
+
+if (typeof(ccauds) != "undefined") {
+    (function(googletag, ccauds) {
+        var aud_abbr = [], audience = ccauds.Profile.Audiences.Audience;
+        for (var cci = 0; cci < audience.length; cci++) {
+            aud_abbr.push(audience[cci].abbr);
+        }
+        googletag.pubads().setTargeting("aud_abbr", aud_abbr);
+    })(googletag, ccauds);
+}
+
+googletag.pubads().setTargeting("strNativeKey", "URMBsimDVDFEJ3HgirLTPgUW");
+
+pbjs.que.push(function() {
+    pbjs.setTargetingForGPTAsync();
+});
+
+googletag.enableServices();
+});
+googletag.cmd.push(function() {            
+googletag.pubads().set("adsense_background_color", "ffffff");
+googletag.pubads().set("adsense_border_color", "ffffff");
+googletag.pubads().set("adsense_link_color", "000000");
+googletag.pubads().set("adsense_text_color", "000000");
+googletag.pubads().set("adsense_url_color", "000000");
+googletag.pubads().set("google_ad_bg", "ffffff");
+googletag.pubads().set("google_ad_border", "ffffff");
+googletag.pubads().set("google_ad_link", "000000");
+googletag.pubads().set("google_ad_text", "000000");
+googletag.pubads().set("google_ad_url", "000000");
+googletag.pubads().set("page_url", "http://www.avsforum.com/forum/showthread.php?t=2902529");});
+</script>
+<!-- /DFP TAG -->
+
+<!-- Video Player -->
+<script type="text/javascript" src="/videoplayer/jwplayer.js?v=1407419967"></script>
+<script type="text/javascript" src="/videoplayer/playerscripts.min.js.php?v=1407430338"></script>
+<!-- /Video Player -->
+
+<!-- Amazon Tag Bottom -->
+<script type='text/javascript'>
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+  try { amznads.setTargetingForGPTAsync('passback'); } catch(e) { /*ignore*/}
+</script>
+<!-- /Amazon Tag Bottom -->
+<script type="text/javascript" src="//d1r55yzuc1b1bw.cloudfront.net/vsapi.all.min.js"></script>
+	<title> Need advice 70&quot; Bravia Vertical lines - AVS Forum | Home Theater Discussions And Reviews</title>
+
+
+<!-- Taboola Header -->
+<script type="text/javascript">
+  window._taboola = window._taboola || [];
+  _taboola.push({article:"auto"});
+  !function (e, f, u) {
+    e.async = 1;
+    e.src = u;
+    f.parentNode.insertBefore(e, f);
+  }(document.createElement("script"),
+  document.getElementsByTagName("script")[0],
+  '//cdn.taboola.com/libtrc/verticalscope-network/loader.js');
+</script>
+<!-- /Taboola Header -->
+<!-- BEGIN TEMPLATE: vbseo_ui_headinc -->
+<link rel="stylesheet" type="text/css" href="vbseo/resources/css/vbseo_buttons.css?v=a4" />
+<script type="text/javascript" src="vbseo/resources/scripts/vbseo_ui.js?v=a4"></script>
+
+<script type="text/javascript">
+ YAHOO.util.Event.onDOMReady(function (){
+ 	vbseoui = new vBSEO_UI();
+ 	vbseoui.page_init(Array('postbody','blogbit','content','postcontainer','vbseo_like_postbit'), Array("php",1));
+ });
+</script>
+
+<!-- END TEMPLATE: vbseo_ui_headinc -->
+</head>
+<body onload="">
+
+<script>
+var captify_kw_query_11825 = "";
+(function(c,a,p,t,i,f,y){i=c.createElement(a);t=c.getElementsByTagName(a)[0];i.type="text/javascript";i.async=true;i.src=p;t.parentNode.insertBefore(i,t);})(document,"script","https://p.cpx.to/p/11825/px.js");
+</script>
+
+<script type="text/javascript"> 
+    var xl8_script = document.createElement("script"); 
+    xl8_script.src = "https://loadus.exelator.com/load/?p=239&g=005&c=927073&ctg=&cmake=&cmodel=&j=d"; 
+    xl8_script.type = "text/javascript"; 
+    xl8_script.async = true; 
+    document.body.appendChild(xl8_script); 
+</script>
+
+
+
+
+
+
+<!-- BEGIN TEMPLATE: header -->
+<div class="container">
+
+<!-- logo -->
+<a name="top"></a>
+<table border="0" width="100%" cellpadding="0" cellspacing="0" align="center" id="header" class="header"><tr><td align="left" style="max-width:220px;"><a href="/"><img src="/forum/images/AVSForum/misc/logo_placeholder.png" class="logo" border="0" height="61" width="331" alt="AVS Forum | Home Theater Discussions And Reviews" /></a></td><td align="right" id="header_right_cell">
+<div class="Leaderboard">
+<div style='width:100%; text-align:center;'><div id='AVSForum_com_728x90_Top_TECH_Forum' style='width:auto; height:auto;'>
+						<script type='text/javascript'>
+							googletag.cmd.push(function() { googletag.display('AVSForum_com_728x90_Top_TECH_Forum'); });
+						</script>
+					</div></div>
+<!--Hello World-->
+</div></td>
+</tr></table>
+<!-- /logo -->
+
+<!-- content table -->
+<!-- BEGIN TEMPLATE: spacer_open -->
+<!-- open content container -->
+
+<div class="content" align="center" itemscope itemtype="http://schema.org/WebPage">
+	<div id="page" class="page page-background" style="width:100%; text-align:left">
+		<div style="padding:0px 0px 0px 0px" align="left">
+
+<!-- END TEMPLATE: spacer_open -->
+
+
+
+<!-- BEGIN TEMPLATE: ad_header_end -->
+
+<!-- END TEMPLATE: ad_header_end -->
+<!-- END TEMPLATE: header -->
+<!-- BEGIN TEMPLATE: navbar -->
+<!-- nav buttons bar -->
+<nav>
+<div class="search-in-one">
+    <div class="change_btn "><div class="image sprite-google-search"></div>
+        <ul class="search_menu">
+            <li data-search-type="google-search"><div class="icon sprite-google-search"></div> Google search</li>
+            <li data-search-type="vb-search"><div class="icon sprite-vb-search"></div> VB search</li>
+        </ul>
+    </div>
+    
+    <div class="search-item google-search">
+    <div class='ams_gtsearch' style='max-width: 250px; margin:auto;' id='cse_gtsearch_form_3'></div>
+<script>
+vsamsgtsearches.push('cse_gtsearch_form_3');
+</script>
+    </div> 
+    
+</div>
+
+  
+
+<ul class="vbmenu_control navbar_search">
+<li><a id="navbar_search" href="http://www.avsforum.com/forum/search.php" accesskey="4" rel="nofollow">Search</a> <script type="text/javascript"> vbmenu_register("navbar_search"); </script>
+</li></ul>
+
+
+<ul class="nav" id="nav">
+    
+    
+    <li class="vbmenu_control"><a href="http://www.avsforum.com/">Home</a></li>
+    
+
+
+
+  <!--  <li class="vbmenu_control"><a href="http://www.avsforum.com/forum/">Forums</a></li> -->
+
+
+<li class="vbmenu_control hovertouch">
+<a href="/forum/" id="navforums">Forums <img src="/forum/images/AVSForum/misc/menu_open.gif" border="0" width="8" height="4" title="" alt=""></a>
+    <div class="vbmenu_popup tools_wrapper forum-menu_wrapper" id="forum-menu">
+    <ul class="subnav vs_dblnav">
+    
+<li class="vbmenu_control"><a href="/forum/60-news-forum/">News Forum</a>
+
+<div class="vbmenu_popup" id="usercptools_menu" style="display:none;" align="left">
+<ul class="subnav">
+<li class="vbmenu_control"><a href="/forum/286-latest-industry-news/">Latest Industry News</a></li>
+<li class="vbmenu_control"><a href="/forum/92-community-news-polls/">Community News & Polls</a></li>
+<li class="vbmenu_control"><a href="/forum/138-avs-forum-podcasts/">AVS Forum Podcasts</a></li>
+<li class="vbmenu_control"><a href="/forum/122-great-found-deals/">Great Found Deals</a></li>
+</ul>
+</div>
+
+</li>
+
+     <li class="vbmenu_control"><a href="/forum/120-avs-forum-club-special-forums/">AVS Forum Clubs Special Forums</a>
+
+<div class="vbmenu_popup" id="usercptools_menu" style="display:none;" align="left">
+<ul class="subnav vs_dblnav">
+<li class="vbmenu_control"><a href="/forum/133-rumor-mill/">Rumor Mill</a></li>
+<li class="vbmenu_control"><a href="/forum/134-avs-forum-gold-coffee-house/">AVS Forum Gold Coffee House</a></li>
+</ul>
+</div>
+</li>
+
+<li class="vbmenu_control"><a href="/forum/9-display-devices/">Display Devices</a>
+
+<div class="vbmenu_popup" id="usercptools_menu" style="display:none;" align="left">
+<ul class="subnav vs_dblnav">
+<li class="vbmenu_control"><a href="/forum/68-digital-projectors-under-3-000-usd-msrp/">Digital Projectors - Under $3,000 USD MSRP</a></li>
+<li class="vbmenu_control"><a href="/forum/166-lcd-flat-panel-displays/">LCD Flat Panel Displays</a></li>
+<li class="vbmenu_control"><a href="/forum/167-plasma-flat-panel-displays/">Plasma Flat Panel Displays</a></li>
+<li class="vbmenu_control"><a href="/forum/24-digital-hi-end-projectors-3-000-usd-msrp/">Digital Hi-End Projectors - $3,000+ USD MSRP</a></li>
+<li class="vbmenu_control"><a href="/forum/63-rear-projection-units/">Rear Projection Units</a></li>
+<li class="vbmenu_control"><a href="/forum/40-flat-panels-general-oled-technology/">OLED Technology & Flat Panels General</a></li>
+<li class="vbmenu_control"><a href="/forum/86-ultra-hi-end-ht-gear-20-000/">Ultra Hi-End HT Gear ($20,000+)</a></li>
+<li class="vbmenu_control"><a href="http://www.avsforum.com/forum/465-high-dynamic-range-hdr-wide-color-gamut-wcg/
+">High dynamic Range (HDR) & Wide Color Gamut (WCG)</a></li>
+<li class="vbmenu_control"><a href="/forum/23-screens/">Screens</a></li>
+<li class="vbmenu_control"><a href="/forum/64-direct-view-single-tube-crt-displays/">Direct View (single tube) CRT Displays</a></li>
+<li class="vbmenu_control"><a href="/forum/139-display-calibration/">Display Calibration</a></li>
+<li class="vbmenu_control"><a href="/forum/117-2-35-1-constant-image-height-chat/">2.35:1 Constant Image Height Chat</a></li>
+
+
+</ul>
+</div>
+</li>
+
+<li class="vbmenu_control"><a href="/forum/6-hdtv/">HDTV</a>
+
+<div class="vbmenu_popup" id="usercptools_menu" style="display:none;" align="left">
+<ul class="subnav vs_dblnav">
+<li class="vbmenu_control"><a href="/forum/45-local-hdtv-info-reception/">Local HDTV Info and Reception</a></li>
+<li class="vbmenu_control"><a href="/forum/25-hdtv-technical/">HDTV Technical</a></li>
+<li class="vbmenu_control"><a href="/forum/34-hdtv-programming/">HDTV Programming</a></li>
+<li class="vbmenu_control"><a href="/forum/42-hdtv-recorders/">HDTV Recorders</a></li>
+</ul>
+</div>
+
+</li>
+
+<li class="vbmenu_control"><a href="/forum/88-audio/">Audio</a>
+<div class="vbmenu_popup" id="usercptools_menu" style="display:none;" align="left">
+<ul class="subnav vs_dblnav">
+<li class="vbmenu_control"><a href="/forum/89-speakers/">Speakers</a></li>
+<li class="vbmenu_control"><a href="/forum/378-headphones/">Headphones</a></li>
+<li class="vbmenu_control"><a href="/forum/90-receivers-amps-processors/">Receivers, Amps and Processors</a></li>
+<li class="vbmenu_control"><a href="/forum/113-subwoofers-bass-transducers/">Subwoofers, Bass and Transducers</a></li>
+<li class="vbmenu_control"><a href="/forum/155-diy-speakers-subs/">DIY Speakers and Subs</a></li>
+<li class="vbmenu_control"><a href="/forum/195-soundbars/">Soundbars</a></li>
+<li class="vbmenu_control"><a href="/forum/153-cd-players-dedicated-music-transports/">CD Players & Dedicated Music Transports</a></li>
+<li class="vbmenu_control"><a href="/forum/109-home-theater-box/">Home Theater in a Box</a></li>
+<li class="vbmenu_control"><a href="/forum/112-surround-music-formats/">Surround Music Formats</a></li>
+<li class="vbmenu_control"><a href="/forum/173-2-channel-audio/">2 Channel Audio</a></li>
+<li class="vbmenu_control"><a href="/forum/91-audio-theory-setup-chat/">Audio theory, setup and chat</a></li>
+</ul>
+</div>
+</li>
+
+
+<li class="vbmenu_control"><a href="/forum/148-blu-ray-hd-dvd/">Blu-ray & HD DVD</a>
+<div class="vbmenu_popup" id="usercptools_menu" style="display:none;" align="left">
+<ul class="subnav vs_dblnav">
+<li class="vbmenu_control"><a href="/forum/187-official-avs-forum-blu-ray-disc-reviews/">Official AVS Forum Blu-ray Disc Reviews</a></li>
+<li class="vbmenu_control"><a href="/forum/149-blu-ray-players/">Blu-Ray Players</a></li>
+<li class="vbmenu_control"><a href="/forum/150-blu-ray-software/">Blu-Ray Software</a></li>
+<li class="vbmenu_control"><a href="/forum/172-dual-format-players/">Dual Format Players</a></li>
+<li class="vbmenu_control"><a href="/forum/114-hdtv-software-media-discussion/">HDTV Software Media Discussion</a></li>
+<li class="vbmenu_control"><a href="/forum/151-hd-dvd-players/">HD DVD Players</a></li>
+<li class="vbmenu_control"><a href="/forum/152-hd-dvd-software/">HD DVD Software</a></li>
+</ul>
+</div>
+</li>
+
+
+<li class="vbmenu_control"><a href="/forum/8-gaming-content-streaming/">Gaming & Content Streaming</a>
+<div class="vbmenu_popup" id="usercptools_menu" style="display:none;" align="left">
+<ul class="subnav vs_dblnav">
+<li class="vbmenu_control"><a href="/forum/39-networking-media-servers-content-streaming/">Network, Media Servers and Content Streaming</a></li>
+<li class="vbmenu_control"><a href="/forum/94-home-theater-gaming/">Home Theater Gaming</a></li>
+<li class="vbmenu_control"><a href="/forum/100-digital-recorders-pvrs-general/">Digital Recorders (PVRs) General</a></li>
+<li class="vbmenu_control"><a href="/forum/101-xm-sirius-satellite-radio/">XM and Sirius Satellite Radio</a></li>
+<li class="vbmenu_control"><a href="/forum/154-hd-radio/">HD Radio</a></li>
+<li class="vbmenu_control"><a href="/forum/163-portable-v/">Portable A/V</a></li>
+<li class="vbmenu_control"><a href="/forum/27-replaytv-showstopper-pvrs/">ReplayTV & ShowStopper PVRs</a></li>
+<li class="vbmenu_control"><a href="/forum/41-microsoft-ultimatetv-pvr/">Microsoft UltimateTV PVR</a></li>
+</ul>
+</div>
+</li>
+
+
+
+<li class="vbmenu_control"><a href="/forum/11-video-components/">Video Components</a>
+<div class="vbmenu_popup" id="usercptools_menu" style="display:none;" align="left">
+<ul class="subnav vs_dblnav">
+<li class="vbmenu_control"><a href="/forum/184-video-download-services-hardware/">Video Download Services & Hardware</a></li>
+<li class="vbmenu_control"><a href="/forum/18-dvd-players-standard-def/">DVD Players (Standard Def)</a></li>
+<li class="vbmenu_control"><a href="/forum/106-dvd-recorders-standard-def/">DVD Recorders (Standard Def)</a></li>
+<li class="vbmenu_control"><a href="/forum/35-cable-digital-cable-non-hdtv/">Cable, Digital Cable (non-HDTV)</a></li>
+<li class="vbmenu_control"><a href="/forum/37-video-processors/">Video Processors</a></li>
+<li class="vbmenu_control"><a href="/forum/26-home-theater-computers/">Home Theater Computers</a></li>
+</ul>
+</div>
+</li>
+
+
+<li class="vbmenu_control"><a href="/forum/3-home-entertainment-theater-builder/">Home Entertainment & Theater Builder</a>
+<div class="vbmenu_popup" id="usercptools_menu" style="display:none;" align="left">
+<ul class="subnav vs_dblnav">
+<li class="vbmenu_control"><a href="/forum/19-dedicated-theater-design-construction/">Dedicated Theater Design and Construction</a></li>
+<li class="vbmenu_control"><a href="/forum/15-general-home-theater-media-game-rooms/">General Home Theather & Media/Game Rooms</a></li>
+<li class="vbmenu_control"><a href="/forum/32-theater-room-items-accessories/">Theater Room Items & Accessories</a></li>
+<li class="vbmenu_control"><a href="/forum/118-game-room-equipment-accessories/">Game Room Equipment & Accessories</a></li>
+<li class="vbmenu_control"><a href="/forum/159-outdoor-theaters/">Outdoor Theaters</a></li>
+</ul>
+</div>
+</li>
+
+
+<li class="vbmenu_control"><a href="/forum/193-3d-central/">3D Central</a>
+<div class="vbmenu_popup" id="usercptools_menu" style="display:none;" align="left">
+<ul class="subnav vs_dblnav">
+<li class="vbmenu_control"><a href="/forum/194-3d-tech-talk/">3D Tech Talk</a></li>
+<li class="vbmenu_control"><a href="/forum/191-3d-displays/">3D Displays</a></li>
+<li class="vbmenu_control"><a href="/forum/192-3d-source-components/">3D Source Components</a></li>
+<li class="vbmenu_control"><a href="/forum/196-3d-content/">3D Content</a></li>
+</ul>
+</div>
+</li>
+
+
+
+
+
+
+<li class="vbmenu_control"><a href="/forum/10-v-control-automation/">A/V Control and Automation</a>
+<div class="vbmenu_popup" id="usercptools_menu" style="display:none;" align="left">
+
+<ul class="subnav vs_dblnav">
+<li class="vbmenu_control"><a href="/forum/93-remote-control-area/">Remote Control Area</a></li>
+<li class="vbmenu_control"><a href="/forum/36-home-v-distribution/">Home A/V Distribution</a></li>
+<li class="vbmenu_control"><a href="/forum/162-home-automation/">Home Automation</a></li>
+<li class="vbmenu_control"><a href="/forum/28-tweaks-do-yourself/">Tweaks and Do-It-Yourself</a></li>
+</ul>
+</div>
+</li>
+
+
+<li class="vbmenu_control"><a href="/forum/169-industry-area/">Industry Area</a>
+<div class="vbmenu_popup" id="usercptools_menu" style="display:none;" align="left">
+<ul class="subnav vs_dblnav">
+<li class="vbmenu_control"><a href="/forum/168-hdmi-q-one-connector-world/">HDMI Q&A - The One Connector World</a></li>
+<li class="vbmenu_control"><a href="/forum/171-firewire-1394-trade-association-q/">Firewire 1394 Trade Association Q&A</a></li>
+</ul>
+</div>
+</li>
+
+
+<li class="vbmenu_control"><a href="/forum/208-classifieds/">Classifieds</a>
+<div class="vbmenu_popup" id="usercptools_menu" style="display:none;" align="left">
+<ul class="subnav vs_dblnav">
+<li class="vbmenu_control"><a href="/forum/218-display-devices/">Display Devices</a></li>
+<li class="vbmenu_control"><a href="/forum/216-a/">This and That</a></li>
+<li class="vbmenu_control"><a href="/forum/215-dealer-specials/">Dealer Specials</a></li>
+<li class="vbmenu_control"><a href="/forum/214-help-wanted-seeking/">Help Wanted/Seeking</a></li>
+<li class="vbmenu_control"><a href="/forum/210-video-source-items/">Video Source Items</a></li>
+<li class="vbmenu_control"><a href="/forum/209-audio-gear/">Audio Gear</a></li>
+<li class="vbmenu_control"><a href="/forum/213-physical-media-items-movies-etc/">Physical Media Items (Movies etc)</a></li>
+<li class="vbmenu_control"><a href="/forum/298-media-codes/">Media Codes</a></li>
+<li class="vbmenu_control"><a href="/forum/212-htpc-computer-items/">HTPC Computer Items</a></li>
+<li class="vbmenu_control"><a href="/forum/211-accessories/">Accessories</a></li>
+</ul>
+</div>
+</li>
+
+
+<li class="vbmenu_control"><a href="/forum/5-other-areas-interest/">Other Areas of Interest</a>
+<div class="vbmenu_popup" id="usercptools_menu" style="display:none;" align="left">
+<ul class="subnav vs_dblnav">
+<li class="vbmenu_control"><a href="/forum/44-movies-concerts-music-discussion/">Movies, Concert and Music Discussion</a></li>
+<li class="vbmenu_control"><a href="/forum/161-camcorders/">Camcorders</a></li>
+<li class="vbmenu_control"><a href="/forum/160-car-audio-video-nav/">Car Audio, Video and Nav</a></li>
+<li class="vbmenu_control"><a href="/forum/61-area-home-theater-meets/">Area Home Theater Meets</a></li>
+<li class="vbmenu_control"><a href="/forum/29-whats-your-system-configuration/">What's Your System Configuration </a></li>
+<li class="vbmenu_control"><a href="/forum/156-ce-pro-electronic-house-articles/">CE Pro & Electronics House Articles </a></li>
+</ul>
+</div>
+</li>
+
+
+<li class="vbmenu_control"><a href="/forum/13-avs-forum-information/">AVS Forum Information</a>
+<div class="vbmenu_popup" id="usercptools_menu" style="display:none;" align="left">
+<ul class="subnav vs_dblnav">
+<li class="vbmenu_control"><a href="/forum/43-forum-operations-center/">Forum Operations Center</a></li>
+<li class="vbmenu_control"><a href="/forum/46-post-testing-area/">Post Testing Area</a></li>
+<li class="vbmenu_control"><a href="/forum/294-avs-forum-team-members/">AVS Forum Team Members</a></li>
+</ul>
+</div>
+</li>
+
+<li class="vbmenu_control"><a href="/forum/330-avs-forum-vendors/">AVS Forum Vendors</a>
+<div class="vbmenu_popup" id="usercptools_menu" style="display:none;" align="left">
+<ul class="subnav vs_dblnav">
+<li class="vbmenu_control"><a href="/forum/346-avs-forum-vendor-rules/">AVS Forum Vendor Rules</a></li>
+<!--<li class="vbmenu_control"><a href="/forum/386-blue-jeans-cable-lounge/">Blue Jeans Cable</a></li>-->
+<li class="vbmenu_control"><a href="/forum/418-svs-community-avs-forum/">SVS</a></li>
+<li class="vbmenu_control"><a href="/forum/425-kef-music-lounge/">KEF</a></li>
+<!--<li class="vbmenu_control"><a href="/forum/401-diy-sound-group-loudspeakers-subwoofers/">DIY Sound Group</a></li>-->
+<!--<li class="vbmenu_control"><a href="/forum/442-goland-tech/">DVD Fab</a></li>-->
+<li class="vbmenu_control"><a href="/forum/410-sewell-direct-connect-anything/">Sewell Direct</a></li>
+<li class="vbmenu_control"><a href="/forum/426-power-sound-audio/">Power Sound Audio</a></li>
+<!-- <li class="vbmenu_control"><a href="/forum/361-axiom-audio-home-theater-stereo-systems/">Axiom Audio</a></li>-->
+<!-- <li class="vbmenu_control"><a href="/forum/369-xtz-sound-speakers-subwoofers/">HDFury</a></li>-->
+<!-- <li class="vbmenu_control"><a href="/forum/377-xtz-sound-speakers-subwoofers/">Probox2</a></li>-->
+<!-- <li class="vbmenu_control"><a href="/forum/353-xtz-sound-speakers-subwoofers/">XTZ Sound Speakers and Subwoofers</a></li> -->
+<!--<li class="vbmenu_control"><a href="/forum/450-has-advanced-audio-imaging-solutions/">Hidden Audio Systems</a></li>-->
+<li class="vbmenu_control"><a href="/forum/473-us-audiolist/">US Audio</a></li>
+
+</ul>
+</div>
+</li>
+
+
+</ul>
+</div>
+</li>
+
+
+
+
+
+
+    
+    <li class="vbmenu_control"><a rel="nofollow" href="http://www.avsforum.com/index.php?page=active_topics">Active Topics</a></li>
+    
+    
+    <li class="vbmenu_control"><a href="http://www.avsforum.com/forum/search.php?do=getdaily" accesskey="2">Today's Posts</a></li>
+    
+    <li class="vbmenu_control">
+<a href="http://www.avsforum.com/forum/dbtreview.php">Reviews</a>
+</li>
+
+<li class="vbmenu_control hovertouch">
+<a href="http://www.avsforum.com/forum/300-articles/" id="navarticles">Articles <img src="/forum/images/AVSForum/misc/menu_open.gif" border="0" width="8" height="4" title="" alt=""></a>
+<div class="vbmenu_popup dbl-column">
+<ul>
+    <li><a href="/forum/301-avs-forum-articles/">AVS Forum articles</a></li>
+    <li><a href="/forum/307-sponsored-posts/">Sponsored Articles</a></li>
+    <li><a href="/forum/306-contest-terms-conditions/">Contests</a></li>
+    <!--<li><a rel="nofollow" href="/index.php?page=BG-landing">Dolby Atmos Buyer's Guide</a></li>-->
+</ul>
+</div>
+</li>
+    
+    <li class="vbmenu_control gallery"><a href="http://www.avsforum.com/photopost/">Gallery</a></li>
+    
+		
+
+    
+</li>
+
+        
+        
+    <li class="vbmenu_control vs_register"><a href="http://www.avsforum.com/forum/register.php" rel="nofollow">Register</a></li>
+    
+
+</ul>
+</nav>
+<!-- / nav buttons bar -->
+
+<!-- breadcrumb, login, pm info -->
+<div class="text_wrapper info-bar">
+<span class="login-or-links">
+
+
+
+		<!-- login form -->
+		<form action="http://www.avsforum.com/forum/login.php?do=login" method="post" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 1)">
+
+<a rel="nofollow" href="http://www.avsforum.com/forum/register.php?do=social&amp;provider=facebook&amp;reg=1" class="social_btn facebook_btn gradient"><span class="sprite inlineimg facebook_sprite">Facebook</span></a>
+
+<a rel="nofollow" href="http://www.avsforum.com/forum/register.php?do=social&amp;provider=google&amp;reg=1" class="social_btn google_btn gradient"><span class="sprite inlineimg google_sprite">Google</span></a>
+
+<a rel="nofollow" href="http://www.avsforum.com/forum/register.php?do=social&amp;provider=twitter&amp;reg=1" class="social_btn twitter_btn gradient"><span class="sprite inlineimg twitter_sprite">Twitter</span></a>
+		
+<input type="text" class="bginput"  name="vb_login_username" id="navbar_username" size="10" accesskey="u" tabindex="101" value="User Name" onfocus="if (this.value == 'User Name') this.value = '';" />
+
+<input type="password" class="bginput"  name="vb_login_password" id="navbar_password" size="10" tabindex="102" /  value="Password" onfocus="if (this.value == 'Password') this.value = '';">
+
+
+<input type="submit" class="button" value="Log in" tabindex="104" title="Enter your username and password in the boxes provided to login, or click the 'register' button to create a profile for yourself." accesskey="s" />
+
+<label for="cb_cookieuser_navbar"><input type="checkbox" name="cookieuser" value="1" tabindex="103" id="cb_cookieuser_navbar" accesskey="c" checked="checked" /><span class="mobile-hide">Remember</span></label>
+
+
+		<input type="hidden" name="s" value="" />
+		<input type="hidden" name="securitytoken" value="guest" />
+		<input type="hidden" name="do" value="login" />
+		<input type="hidden" name="vb_login_md5password" />
+		<input type="hidden" name="vb_login_md5password_utf" />
+		</form>
+		<!-- / login form -->
+     
+       
+</span> 
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- BEGIN TEMPLATE: ad_navbar_below -->
+
+<!-- END TEMPLATE: ad_navbar_below -->
+
+<!-- BEGIN TEMPLATE: ad_header_logo -->
+
+<!-- END TEMPLATE: ad_header_logo -->
+
+<div class="text_wrapper navbar_wrapper">
+<div class="breadcrumb" itemprop="breadcrumb">	
+
+
+
+    
+	
+
+			
+			<span class="navbar"><a href="http://www.avsforum.com/forum/" accesskey="1">AVS Forum | Home Theater Discussions And Reviews</a></span> <!-- BEGIN TEMPLATE: navbar_link -->
+
+	<span class="navbar">&gt; <a href="http://www.avsforum.com/forum/9-display-devices/">Display Devices</a></span>
+
+
+<!-- END TEMPLATE: navbar_link --><!-- BEGIN TEMPLATE: navbar_link -->
+
+	<span class="navbar">&gt; <a href="http://www.avsforum.com/forum/166-lcd-flat-panel-displays/">LCD Flat Panel Displays</a></span>
+
+
+<!-- END TEMPLATE: navbar_link -->
+                ><a href="http://www.avsforum.com/forum/166-lcd-flat-panel-displays/2902529-need-advice-70-bravia-vertical-lines.html"></a> <strong><!-- BEGIN TEMPLATE: navbar_link -->
+
+	 Need advice 70&quot; Bravia Vertical lines
+
+
+<!-- END TEMPLATE: navbar_link --></strong>
+		
+</div>
+</div>
+<!-- / breadcrumb, login, pm info -->
+
+
+<!-- END TEMPLATE: navbar -->
+
+
+
+<div id="wrapper" class="wrapper">
+<div id="main-content_wrapper" class="center">    
+<div id="main-content">
+
+
+
+
+
+
+
+<!-- forum jump -->
+<div class="vs_forumnav">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+<tr valign="bottom">
+	<td>
+		<!-- BEGIN TEMPLATE: forumjump -->
+<div class="smallfont" style="text-align:left;">
+	<form action="http://www.avsforum.com/forum/forumdisplay.php" method="get" class="vs_forumjump">
+	<input type="hidden" name="s" value="" />
+	<input type="hidden" name="daysprune" value="" />
+	<strong>Forum Jump:</strong>&nbsp;
+	<select name="f" onchange="this.form.submit();">
+		<optgroup label="Site Areas">
+			<option value="cp" >User Control Panel</option>
+			<option value="pm" >Private Messages</option>
+			<option value="subs" >Subscriptions</option>
+			<option value="wol" >Who's Online</option>
+			<option value="search" >Search Forums</option>
+			<option value="home" >Forums Home</option>
+		</optgroup>
+		
+		<optgroup label="Forums">
+		<!-- BEGIN TEMPLATE: option -->
+<option value="300" class="fjdpth0" > Articles</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="301" class="fjdpth1" >&nbsp; &nbsp;  AVS Forum® Articles</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="308" class="fjdpth1" >&nbsp; &nbsp;  Community Articles</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="306" class="fjdpth1" >&nbsp; &nbsp;  Contest Terms &amp; Conditions</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="305" class="fjdpth1" >&nbsp; &nbsp;  Site FAQs &amp; Tutorials</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="60" class="fjdpth0" > News Forum</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="286" class="fjdpth1" >&nbsp; &nbsp;  Latest Industry News</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="92" class="fjdpth1" >&nbsp; &nbsp;  Community News &amp; Polls</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="138" class="fjdpth1" >&nbsp; &nbsp;  AVS Forum® Podcasts</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="122" class="fjdpth1" >&nbsp; &nbsp;  Great Found Deals</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="120" class="fjdpth0" > AVS Forum® Club Special Forums</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="9" class="fjdpth0" > Display Devices</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="68" class="fjdpth1" >&nbsp; &nbsp;  Digital Projectors - Under $3,000 USD MSRP</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="199" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  Front Projectors Great Found Deals!</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="166" class="fjsel" selected="selected">&nbsp; &nbsp;  LCD Flat Panel Displays</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="197" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  LCD Flat Panel Great Found Deals!</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="167" class="fjdpth1" >&nbsp; &nbsp;  Plasma Flat Panel Displays</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="198" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  Plasma Flat Panel Great Found Deals!</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="24" class="fjdpth1" >&nbsp; &nbsp;  Digital Hi-End Projectors - $3,000+ USD MSRP</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="63" class="fjdpth1" >&nbsp; &nbsp;  Rear Projection Units</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="40" class="fjdpth1" >&nbsp; &nbsp;  OLED Technology and Flat Panels General</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="322" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  OLED Technology Great Found Deals!</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="86" class="fjdpth1" >&nbsp; &nbsp;  Ultra Hi-End HT Gear ($20,000+)</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="185" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  D-cinema Equipment and Theaters</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="465" class="fjdpth1" >&nbsp; &nbsp;  High Dynamic Range (HDR) &amp; Wide Color Gamut (WCG)</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="23" class="fjdpth1" >&nbsp; &nbsp;  Screens</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="110" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  DIY Screen Section</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="16" class="fjdpth1" >&nbsp; &nbsp;  CRT Projectors</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="64" class="fjdpth1" >&nbsp; &nbsp;  Direct View (single tube) CRT Displays</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="139" class="fjdpth1" >&nbsp; &nbsp;  Display Calibration</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="117" class="fjdpth1" >&nbsp; &nbsp;  2.35:1 Constant Image Height Chat</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="174" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  DIY Constant Height</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="6" class="fjdpth0" > HDTV</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="45" class="fjdpth1" >&nbsp; &nbsp;  Local HDTV Info and Reception</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="25" class="fjdpth1" >&nbsp; &nbsp;  HDTV Technical</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="186" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  Coupon Eligible Converter Box (CECB)</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="34" class="fjdpth1" >&nbsp; &nbsp;  HDTV Programming</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="42" class="fjdpth1" >&nbsp; &nbsp;  HDTV Recorders</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="88" class="fjdpth0" > Audio</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="89" class="fjdpth1" >&nbsp; &nbsp;  Speakers</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="90" class="fjdpth1" >&nbsp; &nbsp;  Receivers, Amps, and Processors</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="113" class="fjdpth1" >&nbsp; &nbsp;  Subwoofers, Bass, and Transducers</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="155" class="fjdpth1" >&nbsp; &nbsp;  DIY Speakers and Subs</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="195" class="fjdpth1" >&nbsp; &nbsp;  Soundbars</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="153" class="fjdpth1" >&nbsp; &nbsp;  CD Players &amp; Dedicated Music Transports</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="109" class="fjdpth1" >&nbsp; &nbsp;  Home Theater In A Box</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="112" class="fjdpth1" >&nbsp; &nbsp;  Surround Music Formats</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="173" class="fjdpth1" >&nbsp; &nbsp;  2-Channel Audio</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="91" class="fjdpth1" >&nbsp; &nbsp;  Audio Theory, Setup, and Chat</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="378" class="fjdpth1" >&nbsp; &nbsp;  Headphones</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="148" class="fjdpth0" > Blu-ray &amp; HD DVD</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="187" class="fjdpth1" >&nbsp; &nbsp;  Official AVS Forum® Blu-ray Disc Reviews</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="149" class="fjdpth1" >&nbsp; &nbsp;  Blu-ray Players</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="202" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  Blu-ray Player Great Found Deals!</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="150" class="fjdpth1" >&nbsp; &nbsp;  Blu-ray Software</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="200" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  Blu-ray Disc Great Found Deals!</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="172" class="fjdpth1" >&nbsp; &nbsp;  Dual Format Players</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="114" class="fjdpth1" >&nbsp; &nbsp;  HDTV Software Media Discussion</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="151" class="fjdpth1" >&nbsp; &nbsp;  HD DVD Players</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="152" class="fjdpth1" >&nbsp; &nbsp;  HD DVD Software</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="8" class="fjdpth0" > Gaming & Content Streaming</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="39" class="fjdpth1" >&nbsp; &nbsp;  Networking, Media Servers &amp; Content Streaming</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="94" class="fjdpth1" >&nbsp; &nbsp;  Home Theater Gaming</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="143" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  General Gaming  Help</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="145" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  HTPC Gaming</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="144" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  Nintendo</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="141" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  Xbox Area</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="142" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  PlayStation Area</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="165" class="fjdpth3" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  PS3 Purchase Chat Area</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="481" class="fjdpth1" >&nbsp; &nbsp;  Virtual Reality (VR) &amp; Augmented Reality (AR)</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="100" class="fjdpth1" >&nbsp; &nbsp;  Digital Recorders (PVRs) General</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="101" class="fjdpth1" >&nbsp; &nbsp;  XM and Sirius Satellite Radio</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="154" class="fjdpth1" >&nbsp; &nbsp;  HD Radio</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="163" class="fjdpth1" >&nbsp; &nbsp;  Portable A/V</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="27" class="fjdpth1" >&nbsp; &nbsp;  ReplayTV &amp; Showstopper PVRs</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="41" class="fjdpth1" >&nbsp; &nbsp;  Microsoft UltimateTV PVR</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="11" class="fjdpth0" > Video Components</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="184" class="fjdpth1" >&nbsp; &nbsp;  Video Download Services &amp; Hardware</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="18" class="fjdpth1" >&nbsp; &nbsp;  DVD Players (Standard Def)</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="106" class="fjdpth1" >&nbsp; &nbsp;  DVD Recorders (Standard Def)</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="35" class="fjdpth1" >&nbsp; &nbsp;  Cable, Digital Cable - Non-HDTV</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="37" class="fjdpth1" >&nbsp; &nbsp;  Video Processors</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="26" class="fjdpth1" >&nbsp; &nbsp;  Home Theater Computers</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="201" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  Computers and Parts Great Found Deals!</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="76" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  HTPC - Linux Chat</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="115" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  HTPC - Mac Chat</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="3" class="fjdpth0" > Home Entertainment & Theater Builder</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="19" class="fjdpth1" >&nbsp; &nbsp;  Dedicated Theater Design &amp; Construction</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="15" class="fjdpth1" >&nbsp; &nbsp;  General Home Theater &amp; Media/Game Rooms</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="32" class="fjdpth1" >&nbsp; &nbsp;  Theater Room Items &amp; Accessories</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="118" class="fjdpth1" >&nbsp; &nbsp;  Game Room Equipment &amp; Accessories</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="159" class="fjdpth1" >&nbsp; &nbsp;  Outdoor Theaters</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="193" class="fjdpth0" > 3D Central</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="194" class="fjdpth1" >&nbsp; &nbsp;  3D Tech Talk</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="191" class="fjdpth1" >&nbsp; &nbsp;  3D Displays</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="192" class="fjdpth1" >&nbsp; &nbsp;  3D Source Components</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="196" class="fjdpth1" >&nbsp; &nbsp;  3D Content</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="10" class="fjdpth0" > A/V Control & Automation</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="93" class="fjdpth1" >&nbsp; &nbsp;  Remote Control Area</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="36" class="fjdpth1" >&nbsp; &nbsp;  Home A/V Distribution</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="162" class="fjdpth1" >&nbsp; &nbsp;  Home Automation</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="28" class="fjdpth1" >&nbsp; &nbsp;  Tweaks and Do-It-Yourself</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="169" class="fjdpth0" > Industry Area</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="168" class="fjdpth1" >&nbsp; &nbsp;  HDMI Q&amp;A - The One Connector World</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="171" class="fjdpth1" >&nbsp; &nbsp;  Firewire 1394 Trade Association Q&amp;A</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="208" class="fjdpth0" > Classifieds</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="218" class="fjdpth1" >&nbsp; &nbsp;  Display Devices</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="256" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  Direct View CRT</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="255" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  Rear Projection</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="254" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  LCD Panels</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="253" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  Plasma Panels</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="252" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  Front Projector</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="216" class="fjdpth1" >&nbsp; &nbsp;  This and That</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="215" class="fjdpth1" >&nbsp; &nbsp;  Dealer Specials</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="214" class="fjdpth1" >&nbsp; &nbsp;  Help Wanted/Seeking</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="210" class="fjdpth1" >&nbsp; &nbsp;  Video Source Items</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="209" class="fjdpth1" >&nbsp; &nbsp;  Audio Gear</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="213" class="fjdpth1" >&nbsp; &nbsp;  Physical Media Items (Movies etc)</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="298" class="fjdpth1" >&nbsp; &nbsp;  Media Codes</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="212" class="fjdpth1" >&nbsp; &nbsp;  HTPC Computer Items</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="211" class="fjdpth1" >&nbsp; &nbsp;  Accessories</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="5" class="fjdpth0" > Other Areas of Interest</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="44" class="fjdpth1" >&nbsp; &nbsp;  Movies, Concerts, and Music Discussion</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="161" class="fjdpth1" >&nbsp; &nbsp;  Camcorders</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="160" class="fjdpth1" >&nbsp; &nbsp;  Car Audio, Video, and Nav</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="61" class="fjdpth1" >&nbsp; &nbsp;  Area Home Theater Meets</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="29" class="fjdpth1" >&nbsp; &nbsp;  What's Your System Configuration</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="156" class="fjdpth1" >&nbsp; &nbsp;  CE Pro &amp; Electronic House Articles</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="13" class="fjdpth0" > AVS Forum® Information</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="46" class="fjdpth1" >&nbsp; &nbsp;  Post Testing Area</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="330" class="fjdpth0" > AVS Forum® Vendors</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="473" class="fjdpth1" >&nbsp; &nbsp;  US Audiolist</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="346" class="fjdpth1" >&nbsp; &nbsp;  AVS Forum® Vendor Rules</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="425" class="fjdpth1" >&nbsp; &nbsp;  KEF Music Lounge</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="426" class="fjdpth1" >&nbsp; &nbsp;  Power Sound Audio</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="418" class="fjdpth1" >&nbsp; &nbsp;  SVS Community on AVS Forum®</option>
+
+<!-- END TEMPLATE: option -->
+		</optgroup>
+		
+	</select><!-- BEGIN TEMPLATE: gobutton -->
+<input type="submit" class="button go_button" value="Go"  />
+<!-- END TEMPLATE: gobutton -->
+	</form>
+</div>
+<!-- END TEMPLATE: forumjump -->
+		
+	</td>
+</tr>
+</table>
+</div>
+<!-- end forum jump -->
+
+
+
+
+<a name="poststop" id="poststop"></a> 
+
+
+<!-- controls above postbits -->
+<div class="controls" id="fixed-controls">
+<div class="fixed-controls-container">
+
+<span class="item pagenav">
+	
+</span>
+
+<span class="item item-social"><!-- BEGIN TEMPLATE: vbpsni_buttons -->
+
+			
+<div class="socialIcons threadPage">
+	<div class="gplus"><g:plusone size="medium"></g:plusone></div>
+	<a
+		href="http://twitter.com/share"
+		class="twitter-share-button"
+		data-count="horizontal"
+		
+	>Tweet</a>
+	<fb:like href="" send="false" layout="button_count" width="70" show_faces="false" action="like" font=""></fb:like>
+</div>
+<div style="clear:both;"></div>
+			
+		
+<!-- END TEMPLATE: vbpsni_buttons --></span>
+
+</div>
+</div>
+<!-- / controls above postbits -->
+<div id="placeholder"></div>
+
+ 
+
+<!-- toolbar -->
+<table class="tborder toolbar " cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="border-bottom-width:0px">
+<tr>
+	<td class="tcat" width="100%">
+		<div class="smallfont">
+		
+		&nbsp;
+		</div>
+	</td>
+	<td class="tcat" id="threadtools" nowrap="nowrap">
+		<a href="http://www.avsforum.com/forum/166-lcd-flat-panel-displays/2902529-need-advice-70-bravia-vertical-lines.html#goto_threadtools">Thread Tools</a>
+		
+	</td>
+	
+	
+	<!-- BEGIN TEMPLATE: vbpsni_showthread_wrapper -->
+
+
+<!-- END TEMPLATE: vbpsni_showthread_wrapper --> 
+
+	
+
+</tr>
+</table>
+<!-- / toolbar -->
+
+
+
+<!-- end content table -->
+
+<!-- / end content table -->
+
+
+
+
+
+<div id="posts" itemscope itemtype="http://schema.org/Blog"><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- post #54424161 -->
+
+	
+	<div id="edit54424161" style="padding:0px 0px 0px 0px">
+	
+
+
+<!-- BEGIN TEMPLATE: postbit_legacy -->
+
+<section id="post54424161" class="tborder vbseo_like_postbit user-post" itemscope itemtype="http://schema.org/Comment">
+
+
+<div class="text_wrapper postbit_legacy_wrapper_thead thead" >
+	
+    
+    
+			
+ </span>
+			<!-- status icon and date -->
+			<a name="post54424161"><span class="sprite inlineimg post_old">Old</span></a>
+			<span itemprop="dateCreated" class="dateCreated">Today, 05:01 PM</span>
+			
+			<!-- / status icon and date -->
+
+
+                  - <strong>Thread Starter</strong>			
+			
+
+	
+    
+</div>
+
+<div class="text_wrapper postbit_legacy_wrapper">
+<div class="alt2 picture main-column-picture">
+
+			<div id="postmenu_54424161" itemprop="contributor">
+				
+				<a rel="nofollow" class="bigusername" href="http://www.avsforum.com/forum/members/9372121-james-scott-2.html">James Scott 2</a>
+				
+				
+			</div>
+
+			
+
+
+						<div class="smallfont">Newbie</div>
+
+							
+
+
+			
+			
+
+			
+			<div class="smallfont">
+				&nbsp;<br />
+				<div>Join Date: Jul 2017</div>
+				
+				
+				<div>
+					Posts: 1
+				</div>
+				<!-- BEGIN TEMPLATE: dbtech_usertag_postbit -->
+
+	<div>Mentioned: 0 Post(s)</div>
+
+
+	<div>Tagged: 0 Thread(s)</div>
+
+
+	<div>Quoted: 0 Post(s)</div>
+
+<!-- END TEMPLATE: dbtech_usertag_postbit -->
+				
+				
+				
+				<div>Liked: 0</div>
+				<div>    </div>
+			</div>
+
+</div>
+
+	
+    <div id="td_post_54424161" class="main-column-text-wrapper alt1">
+	<div class="main-column-text">
+	
+		
+		
+			<!-- icon and title -->
+			<div class="smallfont">
+				
+				 <strong itemprop="alternativeHeadline">Need advice 70&quot; Bravia Vertical lines</strong>
+			</div>
+			<hr class="dividing-line" />
+
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_54424161" itemprop="text">
+			<!-- BEGIN TEMPLATE: ad_showthread_firstpost_start -->
+
+<!-- END TEMPLATE: ad_showthread_firstpost_start -->
+			Long story short, turn on my TV one day and suddenly I have nothing but vertical lines. (KDL 70w850b) Considering this tv isn't even 2 years old.. I was a bit disappointed. I figured it was the T-con so I replaced that and same lines appeared. Purchased a broken 60&quot; since they have same internals, swapped out the mainboard and power supply and still only get vertical lines. Then I read about Bravia tvs having Tab issues. So currently I have the frame removed, touched all the connections and the lines don't change.  Am I screwed or is there something else I can try?<br />
+<br />
+<img src="https://ibb.co/eX78VQ" border="0" alt="" />
+		</div>
+		<!-- / message -->
+
+		
+
+		<!-- BEGIN TEMPLATE: vbseo_likeshare -->
+<div class="text_wrapper vbseo_buttons" id="lkbtn_1.2902529.54424161">
+
+    <div class="alt2 vbseo_liked" style="display:none"></div>
+
+
+</div>
+
+<!-- END TEMPLATE: vbseo_likeshare -->
+		<!-- BEGIN TEMPLATE: ad_showthread_firstpost_sig -->
+
+<!-- END TEMPLATE: ad_showthread_firstpost_sig -->
+
+
+
+
+		
+
+		
+
+		
+
+</div>
+</div>
+
+</div>
+<!-- end text_wrapper -->
+
+    
+<div class="text_wrapper postbit_legacy_wrapper postbit_legacy_wrapper_bottom">
+<div class="alt2 picture main-column-picture status-icons" >  
+		<!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+
+<span class="sprite inlineimg user_online">James Scott 2 is online now</span>
+
+<!-- END TEMPLATE: postbit_onlinestatus -->
+		
+		
+		
+		
+		&nbsp;
+</div>
+	
+<div id="td_post_1162" class="main-column-text-wrapper buttons buttons-postings">
+<div class="main-column-text">  
+	
+		<div class="right"><!-- controls -->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+		
+		
+		<!-- / controls -->
+        </div>
+</div>
+</div>
+
+</div>
+<!-- end text_wrapper -->
+</section>
+
+
+ 
+<!-- post 54424161 popup menu -->
+
+<!-- / post 54424161 popup menu -->
+
+<!-- END TEMPLATE: postbit_legacy -->
+
+
+	</div>
+	
+
+<!-- / post #54424161 -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: ad_showthread_firstpost -->
+
+
+<!-- END TEMPLATE: ad_showthread_firstpost -->
+<div id="edit_vp2" class="vs_dfp_standard_postbit_container" style="padding:0px 0px 0px 0px; ">
+<table class="tborder vs_dfp_standard_postbit_ad" cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="margin-bottom:6px;">
+        <tr>
+        <td class="thead" style="line-height:1.4em;" colspan="2">
+            <div>
+                <span style="float:right;font-weight:normal">
+                    <a href="http://www.avsforum.com/forum/register.php">Remove Advertisements</a>
+                </span>
+            </div>Sponsored Links
+        </td>
+    </tr>
+	<tr valign="top">
+        <td class="alt2" width="175px">
+            <div>
+                <a class="bigusername" href="http://www.avsforum.com/forum">AVS Forum</a>
+            </div>
+            <div class="smallfont">Advertisement</div>
+            <div>&nbsp;<br /></div>
+        </td>        <td class="alt1">
+            <div style='width:100%; text-align:left;'><div id='AVSForum_com_300x250_PostbitLower_TECH_Forum' style='width:auto; height:auto;'>
+						<script type='text/javascript'>
+							googletag.cmd.push(function() { googletag.display('AVSForum_com_300x250_PostbitLower_TECH_Forum'); });
+						</script>
+					</div></div>
+        </td>
+    </tr>
+</table></div><div id="lastpost"></div></div>
+
+
+
+<!-- start content table -->
+
+<!-- / start content table -->
+
+<!-- controls below postbits -->
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-top:3px" class="text_wrapper">
+<tr valign="top">
+	
+		<td class="smallfont">&nbsp;</td>
+	
+	
+</tr>
+</table>
+<!-- / controls below postbits -->
+
+
+
+
+
+
+
+<!-- BEGIN TEMPLATE: ad_showthread_beforeqr -->
+
+<!-- END TEMPLATE: ad_showthread_beforeqr --><!-- Taboola Content -->
+<div id="taboola-below-article-thumbnails-white"></div>
+<script type="text/javascript">
+  window._taboola = window._taboola || [];
+  _taboola.push({
+    mode: "thumbnails-c",
+  container: "taboola-below-article-thumbnails-white",
+    placement: "Below Article Thumbnails White",
+    target_type: "mix"
+  });
+</script>
+<!-- /Taboola Content -->
+
+
+<div class="text_wrapper navbar_wrapper">
+<div class="breadcrumb" itemprop="breadcrumb">	
+    
+    	
+
+			
+			<span class="navbar"><a href="http://www.avsforum.com/forum/" accesskey="1">AVS Forum | Home Theater Discussions And Reviews</a></span> <!-- BEGIN TEMPLATE: navbar_link -->
+
+	<span class="navbar">&gt; <a href="http://www.avsforum.com/forum/9-display-devices/">Display Devices</a></span>
+
+
+<!-- END TEMPLATE: navbar_link --><!-- BEGIN TEMPLATE: navbar_link -->
+
+	<span class="navbar">&gt; <a href="http://www.avsforum.com/forum/166-lcd-flat-panel-displays/">LCD Flat Panel Displays</a></span>
+
+
+<!-- END TEMPLATE: navbar_link -->
+                ><a href="http://www.avsforum.com/forum/166-lcd-flat-panel-displays/2902529-need-advice-70-bravia-vertical-lines.html"></a> <strong><!-- BEGIN TEMPLATE: navbar_link -->
+
+	 Need advice 70&quot; Bravia Vertical lines
+
+
+<!-- END TEMPLATE: navbar_link --></strong>
+		
+</div>
+</div>
+<!-- / breadcrumb, login, pm info -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- controls for non-popup browsers -->
+
+
+<table class="tborder" cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="border-top-width:0px">
+<tr>
+	<td class="thead" colspan="2">Thread Tools<a name="goto_threadtools"></a></td>
+	
+</tr>
+<tr valign="top">
+	<td class="alt1" colspan="2">
+
+	<!-- thread tools -->
+	<div class="smallfont">
+		
+		
+		
+	</div>
+	<!-- / thread tools -->
+
+	</td>
+	
+</tr>
+
+</table>
+<br />
+
+
+<!-- / controls for non-popup browsers -->
+
+
+<!-- forum rules and admin links -->
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+<tr valign="bottom">
+	<td width="100%" valign="top">
+		
+	</td>
+	<td class="smallfont" align="right">
+		<table cellpadding="0" cellspacing="0" border="0">
+		
+		
+		</table>
+	</td>
+</tr>
+</table>
+<!-- /forum rules and admin links -->
+<br>
+<!-- BEGIN TEMPLATE: forumjump -->
+<div class="smallfont" style="text-align:left;">
+	<form action="http://www.avsforum.com/forum/forumdisplay.php" method="get" class="vs_forumjump">
+	<input type="hidden" name="s" value="" />
+	<input type="hidden" name="daysprune" value="" />
+	<strong>Forum Jump:</strong>&nbsp;
+	<select name="f" onchange="this.form.submit();">
+		<optgroup label="Site Areas">
+			<option value="cp" >User Control Panel</option>
+			<option value="pm" >Private Messages</option>
+			<option value="subs" >Subscriptions</option>
+			<option value="wol" >Who's Online</option>
+			<option value="search" >Search Forums</option>
+			<option value="home" >Forums Home</option>
+		</optgroup>
+		
+		<optgroup label="Forums">
+		<!-- BEGIN TEMPLATE: option -->
+<option value="300" class="fjdpth0" > Articles</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="301" class="fjdpth1" >&nbsp; &nbsp;  AVS Forum® Articles</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="308" class="fjdpth1" >&nbsp; &nbsp;  Community Articles</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="306" class="fjdpth1" >&nbsp; &nbsp;  Contest Terms &amp; Conditions</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="305" class="fjdpth1" >&nbsp; &nbsp;  Site FAQs &amp; Tutorials</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="60" class="fjdpth0" > News Forum</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="286" class="fjdpth1" >&nbsp; &nbsp;  Latest Industry News</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="92" class="fjdpth1" >&nbsp; &nbsp;  Community News &amp; Polls</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="138" class="fjdpth1" >&nbsp; &nbsp;  AVS Forum® Podcasts</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="122" class="fjdpth1" >&nbsp; &nbsp;  Great Found Deals</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="120" class="fjdpth0" > AVS Forum® Club Special Forums</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="9" class="fjdpth0" > Display Devices</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="68" class="fjdpth1" >&nbsp; &nbsp;  Digital Projectors - Under $3,000 USD MSRP</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="199" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  Front Projectors Great Found Deals!</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="166" class="fjsel" selected="selected">&nbsp; &nbsp;  LCD Flat Panel Displays</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="197" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  LCD Flat Panel Great Found Deals!</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="167" class="fjdpth1" >&nbsp; &nbsp;  Plasma Flat Panel Displays</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="198" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  Plasma Flat Panel Great Found Deals!</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="24" class="fjdpth1" >&nbsp; &nbsp;  Digital Hi-End Projectors - $3,000+ USD MSRP</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="63" class="fjdpth1" >&nbsp; &nbsp;  Rear Projection Units</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="40" class="fjdpth1" >&nbsp; &nbsp;  OLED Technology and Flat Panels General</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="322" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  OLED Technology Great Found Deals!</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="86" class="fjdpth1" >&nbsp; &nbsp;  Ultra Hi-End HT Gear ($20,000+)</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="185" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  D-cinema Equipment and Theaters</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="465" class="fjdpth1" >&nbsp; &nbsp;  High Dynamic Range (HDR) &amp; Wide Color Gamut (WCG)</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="23" class="fjdpth1" >&nbsp; &nbsp;  Screens</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="110" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  DIY Screen Section</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="16" class="fjdpth1" >&nbsp; &nbsp;  CRT Projectors</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="64" class="fjdpth1" >&nbsp; &nbsp;  Direct View (single tube) CRT Displays</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="139" class="fjdpth1" >&nbsp; &nbsp;  Display Calibration</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="117" class="fjdpth1" >&nbsp; &nbsp;  2.35:1 Constant Image Height Chat</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="174" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  DIY Constant Height</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="6" class="fjdpth0" > HDTV</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="45" class="fjdpth1" >&nbsp; &nbsp;  Local HDTV Info and Reception</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="25" class="fjdpth1" >&nbsp; &nbsp;  HDTV Technical</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="186" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  Coupon Eligible Converter Box (CECB)</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="34" class="fjdpth1" >&nbsp; &nbsp;  HDTV Programming</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="42" class="fjdpth1" >&nbsp; &nbsp;  HDTV Recorders</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="88" class="fjdpth0" > Audio</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="89" class="fjdpth1" >&nbsp; &nbsp;  Speakers</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="90" class="fjdpth1" >&nbsp; &nbsp;  Receivers, Amps, and Processors</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="113" class="fjdpth1" >&nbsp; &nbsp;  Subwoofers, Bass, and Transducers</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="155" class="fjdpth1" >&nbsp; &nbsp;  DIY Speakers and Subs</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="195" class="fjdpth1" >&nbsp; &nbsp;  Soundbars</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="153" class="fjdpth1" >&nbsp; &nbsp;  CD Players &amp; Dedicated Music Transports</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="109" class="fjdpth1" >&nbsp; &nbsp;  Home Theater In A Box</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="112" class="fjdpth1" >&nbsp; &nbsp;  Surround Music Formats</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="173" class="fjdpth1" >&nbsp; &nbsp;  2-Channel Audio</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="91" class="fjdpth1" >&nbsp; &nbsp;  Audio Theory, Setup, and Chat</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="378" class="fjdpth1" >&nbsp; &nbsp;  Headphones</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="148" class="fjdpth0" > Blu-ray &amp; HD DVD</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="187" class="fjdpth1" >&nbsp; &nbsp;  Official AVS Forum® Blu-ray Disc Reviews</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="149" class="fjdpth1" >&nbsp; &nbsp;  Blu-ray Players</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="202" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  Blu-ray Player Great Found Deals!</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="150" class="fjdpth1" >&nbsp; &nbsp;  Blu-ray Software</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="200" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  Blu-ray Disc Great Found Deals!</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="172" class="fjdpth1" >&nbsp; &nbsp;  Dual Format Players</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="114" class="fjdpth1" >&nbsp; &nbsp;  HDTV Software Media Discussion</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="151" class="fjdpth1" >&nbsp; &nbsp;  HD DVD Players</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="152" class="fjdpth1" >&nbsp; &nbsp;  HD DVD Software</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="8" class="fjdpth0" > Gaming & Content Streaming</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="39" class="fjdpth1" >&nbsp; &nbsp;  Networking, Media Servers &amp; Content Streaming</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="94" class="fjdpth1" >&nbsp; &nbsp;  Home Theater Gaming</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="143" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  General Gaming  Help</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="145" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  HTPC Gaming</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="144" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  Nintendo</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="141" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  Xbox Area</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="142" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  PlayStation Area</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="165" class="fjdpth3" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  PS3 Purchase Chat Area</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="481" class="fjdpth1" >&nbsp; &nbsp;  Virtual Reality (VR) &amp; Augmented Reality (AR)</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="100" class="fjdpth1" >&nbsp; &nbsp;  Digital Recorders (PVRs) General</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="101" class="fjdpth1" >&nbsp; &nbsp;  XM and Sirius Satellite Radio</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="154" class="fjdpth1" >&nbsp; &nbsp;  HD Radio</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="163" class="fjdpth1" >&nbsp; &nbsp;  Portable A/V</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="27" class="fjdpth1" >&nbsp; &nbsp;  ReplayTV &amp; Showstopper PVRs</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="41" class="fjdpth1" >&nbsp; &nbsp;  Microsoft UltimateTV PVR</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="11" class="fjdpth0" > Video Components</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="184" class="fjdpth1" >&nbsp; &nbsp;  Video Download Services &amp; Hardware</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="18" class="fjdpth1" >&nbsp; &nbsp;  DVD Players (Standard Def)</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="106" class="fjdpth1" >&nbsp; &nbsp;  DVD Recorders (Standard Def)</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="35" class="fjdpth1" >&nbsp; &nbsp;  Cable, Digital Cable - Non-HDTV</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="37" class="fjdpth1" >&nbsp; &nbsp;  Video Processors</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="26" class="fjdpth1" >&nbsp; &nbsp;  Home Theater Computers</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="201" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  Computers and Parts Great Found Deals!</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="76" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  HTPC - Linux Chat</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="115" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  HTPC - Mac Chat</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="3" class="fjdpth0" > Home Entertainment & Theater Builder</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="19" class="fjdpth1" >&nbsp; &nbsp;  Dedicated Theater Design &amp; Construction</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="15" class="fjdpth1" >&nbsp; &nbsp;  General Home Theater &amp; Media/Game Rooms</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="32" class="fjdpth1" >&nbsp; &nbsp;  Theater Room Items &amp; Accessories</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="118" class="fjdpth1" >&nbsp; &nbsp;  Game Room Equipment &amp; Accessories</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="159" class="fjdpth1" >&nbsp; &nbsp;  Outdoor Theaters</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="193" class="fjdpth0" > 3D Central</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="194" class="fjdpth1" >&nbsp; &nbsp;  3D Tech Talk</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="191" class="fjdpth1" >&nbsp; &nbsp;  3D Displays</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="192" class="fjdpth1" >&nbsp; &nbsp;  3D Source Components</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="196" class="fjdpth1" >&nbsp; &nbsp;  3D Content</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="10" class="fjdpth0" > A/V Control & Automation</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="93" class="fjdpth1" >&nbsp; &nbsp;  Remote Control Area</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="36" class="fjdpth1" >&nbsp; &nbsp;  Home A/V Distribution</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="162" class="fjdpth1" >&nbsp; &nbsp;  Home Automation</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="28" class="fjdpth1" >&nbsp; &nbsp;  Tweaks and Do-It-Yourself</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="169" class="fjdpth0" > Industry Area</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="168" class="fjdpth1" >&nbsp; &nbsp;  HDMI Q&amp;A - The One Connector World</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="171" class="fjdpth1" >&nbsp; &nbsp;  Firewire 1394 Trade Association Q&amp;A</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="208" class="fjdpth0" > Classifieds</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="218" class="fjdpth1" >&nbsp; &nbsp;  Display Devices</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="256" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  Direct View CRT</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="255" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  Rear Projection</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="254" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  LCD Panels</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="253" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  Plasma Panels</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="252" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  Front Projector</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="216" class="fjdpth1" >&nbsp; &nbsp;  This and That</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="215" class="fjdpth1" >&nbsp; &nbsp;  Dealer Specials</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="214" class="fjdpth1" >&nbsp; &nbsp;  Help Wanted/Seeking</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="210" class="fjdpth1" >&nbsp; &nbsp;  Video Source Items</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="209" class="fjdpth1" >&nbsp; &nbsp;  Audio Gear</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="213" class="fjdpth1" >&nbsp; &nbsp;  Physical Media Items (Movies etc)</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="298" class="fjdpth1" >&nbsp; &nbsp;  Media Codes</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="212" class="fjdpth1" >&nbsp; &nbsp;  HTPC Computer Items</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="211" class="fjdpth1" >&nbsp; &nbsp;  Accessories</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="5" class="fjdpth0" > Other Areas of Interest</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="44" class="fjdpth1" >&nbsp; &nbsp;  Movies, Concerts, and Music Discussion</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="161" class="fjdpth1" >&nbsp; &nbsp;  Camcorders</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="160" class="fjdpth1" >&nbsp; &nbsp;  Car Audio, Video, and Nav</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="61" class="fjdpth1" >&nbsp; &nbsp;  Area Home Theater Meets</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="29" class="fjdpth1" >&nbsp; &nbsp;  What's Your System Configuration</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="156" class="fjdpth1" >&nbsp; &nbsp;  CE Pro &amp; Electronic House Articles</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="13" class="fjdpth0" > AVS Forum® Information</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="46" class="fjdpth1" >&nbsp; &nbsp;  Post Testing Area</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="330" class="fjdpth0" > AVS Forum® Vendors</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="473" class="fjdpth1" >&nbsp; &nbsp;  US Audiolist</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="346" class="fjdpth1" >&nbsp; &nbsp;  AVS Forum® Vendor Rules</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="425" class="fjdpth1" >&nbsp; &nbsp;  KEF Music Lounge</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="426" class="fjdpth1" >&nbsp; &nbsp;  Power Sound Audio</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="418" class="fjdpth1" >&nbsp; &nbsp;  SVS Community on AVS Forum®</option>
+
+<!-- END TEMPLATE: option -->
+		</optgroup>
+		
+	</select><!-- BEGIN TEMPLATE: gobutton -->
+<input type="submit" class="button go_button" value="Go"  />
+<!-- END TEMPLATE: gobutton -->
+	</form>
+</div>
+<!-- END TEMPLATE: forumjump -->
+<br />
+
+
+
+
+<!-- BEGIN TEMPLATE: forumrules -->
+<table class="tborder forumrules" cellpadding="0" cellspacing="0" border="0" width="210">
+<thead>
+<tr>
+
+<td class="thead">
+Posting Rules
+</td>
+
+	<td class="thead" align="right">
+		<a style="float:right" href="http://www.avsforum.com/forum/166-lcd-flat-panel-displays/2902529-need-advice-70-bravia-vertical-lines.html#top" onclick="return toggle_collapse('forumrules')"><span id="collapseimg_forumrules" class="sprite inlineimg collapseimg"><!-- -->&nbsp;</span></a>
+		
+	</td>
+</tr>
+</thead>
+<tbody id="collapseobj_forumrules" style="">
+<tr>
+	<td colspan="2" class="alt1" nowrap="nowrap"><div class="smallfont">
+		
+		<div>You <strong>may not</strong> post new threads</div>
+		<div>You <strong>may not</strong> post replies</div>
+		<div>You <strong>may not</strong> post attachments</div>
+		<div>You <strong>may not</strong> edit your posts</div>
+		<hr />
+		
+		<div><a rel="nofollow" href="http://www.avsforum.com/forum/misc.php?do=bbcode" target="_blank">BB code</a> is <strong>On</strong></div>
+		<div><a rel="nofollow" href="http://www.avsforum.com/forum/misc.php?do=showsmilies" target="_blank">Smilies</a> are <strong>On</strong></div>
+		<div><a rel="nofollow" href="http://www.avsforum.com/forum/misc.php?do=bbcode#imgcode" target="_blank">[IMG]</a> code is <strong>On</strong></div>
+		<div>HTML code is <strong>Off</strong></div><div><a rel="nofollow" href="http://www.avsforum.com/forum/misc.php?do=linkbacks#trackbacks" target="_blank">Trackbacks</a> are <strong>Off</strong></div>
+<div><a rel="nofollow" href="http://www.avsforum.com/forum/misc.php?do=linkbacks#pingbacks" target="_blank">Pingbacks</a> are <strong>Off</strong></div>
+<div><a rel="nofollow" href="http://www.avsforum.com/forum/misc.php?do=linkbacks#refbacks" target="_blank">Refbacks</a> are <strong>Off</strong></div>
+		<hr />
+		<div><a rel="nofollow" href="http://www.avsforum.com/forum/misc.php?do=showrules" target="_blank">Forum Rules</a></div>
+	</div></td>
+</tr>
+</tbody>
+</table>
+<!-- END TEMPLATE: forumrules -->
+
+
+<!-- temp -->
+<div style="display:none">
+	<!-- thread rate -->
+	
+		
+	
+	<!-- / thread rate -->
+</div>
+
+<!-- SlimCut -->
+<div style='width:100%; text-align:center;'><div id='AVSForum_com_1x1_SlimCut_TECH_Forum' style='width:auto; height:auto;'>
+						<script type='text/javascript'>
+							googletag.cmd.push(function() { googletag.display('AVSForum_com_1x1_SlimCut_TECH_Forum'); });
+						</script>
+					</div></div>
+
+
+</div>
+</div>
+
+<aside class="noprint" id="sidebar">
+<div style="display: none;" class="sidebar-controls ">
+<span class="sprite inlineimg sidebar-controls-icon"></span>
+<span class="sprite inlineimg br-creditcheck"></span>
+<span class="sprite inlineimg br-warranty"></span>
+<span class="sprite inlineimg br-history"></span>
+<span class="sprite inlineimg br-shipping"></span>
+<span class="sprite inlineimg br-escrow"></span>
+<span class="sprite inlineimg br-tires"></span>
+<span class="sprite inlineimg br-inspections"></span>
+<span class="sprite inlineimg br-insurance"></span>
+</div>
+<div class="sidebar">
+<!-- BEGIN TEMPLATE: adv_portal_search_in_one -->
+<div class="search-in-one">
+    <div class="change_btn "><div class="image sprite-google-search"></div>
+        <ul class="search_menu">
+            <li data-search-type="google-search"><div class="icon sprite-google-search"></div> Google search</li>
+            <li data-search-type="vb-search"><div class="icon sprite-vb-search"></div> VB search</li>
+        </ul>
+    </div>
+    
+    <div class="search-item google-search">
+    <div class='ams_gtsearch' style='width: 150px; margin:auto;' id='cse_gtsearch_form_5'></div>
+<script>
+vsamsgtsearches.push('cse_gtsearch_form_5');
+</script>
+    </div> 
+    
+</div>
+<!-- END TEMPLATE: adv_portal_search_in_one --><!-- BEGIN TEMPLATE: adv_portal_sponsors -->
+
+
+<section class="ad box-ad">
+<div style='width:100%; text-align:center;'><div id='AVSForum_com_300x250_TopRight_TECH_Forum' style='width:auto; height:auto;'>
+						<script type='text/javascript'>
+							googletag.cmd.push(function() { googletag.display('AVSForum_com_300x250_TopRight_TECH_Forum'); });
+						</script>
+					</div></div>
+</section>
+
+
+<!-- END TEMPLATE: adv_portal_sponsors --><!-- BEGIN TEMPLATE: adv_portal_amazonsidebar -->
+
+<!-- END TEMPLATE: adv_portal_amazonsidebar --><!-- BEGIN TEMPLATE: adv_portal_vendor_sponsor -->
+<div style='width:100%; text-align:center;'><div id='AVSForum_com_300x150_Sponsor_TECH_Forum' style='width:auto; height:auto;'>
+						<script type='text/javascript'>
+							googletag.cmd.push(function() { googletag.display('AVSForum_com_300x150_Sponsor_TECH_Forum'); });
+						</script>
+					</div></div>
+<!-- END TEMPLATE: adv_portal_vendor_sponsor --><!-- BEGIN TEMPLATE: adv_portal_module_wrapper_tborder -->
+
+
+<section class="sb-recentdisscussions">
+	<table align="left" border="0" cellpadding="0" cellspacing="0" class="tborder" width="100%">
+		<thead>
+			<tr>
+				<td class="tcat" colspan="0">
+				
+				<h2>Active Topics</h2></td>
+			</tr>
+		</thead>
+		<tbody id="collapseobj_module_41" style="">
+			
+				<!-- BEGIN TEMPLATE: adv_portal_recthreads_lean -->
+<tr>
+	<td class="alt2 columns columns-comments">
+
+	 <div class="picture main-column-picture">    
+
+		
+				<div style="padding-top:0px"><span class="sprite count">21</span></div>
+		
+	
+	</div>
+    
+    	<div class="main-column-text-wrapper">
+   	 <div class="text main-column-text">
+    
+    		<div class="smallfont">
+		
+				<span style="float:right">
+					
+						<a href="http://www.avsforum.com/forum/166-lcd-flat-panel-displays/2902529-need-advice-70-bravia-vertical-lines.html#" onclick="vba_attach_win(2899481); return false"><span class="sprite inlineimg paperclip">2 Attachment(s)</span></a>
+					
+					
+				</span>
+		
+
+		
+		
+
+		
+			 <a href="http://www.avsforum.com/forum/173-2-channel-audio/2899481-high-end-audio-has-become-obsolete.html" title="I have been lucky to listen to some very expensive systems over the past few years and frankly, have not been very impressed. I have been listening..." itemprop="headline">High end audio has become obsolete......</a>
+		
+		
+		
+
+        
+        <div>
+        
+				 <span itemprop="dateModified">Today <span class="time">05:08 PM</span></span> by <a rel="nofollow" href="http://www.avsforum.com/forum/members/8956074-theothergreg.html" itemprop="contributor">Theothergreg</a>
+                 <meta itemprop="author" content="The Murderousone">
+                 <meta itemprop="dateCreated" content="07-17-2017 07:20 PM">
+				
+			
+        </div>
+					
+		</div>
+		
+    </div>
+    </div>  
+    
+</td>
+</tr>
+<!-- END TEMPLATE: adv_portal_recthreads_lean --><!-- BEGIN TEMPLATE: adv_portal_recthreads_lean -->
+<tr>
+	<td class="alt1 columns columns-comments">
+
+	 <div class="picture main-column-picture">    
+
+		
+				<div style="padding-top:0px"><span class="sprite count">3k</span></div>
+		
+	
+	</div>
+    
+    	<div class="main-column-text-wrapper">
+   	 <div class="text main-column-text">
+    
+    		<div class="smallfont">
+		
+				<span style="float:right">
+					
+						<a href="http://www.avsforum.com/forum/166-lcd-flat-panel-displays/2902529-need-advice-70-bravia-vertical-lines.html#" onclick="vba_attach_win(2773233); return false"><span class="sprite inlineimg paperclip">202 Attachment(s)</span></a>
+					
+					
+				</span>
+		
+
+		
+		
+
+		
+			 <a href="http://www.avsforum.com/forum/166-lcd-flat-panel-displays/2773233-2017-sony-xbr-900e-owners-thread-no-price-talk.html" title="On Saturday I took delivery of an XBR65X900E. I like it so far, but my wife says it is too bright. We came from a 2007 46in Toshiba Regza LX177. I..." itemprop="headline">2017 Sony XBR 900E owners thread (No Price Talk)</a>
+		
+		
+		
+
+        
+        <div>
+        
+				 <span itemprop="dateModified">Today <span class="time">05:07 PM</span></span> by <a rel="nofollow" href="http://www.avsforum.com/forum/members/8180016-varucell.html" itemprop="contributor">varucell</a>
+                 <meta itemprop="author" content="McBlundersnuggle">
+                 <meta itemprop="dateCreated" content="03-06-2017 07:10 AM">
+				
+			
+        </div>
+					
+		</div>
+		
+    </div>
+    </div>  
+    
+</td>
+</tr>
+<!-- END TEMPLATE: adv_portal_recthreads_lean --><!-- BEGIN TEMPLATE: adv_portal_recthreads_lean -->
+<tr>
+	<td class="alt2 columns columns-comments">
+
+	 <div class="picture main-column-picture">    
+
+		
+				<div style="padding-top:0px"><span class="sprite count">8k</span></div>
+		
+	
+	</div>
+    
+    	<div class="main-column-text-wrapper">
+   	 <div class="text main-column-text">
+    
+    		<div class="smallfont">
+		
+				<span style="float:right">
+					
+						<a href="http://www.avsforum.com/forum/166-lcd-flat-panel-displays/2902529-need-advice-70-bravia-vertical-lines.html#" onclick="vba_attach_win(2493546); return false"><span class="sprite inlineimg paperclip">4504 Attachment(s)</span></a>
+					
+					
+				</span>
+		
+
+		
+		
+
+		
+			 <a href="http://www.avsforum.com/forum/166-lcd-flat-panel-displays/2493546-official-2016-vizio-m-series-owner-s-thread.html" title="thomasfxlt continues to update Post #1 of the 2016 P-Series owner's thread with a wealth of information about these displays. There are differences..." itemprop="headline">Official 2016 Vizio M-Series Owner's Thread</a>
+		
+		
+		
+
+        
+        <div>
+        
+				 <span itemprop="dateModified">Today <span class="time">05:07 PM</span></span> by <a rel="nofollow" href="http://www.avsforum.com/forum/members/9124305-cem79.html" itemprop="contributor">CEM79</a>
+                 <meta itemprop="author" content="baniels">
+                 <meta itemprop="dateCreated" content="06-23-2016 11:35 AM">
+				
+			
+        </div>
+					
+		</div>
+		
+    </div>
+    </div>  
+    
+</td>
+</tr>
+<!-- END TEMPLATE: adv_portal_recthreads_lean --><!-- BEGIN TEMPLATE: adv_portal_recthreads_lean -->
+<tr>
+	<td class="alt1 columns columns-comments">
+
+	 <div class="picture main-column-picture">    
+
+		
+				<div style="padding-top:0px"><span class="sprite count">35k</span></div>
+		
+	
+	</div>
+    
+    	<div class="main-column-text-wrapper">
+   	 <div class="text main-column-text">
+    
+    		<div class="smallfont">
+		
+				<span style="float:right">
+					
+						<a href="http://www.avsforum.com/forum/166-lcd-flat-panel-displays/2902529-need-advice-70-bravia-vertical-lines.html#" onclick="vba_attach_win(1372020); return false"><span class="sprite inlineimg paperclip">65535 Attachment(s)</span></a>
+					
+					
+				</span>
+		
+
+		
+		
+
+		
+			 <a href="http://www.avsforum.com/forum/113-subwoofers-bass-transducers/1372020-official-power-sound-audio-subwoofer-thread.html" title="This is a thread about the Tom Vodhanel and Jim Farina founded. 
+ 
+Power Sound Audio 
+ 
+  
+ This is thread is for discussion about Power Sound Audio...." itemprop="headline">Official Power Sound Audio Subwoofer Thread</a>
+		
+		
+		
+
+        
+        <div>
+        
+				 <span itemprop="dateModified">Today <span class="time">05:06 PM</span></span> by <a rel="nofollow" href="http://www.avsforum.com/forum/members/9085490-subacabra.html" itemprop="contributor">subacabra</a>
+                 <meta itemprop="author" content="oneeyeblind">
+                 <meta itemprop="dateCreated" content="11-09-2011 04:49 PM">
+				
+			
+        </div>
+					
+		</div>
+		
+    </div>
+    </div>  
+    
+</td>
+</tr>
+<!-- END TEMPLATE: adv_portal_recthreads_lean --><!-- BEGIN TEMPLATE: adv_portal_recthreads_lean -->
+<tr>
+	<td class="alt2 columns columns-comments">
+
+	 <div class="picture main-column-picture">    
+
+		
+				<div style="padding-top:0px"><span class="sprite count">409</span></div>
+		
+	
+	</div>
+    
+    	<div class="main-column-text-wrapper">
+   	 <div class="text main-column-text">
+    
+    		<div class="smallfont">
+		
+				<span style="float:right">
+					
+						<a href="http://www.avsforum.com/forum/166-lcd-flat-panel-displays/2902529-need-advice-70-bravia-vertical-lines.html#" onclick="vba_attach_win(2187793); return false"><span class="sprite inlineimg paperclip">77 Attachment(s)</span></a>
+					
+					
+				</span>
+		
+
+		
+		
+
+		
+			 <a href="http://www.avsforum.com/forum/19-dedicated-theater-design-construction/2187793-javery-s-nj-theater-finally-started.html" title="OK... it is official.  After years and years of waiting I have finally  started work on my basement home theater.  Since some actual  construction..." itemprop="headline">Javery's NJ Theater - finally started!</a>
+		
+		
+		
+
+        
+        <div>
+        
+				 <span itemprop="dateModified">Today <span class="time">05:05 PM</span></span> by <a rel="nofollow" href="http://www.avsforum.com/forum/members/7442905-javeryh.html" itemprop="contributor">javeryh</a>
+                 <meta itemprop="author" content="javeryh">
+                 <meta itemprop="dateCreated" content="10-30-2015 06:34 AM">
+				
+			
+        </div>
+					
+		</div>
+		
+    </div>
+    </div>  
+    
+</td>
+</tr>
+<!-- END TEMPLATE: adv_portal_recthreads_lean --><!-- BEGIN TEMPLATE: adv_portal_recthreads_lean -->
+<tr>
+	<td class="alt1 columns columns-comments">
+
+	 <div class="picture main-column-picture">    
+
+		
+				<div style="padding-top:0px"><span class="sprite count">1k</span></div>
+		
+	
+	</div>
+    
+    	<div class="main-column-text-wrapper">
+   	 <div class="text main-column-text">
+    
+    		<div class="smallfont">
+		
+				<span style="float:right">
+					
+						<a href="http://www.avsforum.com/forum/166-lcd-flat-panel-displays/2902529-need-advice-70-bravia-vertical-lines.html#" onclick="vba_attach_win(1465802); return false"><span class="sprite inlineimg paperclip">135 Attachment(s)</span></a>
+					
+					
+				</span>
+		
+
+		
+		
+
+		
+			 <a href="http://www.avsforum.com/forum/34-hdtv-programming/1465802-orphan-black-bbc-america-hd.html" title="" itemprop="headline">"ORPHAN BLACK" on BBC America in HD </a>
+		
+		
+		
+
+        
+        <div>
+        
+				 <span itemprop="dateModified">Today <span class="time">05:04 PM</span></span> by <a rel="nofollow" href="http://www.avsforum.com/forum/members/7492277-replayrob.html" itemprop="contributor">replayrob</a>
+                 <meta itemprop="author" content="Fastslappy">
+                 <meta itemprop="dateCreated" content="03-29-2013 01:01 PM">
+				
+			
+        </div>
+					
+		</div>
+		
+    </div>
+    </div>  
+    
+</td>
+</tr>
+<!-- END TEMPLATE: adv_portal_recthreads_lean --><!-- BEGIN TEMPLATE: adv_portal_recthreads_lean -->
+<tr>
+	<td class="alt2 columns columns-comments">
+
+	 <div class="picture main-column-picture">    
+
+		
+				<div style="padding-top:0px"><span class="sprite count">86</span></div>
+		
+	
+	</div>
+    
+    	<div class="main-column-text-wrapper">
+   	 <div class="text main-column-text">
+    
+    		<div class="smallfont">
+		
+				<span style="float:right">
+					
+						<a href="http://www.avsforum.com/forum/166-lcd-flat-panel-displays/2902529-need-advice-70-bravia-vertical-lines.html#" onclick="vba_attach_win(2082250); return false"><span class="sprite inlineimg paperclip">4 Attachment(s)</span></a>
+					
+					
+				</span>
+		
+
+		
+		
+
+		
+			 <a href="http://www.avsforum.com/forum/89-speakers/2082250-rbh-r55ti-tower-s-best-value-floor-standing.html" title="I have owned these speakers since late november of 2014 and i felt it was time to offer my thoughts of these fantastic speakers 
+ 
+They are best pair..." itemprop="headline">The RBH R55TI tower's are the best value in floor standing...</a>
+		
+		
+		
+
+        
+        <div>
+        
+				 <span itemprop="dateModified">Today <span class="time">05:04 PM</span></span> by <a rel="nofollow" href="http://www.avsforum.com/forum/members/8133480-the-murderousone.html" itemprop="contributor">The Murderousone</a>
+                 <meta itemprop="author" content="The Murderousone">
+                 <meta itemprop="dateCreated" content="07-29-2015 04:49 PM">
+				
+			
+        </div>
+					
+		</div>
+		
+    </div>
+    </div>  
+    
+</td>
+</tr>
+<!-- END TEMPLATE: adv_portal_recthreads_lean --><!-- BEGIN TEMPLATE: adv_portal_recthreads_lean -->
+<tr>
+	<td class="alt1 columns columns-comments">
+
+	 <div class="picture main-column-picture">    
+
+		
+				<div style="padding-top:0px"><span class="sprite count">20k</span></div>
+		
+	
+	</div>
+    
+    	<div class="main-column-text-wrapper">
+   	 <div class="text main-column-text">
+    
+    		<div class="smallfont">
+		
+				<span style="float:right">
+					
+						<a href="http://www.avsforum.com/forum/166-lcd-flat-panel-displays/2902529-need-advice-70-bravia-vertical-lines.html#" onclick="vba_attach_win(2426314); return false"><span class="sprite inlineimg paperclip">5997 Attachment(s)</span></a>
+					
+					
+				</span>
+		
+
+		
+		
+
+		
+			 <a href="http://www.avsforum.com/forum/40-oled-technology-flat-panels-general/2426314-2016-lg-c6-b6-owners-thread.html" title="I plan on getting a 65C6P and since we already have owners of the 55C6P I figured an owners thread is due.  
+ 
+Especially curios about panel..." itemprop="headline">2016 LG C6-B6 owners thread</a>
+		
+		
+		
+
+        
+        <div>
+        
+				 <span itemprop="dateModified">Today <span class="time">05:03 PM</span></span> by <a rel="nofollow" href="http://www.avsforum.com/forum/members/8477641-astateofmind.html" itemprop="contributor">astateofmind</a>
+                 <meta itemprop="author" content="PRO-630HD">
+                 <meta itemprop="dateCreated" content="04-16-2016 03:48 PM">
+				
+			
+        </div>
+					
+		</div>
+		
+    </div>
+    </div>  
+    
+</td>
+</tr>
+<!-- END TEMPLATE: adv_portal_recthreads_lean --><!-- BEGIN TEMPLATE: adv_portal_recthreads_lean -->
+<tr>
+	<td class="alt2 columns columns-comments">
+
+	 <div class="picture main-column-picture">    
+
+		
+				<div style="padding-top:0px"><span class="sprite count">21</span></div>
+		
+	
+	</div>
+    
+    	<div class="main-column-text-wrapper">
+   	 <div class="text main-column-text">
+    
+    		<div class="smallfont">
+		
+
+		
+		
+
+		
+			 <a href="http://www.avsforum.com/forum/113-subwoofers-bass-transducers/2900937-can-i-use-lesser-sub-midbass.html" title="I currently own duo Kreisel dxd 12012 subs. I was wondering if it's a good idea to get the little brother the dxd 808 and use it nearfield. I plan on..." itemprop="headline">Can I use a lesser sub for midbass?</a>
+		
+		
+		
+
+        
+        <div>
+        
+				 <span itemprop="dateModified">Today <span class="time">05:03 PM</span></span> by <a rel="nofollow" href="http://www.avsforum.com/forum/members/8385223-asere.html" itemprop="contributor">asere</a>
+                 <meta itemprop="author" content="asere">
+                 <meta itemprop="dateCreated" content="07-19-2017 08:32 AM">
+				
+			
+        </div>
+					
+		</div>
+		
+    </div>
+    </div>  
+    
+</td>
+</tr>
+<!-- END TEMPLATE: adv_portal_recthreads_lean --><!-- BEGIN TEMPLATE: adv_portal_recthreads_lean -->
+<tr>
+	<td class="alt1 columns columns-comments">
+
+	 <div class="picture main-column-picture">    
+
+		
+				<div style="padding-top:0px"><span class="sprite count">4</span></div>
+		
+	
+	</div>
+    
+    	<div class="main-column-text-wrapper">
+   	 <div class="text main-column-text">
+    
+    		<div class="smallfont">
+		
+
+		
+		
+
+		
+			 <a href="http://www.avsforum.com/forum/89-speakers/2901121-experience-nht-b-stock.html" title="Curious if anyone has had any experience purchasing b-stock speakers from NHT. Considering whether to buy SuperZeroes brand new vs. b-stock. The..." itemprop="headline">Experience with NHT b-stock?</a>
+		
+		
+		
+
+        
+        <div>
+        
+				 <span itemprop="dateModified">Today <span class="time">05:03 PM</span></span> by <a rel="nofollow" href="http://www.avsforum.com/forum/members/7427841-tri.html" itemprop="contributor">Tri</a>
+                 <meta itemprop="author" content="Tri">
+                 <meta itemprop="dateCreated" content="07-19-2017 10:09 AM">
+				
+			
+        </div>
+					
+		</div>
+		
+    </div>
+    </div>  
+    
+</td>
+</tr>
+<!-- END TEMPLATE: adv_portal_recthreads_lean -->
+			
+		</tbody>
+	</table>
+</section>
+
+<!-- END TEMPLATE: adv_portal_module_wrapper_tborder --><!-- BEGIN TEMPLATE: adv_portal_sponsors2 -->
+
+<section class="ad box-ad">
+<div style='width:100%; text-align:center;'><div id='AVSForum_com_300x250_TopLeft_TECH_Forum' style='width:auto; height:auto;'>
+						<script type='text/javascript'>
+							googletag.cmd.push(function() { googletag.display('AVSForum_com_300x250_TopLeft_TECH_Forum'); });
+						</script>
+					</div></div>
+</section>
+
+<!-- END TEMPLATE: adv_portal_sponsors2 --><!-- BEGIN TEMPLATE: adv_portal_facebook_like_box -->
+
+<!-- END TEMPLATE: adv_portal_facebook_like_box -->
+</div>
+</aside>
+
+<div class="clear"><!-- -->&nbsp;</div>
+</div>
+<!-- end wrapper -->
+
+
+<!-- BEGIN TEMPLATE: footer -->
+<!-- ad_footer_start was here before -->
+<!-- BEGIN TEMPLATE: ad_footer_start -->
+
+<div class="Leaderboard-bottom">
+<div class="Leaderboard">
+<div style='width:100%; text-align:center;'><div id='AVSForum_com_728x90_Bottom_TECH_Forum' style='width:auto; height:auto;'>
+						<script type='text/javascript'>
+							googletag.cmd.push(function() { googletag.display('AVSForum_com_728x90_Bottom_TECH_Forum'); });
+						</script>
+					</div></div>
+</div>
+</div> 
+
+<!-- END TEMPLATE: ad_footer_start -->
+
+<div class="wrapper sponsors-footer">
+<h2><a href="/sponsors" class="all">view our sponsors showcase</a>
+AVS Forum is proudly sponsored by</h2>
+
+
+<!-- 
+<table>
+<tbody><tr>
+<td>
+
+
+
+
+
+<ul class="sponsors">
+
+
+
+<li>
+<div style='width:100%; text-align:center;'><div id='AVSForum_com_140x140_VisualApex_TECH_Forum' style='width:auto; height:auto;'>
+						<script type='text/javascript'>
+							googletag.cmd.push(function() { googletag.display('AVSForum_com_140x140_VisualApex_TECH_Forum'); });
+						</script>
+					</div></div>
+</li>
+
+<li>
+
+
+<div style='width:100%; text-align:center;'><div id='AVSForum_com_140x140_MonoPrice_TECH_Forum' style='width:auto; height:auto;'>
+						<script type='text/javascript'>
+							googletag.cmd.push(function() { googletag.display('AVSForum_com_140x140_MonoPrice_TECH_Forum'); });
+						</script>
+					</div></div>
+
+
+
+</li>
+
+    <li>
+
+<div style='width:100%; text-align:center;'><div id='AVSForum_com_140x140_ClevelandPlasma_TECH_Forum' style='width:auto; height:auto;'>
+						<script type='text/javascript'>
+							googletag.cmd.push(function() { googletag.display('AVSForum_com_140x140_ClevelandPlasma_TECH_Forum'); });
+						</script>
+					</div></div>
+
+
+</li>
+
+
+<li>
+
+<div style='width:100%; text-align:center;'><div id='AVSForum_com_140x140_BlueJeans_TECH_Forum' style='width:auto; height:auto;'>
+						<script type='text/javascript'>
+							googletag.cmd.push(function() { googletag.display('AVSForum_com_140x140_BlueJeans_TECH_Forum'); });
+						</script>
+					</div></div>
+</li>
+
+
+<li>
+
+<div style='width:100%; text-align:center;'><div id='AVSForum_com_140x140_HSU_TECH_Forum' style='width:auto; height:auto;'>
+						<script type='text/javascript'>
+							googletag.cmd.push(function() { googletag.display('AVSForum_com_140x140_HSU_TECH_Forum'); });
+						</script>
+					</div></div>
+</li>
+
+
+<li>
+<div style='width:100%; text-align:center;'><div id='AVSForum_com_140x140_StandoutDesign_TECH_Forum' style='width:auto; height:auto;'>
+						<script type='text/javascript'>
+							googletag.cmd.push(function() { googletag.display('AVSForum_com_140x140_StandoutDesign_TECH_Forum'); });
+						</script>
+					</div></div>
+</li>
+
+<li>
+
+</li>
+
+<li>
+<div style='width:100%; text-align:center;'><div id='AVSForum_com_140x140_RythmikAudio_TECH_Forum' style='width:auto; height:auto;'>
+						<script type='text/javascript'>
+							googletag.cmd.push(function() { googletag.display('AVSForum_com_140x140_RythmikAudio_TECH_Forum'); });
+						</script>
+					</div></div>
+</li>
+</td>
+</tr>
+</table> 
+-->
+
+<div style='width:100%; text-align:center;'><div id='AVSForum_com_953x631_Sponsor_TECH_Forum' style='width:auto; height:auto;'>
+						<script type='text/javascript'>
+							googletag.cmd.push(function() { googletag.display('AVSForum_com_953x631_Sponsor_TECH_Forum'); });
+						</script>
+					</div></div>
+
+</div>
+
+
+<div id="footer" class="footer">
+
+
+
+<form action="http://www.avsforum.com/forum/" method="get" style="clear:left">
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%" class="page" align="center">
+<tr>
+	
+		<td class="tfoot" valign="top">
+			<select name="styleid" onchange="switch_id(this, 'style')">
+				<optgroup label="Quick Style Chooser">
+					<!-- BEGIN TEMPLATE: option -->
+<option value="113" class="" selected="selected">-- AVSForum (Default)</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="121" class="" >---- AVSForum (Dark)</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="162" class="" >---- AVSForum (Retro)</option>
+
+<!-- END TEMPLATE: option --><!-- BEGIN TEMPLATE: option -->
+<option value="129" class="" >-- AVSForum (Mobile)</option>
+
+<!-- END TEMPLATE: option -->
+				</optgroup>
+			</select>
+		</td>
+	
+	
+
+
+
+
+	<td class="tfoot subnav-bottom" align="right" width="100%">
+		<div class="smallfont">
+			<strong>
+				<a href="http://www.avsforum.com/forum/sendmessage.php" rel="nofollow" accesskey="9">Contact Us</a> |
+
+<a href="http://www.avsforum.com/advertise/" rel="nofollow">Advertise</a> |
+
+				<a href="http://www.avsforum.com">AVS Forum | Home Theater Discussions And Reviews</a> | 
+				
+				
+				
+				
+				<a href="http://www.avsforum.com/privacy-policy/">Privacy Statement</a> | 
+				<a href="http://www.avsforum.com/terms/">Terms of Service</a> | 
+				<a href="http://www.avsforum.com/forum/166-lcd-flat-panel-displays/2902529-need-advice-70-bravia-vertical-lines.html#top" onclick="self.scrollTo(0, 0); return false;">Top</a>
+			</strong>
+		</div>
+	</td>
+</tr>
+</table>
+
+<br />
+
+<div align="center">
+<a rel="nofollow" href="http://www.avsforum.com/forum/166-lcd-flat-panel-displays/2902529-need-advice-70-bravia-vertical-lines.html?styleid=129" class="button">Mobile</a>&nbsp;&nbsp;<a rel="nofollow" href="http://www.avsforum.com/forum/166-lcd-flat-panel-displays/2902529-need-advice-70-bravia-vertical-lines.html?styleid=113" class="button on">Desktop</a>
+</div>
+
+<br />
+<br />
+
+<div align="center" class="smallfont">
+AVSForum.com is an independent audio visual enthusiast website. AVSForum.com is not sponsored by or in any way affiliated with AV Science Inc.
+</div>
+
+<br />
+<br />
+
+<div align="center">
+<div class="terms">
+<a href="http://www.verticalscope.com/aboutus/tos.php?site=avsforum.com" class="link">Terms of Use</h2>
+</div>
+</div>
+
+
+
+
+<div align="center">
+
+
+
+	<div class="smallfont" align="center">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+
+
+	</div>
+
+
+
+
+
+</form>
+
+
+
+<!-- BEGIN TEMPLATE: ad_footer_end -->
+
+<!-- END TEMPLATE: ad_footer_end -->
+
+
+
+
+<script type="text/javascript">
+<!--
+	// Main vBulletin Javascript Initialization
+	vBulletin_init();
+//-->
+</script>
+
+
+
+
+
+
+<script type="text/javascript" async src="http://www.advertnetworks.com/worker.php"></script>
+
+<script src="http://www.avsforum.com/forum/clientscript/scripts-bottom.js"></script>
+
+<script src="http://www.avsforum.com/forum/clientscript/scripts-defer.js"></script>
+
+<script src="http://www.google.com/cse/brand?form=&amp;lang=en"></script>
+
+
+<div id="update-browser">For the best viewing experience please update your browser to <a href="http://www.google.com/chrome" target="blank">Google Chrome</a></div>
+
+
+<script>
+/* Dropdowns
+-------------------------------------------------------*/
+jQ('.chooser div.select').click(function(event){
+	event.stopPropagation();
+	//close all other opened lists first
+	jQ('.chooser div.select').not(this).find(".select-list").hide();
+	//Toggle the clicked one
+	jQ(this).find(".select-list").toggle();		
+});
+jQ(document).on('mouseup', function(e){
+	var container = jQ(".chooser div.select");
+	if (!container.is(e.target) && container.has(e.target).length === 0) jQ('.select-list').hide();	
+});
+jQ(document).on('touchstart', function(e){
+	var container = jQ(".chooser div.select");
+	if (!container.is(e.target) && container.has(e.target).length === 0) jQ('.select-list').hide();	
+});
+/* ---- END Dropdowns */
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--NEWSLETTER POPUP-->
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<style>
+	/* Newsletter sing-up popup */
+	#vspopup-overlay{display: none; overflow: hidden; top: 0; left:0;	padding: 0; background-color: rgba(0,0,0,0.7);position: fixed;height: 100%;	width: 100%;z-index: 1000000; line-height: 20px;}
+	#vspopup-overlay form{
+		margin: 0 auto;
+		max-width: calc(100% - 140px);
+		width: 100%;
+		background: rgba(0, 0, 0, 0.5);
+		padding: 25px 40px;
+	}
+	#vspopup-overlay #vspopup-container{border: solid 10px #fff; background:url('http://www.avsforum.com/forum/images/AVSForum/misc/newsletter/bg.jpg') no-repeat center;max-width: 690px; min-width: 300px;width: 100%; min-height: 458px; margin: 15% auto; position: relative; background-size: cover; transition: all 0.5s ease;}
+	#vspopup-overlay #vspopup-container.opened{
+		border: 10px solid #d8d8d8;
+	}
+	#vspopup-overlay #vspopup-container .close-vspopup{
+		position: absolute;
+		padding: 0;
+		top: -24px;
+		background: url(http://www.avsforum.com/forum/images/AVSForum/misc/newsletter/close.png);
+		height: 36px;
+		width: 36px;
+		right: -23px;
+		color: #333333;
+		text-decoration: none;
+		font-size: 0;
+		line-height: 0;
+		color: transparent;
+		cursor: pointer;
+	}
+	#vspopup-overlay .vspopup-call{padding:0 10px; padding-top: 4%; text-align:center}
+	#vspopup-overlay .vspopup-call img{max-width:100%}
+	#vspopup-overlay .vspopup-content{position:absolute; top: auto; left: 0; font-weight: normal;}
+	#vspopup-overlay .vspopup-content p{background-color: rgba(104,55,84,0.8);font-size: 16px;text-align: left;color:#FFFFFF; width: 48%; padding: 8px 18px; position:relative;line-height: 25px; margin-bottom:18px;}
+	#vspopup-overlay .vspopup-content p:after { border-left: 7px solid transparent; border-right: 7px solid transparent; border-top: 12px solid #683754; content: ""; display: block; height: 0; position: absolute;  left: 30px;  bottom: -12px; width: 0; opacity:0.8}
+	#vspopup-overlay .vspopup-content input[type='email']{	width: 40%;	height: 47px;padding: 4px 5px 4px 15px;	font-size: 17px;margin-top:5px;	display: block; border: none; margin-bottom: 15px;}
+	#vspopup-overlay .vspopup-content input[type='submit']{
+		background: #ec612f;border: none;width: 35%;height: 46px;font-size: 17px;margin-top: 5px;color: #FFFFFF;cursor:pointer; border-radius: 0; font-weight: bold;
+	}
+	#vspopup-overlay .vspopup-content button:hover{ background:#fd4f10}
+	#vspopup-overlay .vspopup-content img{position: absolute; bottom: -15px; right: -15px;}
+
+	#vs-heading{
+		position: absolute;
+		top: 90px;
+		left: 20px;
+	}
+	#vs-logo-of-company{
+		position: absolute;
+		top: 25px;
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+		-moz-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+		-o-transform: translateX(-50%);
+		transform: translateX(-50%);
+	}
+	.restrictions-msg{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(255,255,255,0.97);
+		z-index: 99;
+		color: #000;
+		padding: 15px;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		font-family: Arial;
+		top: 100%;
+		-webkit-transition: 0.5s;
+		-moz-transition: 0.5s;
+		-ms-transition: 0.5s;
+		-o-transition: 0.5s;
+		transition: 0.5s;
+		opacity: 0;
+		font-family: Arial;
+		font-size: 14px;
+		line-height: 1.3;
+		overflow: auto;
+	}
+
+	.restrictions-msg .restriction-contents p{
+		margin: 14px 0;
+	}
+
+	.restrictions-msg a{
+		font-weight: bold;
+		color: #FFF;
+	}
+	#restrictions-msg::-webkit-scrollbar-track
+	{
+		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+		border-radius: 10px;
+		background-color: #F5F5F5;
+	}
+
+	#restrictions-msg::-webkit-scrollbar
+	{
+		width: 12px;
+		background-color: #F5F5F5;
+	}
+
+	#restrictions-msg::-webkit-scrollbar-thumb
+	{
+		border-radius: 10px;
+		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+		background-color: #555;
+	}
+
+	.restrictions-msg.opened{
+		top: 0;
+		opacity: 1;
+	}
+
+
+
+	#vspopup-overlay #vspopup-container .close-vspopup.opened{
+		display: none;
+	}
+	.restrictions-label{
+		font-family: Arial;
+		font-size: 10px;
+		cursor: pointer;
+		color: #000;
+	}
+	#vs-reward{
+		position: absolute;
+		top: 235px;
+		right: 10px;
+	}
+
+	#vs-subscribe-text{
+		background: rgba(131,91,105,0.8);
+		font-family: Arial;
+		color: #FFF;
+		padding: 10px 5px;
+		line-height: 1;
+		position: absolute;
+	}
+
+	#vs-subscribe-text:after{
+		content: "";
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 10px 10px 0 10px;
+		border-color: rgba(131,91,105,0.8) transparent transparent transparent;
+		position: absolute;
+		bottom: -10px;
+		left: 5%;
+	}
+
+	#vs-terms-close{
+		position: absolute;
+		top: 0;
+		background: #000;
+		color: transparent;
+		font-size: 0;
+		line-height: 0;
+		height: 30px;
+		width: 30px;
+		background: url(http://www.avsforum.com/forum/images/AVSForum/misc/newsletter/close2.jpg);
+		padding: 0;
+		right: 0px;
+		opacity: 0;
+		z-index: -1;
+		cursor: pointer;
+		-webkit-transform: translateY(40px);
+		-moz-transform: translateY(40px);
+		-ms-transform: translateY(40px);
+		-o-transform: translateY(40px);
+		transform: translateY(40px);
+		-webkit-transition: 0.5s;
+		-moz-transition: 0.5s;
+		-ms-transition: 0.5s;
+		-o-transition: 0.5s;
+		transition: 0.5s;
+	}
+
+	#vs-terms-close.opened{
+		-webkit-transform: translateY(0px);
+		-moz-transform: translateY(0px);
+		-ms-transform: translateY(0px);
+		-o-transform: translateY(0px);
+		transform: translateY(0px);
+		opacity: 1;
+		z-index: 100;
+	}
+
+	@media all and (max-width:640px){
+		#vspopup-overlay .vspopup-content img{position: relative; bottom: 0; right: 0; left:0; display:block; margin:10px auto 20px}
+		#vspopup-overlay .vspopup-content p{width:100%;box-sizing: border-box;}
+		#vspopup-overlay .vspopup-content input{width: 100% !important;box-sizing: border-box;}
+		#vspopup-overlay .vspopup-content{
+			position: static;
+			margin: auto;
+			margin-top: 40px;
+			padding-bottom: 10px;
+			max-width: 90%;
+		}
+
+		#vs-subscribe-text{
+			position: relative;
+			top: -20px;
+		}
+		#vs-logo-of-company{
+			position: relative;
+			top: 0;
+			left: 0;
+			max-width: 90%;
+			margin: auto;
+			display: block;
+			padding-top: 20px;
+			-webkit-transform: translateX(0%);
+			-moz-transform: translateX(0%);
+			-ms-transform: translateX(0%);
+			-o-transform: translateX(0%);
+			transform: translateX(0%);
+		}
+		#vs-heading{
+			display: block;
+			position: static;
+			max-width: 90%;
+			margin: auto;
+			margin-top: 10px;
+		}
+
+
+		#vs-reward{
+			position: static;
+			display: block;
+			margin: auto;
+		}
+		.restrictions-label{
+			position: static;
+			width: 100%;
+			margin-top: 0;
+			margin-left: 0;
+		}
+	}
+
+
+	#vs-heading{
+		top: 8px;
+	}
+	#vspopup-overlay .vspopup-content{
+		bottom: 50px;
+		width: 100%;
+		text-align: center;
+	}
+	#vspopup-overlay #vspopup-container .close-vspopup{
+		z-index: 9999;
+	}
+	#vs-subscribe-text{
+		top: 0;
+		width: 100%;
+		background: none;
+		font-size: 12px;
+	}
+	#vs-subscribe-text:after{
+		content: none;
+	}
+	.restrictions-label{
+		margin-left: 0;
+		text-decoration: none;
+		display: inline-block;
+		background: url(http://www.avsforum.com/forum/images/AVSForum/misc/newsletter/privacy.png);
+		height: 9px;
+		width: 134px;
+		color: transparent;
+		font-size: 0;
+		line-height: 0;
+		vertical-align: middle;
+	}
+	#vs-logo-of-company{
+		left: 25px;
+		transform: translateX(0%);
+	}
+	#vspopup-overlay .vspopup-content input[type="submit"]{
+		margin-top: 0;
+		box-sizing: border-box;
+		background: #4dc24d;
+		margin-left: 10px;
+		width: 100%;
+		max-width: 190px;
+	}
+	#vspopup-overlay .vspopup-content input[type="email"]{
+		box-sizing: border-box;
+		float: left;
+		margin-top: 0;
+		border-radius: 0;
+		width: 100%;
+		max-width: 350px;
+	}
+	#vspopup-overlay form{
+		margin-top: 0;
+		margin-bottom: 5px;
+	}
+
+	@media (max-width: 640px){
+		#vs-subscribe-text {
+			position: relative;
+			top: 50px;
+			text-align: center;
+		}
+		#vs-logo-of-company{
+			margin: 0;
+			width: 28%;
+		}
+		#vs-heading{
+			margin-top: -26px;
+			max-width: 360px;
+			width: 100%;
+		}
+		#vspopup-overlay form{
+			margin-top: -110px;
+		}
+		#vspopup-overlay .vspopup-content{
+			top: 33px;
+			position: relative;
+			margin-top: 0;
+			left: 0;
+		}
+		#vspopup-overlay .vspopup-content input[type="email"]{
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+			float: none;
+		}
+		#vspopup-overlay .vspopup-content input[type="submit"]{
+			font-size: 14px;
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+		}
+		.restrictions-label{
+			margin-top: 47px;
+			display: block;
+			text-align: center;
+			padding-right: 0;
+			transform: translateX(0);
+		}
+	}
+
+	@media (min-width: 641px){
+		#vs-subscribe-text {
+			position: relative;
+		}
+	}
+
+	/* End of Newsletter sing-up popup */
+
+	/* Facebook popup */
+	#vspopup-facebook{display: none;top: 0; left:0;	padding: 0; background-color: rgba(0,0,0,0.7);position: fixed;height: 100%;	width: 100%;z-index: 1000000;}
+	#vspopup-facebook .vspopup-container{background:#f7f7f7;  max-width: 640px; min-width: 300px;width: 100%; min-height: 370px; margin: 15% auto; position: relative; background-size: cover;}
+	#vspopup-facebook .vspopup-container > div{padding:45px 20px; text-align:center;}
+	#vspopup-facebook .vspopup-container .top-x{ position: absolute; top: 20px; right: 20px;}
+	#vspopup-facebook .vspopup-container .already-liked{color:#8e8e8e; text-decoration:underline; text-transform:uppercase; font-size:15px;}
+	#vspopup-facebook .vspopup-container .already-liked:hover {color: #3B5999;}
+	#vspopup-facebook .facebook-like{margin:40px auto; width:100%; width:500px;}
+	#vspopup-facebook .facebook-wording{max-width: 100%; height: auto;}
+
+	@media all and (max-width:640px){
+		#vspopup-facebook .vspopup-container > div{padding:30px 20px;}
+		#vspopup-facebook .facebook-like{margin:20px auto; width:100% !important;}
+		#vspopup-facebook .vspopup-container .top-x{top: 6px; right: 6px;}
+		#vspopup-facebook .fb_iframe_widget{width:100% !important}
+		#vspopup-facebook .fb_iframe_widget span{width: 100% !important;}
+		#vspopup-facebook .fb_iframe_widget iframe { width: 100% !important; overflow: hidden;}
+	}
+
+	@media all and (min-width:641px){
+		#vs-subscribe-text{
+			width: calc(100% - 285px);
+			box-sizing: border-box;
+			display: inline-block;
+			vertical-align: -1px;
+		}
+	}
+
+	/* End of Facebook popup */
+	</style>
+	<div id="vspopup-all-overlays">
+		<!-- BEGIN Newsletter sing-up popup -->
+		<div id="vspopup-overlay" class="vsoverlay-item" data-cookie-exp-days="31" data-cookie-name="showpopup" data-cookie-value="popup_signup_0816">
+
+			<div id="vspopup-container">
+				<div class="close-vspopup"></div>
+				<div id="vs-terms-close">« Back</div>
+
+        <!--
+				<div class="restrictions-msg">
+					<div class="restriction-contents">
+						<p>Dear forum members,</p>
+						<p>Due to a security issue we will be resetting all users' passwords. This reset will be taking place between Tuesday June 21st - Thursday June 23rd. </p>
+						<p>Please ensure that the email address associated with your account is the correct email address and that you have access to this account. To check, go to: <strong>UserCP >> Edit Email and Password.</strong> Once the password reset has taken place, you will not be able to change anything on your account until you have successfully logged in. For more information please go to the site issues section.</p>
+					</div> END OF .restriction-contents
+				</div>END OF .restrictions-msg  -->
+
+				<div class="vspopup-content">
+					<form id="promote_newsletter" action="https://feedburner.google.com/fb/a/mailverify" method="post" target="_blank">
+						<input type="email" name="email" placeholder="Enter Your Email" />
+						<input type="submit" value="SUBSCRIBE" />
+						<input type="hidden" value="AvsForumHomeTheaterDiscussionsAndReviews" name="uri">
+            <input type="hidden" name="loc" value="en_US"/>
+					</form>
+          <!--
+					<span class="restrictions-label">
+						Privacy Guranteed
+					</span>
+					<div id="vs-subscribe-text">
+						We'll never share your information and you can unsubscribe at any time.
+					</div> END OF .subscribe-text  -->
+				</div>
+			</div>
+		</div>
+		<!-- END Newsletter sing-up popup -->
+
+		<script>
+		// If the Date.now() function doesn't exist, then create it
+		if (!Date.now) {
+			Date.now = function() { return new Date().getTime(); }
+		}
+
+		////////// Overlay boxes Start //////////////////
+
+		function createCookie(name,value,days) {
+			if (days) {
+				var date = new Date();
+				date.setTime(date.getTime()+(days*24*60*60*1000));
+				var expires = "; expires="+date.toGMTString();
+			}
+			else
+			var expires = "";
+			document.cookie = name+"="+value+expires+"; path=/";
+		}
+
+		function readCookie(name) {
+			var nameEQ = name + "=";
+			var ca = document.cookie.split(';');
+			for(var i=0;i < ca.length;i++) {
+				var c = ca[i];
+				while (c.charAt(0)==' ') c = c.substring(1,c.length);
+				if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+			}
+			return null;
+		}
+
+		function eraseCookie(name) {
+			createCookie(name,"",-1);
+		}
+
+
+		(function ($, window) {
+			$.noConflict();
+			//Cookie is set using following format: "vsCookieValueArray[i];TimeStamp"
+			// Each popup window
+
+			// Index URL defaults to the root of the domain. If that is not the case, if it's something like http://domain.com/articles is the root
+			// of the site, then please change the indexUrl below
+
+			if ( $(location).attr('pathname') != '/' ){ // Show only if not on the index page
+
+				var vsAllSetCookieTSArray = [];
+				var vsAllSetCookieValueArray = [];
+				var dontShowAnyPopups = 0;  // 0/1 Show or not to show the popup
+
+				//First collect all data about shown overlays
+				$("#vspopup-all-overlays .vsoverlay-item").each(function(){
+					var vsOverlay = $(this);
+
+					var vsCookieExpDays = vsOverlay.data("cookie-exp-days"); // How many days to set the cookie for
+					var vsCookieName = vsOverlay.data("cookie-name"); // Cookie name for this popup
+					var vsCookieValue = vsOverlay.data("cookie-value"); // If the CookieName = (this value.timestamp), then that means it's set!
+
+
+					if (readCookie(vsCookieName) != null){ // if cookie exists | no matter what the situation in here is, no popup will be shown
+
+						var vsSetCookie = readCookie(vsCookieName).split(".");
+						var vsSetCookieValue = vsSetCookie[0];
+						var vsSetCookieTS = vsSetCookie[1];
+
+						if (vsSetCookieTS == null || vsSetCookieTS == "") { // if timestamp is not set but cookie is set
+
+							var vsCookieValueStr = vsSetCookieValue + "." + Date.now().toString(); // New value to be set
+							createCookie(vsCookieName, vsCookieValueStr, vsCookieExpDays); // We set the proper value so next time we loop, we will know when it was last run
+
+							// Just to be consistent, although we won't reach to the second loop, to keep
+							vsAllSetCookieTSArray.push(vsSetCookieTS); //save element's timestamp, so we know it has been shown more than 24 hours ago
+							vsAllSetCookieValueArray.push(vsSetCookieValue);
+
+							dontShowAnyPopups = 1; // We don't know when cookie was set, so let's just wait 24 hours before showing any popups
+							return false;
+
+						} else { //timestamp is set
+
+							// It was set less than 24 hours ago | We are not going to show any popups
+							if ((parseInt(vsSetCookieTS) + 60 * 60 * 24 * 1000) > Date.now()){
+								dontShowAnyPopups = 1; // dont show any popups
+								return false;
+							} else { // This popup can not be displayed. Cookies Set. Cookies Set and 24 hours ago.
+								vsAllSetCookieTSArray.push(vsSetCookieTS); //save element's timestamp, so we know it has been shown more than 24 hours ago
+								vsAllSetCookieValueArray.push(vsSetCookieValue);
+							}
+						}
+					} else { // Cookie does not exist. Good sign. We can show this.
+						vsAllSetCookieTSArray.push(""); // Save an empty string, so we know that this popup has not been shown
+						vsAllSetCookieValueArray.push(vsSetCookieValue);
+					}
+
+				});
+
+
+				if (dontShowAnyPopups == 0) { // if no popus have been seen in the last 24 hours
+
+					// need to go through all popups again even if cookies are set - what if cookie value is different
+					var popupCounter = 0;
+					$("#vspopup-all-overlays .vsoverlay-item").each(function(){
+
+						var vsOverlay = $(this);
+						var vsCookieExpDays = vsOverlay.data("cookie-exp-days");
+						var vsCookieName = vsOverlay.data("cookie-name");
+						var vsCookieValue = vsOverlay.data("cookie-value");
+
+
+						// This popup has not been shown or cookie value is different (Not Sure why this different case is there)
+						if (vsAllSetCookieTSArray[popupCounter] == "" || vsCookieValue != vsAllSetCookieValueArray[popupCounter]) {
+							window.setTimeout(function() {
+								vsOverlay.fadeIn("slow");
+							}, 8000);
+							return false; // show it and exit the loop
+						}
+
+						popupCounter++;
+					}); // end $("#vspopup-all-overlays .vsoverlay-item").each
+				}
+
+			} // end if not a homepage
+
+
+			// Close buttons of Overlays
+			$("#vspopup-all-overlays .vsoverlay-item").delegate(".close-vspopup", "click", function(){
+
+				var vsOverlay = $(this).closest(".vsoverlay-item");
+				overlayCloser(vsOverlay, 0);
+
+				return false;
+			});
+
+/*
+			// Terms of service
+			$(".restrictions-label").click(function(event) {
+				event.preventDefault();
+				$(this).parents("#vspopup-overlay").find(".restrictions-msg, #vspopup-container, #vs-terms-close, .close-vspopup").toggleClass('opened');
+			});
+
+			// Close the terms of service
+			$("#vspopup-overlay #vspopup-container #vs-terms-close").click(function(event) {
+				event.preventDefault();
+				$(this).parents("#vspopup-overlay").find(".restrictions-msg, #vspopup-container, #vs-terms-close, .close-vspopup").toggleClass('opened');
+			});*/
+
+			// Already liked. Means we should never show this popup ever again
+			$("#vspopup-all-overlays .vsoverlay-item").delegate(".already-liked", "click", function(){
+
+				var vsOverlay = $(this).closest(".vsoverlay-item");
+				vsOverlay.data("cookie-exp-days", 9999); // Set to 9999 days expiry for the cookie
+				overlayCloser(vsOverlay, 0);
+
+				return false;
+			});
+
+			// function per overlay
+			$("#vspopup-all-overlays form").submit(function(){
+        var vsOverlay = $(this).closest(".vsoverlay-item");
+        overlayCloser(vsOverlay);
+        /*
+				var vsOverlay = $(this).closest(".vsoverlay-item");
+				$.post($(this).attr('action'), $(this).serialize(), function(response){
+
+				});
+
+				return false;
+        */
+			});
+
+			// The helper to closing an overlay popup. Parameter overlay jQuery object
+			function overlayCloser(overlay, delayClose)
+			{
+				var vsCookieExpDays = overlay.data("cookie-exp-days");
+				var vsCookieName = overlay.data("cookie-name");
+				var vsCookieValue = overlay.data("cookie-value");
+				delayClose = (typeof(delayClose) == "undefined") ? 0 : delayClose; // Set the delay before closing the overlay
+
+				overlay.delay(delayClose).fadeOut("slow");
+
+				// Set the cookie with current timestamp for this overlay
+				var vsCookieValueStr = vsCookieValue + "." + Date.now().toString();
+				createCookie(vsCookieName,vsCookieValueStr,vsCookieExpDays); //set cookie
+			}
+
+		})(jQuery, window);
+		</script>
+
+<!-- END NEWSLETTER POPUP--><!-- vBadvanced 5-1-9-7-3 --><script>
+var renderVSAMSGTSearch = function() {
+	for(var a = 0; a < vsamsgtsearches.length; a++)     
+		google.search.cse.element.render({div: vsamsgtsearches[a], tag: 'searchbox-only'})
+}, startVSAMSGTSearch = function() {
+	'complete' == document.readyState ? renderVSAMSGTSearch() : google.setOnLoadCallback(renderVSAMSGTSearch)
+};
+			
+		window.__gcse = { parsetags: 'explicit', callback: startVSAMSGTSearch}, function() {
+			var cx = 'partner-pub-7865546952023728:4039054045';
+			var gcse = document.createElement('script');
+			gcse.type = 'text/javascript';
+			gcse.async = true;
+			gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(gcse, s);
+		}();
+</script>
+<!-- END TEMPLATE: footer -->
+
+
+<!-- Adblock Check -->
+<div class="afs_ads">&nbsp;</div>
+<script>
+(function() {
+    var adBlockDetector = function() {
+        setTimeout(function() {
+            if (!document.getElementsByClassName) return;
+            
+            var ads = document.getElementsByClassName("afs_ads");
+            ad  = ads[ads.length - 1];
+
+            if (!ad || ad.innerHTML.length == 0 || ad.clientHeight === 0) {
+                _gaq.push(["_trackEvent", "Adblock", "Blocked", "true",,true]);
+            } else {
+                ad.style.display = "none";
+                _gaq.push(["_trackEvent", "Adblock", "Unblocked", "false",,true]);
+            }
+
+        }, 500);
+    }
+
+    /* Attach a listener for page load */
+    if (window.addEventListener) {
+        window.addEventListener("load", adBlockDetector, false);
+    } else {
+        window.attachEvent("onload", adBlockDetector); //IE
+    }
+})();
+</script>
+<!-- /Adblock Check-->
+<!-- Lotame -->
+<script src="//tags.crwdcntrl.net/c/8060/cc_af.js"></script>
+<!-- /Lotame -->
+
+<!-- SWOOP -->
+<script type="text/javascript">
+  (function addSwoopOnce(domain) {
+    var win = window;
+    try {
+      while (!(win.parent == win || !win.parent.document)) {
+        win = win.parent;
+      }
+    } catch (e) {
+      /* noop */
+    }
+    var doc = win.document;
+    if (!doc.getElementById("swoop_sdk")) {
+      var serverbase = doc.location.protocol + "//ardrone.swoop.com/";
+      var s = doc.createElement("script");
+      s.type = "text/javascript";
+      s.src = serverbase + "js/spxw.js";
+      s.id = "swoop_sdk";
+      s.setAttribute("data-domain", domain);
+      s.setAttribute("data-serverbase", serverbase);
+      doc.head.appendChild(s);
+    }
+  })("SW-86972468-T1006");
+</script>
+<!-- /SWOOP -->
+<script type="text/javascript">
+var vs_api = vsapi.api();
+var vs_o = vs_api.vbulletinInit(0, [54424161]);
+vs_o.addPostElement(document.getElementById("post54424161"), document.getElementById("post_message_54424161"), 54424161, 2902529, 166, 9372121, 0);
+</script>
+      <!-- VigLink vBulletin Plugin v2.0.7.0001: http://viglink.com -->
+      <script type="text/javascript">
+        var vglnk = { api_url: '//api.viglink.com/api',
+                      key: '0f4a86ba6db5fdb509f85ecacef1696f' };
+
+        (function(d, t) {
+          var s = d.createElement(t); s.type = 'text/javascript'; s.async = true;
+          s.src = ('https:' == document.location.protocol ? vglnk.api_url :
+                   '//cdn.viglink.com/api') + '/vglnk.js';
+          var r = d.getElementsByTagName(t)[0]; r.parentNode.insertBefore(s, r);
+        }(document, 'script'));
+      </script>
+      <!-- end VigLink -->
+<!-- Taboola Footer -->
+<script type="text/javascript">
+  window._taboola = window._taboola || [];
+  _taboola.push({flush: true});
+</script>
+<!-- /Taboola Footer -->
+
+<script type="text/javascript">
+//<![CDATA[
+
+window.orig_onload = window.onload;
+window.onload = function() {
+var cpost=document.location.hash.substring(1);var cpost2='';if(cpost && (typeof fetch_object != 'undefined')){ var ispost=cpost.substring(0,4)=='post';if(ispost)cpost2='post_'+cpost.substring(4);if((cobj = fetch_object(cpost))||(cobj = fetch_object(cpost2))){cobj.scrollIntoView(true);}else if(ispost){cpostno = cpost.substring(4,cpost.length);if(parseInt(cpostno)>0){location.replace('http://www.avsforum.com/forum/showthread.php?p='+cpostno);};} }
+
+if(typeof window.orig_onload == "function") window.orig_onload();
+}
+
+//]]>
+</script>
+</body>
+</html><!-- cached by vbseo-cache -->
