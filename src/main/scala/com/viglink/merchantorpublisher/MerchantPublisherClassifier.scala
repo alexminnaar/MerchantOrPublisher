@@ -2,14 +2,20 @@ package com.viglink.merchantorpublisher
 
 import java.io.File
 
-import cc.mallet.classify.{Classifier, NaiveBayesTrainer}
+import cc.mallet.classify.{Classification, Classifier, NaiveBayesTrainer}
 import cc.mallet.pipe._
 import cc.mallet.pipe.iterator.FileIterator
 import cc.mallet.types.{Instance, InstanceList}
 
 import scala.io.Source
 
-object Classifier extends App {
+class MerchantPublisherClassifier {
+
+  var model: Option[Classifier] = None
+
+  def loadModel(clf: Classifier) = {
+    this.model = Some(clf)
+  }
 
   def train(trainingDataDir: String, trainTestRatio: Array[Double]): Classifier = {
 
@@ -56,6 +62,17 @@ object Classifier extends App {
     classifier
   }
 
+  def predict(text: String, clf: Option[Classifier] = None): Classification = {
+
+    //make sure there is some kind of model loaded
+    clf match {
+      case Some(c) => this.loadModel(c)
+      case None => assert(this.model.isDefined)
+    }
+
+    val clfModel = this.model.get
+    clfModel.classify(clfModel.getInstancePipe().instanceFrom(new Instance(text, "", "", "")))
+  }
 
 }
 
